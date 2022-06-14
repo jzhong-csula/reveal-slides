@@ -32,42 +32,42 @@ California State University, Los Angeles</h6>
 </section>
 
 <section>
-<section id="slide-org07822a3">
-<h2 id="org07822a3">Chapter 1 - Introduction to Probability</h2>
-<div class="outline-text-2" id="text-org07822a3">
+<section id="slide-org4ecc76a">
+<h2 id="org4ecc76a">Chapter 1 - Introduction to Probability</h2>
+<div class="outline-text-2" id="text-org4ecc76a">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org4dc144d">
-<h3 id="org4dc144d">1.4. Set Theory</h3>
+<section id="slide-org7b0128d">
+<h3 id="org7b0128d">1.4. Set Theory</h3>
 </section>
 </section>
 <section>
-<section id="slide-org963c77a">
-<h3 id="org963c77a">1.5. The Definition of Probability</h3>
+<section id="slide-org62df230">
+<h3 id="org62df230">1.5. The Definition of Probability</h3>
 </section>
 </section>
 <section>
-<section id="slide-org9ff6bf6">
-<h3 id="org9ff6bf6">1.6. Finite Sample Spaces</h3>
+<section id="slide-org84b4b8b">
+<h3 id="org84b4b8b">1.6. Finite Sample Spaces</h3>
 </section>
 </section>
 <section>
-<section id="slide-org5539dae">
-<h3 id="org5539dae">1.7. Counting Methods</h3>
+<section id="slide-org8976084">
+<h3 id="org8976084">1.7. Counting Methods</h3>
 </section>
 </section>
 <section>
-<section id="slide-org4dd8a79">
-<h3 id="org4dd8a79">1.8. Combinatorial Methods</h3>
-<div class="outline-text-3" id="text-org4dd8a79">
+<section id="slide-org2057593">
+<h3 id="org2057593">1.8. Combinatorial Methods</h3>
+<div class="outline-text-3" id="text-org2057593">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgd52e977">
-<h4 id="orgd52e977">Example 1.8.1 (choosing subsets)</h4>
+<section id="slide-orga325aee">
+<h4 id="orga325aee">Example 1.8.1 (choosing subsets)</h4>
 <p class="fragment">
 Consider the set \(\{a, b, c, d\}\).
 </p>
@@ -77,7 +77,7 @@ How many distinct subsets of size two?
 </p>
 
 <p class="fragment">
-
+<span style="color: rgb(30,144,255)">Note: \(\{a, b\} = \{b, a\}\), where the order does not matter!</span>
 </p>
 <p class="fragment">
 All subsets of size two:
@@ -90,14 +90,14 @@ and the total is \(6\).
 </section>
 </section>
 <section>
-<section id="slide-org8723229">
-<h4 id="org8723229">Combination</h4>
+<section id="slide-org782d80b">
+<h4 id="org782d80b">Combination</h4>
 <p class="fragment">
 A selection of items from a set such that the order of the selection does not matter.
 </p>
 
 <p class="fragment">
-In fact, a combination is an sampling .
+In fact, a combination is an <span style="color: rgb(30,144,255)">unordered</span> sampling <span style="color: rgb(30,144,255)">without replacement</span>.
 </p>
 
 <p class="fragment">
@@ -113,8 +113,8 @@ C_{n, k}, \quad\text{or}\quad C^n_k, \quad\text{or}\quad \binom{n}{k}
 </section>
 </section>
 <section>
-<section id="slide-org2672af4">
-<h4 id="org2672af4">How to find this number \(C_{n,k}\)?</h4>
+<section id="slide-org57ed4f4">
+<h4 id="org57ed4f4">How to find this number \(C_{n,k}\)?</h4>
 <p class="fragment">
 We will use a different way to compute \(P_{n,k}\).
 </p>
@@ -155,8 +155,8 @@ C_{n,k} = \frac{P_{n,k}}{k!} = \frac{n!}{(n-k)! k!}.
 </section>
 </section>
 <section>
-<section id="slide-orgefad9b2">
-<h4 id="orgefad9b2">Example</h4>
+<section id="slide-org61e3cd6">
+<h4 id="org61e3cd6">Example</h4>
 <p class="fragment">
 Select \(5\) of \(30\) students in a class without regard to the order:
 </p>
@@ -170,8 +170,8 @@ C_{30, 5} = \frac{30!}{25!5!}
 </section>
 </section>
 <section>
-<section id="slide-orge43e447">
-<h4 id="orge43e447">Binomial coefficient</h4>
+<section id="slide-org0ed0cb2">
+<h4 id="org0ed0cb2">Binomial coefficient</h4>
 <p class="fragment">
 \[
 \binom{n}{k} = C_{n,k} = \frac{n!}{(n-k)! k!}
@@ -261,14 +261,14 @@ The second formula above suggests that choosing \(k\) items from a set of \(n\) 
 </p>
 
 <p class="fragment">
-In other words, a combination is in fact a of a set into two parts.
+In other words, a combination is in fact a <span style="color: rgb(30,144,255)">partition</span> of a set into two parts.
 </p>
 
 </section>
 </section>
 <section>
-<section id="slide-orgd54fe69">
-<h4 id="orgd54fe69">Example</h4>
+<section id="slide-org140067e">
+<h4 id="org140067e">Example</h4>
 <p>
 Flip a fair coin \(10\) times.
 </p>
@@ -330,8 +330,8 @@ p' = \frac{\# A'}{\# S} = \frac{\binom{10}{0} + \binom{10}{1} + \binom{10}{2} + 
 </section>
 </section>
 <section>
-<section id="slide-orgcdd2f6f">
-<h4 id="orgcdd2f6f">Sampling with replacement but unordered</h4>
+<section id="slide-orgdcf89da">
+<h4 id="orgdcf89da">Sampling with replacement but unordered</h4>
 <p class="fragment">
 Recall: sampling with replacement but ordered
 \[
@@ -342,18 +342,18 @@ n^k.
 </section>
 </section>
 <section>
-<section id="slide-orgbd75b44">
-<h4 id="orgbd75b44">Example 1.8.4 (Blood types)</h4>
+<section id="slide-org4dc144c">
+<h4 id="org4dc144c">Example 1.8.4 (Blood types)</h4>
 <p class="fragment">
 The gene for human blood types consists of a pair of alleles chosen from three alleles, called \(A, B\) and \(O\).
 </p>
 
 <p class="fragment">
-\(OA\) is the same as \(AO\): .
+\(OA\) is the same as \(AO\): <span style="color: rgb(30,144,255)">order does not matter</span>.
 </p>
 
 <p class="fragment">
-\(AA, BB, CC\) are valid types: .
+\(AA, BB, OO\) are valid types: <span style="color: rgb(30,144,255)">with replacement</span>.
 </p>
 
 <p class="fragment">
@@ -365,7 +365,7 @@ We can simply list all cases: \(AA, BB, OO, AB, BO, AO\), and there are \(6\) in
 </p>
 
 <p class="fragment">
-<b></b>: \(6\) here is not \(C_{3,2} = 3\), nor \(3^2 = 9\).
+<b><span style="color: rgb(255,0,0)">Warning</span></b>: \(6\) here is not \(C_{3,2} = 3\), nor \(3^2 = 9\).
 </p>
 
 </section>
@@ -417,33 +417,27 @@ When \(k=2\),
 </section>
 </section>
 <section>
-<section id="slide-org5cdec19">
-<h4 id="org5cdec19">Summary</h4>
+<section id="slide-org124ef3c">
+<h4 id="org124ef3c">Summary</h4>
 <ul class="org-ul">
-<li><a id="org9f140b2"></a>Sampling with replacement, order matters.\\<br />
+<li><a id="org8193eca"></a>Sampling with replacement, order matters.<br />
 <p>
 Example: flip a fair coin \(10\) times, then \(\# S = 2^{10} (n^k)\).
 </p>
-
-<p class="fragment">
-(2) Sampling without replacement, order matters.
-</p>
-
+</li>
+<li><a id="org9715718"></a>Sampling without replacement, order matters.<br />
 <p>
 Example: pick \(5\) students out of 30 to form a line: \(P_{30, 5}, \quad(P_{n,k})\).
 </p>
-
-<p class="fragment">
-(3) Sampling without replacement, order does not matter.
-</p>
-
+</li>
+<li><a id="org30c260a"></a>Sampling without replacement, order does not matter.<br />
 <p>
 Example: pick \(5\) students out of \(30\) to form a team/committee: \(C_{30, 5} = \binom{30}{5}\).
 </p>
-
-<p class="fragment">
-(4) Sampling with replacement, order does not matter (tricky).
-  Example 1.8.4, Exercise 19.
+</li>
+<li><a id="org4160726"></a>Sampling with replacement, order does not matter (tricky).<br />
+<p>
+Example 1.8.4, Exercise 19.
 </p>
 </li>
 </ul>
@@ -451,62 +445,78 @@ Example: pick \(5\) students out of \(30\) to form a team/committee: \(C_{30, 5}
 </section>
 </section>
 <section>
-<section id="slide-org83504da">
-<h4 id="org83504da">Example</h4>
+<section id="slide-org41fe19e">
+<h4 id="org41fe19e">Example</h4>
 <p>
 Suppose we have a class of \(24\) children. We consider three different scenarios that each involves choosing \(3\) children.
 </p>
 
 <p>
-(1) Every day a random child is chosen to lead the class to lunch, without regard to previous choices.
+Every day a random child is chosen to lead the class to lunch, without regard to previous choices.
 </p>
 
+</section>
+<section>
 <p>
-What is the probability that Carlos was chosen on Monday and Wednesday, Aaron on Tuesday?
+(1) What is the probability that Carlos was chosen on Monday and Wednesday, Aaron on Tuesday?
 </p>
 
-<p>
+<p class="fragment">
 Let \(A\) denote the event that Carlos was chosen on Monday and Wednesday, Aaron on Tuesday.
 </p>
 
-<p>
+<p class="fragment">
 There are two ways to count in this problem:
+</p>
+<p class="fragment">
 \[
 \# S = 24^3,~ \# A = 1\qquad \text{or}\qquad \# S = 24^5, ~ \# A = 24^2,
 \]
 but both give you
+</p>
+<p class="fragment">
 \[
 \mathbb{P}(A) = \frac{1}{24^{3}}.
 \]
 </p>
 
+</section>
+<section>
 <p>
 (2) Three children are chosen randomly to be the class president, vice president and treasurer. No student can hold more than one position. What&rsquo;s the probability that Mary is president, Cory is vice president and Matt is treasurer?
 </p>
 
-<p>
+<p class="fragment">
 Let \(A'\) be the event that Mary is president, Cory is vice president and Matt is treasurer. Then
+</p>
+<p class="fragment">
 \[
 \# S = P_{24, 3}, \quad \# A' = 1,
 \]
 and
+</p>
+<p class="fragment">
 \[
 \mathbb{P}(A') = \frac{1}{P_{24,3}}.
 \]
 </p>
 
+</section>
+<section>
 <p>
 (3) A team of three children is chosen at random. What&rsquo;s the probability that Mary is on the team?
 </p>
 
-<p>
+<p class="fragment">
 Let \(A''\) be the event that Mary is on the team. Then
 </p>
 
-<p>
+<p class="fragment">
 \[
 \# S = \binom{24}{3}, \quad \# A'' = \binom{1}{1} \binom{23}{2},
 \]
+</p>
+<p class="fragment">
 and
 \[
 \mathbb{P}(A') = \frac{\binom{1}{1} \binom{23}{2}}{\binom{24}{3}}.
@@ -516,8 +526,8 @@ and
 </section>
 </section>
 <section>
-<section id="slide-org4215cb3">
-<h3 id="org4215cb3">1.9. Multinomial Coefficients</h3>
+<section id="slide-org37ecc53">
+<h3 id="org37ecc53">1.9. Multinomial Coefficients</h3>
 <p>
 Recall: Binomial coefficient
 \[\binom{n}{k} = C_{n, k} = \binom{n}{n-k}\]
@@ -526,29 +536,37 @@ Recall: Binomial coefficient
 </section>
 </section>
 <section>
-<section id="slide-org8853402">
-<h4 id="org8853402">Partitions</h4>
-<p>
-A combination is a choice of \(k\) items of an \(n\) -item set, and the order does not matter.
+<section id="slide-org4915e2b">
+<h4 id="org4915e2b">Partitions</h4>
+<p class="fragment">
+A combination is a choice of \(k\) items of an \(n\text{-item}\) set, and the order does not matter.
+</p>
+
+<p class="fragment">
 This is the same as partitioning the set into two parts. One part contains \(k\) items, and the other contains the remaining \(n-k\) items.
 </p>
 
-<p>
+<p class="fragment">
 Now consider partitions into more than two parts.
 </p>
 
+</section>
+</section>
+<section>
+<section id="slide-orge791864">
+<h4 id="orge791864">Example</h4>
 <p>
-Example. Suppose that \(20\) members of an  4 organization are to be divided into three committees \(A, B\) and \(C\), in such a way \(A\) and \(B\) each has \(8\) members, \(C\) has \(4\) members. Each member can be assigned to only one committee.
+Suppose that \(20\) members of an  4 organization are to be divided into three committees \(A, B\) and \(C\), in such a way \(A\) and \(B\) each has \(8\) members, \(C\) has \(4\) members. Each member can be assigned to only one committee.
 </p>
 
-<p>
-How many ways to assign the members?
+<p class="fragment">
+<b>Question</b>: How many ways to assign the members?
 </p>
 
-<p>
-\(3\) -step procedure: in each step we choose the members to one committee.
+<p class="fragment">
+\(3\text{-step}\) procedure: in each step we choose the members to one committee.
 </p>
-<div>
+<div class="fragment">
 \begin{align*}
   & \binom{20}{8} \cdot \binom{12}{8} \cdot \binom{4}{4}\\
   = & \frac{20!}{8!12!} \cdot \frac{12!}{8!4!} \cdot 1\\
@@ -556,25 +574,35 @@ How many ways to assign the members?
 \end{align*}
 
 </div>
-
-<p>
-In general, given a set of \(n\) distinct items and non-negative integers \(n_{1}, n_{2}, \dots, n_{r}\) with \(n_1 + n_2 + \cdots +n _r = n\).
+</section>
+</section>
+<section>
+<section id="slide-org43065d1">
+<h4 id="org43065d1">Partitions - General Case</h4>
+<p class="fragment">
+Given a set of \(n\) distinct items and non-negative integers \(n_{1}, n_{2}, \dots, n_{r}\) with \(n_1 + n_2 + \cdots +n _r = n\).
 </p>
 
-<p>
-How many ways can the set be partitioned into \(r\) disjoint subsets with \(n_i\) items in its \(i^{\text{th}}\) subset?
+<p class="fragment">
+<b>Question</b>: How many ways can the set be partitioned into \(r\) disjoint subsets with \(n_i\) items in its \(i^{\text{th}}\) subset?
+</p>
+
+<p class="fragment">
 We call this number
 \[
   \binom{n}{n_1, n_{2}, \dots, n_{r}}
 \]
 </p>
 
+</section>
+<section>
 <p>
-This is  a \(r\) -step procedure:
+This is  a \(r\text{-step}\) procedure:
 </p>
-<div>
+<div class="fragment">
 \begin{align*}
-  & \binom{n}{n_{1}} \cdot \binom{n-n_{1}}{n_{2}} \cdots \binom{n-n_{1}-n_{2}-\cdots - n_{r-1}}{n_{r}}\\
+  &\binom{n}{n_1, n_{2}, \dots, n_{r}}=
+ \binom{n}{n_{1}} \cdot \binom{n-n_{1}}{n_{2}} \cdots \binom{n-n_{1}-n_{2}-\cdots - n_{r-1}}{n_{r}}\\
   = & \frac{n!}{n_{1}!(n-n_{1})!} \cdot \frac{(n-n_{1})!}{n_{2}!(n-n_{1} - n_{2})!} \cdot \frac{(n-n_{1} -n_{2})!}{n_{3}!(n-n_{1} - n_{2}-n_{3})!}\\
    &  \qquad \cdots \frac{(n-n_{1} -n_{2}- \cdots n_{r-1})!}{n_{r}!(n-n_{1} - n_{2}-\cdots - n_{r-1} - n_{r})!}\\
 = & \frac{n!}{n_{1}!n_{2}! \cdots n_{r}!}
@@ -582,7 +610,7 @@ This is  a \(r\) -step procedure:
 
 </div>
 
-<p>
+<p class="fragment">
 Check for \(n=2\): \(n_1 = k, n_2 = n-k\),
 \[
 \binom{n}{k} = \binom{n}{n-k} = \binom{n}{k, n-k} = \frac{n!}{k!(n-k)!}
@@ -593,92 +621,151 @@ Check for \(n=2\): \(n_1 = k, n_2 = n-k\),
 </section>
 </section>
 <section>
-<section id="slide-org52fe89e">
-<h4 id="org52fe89e">Example</h4>
+<section id="slide-org6237fb7">
+<h4 id="org6237fb7">Example</h4>
 <p>
 How many arrangements are there of the letters &ldquo;BANANA&rdquo;?
 </p>
 
+
+</section>
+<section>
 <p>
 Solution (1):
+</p>
+
+<p class="fragment">
 There are \(6\) positions for the \(3\) letters.
+</p>
+
+<p class="fragment">
 Each arrangement is a partition of the set of \(6\) positions into a subset of size \(3\) (the positions that get the letter \(A\)), and subset of size \(2\) (the positions that get the letter \(N\)), and a subset of size \(1\) (the position that gets the letter \(B\)).
 </p>
 
-<p>
+<p class="fragment">
 For example,
+</p>
+<p class="fragment">
 \[
 A A A B N N \leftrightarrow \{1, 2, 3\}, \{4\}, \{5, 6\}
 \]
+</p>
+<p class="fragment">
 \[
 B A N A N A \leftrightarrow \{1, 2, 3\}, \{4\}, \{5, 6\}
 \]
 </p>
 
-<p>
+<p class="fragment">
 Total number of arrangements:
+</p>
+<p class="fragment">
 \[
 \binom{6}{3,2,1} = \frac{6!}{3!2!1!} = 60.
 \]
 </p>
 
+</section>
+<section>
 <p>
 Solution (2):
+</p>
+
+<p class="fragment">
 We first pretend the \(6\) letters are distinct:
+</p>
+<p class="fragment">
 \[
 B, A_1, A_2, A_3, N_1, N_2.
 \]
+</p>
+<p class="fragment">
 There are \(6!\) ways to arrange them.
-But each of \(3!\) ways to arrange \(A\)&rsquo;s and each of the 2! ways to arrange $N$s correspond to the same arrangement.
 </p>
 
-<p>
+<p class="fragment">
+But each of \(3!\) ways to arrange \(A\)&rsquo;s and each of the 2! ways to arrange \(N\)&rsquo;s correspond to the same arrangement.
+</p>
+
+<p class="fragment">
 For example,
 \[
 B A_1 N_1 A_2 N_2 A_3 \quad\text{and}\quad B A_2 N_1 A_3 N_2 A_{1}
 \]
-both spell as \(BANANA\). So we need to divide it by \(3!2!\), there are
+both spell as \(BANANA\).
+</p>
+
+<p class="fragment">
+So we need to divide it by \(3!2!\), and the total number ways is
 \[
-\frac{6!}{3!2!} = 60 = \binom{6}{3, 2, 1}
+\frac{6!}{3!2!} = 60 = \binom{6}{3, 2, 1}.
 \]
-ways of arrangements.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org14cc6dc">
+<h4 id="org14cc6dc">Example 1.9.4</h4>
+<p>
+A deck of \(52\) cards, containing \(13\) hearts. Suppose cards are shuffled and distributed among \(A, B, C\) and \(D\) four players.
 </p>
 
 <p>
-Example. (Example 1.9.4)
-A deck of \(52\) cards, containing \(13\) hearts. Suppose cards are shuffled and distributed among \(A, B, C\) and \(D\) four players.
 What is the probability that \(A\) gets \(6\) hearts, \(B\) gets \(4\) hearts, \(C\) gets \(2\) hearts, and \(D\) gets \(1\) heart?
 </p>
 
+</section>
+<section>
 <p>
 Solution (1):
+</p>
+<p class="fragment">
 \[
 \# S = \binom{52}{13, 13, 13, 13} = \frac{52!}{(13!)^4}.
 \]
+</p>
+<p class="fragment">
 Let \(E\) be the event that \(A\) gets \(6\) hearts, \(B\) gets \(4\) hearts, \(C\) gets \(2\) hearts, and \(D\) gets \(1\) heart, then
+</p>
+<p class="fragment">
 \[
 \# E = \binom{13}{6, 4, 2, 1} \cdot \binom{39}{7, 9, 11, 12}.
 \]
+</p>
+<p class="fragment">
 Thus,
 \[
 \mathbb{P}(E) = \frac{\# E}{\# S} = \frac{13!}{6!4!2!} \cdot \frac{39!}{7!9!11!12!} \cdot \frac{(13!)^{4}}{52!}.
 \]
 </p>
 
+</section>
+<section>
 <p>
 Solution (2):
-Consider \(52\) cards are distributed one by one. So there are \(\# S = \binom{52}{13}\) total number of combinations of positions of \(13\) hearts, and
+</p>
+<p class="fragment">
+Consider \(52\) cards are distributed one by one.
+</p>
+
+<p class="fragment">
+So there are \(\# S = \binom{52}{13}\) total number of combinations of positions of \(13\) hearts, and
+</p>
+<p class="fragment">
 \[
 \# E = \binom{13}{6} \binom{13}{4} \binom{13}{2} \binom{13}{1}.
 \]
-Of course the probability \(\mathbb{P}(E)\) is the same as before.
+</p>
+<p class="fragment">
+Of course, the probability \(\mathbb{P}(E)\) is the same as before.
 </p>
 
 </section>
 </section>
 <section>
-<section id="slide-orgf20824b">
-<h3 id="orgf20824b">1.10. The Probability of a Union of Events</h3>
+<section id="slide-org20f4017">
+<h3 id="org20f4017">1.10. The Probability of a Union of Events</h3>
 <p>
 Recall: Inclusion-Exclusion formula
 \[
@@ -686,7 +773,7 @@ Recall: Inclusion-Exclusion formula
 \]
 </p>
 
-<div id="org45d8c35" class="figure">
+<div id="org210ee31" class="figure">
 <p><img src="file:///Users/jzhong/gDrive/reveal-slides/org-files/20220610-16572920220610-164412intersection-of-two-sets.png" alt="20220610-16572920220610-164412intersection-of-two-sets.png" width="400px" />
 </p>
 </div>
@@ -703,7 +790,7 @@ Theorem. (1) Three events:
 
 </div>
 
-<div id="orgdf633b5" class="figure">
+<div id="orgb4d1be1" class="figure">
 <p><img src="file:///Users/jzhong/gDrive/reveal-slides/org-files/20220610-164431intersection-venn-diagram.png" alt="20220610-164431intersection-venn-diagram.png" width="400px" />
 </p>
 </div>
@@ -719,8 +806,8 @@ Example 1.10.1 (easy, read by yourself)
 </section>
 </section>
 <section>
-<section id="slide-org1062592">
-<h4 id="org1062592">Matching Problem</h4>
+<section id="slide-org7f9d406">
+<h4 id="org7f9d406">Matching Problem</h4>
 <p>
 Suppose \(3\) men throw their hats into the center of a room. The hats are mixed up, and then each man randomly selects a hat. What&rsquo;s the probability that at least one man selects his own hat?
 </p>
@@ -771,15 +858,15 @@ Note: see the &ldquo;hat problem&rdquo; on page 49 for the general case.
 </section>
 </section>
 <section>
-<section id="slide-orgd96761c">
-<h2 id="orgd96761c">Chapter 2 - Conditional Probability</h2>
-<div class="outline-text-2" id="text-orgd96761c">
+<section id="slide-org5caf130">
+<h2 id="org5caf130">Chapter 2 - Conditional Probability</h2>
+<div class="outline-text-2" id="text-org5caf130">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org78441fa">
-<h3 id="org78441fa">The Definition of Conditional Probability</h3>
+<section id="slide-orge8d1e90">
+<h3 id="orge8d1e90">The Definition of Conditional Probability</h3>
 <p>
 Definition. Given an experiment with probability model \((S, \mathbb{P}, \mathcal{F})\). Suppose we know the outcome belongs to a given event \(B\), such that \(\mathbb{P}(B)>0\). The probability that the outcome also belongs to the event \(A\) is called the conditional probability of \(A\) given \(B\), and is defined by
 \[
@@ -789,7 +876,7 @@ Intuitively, out of the total probability assigned to elements of \(B\), \(\math
 </p>
 
 
-<div id="org72f41f4" class="figure">
+<div id="orgc3eac52" class="figure">
 <p><img src="file:///Users/jzhong/gDrive/reveal-slides/org-files/20220610-211829Complement of a Set.svg" alt="20220610-211829Complement of a Set.svg" class="org-svg" width="400px" />
 </p>
 </div>
@@ -797,42 +884,42 @@ Intuitively, out of the total probability assigned to elements of \(B\), \(\math
 </section>
 </section>
 <section>
-<section id="slide-org437277c">
-<h3 id="org437277c">Independent Events</h3>
+<section id="slide-org615d116">
+<h3 id="org615d116">Independent Events</h3>
 </section>
 </section>
 <section>
-<section id="slide-orge883e1b">
-<h3 id="orge883e1b">Bayes&rsquo; Theorem</h3>
+<section id="slide-org23c1306">
+<h3 id="org23c1306">Bayes&rsquo; Theorem</h3>
 </section>
 </section>
 <section>
-<section id="slide-orge2319cb">
-<h2 id="orge2319cb">Chapter 3 - Random Variables and Distributions</h2>
-<div class="outline-text-2" id="text-orge2319cb">
+<section id="slide-org52c6333">
+<h2 id="org52c6333">Chapter 3 - Random Variables and Distributions</h2>
+<div class="outline-text-2" id="text-org52c6333">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org32db774">
-<h3 id="org32db774">Random Variables and Discrete Distributions</h3>
+<section id="slide-orgc27661d">
+<h3 id="orgc27661d">Random Variables and Discrete Distributions</h3>
 </section>
 </section>
 <section>
-<section id="slide-org0d7089f">
-<h3 id="org0d7089f">Continuous Distributions</h3>
+<section id="slide-org89c4d38">
+<h3 id="org89c4d38">Continuous Distributions</h3>
 </section>
 </section>
 <section>
-<section id="slide-org6844a29">
-<h3 id="org6844a29">The Cumulative Distribution Functions</h3>
-<div class="outline-text-3" id="text-org6844a29">
+<section id="slide-org47e7a4e">
+<h3 id="org47e7a4e">The Cumulative Distribution Functions</h3>
+<div class="outline-text-3" id="text-org47e7a4e">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org9201e7b">
-<h4 id="org9201e7b">Why CDF?</h4>
+<section id="slide-orgc6e7c74">
+<h4 id="orgc6e7c74">Why CDF?</h4>
 <p>
 Suppose the p.d.f of \(X\) is de  fined by
 \[
@@ -859,8 +946,8 @@ Compute
 </section>
 </section>
 <section>
-<section id="slide-org30604f7">
-<h4 id="org30604f7">another</h4>
+<section id="slide-org60cd469">
+<h4 id="org60cd469">another</h4>
 <p>
 \[
 \mathbb{P}(X\le 3)
@@ -871,78 +958,78 @@ test
 </section>
 </section>
 <section>
-<section id="slide-orgcebe413">
-<h3 id="orgcebe413">Bivariate Distributions</h3>
+<section id="slide-orga89688a">
+<h3 id="orga89688a">Bivariate Distributions</h3>
 </section>
 </section>
 <section>
-<section id="slide-orgcb705d1">
-<h3 id="orgcb705d1">Marginal Distributions</h3>
+<section id="slide-orgefc5caa">
+<h3 id="orgefc5caa">Marginal Distributions</h3>
 </section>
 </section>
 <section>
-<section id="slide-org6653066">
-<h3 id="org6653066">Conditional Distributions</h3>
+<section id="slide-org566b998">
+<h3 id="org566b998">Conditional Distributions</h3>
 </section>
 </section>
 <section>
-<section id="slide-orgf6fa8e0">
-<h3 id="orgf6fa8e0">Multivariate Distributions</h3>
+<section id="slide-org3fc5c05">
+<h3 id="org3fc5c05">Multivariate Distributions</h3>
 <p>
 Skip.
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org0e3176e">
-<h3 id="org0e3176e">Functions of a Random Variable</h3>
+<section id="slide-orga93cb89">
+<h3 id="orga93cb89">Functions of a Random Variable</h3>
 </section>
 </section>
 <section>
-<section id="slide-orgaa64b96">
-<h3 id="orgaa64b96">Functions of Two or More Random Variables</h3>
+<section id="slide-org3dc794b">
+<h3 id="org3dc794b">Functions of Two or More Random Variables</h3>
 </section>
 </section>
 <section>
-<section id="slide-org3e7ef50">
-<h2 id="org3e7ef50">Chapter 4 - Expectation</h2>
-<div class="outline-text-2" id="text-org3e7ef50">
+<section id="slide-org2549e0b">
+<h2 id="org2549e0b">Chapter 4 - Expectation</h2>
+<div class="outline-text-2" id="text-org2549e0b">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orga4db034">
-<h3 id="orga4db034">The Expectation of a Random Variable</h3>
+<section id="slide-org03a7909">
+<h3 id="org03a7909">The Expectation of a Random Variable</h3>
 </section>
 </section>
 <section>
-<section id="slide-orga0c2326">
-<h3 id="orga0c2326">Properties of Expectations</h3>
+<section id="slide-orgd5b25f4">
+<h3 id="orgd5b25f4">Properties of Expectations</h3>
 </section>
 </section>
 <section>
-<section id="slide-org2320d77">
-<h3 id="org2320d77">Variance</h3>
+<section id="slide-org3089f81">
+<h3 id="org3089f81">Variance</h3>
 </section>
 </section>
 <section>
-<section id="slide-orgd3aa001">
-<h3 id="orgd3aa001">4.6. Covariance and Correlation</h3>
+<section id="slide-org3915113">
+<h3 id="org3915113">4.6. Covariance and Correlation</h3>
 </section>
 </section>
 <section>
-<section id="slide-org3073708">
-<h3 id="org3073708">4.4. Moments</h3>
+<section id="slide-orgf24a539">
+<h3 id="orgf24a539">4.4. Moments</h3>
 </section>
 </section>
 <section>
-<section id="slide-org0e65893">
-<h3 id="org0e65893">4.5. The Mean and Median</h3>
+<section id="slide-orgb223559">
+<h3 id="orgb223559">4.5. The Mean and Median</h3>
 </section>
 </section>
 <section>
-<section id="slide-orgc10eb0d">
-<h3 id="orgc10eb0d">4.7. Conditional Expectation</h3>
+<section id="slide-org5cd08d7">
+<h3 id="org5cd08d7">4.7. Conditional Expectation</h3>
 </section>
 </section>
 </div>
