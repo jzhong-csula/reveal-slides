@@ -3,6 +3,13 @@
     font-size: 0.8em;
 }
 
+/* Make the image centered but the text sill align left */
+img.middle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Need the following to make aligned equations have similar font size */
 .reveal div {
     font-size: 90%;
