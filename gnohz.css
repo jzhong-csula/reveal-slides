@@ -3,6 +3,24 @@
     font-size: 0.8em;
 }
 
+/* table font size */
+.reveal td {
+    font-size: 0.8em;
+}
+
+/* table color */
+.reveal section table th {
+  background-color: rgba(230, 230, 250, 1);
+  font-size: 0.8em;
+  text-align: center;}
+
+.reveal section table tr:nth-child(even) {
+  background-color:  rgba(230, 230, 250, 0.7); }
+
+.reveal section table tr:nth-child(odd) {
+  background-color:  rgba(230, 230, 250, 0.3); }
+
+
 /* Make the image centered but the text sill align left */
 img.middle{
     display: block;
