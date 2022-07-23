@@ -19,7 +19,7 @@ California State University, Los Angeles"/>
 <link rel="stylesheet" href="../reveal.js-plugins/menu/font-awesome/css/fontawesome.css"/>
 
 <link rel="stylesheet" href="../gnohz.css"/>
-<script>window.MathJax = { TeX: {Macros: {range: "\\text{Range}", ow: "\\text{otherwise}"}} }</script>
+<script>window.MathJax = { TeX: {Macros: {range: "\\text{Range}"}} }</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body>
@@ -33,42 +33,42 @@ California State University, Los Angeles</h6>
 </section>
 
 <section>
-<section id="slide-org91e9d39">
-<h2 id="org91e9d39">Chapter 1 - Introduction to Probability</h2>
-<div class="outline-text-2" id="text-org91e9d39">
+<section id="slide-org23401f6">
+<h2 id="org23401f6">Chapter 1 - Introduction to Probability</h2>
+<div class="outline-text-2" id="text-org23401f6">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org20b3124">
-<h3 id="org20b3124">1.4. Set Theory</h3>
+<section id="slide-org624516b">
+<h3 id="org624516b">1.4. Set Theory</h3>
 </section>
 </section>
 <section>
-<section id="slide-orgfd5de47">
-<h3 id="orgfd5de47">1.5. The Definition of Probability</h3>
+<section id="slide-org0ca70d4">
+<h3 id="org0ca70d4">1.5. The Definition of Probability</h3>
 </section>
 </section>
 <section>
-<section id="slide-orge303753">
-<h3 id="orge303753">1.6. Finite Sample Spaces</h3>
+<section id="slide-org9798fea">
+<h3 id="org9798fea">1.6. Finite Sample Spaces</h3>
 </section>
 </section>
 <section>
-<section id="slide-org16a0fe5">
-<h3 id="org16a0fe5">1.7. Counting Methods</h3>
+<section id="slide-org123eaef">
+<h3 id="org123eaef">1.7. Counting Methods</h3>
 </section>
 </section>
 <section>
-<section id="slide-org9a60b65">
-<h3 id="org9a60b65">1.8. Combinatorial Methods</h3>
-<div class="outline-text-3" id="text-org9a60b65">
+<section id="slide-org6fb6167">
+<h3 id="org6fb6167">1.8. Combinatorial Methods</h3>
+<div class="outline-text-3" id="text-org6fb6167">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org9d9ab78">
-<h4 id="org9d9ab78">Example 1.8.1 (choosing subsets)</h4>
+<section id="slide-org0753336">
+<h4 id="org0753336">Example 1.8.1 (choosing subsets)</h4>
 <p class="fragment">
 Consider the set \(\{a, b, c, d\}\).
 </p>
@@ -91,8 +91,8 @@ and the total is \(6\).
 </section>
 </section>
 <section>
-<section id="slide-org432134a">
-<h4 id="org432134a">Combination</h4>
+<section id="slide-org7114727">
+<h4 id="org7114727">Combination</h4>
 <p class="fragment">
 A selection of items from a set such that the order of the selection does not matter.
 </p>
@@ -114,8 +114,8 @@ C_{n, k}, \quad\text{or}\quad C^n_k, \quad\text{or}\quad \binom{n}{k}
 </section>
 </section>
 <section>
-<section id="slide-org9b0aa03">
-<h4 id="org9b0aa03">How to find this number \(C_{n,k}\)?</h4>
+<section id="slide-org5ebe3ad">
+<h4 id="org5ebe3ad">How to find this number \(C_{n,k}\)?</h4>
 <p class="fragment">
 We will use a different way to compute \(P_{n,k}\).
 </p>
@@ -156,8 +156,8 @@ C_{n,k} = \frac{P_{n,k}}{k!} = \frac{n!}{(n-k)! k!}.
 </section>
 </section>
 <section>
-<section id="slide-org160481c">
-<h4 id="org160481c">Example</h4>
+<section id="slide-org68d2f9a">
+<h4 id="org68d2f9a">Example</h4>
 <p class="fragment">
 Select \(5\) of \(30\) students in a class without regard to the order:
 </p>
@@ -171,8 +171,8 @@ C_{30, 5} = \frac{30!}{25!5!}
 </section>
 </section>
 <section>
-<section id="slide-org51b113b">
-<h4 id="org51b113b">Binomial coefficient</h4>
+<section id="slide-orga8f3f6b">
+<h4 id="orga8f3f6b">Binomial coefficient</h4>
 <p class="fragment">
 \[
 \binom{n}{k} = C_{n,k} = \frac{n!}{(n-k)! k!}
@@ -268,8 +268,8 @@ In other words, a combination is in fact a <span style="color: rgb(30,144,255)">
 </section>
 </section>
 <section>
-<section id="slide-orga1e8a16">
-<h4 id="orga1e8a16">Example</h4>
+<section id="slide-orgf9b4164">
+<h4 id="orgf9b4164">Example</h4>
 <p>
 Flip a fair coin \(10\) times.
 </p>
@@ -332,8 +332,8 @@ p' = \frac{\# A'}{\# S} = \frac{\binom{10}{0} + \binom{10}{1} + \binom{10}{2} + 
 </section>
 </section>
 <section>
-<section id="slide-org604dd46">
-<h4 id="org604dd46">Sampling with replacement but unordered</h4>
+<section id="slide-org274d6f4">
+<h4 id="org274d6f4">Sampling with replacement but unordered</h4>
 <p class="fragment">
 Recall: sampling with replacement but ordered
 \[
@@ -344,8 +344,8 @@ n^k.
 </section>
 </section>
 <section>
-<section id="slide-org2124107">
-<h4 id="org2124107">Example 1.8.4 (Blood types)</h4>
+<section id="slide-org0233838">
+<h4 id="org0233838">Example 1.8.4 (Blood types)</h4>
 <p class="fragment">
 The gene for human blood types consists of a pair of alleles chosen from three alleles, called \(A, B\) and \(O\).
 </p>
@@ -419,8 +419,8 @@ When \(k=2\),
 </section>
 </section>
 <section>
-<section id="slide-orgc4ed9a9">
-<h4 id="orgc4ed9a9">Summary</h4>
+<section id="slide-org2ba5a7a">
+<h4 id="org2ba5a7a">Summary</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">Sampling with replacement, order matters.<br />
 Example: flip a fair coin \(10\) times, then \(\# S = 2^{10} (n^k)\).</li>
@@ -436,8 +436,8 @@ Example 1.8.4, Exercise 19.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgae3a995">
-<h4 id="orgae3a995">Example</h4>
+<section id="slide-org894c305">
+<h4 id="org894c305">Example</h4>
 <p>
 Suppose we have a class of \(24\) children. We consider three different scenarios that each involves choosing \(3\) children.
 </p>
@@ -517,8 +517,8 @@ and
 </section>
 </section>
 <section>
-<section id="slide-org33e4d01">
-<h3 id="org33e4d01">1.9. Multinomial Coefficients</h3>
+<section id="slide-orgcc85727">
+<h3 id="orgcc85727">1.9. Multinomial Coefficients</h3>
 <p>
 Recall: Binomial coefficient
 \[\binom{n}{k} = C_{n, k} = \binom{n}{n-k}\]
@@ -527,8 +527,8 @@ Recall: Binomial coefficient
 </section>
 </section>
 <section>
-<section id="slide-org1f7997b">
-<h4 id="org1f7997b">Partitions</h4>
+<section id="slide-orgc27f86d">
+<h4 id="orgc27f86d">Partitions</h4>
 <p class="fragment">
 A combination is a choice of \(k\) items of an \(n\text{-item}\) set, and the order does not matter.
 </p>
@@ -544,8 +544,8 @@ Now consider partitions into more than two parts.
 </section>
 </section>
 <section>
-<section id="slide-orgec31c0a">
-<h4 id="orgec31c0a">Example</h4>
+<section id="slide-org19b184d">
+<h4 id="org19b184d">Example</h4>
 <p>
 Suppose that \(20\) members of an organization are to be divided into three committees \(A, B\) and \(C\), in such a way \(A\) and \(B\) each has \(8\) members, \(C\) has \(4\) members. Each member can be assigned to only one committee.
 </p>
@@ -568,8 +568,8 @@ Suppose that \(20\) members of an organization are to be divided into three comm
 </section>
 </section>
 <section>
-<section id="slide-org00a62ab">
-<h4 id="org00a62ab">Partitions - General Case</h4>
+<section id="slide-orgc3e9940">
+<h4 id="orgc3e9940">Partitions - General Case</h4>
 <p class="fragment">
 Given a set of \(n\) distinct items and non-negative integers \(n_{1}, n_{2}, \dots, n_{r}\) with \(n_1 + n_2 + \cdots +n _r = n\).
 </p>
@@ -612,8 +612,8 @@ Check for \(r=2\): \(n_1 = k, n_2 = n-k\),
 </section>
 </section>
 <section>
-<section id="slide-org47abfb5">
-<h4 id="org47abfb5">Example</h4>
+<section id="slide-org9e6a4e0">
+<h4 id="org9e6a4e0">Example</h4>
 <p>
 How many arrangements are there of the letters &ldquo;BANANA&rdquo;?
 </p>
@@ -696,8 +696,8 @@ So we need to divide it by \(3!2!\), and the total number ways is
 </section>
 </section>
 <section>
-<section id="slide-org6e10335">
-<h4 id="org6e10335">Example 1.9.4</h4>
+<section id="slide-org4c8d896">
+<h4 id="org4c8d896">Example 1.9.4</h4>
 <p>
 A deck of \(52\) cards, containing \(13\) hearts. Suppose cards are shuffled and distributed among \(A, B, C\) and \(D\) four players.
 </p>
@@ -755,8 +755,8 @@ Of course, the probability \(\mathbb{P}(E)\) is the same as before.
 </section>
 </section>
 <section>
-<section id="slide-org632dfeb">
-<h3 id="org632dfeb">1.10. The Probability of a Union of Events</h3>
+<section id="slide-orge158c2c">
+<h3 id="orge158c2c">1.10. The Probability of a Union of Events</h3>
 <p>
 Recall: Inclusion-Exclusion formula
 </p>
@@ -767,7 +767,7 @@ Recall: Inclusion-Exclusion formula
 </p>
 
 
-<div id="orga5a4372" class="figure">
+<div id="org0555355" class="figure">
 <p><img src="../img/20220610-164412intersection-of-two-sets.png" alt="20220610-164412intersection-of-two-sets.png" class="fragment middle" width="600px" />
 </p>
 </div>
@@ -791,7 +791,7 @@ Recall: Inclusion-Exclusion formula
 </div>
 
 
-<div id="org9b8295b" class="figure">
+<div id="orgfc6a338" class="figure">
 <p><img src="../img/20220610-164431intersection-venn-diagram.png" alt="20220610-164431intersection-venn-diagram.png" class="fragment middle" width="400px" />
 </p>
 </div>
@@ -819,8 +819,8 @@ Example 1.10.1 (easy, read by yourself)
 </section>
 </section>
 <section>
-<section id="slide-org64c7778">
-<h4 id="org64c7778">Matching Problem</h4>
+<section id="slide-orgc35f821">
+<h4 id="orgc35f821">Matching Problem</h4>
 <p class="fragment">
 Suppose \(3\) men throw their hats into the center of a room. The hats are mixed up, and then each man randomly selects a hat.
 </p>
@@ -908,15 +908,15 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-orga496394">
-<h2 id="orga496394">Chapter 2 - Conditional Probability</h2>
-<div class="outline-text-2" id="text-orga496394">
+<section id="slide-org1b31458">
+<h2 id="org1b31458">Chapter 2 - Conditional Probability</h2>
+<div class="outline-text-2" id="text-org1b31458">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org0b0c264">
-<h3 id="org0b0c264">2.1. The Definition of Conditional Probability</h3>
+<section id="slide-org82d693b">
+<h3 id="org82d693b">2.1. The Definition of Conditional Probability</h3>
 <p class="fragment">
 Given an experiment with probability model \((S, \mathbb{P}, \mathcal{F})\).
 </p>
@@ -939,7 +939,7 @@ Intuitively, out of the total probability assigned to elements of \(B\), \(\math
 </p>
 
 
-<div id="orged15ecc" class="figure">
+<div id="org2f443be" class="figure">
 <p><img src="../img/20220610-211829Complement of a Set.svg" alt="20220610-211829Complement of a Set.svg" class="fragment middle" width="400px" />
 </p>
 </div>
@@ -947,8 +947,8 @@ Intuitively, out of the total probability assigned to elements of \(B\), \(\math
 </section>
 </section>
 <section>
-<section id="slide-org5e9a868">
-<h4 id="org5e9a868">Example</h4>
+<section id="slide-orgd6ab05c">
+<h4 id="orgd6ab05c">Example</h4>
 <p>
 A fair six-sided die is rolled twice.
 </p>
@@ -1007,8 +1007,8 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-org322eedf">
-<h4 id="org322eedf">Theorem</h4>
+<section id="slide-org53a7b7b">
+<h4 id="org53a7b7b">Theorem</h4>
 <p>
 If we have a simple sample space, then
 \[
@@ -1020,8 +1020,8 @@ If we have a simple sample space, then
 </section>
 </section>
 <section>
-<section id="slide-org39e263c">
-<h4 id="org39e263c">Example</h4>
+<section id="slide-orgd3f1aae">
+<h4 id="orgd3f1aae">Example</h4>
 <p>
 Toss a fair coin \(5\) times.
 </p>
@@ -1057,8 +1057,8 @@ So
 </section>
 </section>
 <section>
-<section id="slide-orge51385b">
-<h4 id="orge51385b">Important Fact</h4>
+<section id="slide-org2975291">
+<h4 id="org2975291">Important Fact</h4>
 <p>
 <span style="color: rgb(30,144,255)">A conditional probability is a probability measure.</span>
 </p>
@@ -1084,8 +1084,8 @@ Specifically, given a probability model \((S, \mathbb{P}, \mathcal{F})\), an eve
 </section>
 </section>
 <section>
-<section id="slide-orgc96016b">
-<h4 id="orgc96016b">Example</h4>
+<section id="slide-org084f2a2">
+<h4 id="org084f2a2">Example</h4>
 <p class="fragment">
 Exercise. 11.
 \[
@@ -1103,8 +1103,8 @@ Exercise. 12.
 </section>
 </section>
 <section>
-<section id="slide-orgfa7e805">
-<h4 id="orgfa7e805">Multiplication rule for conditional probability</h4>
+<section id="slide-orgeff1438">
+<h4 id="orgeff1438">Multiplication rule for conditional probability</h4>
 <p class="fragment">
 Recall:
 \[
@@ -1136,8 +1136,8 @@ More general version of this rule:
 </section>
 </section>
 <section>
-<section id="slide-orgc90e59d">
-<h4 id="orgc90e59d">Example</h4>
+<section id="slide-org9921367">
+<h4 id="org9921367">Example</h4>
 <p>
 Draw \(3\) cards from a deck of \(52\) cards without replacement. What&rsquo;s the probability that you draw \(A22\) in that order?
 </p>
@@ -1169,8 +1169,8 @@ So, \(B = A_1 \cap A_2 \cap A_3\), and thus,
 </section>
 </section>
 <section>
-<section id="slide-orgf0b30fa">
-<h4 id="orgf0b30fa">Example (Radar detection)</h4>
+<section id="slide-orgf8a68bd">
+<h4 id="orgf8a68bd">Example (Radar detection)</h4>
 <p>
 An aircraft is present in a certain area with probability \(0.05\). If an aircraft is present, the radar correctly detects it with probability \(0.99\). If an aircraft is not present, the radar incorrectly registers it with probability \(0.1\).
 </p>
@@ -1208,8 +1208,8 @@ Let \(A\) be the event that an aircraft is present, and \(B\) be the event that 
 </section>
 </section>
 <section>
-<section id="slide-org8ec7687">
-<h4 id="org8ec7687">Law of total probability</h4>
+<section id="slide-orga795db2">
+<h4 id="orga795db2">Law of total probability</h4>
 <p class="fragment">
 Let \(B_1, B_2, \dots\) be a countable sequence of events that form a <span style="color: rgb(30,144,255)">partition</span> of the sample space \(S\):
 </p>
@@ -1240,7 +1240,7 @@ A = \cup_i (A \cap B_i),
 </section>
 <section>
 
-<div id="org4d10458" class="figure">
+<div id="org826972e" class="figure">
 <p><img src="../img/20220619_191957Total-prob.png" alt="20220619_191957Total-prob.png" class="middle" width="600px" />
 </p>
 </div>
@@ -1271,8 +1271,8 @@ and
 </section>
 </section>
 <section>
-<section id="slide-orgf761c18">
-<h4 id="orgf761c18">Example</h4>
+<section id="slide-orge479034">
+<h4 id="orge479034">Example</h4>
 <p>
 There are \(3\) urns. Urn \(1\) has \(3\) red, \(4\) green, and \(5\) blue balls; urn \(2\) has \(3\) red, \(10\) green, and \(1\) blue balls; urn \(3\) has \(3\) red, \(2\) green, and \(2\) blue balls.
 </p>
@@ -1316,15 +1316,15 @@ and thus
 </section>
 </section>
 <section>
-<section id="slide-orga1cc9e7">
-<h3 id="orga1cc9e7">2.2. Independent Events</h3>
-<div class="outline-text-3" id="text-orga1cc9e7">
+<section id="slide-org1aefae2">
+<h3 id="org1aefae2">2.2. Independent Events</h3>
+<div class="outline-text-3" id="text-org1aefae2">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgaaacbb2">
-<h4 id="orgaaacbb2">Definition</h4>
+<section id="slide-org56b2782">
+<h4 id="org56b2782">Definition</h4>
 <p>
 We say two events \(A\) and \(B\) are <b>independent</b> if
 </p>
@@ -1361,8 +1361,8 @@ We say two events \(A\) and \(B\) are <b>independent</b> if
 </section>
 </section>
 <section>
-<section id="slide-orgdf40d2d">
-<h4 id="orgdf40d2d">Example</h4>
+<section id="slide-org4eb8b9c">
+<h4 id="org4eb8b9c">Example</h4>
 <p>
 Flip two fair coins.
 </p>
@@ -1388,8 +1388,8 @@ By intuition, it seems \(A\) and \(B\) are independent.
 </section>
 </section>
 <section>
-<section id="slide-org429c410">
-<h4 id="org429c410">Example</h4>
+<section id="slide-orgef0015b">
+<h4 id="orgef0015b">Example</h4>
 <p>
 Roll a six-sided die.
 </p>
@@ -1418,8 +1418,8 @@ So \(A\) and \(B\) are <span style="color: rgb(255,0,0)">not</span> independent.
 </section>
 </section>
 <section>
-<section id="slide-org3dd5096">
-<h4 id="org3dd5096">Equivalent definitions</h4>
+<section id="slide-org612c451">
+<h4 id="org612c451">Equivalent definitions</h4>
 <p data-fragment-index="0" class="fragment">
 The following statements are equivalent:
 </p>
@@ -1437,8 +1437,8 @@ The following statements are equivalent:
 </section>
 </section>
 <section>
-<section id="slide-org765fe0b">
-<h4 id="org765fe0b">Definition (for three events)</h4>
+<section id="slide-org5553e05">
+<h4 id="org5553e05">Definition (for three events)</h4>
 <p class="fragment">
 The events \(A_1, A_2, A_3\) are independent if <span style="color: rgb(30,144,255)">all</span> of the following conditions hold:
 </p>
@@ -1453,8 +1453,8 @@ The events \(A_1, A_2, A_3\) are independent if <span style="color: rgb(30,144,2
 </section>
 </section>
 <section>
-<section id="slide-orgc24204f">
-<h4 id="orgc24204f">Example</h4>
+<section id="slide-orge7313a0">
+<h4 id="orge7313a0">Example</h4>
 <p>
 Flip a fair coin twice.
 </p>
@@ -1524,8 +1524,8 @@ Therefore, \(A, B\) and \(C\) are <span style="color: rgb(255,0,0)">not</span> i
 </section>
 </section>
 <section>
-<section id="slide-org29b7d45">
-<h4 id="org29b7d45">Definition (for \(n\) events)</h4>
+<section id="slide-org4a7e681">
+<h4 id="org4a7e681">Definition (for \(n\) events)</h4>
 <p class="fragment">
 The events \(A_1, A_2, \dots, A_n\) are <b>independent</b> if
 </p>
@@ -1539,8 +1539,8 @@ for any index subset \(I\subseteq \{1, 2, \dots, n\}\).
 </section>
 </section>
 <section>
-<section id="slide-org182cfbe">
-<h4 id="org182cfbe">Another equivalent definition</h4>
+<section id="slide-org83c5b6b">
+<h4 id="org83c5b6b">Another equivalent definition</h4>
 <p class="fragment">
 The events \(A_1, A_2, \dots, A_n\) are <b>independent</b> if
 </p>
@@ -1568,8 +1568,8 @@ In particular, if \(A\) and \(B\) are independent, then
 </section>
 </section>
 <section>
-<section id="slide-orgfbef579">
-<h4 id="orgfbef579">Example 2.2.5 (Inspecting items)</h4>
+<section id="slide-orge6168ae">
+<h4 id="orge6168ae">Example 2.2.5 (Inspecting items)</h4>
 <p class="fragment">
 A machine produces a defective item with probability \(p\), and a non-defective item with probability \(1-p\).
 </p>
@@ -1632,8 +1632,8 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-org92321ba">
-<h3 id="org92321ba">2.3. Bayes&rsquo; Theorem</h3>
+<section id="slide-org7da36c2">
+<h3 id="org7da36c2">2.3. Bayes&rsquo; Theorem</h3>
 <p>
 \[
 \text{"conditional probability"} ~+~ \text{"law of total probability"}
@@ -1643,8 +1643,8 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-orgc4100b8">
-<h4 id="orgc4100b8">Version 1</h4>
+<section id="slide-org6f1fdd3">
+<h4 id="org6f1fdd3">Version 1</h4>
 <p class="fragment">
 \[
 \mathbb{P}(A|B) = \frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(B)}.
@@ -1658,8 +1658,8 @@ Bayes&rsquo; formula allows you to <span style="color: rgb(30,144,255)">reverse<
 </section>
 </section>
 <section>
-<section id="slide-org6adc363">
-<h4 id="org6adc363">Version 2</h4>
+<section id="slide-org94bf686">
+<h4 id="org94bf686">Version 2</h4>
 <p class="fragment">
 \[
 \mathbb{P}(A|B) =  \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(B|A)\mathbb{P}(A) + \mathbb{P}(B|A^c)\mathbb{P}(A^c)}.
@@ -1669,8 +1669,8 @@ Bayes&rsquo; formula allows you to <span style="color: rgb(30,144,255)">reverse<
 </section>
 </section>
 <section>
-<section id="slide-org4d640ab">
-<h4 id="org4d640ab">Version 3</h4>
+<section id="slide-orgf8e9cb8">
+<h4 id="orgf8e9cb8">Version 3</h4>
 <p class="fragment">
 Let \(A_1, A_2,\dots\), be a countable partition of \(S\), then
 </p>
@@ -1686,8 +1686,8 @@ Let \(A_1, A_2,\dots\), be a countable partition of \(S\), then
 </section>
 </section>
 <section>
-<section id="slide-orgdea70b0">
-<h4 id="orgdea70b0">Example (Medical test)</h4>
+<section id="slide-orgfd7d840">
+<h4 id="orgfd7d840">Example (Medical test)</h4>
 <p>
 Suppose \(0.1\%\) of the population carries a certain disease. For people with disease, there is a test that correctly gives a positive result \(99.8\%\) of the time.
 For people without disease, the test correctly gives a negative result \(99.7\%\) of the time.
@@ -1766,8 +1766,8 @@ Thus,
 </section>
 </section>
 <section>
-<section id="slide-orge5b42da">
-<h4 id="orge5b42da">Terminology</h4>
+<section id="slide-org5e4f2f0">
+<h4 id="org5e4f2f0">Terminology</h4>
 <ul>
 <li>\(\mathbb{P}(B|A) = 0.998\): true positive rate</li>
 <li>\(\mathbb{P}(B^c|A) = 0.002\): false negative rate</li>
@@ -1783,8 +1783,8 @@ In this example, \(\mathbb{P}(A)\) is often called the <span style="color: rgb(3
 </section>
 </section>
 <section>
-<section id="slide-orgd925b71">
-<h4 id="orgd925b71">Example</h4>
+<section id="slide-org5abbc9d">
+<h4 id="org5abbc9d">Example</h4>
 <p>
 A grocery store gets eggs from \(3\) different farms.
 </p>
@@ -1847,22 +1847,22 @@ Since
 </section>
 </section>
 <section>
-<section id="slide-org3369fd0">
-<h2 id="org3369fd0">Chapter 3 - Random Variables and Distributions</h2>
-<div class="outline-text-2" id="text-org3369fd0">
+<section id="slide-orgb7968ff">
+<h2 id="orgb7968ff">Chapter 3 - Random Variables and Distributions</h2>
+<div class="outline-text-2" id="text-orgb7968ff">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org7ae1df7">
-<h3 id="org7ae1df7">3.1. Random Variables and Discrete Distributions</h3>
-<div class="outline-text-3" id="text-org7ae1df7">
+<section id="slide-org5297ea1">
+<h3 id="org5297ea1">3.1. Random Variables and Discrete Distributions</h3>
+<div class="outline-text-3" id="text-org5297ea1">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orge6148e8">
-<h4 id="orge6148e8">Definition</h4>
+<section id="slide-orgd4aeac0">
+<h4 id="orgd4aeac0">Definition</h4>
 <p class="fragment">
 Given an probability model \((S, \mathbb{P}, \mathcal{F})\), a <b>random variable</b> is a function \(X\) mapping from \(S\) to a set of real numbers:
 </p>
@@ -1880,8 +1880,8 @@ To each possible outcome \(\omega\in S\), \(X\) assigns a real number \(X(\omega
 </section>
 </section>
 <section>
-<section id="slide-org166c686">
-<h4 id="org166c686">Example</h4>
+<section id="slide-org74192b9">
+<h4 id="org74192b9">Example</h4>
 <p>
 Roll two fair six-sided dice.
 </p>
@@ -1985,8 +1985,8 @@ and
 </section>
 </section>
 <section>
-<section id="slide-org7a494bc">
-<h4 id="org7a494bc">Notations</h4>
+<section id="slide-org100c816">
+<h4 id="org100c816">Notations</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">\(\{X = c\} = \{\omega \in S \mid X(\omega) = c\}\).</li>
 <li data-fragment-index="2" class="fragment">\(\{ a \le X \le b \} = \{ \omega \in S \mid a \le X(\omega) \le b\}\).</li>
@@ -1998,8 +1998,8 @@ and
 </section>
 </section>
 <section>
-<section id="slide-org45fa37b">
-<h4 id="org45fa37b">Definition (Probability distribution)</h4>
+<section id="slide-orga51c753">
+<h4 id="orga51c753">Definition (Probability distribution)</h4>
 <p class="fragment">
 The <b>probability distribution</b> of a random variable \(X\) is a collection of all probabilities of the form \(\mathbb{P}(X\in B)\), for all subset \(B\subseteq \mathbb{R}\), such that \(\{X\in B\} \in \mathcal{F}\).
 </p>
@@ -2007,8 +2007,8 @@ The <b>probability distribution</b> of a random variable \(X\) is a collection o
 </section>
 </section>
 <section>
-<section id="slide-org9ad81ec">
-<h4 id="org9ad81ec">Two types of random variables</h4>
+<section id="slide-org6214558">
+<h4 id="org6214558">Two types of random variables</h4>
 <p class="fragment">
 If the <span style="color: rgb(30,144,255)">range</span> of the random variable \(X\) is at most countable (finite or infinitely countable), we call \(X\) a <b>discrete</b> random variable. Otherwise, we call \(X\) is a <b>continuous</b> random variable.
 </p>
@@ -2016,8 +2016,8 @@ If the <span style="color: rgb(30,144,255)">range</span> of the random variable 
 </section>
 </section>
 <section>
-<section id="slide-org79c4b87">
-<h4 id="org79c4b87">Definition</h4>
+<section id="slide-orge1ab802">
+<h4 id="orge1ab802">Definition</h4>
 <p class="fragment">
 Let \(X\) be a discrete random variable. The <b>probability mass function</b> (p.m.f.) \(p_X\) is defined by
 </p>
@@ -2030,8 +2030,8 @@ p_X(k) = \mathbb{P}(X = k), ~\text{for every real number } k.
 </section>
 </section>
 <section>
-<section id="slide-orgdfca3aa">
-<h4 id="orgdfca3aa">Theorem</h4>
+<section id="slide-orgecf564b">
+<h4 id="orgecf564b">Theorem</h4>
 <p class="fragment">
 The probability distribution of a discrete random variable is completely determined by its p.m.f.
 </p>
@@ -2039,8 +2039,8 @@ The probability distribution of a discrete random variable is completely determi
 </section>
 </section>
 <section>
-<section id="slide-org60803b3">
-<h4 id="org60803b3">Proof</h4>
+<section id="slide-org6fac0a3">
+<h4 id="org6fac0a3">Proof</h4>
 <p class="fragment">
 For every \(B\subseteq \mathbb{R}\), we have
 </p>
@@ -2073,8 +2073,8 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-orga907afd">
-<h4 id="orga907afd">Example</h4>
+<section id="slide-org7398831">
+<h4 id="org7398831">Example</h4>
 <p>
 Roll two fair dice. Let
 </p>
@@ -2260,8 +2260,8 @@ What about \(X\)?
 </section>
 </section>
 <section>
-<section id="slide-org0835e1a">
-<h4 id="org0835e1a">Theorem</h4>
+<section id="slide-org55e1349">
+<h4 id="org55e1349">Theorem</h4>
 <p class="fragment">
 (1) \(p_X(k) = 0\) if \(k\notin \text{Range}(X)\).
 </p>
@@ -2273,8 +2273,8 @@ What about \(X\)?
 </section>
 </section>
 <section>
-<section id="slide-org3c379a8">
-<h4 id="org3c379a8">Uniform Distribution on Integers</h4>
+<section id="slide-orga24c2b4">
+<h4 id="orga24c2b4">Uniform Distribution on Integers</h4>
 <p>
 Let \(m< n\) be two integers. Suppose that the value of a random variable \(X\) is equally likely to be each of the integer \(m, m+1, \dots, n\).
 </p>
@@ -2309,8 +2309,8 @@ The random variable \(X_1\) in the previous example has the uniform distribution
 </section>
 </section>
 <section>
-<section id="slide-org282516a">
-<h4 id="org282516a">Bernoulli Distributions.</h4>
+<section id="slide-org22a1667">
+<h4 id="org22a1667">Bernoulli Distributions.</h4>
 <p class="fragment">
 Flip a coin. Suppose the probability that you get heads is \(p\) (not necessarily to be \(1/2\)), \(p\in [0, 1]\).
 </p>
@@ -2368,8 +2368,8 @@ So the p.m.f. of \(X\):
 </section>
 </section>
 <section>
-<section id="slide-orga752472">
-<h4 id="orga752472">Definition</h4>
+<section id="slide-orgc108c65">
+<h4 id="orgc108c65">Definition</h4>
 <p>
 Let \(0\le p\le 1\). A random variable \(X\) has the Bernoulli distribution with the &ldquo;success&rdquo; probability \(p\) if \(X\) is \(\{0, 1\}\text{-valued}\) and satisfies \(\mathbb{P}(X=1) = p\) and \(\mathbb{P}(X=0) = 1-p\).
 </p>
@@ -2381,8 +2381,8 @@ We write \(X\sim \text{Ber}(p)\).
 </section>
 </section>
 <section>
-<section id="slide-orgd3f23aa">
-<h4 id="orgd3f23aa">Binomial Distribution</h4>
+<section id="slide-org1d5514d">
+<h4 id="org1d5514d">Binomial Distribution</h4>
 <p class="fragment">
 Flip a (possibly biased) coin \(n\) times.
 </p>
@@ -2490,8 +2490,8 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-org4473e02">
-<h4 id="org4473e02">Definition</h4>
+<section id="slide-org8cdf74a">
+<h4 id="org8cdf74a">Definition</h4>
 <p>
 Let \(0\le p\le 1\). A random variable is \(X\) has the <b>binomial distribution</b> with parameter \(n\) and \(p\) if
 \[
@@ -2530,8 +2530,8 @@ In particular, if \(p=1/2\), we have
 </section>
 </section>
 <section>
-<section id="slide-org065ca23">
-<h4 id="org065ca23">Example</h4>
+<section id="slide-org3a62e32">
+<h4 id="org3a62e32">Example</h4>
 <p>
 What is the probability that five rolls of a fair die yield two or three sixes?
 </p>
@@ -2570,8 +2570,8 @@ Thus,
 </section>
 </section>
 <section>
-<section id="slide-org9e8f5f2">
-<h3 id="org9e8f5f2">3.2. Continuous Distributions</h3>
+<section id="slide-orgcd13b21">
+<h3 id="orgcd13b21">3.2. Continuous Distributions</h3>
 <p>
 For a continuous random variable, we introduce its probability density function (p.d.f.).
 </p>
@@ -2579,8 +2579,8 @@ For a continuous random variable, we introduce its probability density function 
 </section>
 </section>
 <section>
-<section id="slide-org91bd64b">
-<h4 id="org91bd64b">Definition</h4>
+<section id="slide-org149a68e">
+<h4 id="org149a68e">Definition</h4>
 <p>
 For a continuous random variable \(X\), if there exists a function \(f_X\), such that
 </p>
@@ -2620,8 +2620,8 @@ In particular, \(B = [a, b]\),
 </section>
 </section>
 <section>
-<section id="slide-org1492b72">
-<h4 id="org1492b72">Example (Uniform Distribution on Intervals)</h4>
+<section id="slide-orgd03099c">
+<h4 id="orgd03099c">Example (Uniform Distribution on Intervals)</h4>
 <p class="fragment">
 Choose a real number uniformly at random from the interval \([0, 1]\), so the sample space \(S = [0, 1]\).
 Assume that \([a, b]\subseteq S\), the probability that the chosen number lies in the interval \([a, b]\) should be equal to the proportion of \(S\) covered by \([a, b]\),
@@ -2640,8 +2640,8 @@ We call the probability model in this example, the <b>uniform distribution</b> o
 </section>
 </section>
 <section>
-<section id="slide-orgb8efc35">
-<h4 id="orgb8efc35">Example</h4>
+<section id="slide-org291cb3e">
+<h4 id="org291cb3e">Example</h4>
 <p>
 Let \(X\sim\text{Unif}([0, 1])\).
 </p>
@@ -2655,8 +2655,8 @@ Let \(X\sim\text{Unif}([0, 1])\).
 </section>
 </section>
 <section>
-<section id="slide-org6291c4d">
-<h4 id="org6291c4d">Example</h4>
+<section id="slide-orge4ea794">
+<h4 id="orge4ea794">Example</h4>
 <p>
 What if we change the sample space \(S\) to \([-1, 1]\)?
 </p>
@@ -2710,8 +2710,8 @@ For example, \([a, b] \subseteq [c, d]\),
 </section>
 </section>
 <section>
-<section id="slide-org2d049d3">
-<h4 id="org2d049d3">Other continuous distributions.</h4>
+<section id="slide-org07b8f0a">
+<h4 id="org07b8f0a">Other continuous distributions.</h4>
 <p>
 Incompletely specified p.d.f.
 </p>
@@ -2825,15 +2825,15 @@ c = \frac{1}{8}.
 </section>
 </section>
 <section>
-<section id="slide-org72d93b3">
-<h3 id="org72d93b3">3.3. The Cumulative Distribution Functions</h3>
-<div class="outline-text-3" id="text-org72d93b3">
+<section id="slide-org2263a9e">
+<h3 id="org2263a9e">3.3. The Cumulative Distribution Functions</h3>
+<div class="outline-text-3" id="text-org2263a9e">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org0f51713">
-<h4 id="org0f51713">Example</h4>
+<section id="slide-org42a10a4">
+<h4 id="org42a10a4">Example</h4>
 <p class="fragment">
 Suppose the p.d.f of \(X\) is defined by
 </p>
@@ -2972,8 +2972,8 @@ To sum up,
 </section>
 </section>
 <section>
-<section id="slide-org78d31e4">
-<h4 id="org78d31e4">Definition</h4>
+<section id="slide-org8f97053">
+<h4 id="org8f97053">Definition</h4>
 <p>
 Let \(X\) be a random variable. The <b>cumulative distribution function</b> (CDF) of \(X\) is defined by
 </p>
@@ -2991,8 +2991,8 @@ F_X(t) = \mathbb{P}(X \le t), \quad t\in \mathbb{R}.
 </section>
 </section>
 <section>
-<section id="slide-org33ce30d">
-<h4 id="org33ce30d">Example</h4>
+<section id="slide-orgbc85994">
+<h4 id="orgbc85994">Example</h4>
 <p>
 What is the CDF of a Bernoulli random variable?
 </p>
@@ -3055,7 +3055,7 @@ The following is the plot of the CDF of Ber\((p)\).
 </p>
 
 
-<div id="org5b1603e" class="figure">
+<div id="org999dab8" class="figure">
 <p><img src="../img/beroulli-cdf.svg" alt="beroulli-cdf.svg" class="fragment middle" width="75%" />
 </p>
 </div>
@@ -3063,8 +3063,8 @@ The following is the plot of the CDF of Ber\((p)\).
 </section>
 </section>
 <section>
-<section id="slide-org596ac36">
-<h4 id="org596ac36">Properties of CDF</h4>
+<section id="slide-orgc4ec9e8">
+<h4 id="orgc4ec9e8">Properties of CDF</h4>
 <p class="fragment">
 (1) \(F\) is non-decreasing: if \(s < t\), \(F(s) \le F(t)\).
 </p>
@@ -3098,7 +3098,7 @@ The graph of \(F\) is a non-decreasing right-continuous staircase.
 </p>
 
 
-<div id="orgb678bd7" class="figure">
+<div id="org42aeeff" class="figure">
 <p><img src="../img/discrete-cdf.svg" alt="discrete-cdf.svg" class="fragment middle" width="75%" />
 </p>
 </div>
@@ -3125,7 +3125,7 @@ F'_X(t) = f_X(t).
 The graph of \(F_X\) is non-decreasing and continuous.
 </p>
 
-<div id="org6f5b247" class="figure">
+<div id="orgd81d919" class="figure">
 <p><img src="../img/normal-cdf.svg" alt="normal-cdf.svg" class="fragment middle" width="75%" />
 </p>
 </div>
@@ -3133,8 +3133,8 @@ The graph of \(F_X\) is non-decreasing and continuous.
 </section>
 </section>
 <section>
-<section id="slide-org4f942bc">
-<h4 id="org4f942bc">Theorem</h4>
+<section id="slide-org94e187a">
+<h4 id="org94e187a">Theorem</h4>
 <p class="fragment">
 For \(t \in \mathbb{R}\),
 </p>
@@ -3204,15 +3204,15 @@ For example, Let \(A\) be the event that you pick \(0.4\) uniformly from \([0, 1
 </section>
 </section>
 <section>
-<section id="slide-orge2b9e7d">
-<h3 id="orge2b9e7d">3.4. Bivariate Distributions</h3>
-<div class="outline-text-3" id="text-orge2b9e7d">
+<section id="slide-org146d25d">
+<h3 id="org146d25d">3.4. Bivariate Distributions</h3>
+<div class="outline-text-3" id="text-org146d25d">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgdc253c2">
-<h4 id="orgdc253c2">Definition</h4>
+<section id="slide-orgcceb624">
+<h4 id="orgcceb624">Definition</h4>
 <p>
 Let \(X\) and \(Y\) be two random variables. The <b>bivariate (or joint) distributions</b> of \(X\) and \(Y\) is the collection of all probabilities of the form \(\mathbb{P}((X, Y) \in C)\) for all sets \(C\) of pair of real numbers such that
 </p>
@@ -3230,8 +3230,8 @@ where \(C \in \mathbb{R}^2 = \mathbb{R}\times \mathbb{R}\).
 </section>
 </section>
 <section>
-<section id="slide-orgbf8a70f">
-<h4 id="orgbf8a70f">Discrete Joint Distributions</h4>
+<section id="slide-orgb136dad">
+<h4 id="orgb136dad">Discrete Joint Distributions</h4>
 <p class="fragment">
 <b>Theorem</b>. If \(X\) and \(Y\) are both discrete, then \((X, Y)\) has a discrete joint distribution.
 </p>
@@ -3239,8 +3239,8 @@ where \(C \in \mathbb{R}^2 = \mathbb{R}\times \mathbb{R}\).
 </section>
 </section>
 <section>
-<section id="slide-orge49c6df">
-<h4 id="orge49c6df">Joint Probability Mass Function</h4>
+<section id="slide-orga223aea">
+<h4 id="orga223aea">Joint Probability Mass Function</h4>
 <p class="fragment">
 Recall: p.m.f. of \(X\)
 </p>
@@ -3276,8 +3276,8 @@ Facts:
 </section>
 </section>
 <section>
-<section id="slide-org30aa090">
-<h4 id="org30aa090">Example</h4>
+<section id="slide-orge49d808">
+<h4 id="orge49d808">Example</h4>
 <p>
 Roll 2 fair four sided dice.
 </p>
@@ -3556,8 +3556,8 @@ Now we can even compute:
 </section>
 </section>
 <section>
-<section id="slide-orgf511778">
-<h4 id="orgf511778">Continuous Joint Distributions</h4>
+<section id="slide-orgdc9567d">
+<h4 id="orgdc9567d">Continuous Joint Distributions</h4>
 <p>
 <b>Definition</b>
 Two random variables \(X\) and \(Y\) have a <b>continuous joint distribution</b> if there exists a non-negative function \(f\) such that
@@ -3589,8 +3589,8 @@ Here, \(f(x, y)\) is called the joint p.d.f. of \(X\) and \(Y\).
 </section>
 </section>
 <section>
-<section id="slide-org3b5373b">
-<h4 id="org3b5373b">Example 3.4.7</h4>
+<section id="slide-org2055220">
+<h4 id="org2055220">Example 3.4.7</h4>
 <p>
 Suppose that the joint p.d.f. of \(X\) and \(Y\) is
 </p>
@@ -3622,7 +3622,7 @@ c x^2y, & x^2 \le y \le 1,\\
 </div>
 <div class="column" style="float:right; width: 50%">
 
-<div id="org2673171" class="figure">
+<div id="org392e721" class="figure">
 <p><img src="../img/eg3-4-7.svg" alt="eg3-4-7.svg" class="fragment" />
 </p>
 </div>
@@ -3667,7 +3667,7 @@ Thus,
 </div>
 <div class="column" style="float:right; width: 50%">
 
-<div id="org06018e7" class="figure">
+<div id="orgc7e005d" class="figure">
 <p><img src="../img/eg3-4-7-2.svg" alt="eg3-4-7-2.svg" class="fragment" />
 </p>
 </div>
@@ -3676,8 +3676,8 @@ Thus,
 </section>
 </section>
 <section>
-<section id="slide-org78d0f04">
-<h4 id="org78d0f04">Bivariate CDF</h4>
+<section id="slide-org7ffd6c2">
+<h4 id="org7ffd6c2">Bivariate CDF</h4>
 <p>
 <b>Definition</b>.
 Given two random variables \(X\) and \(Y\), then the <b>joint CDF</b> of \((X, Y)\) is
@@ -3692,8 +3692,8 @@ F_{X, Y}(x, y) = F(x, y) = \mathbb{P}(X \le x, Y \le y).
 </section>
 </section>
 <section>
-<section id="slide-org2b4fafe">
-<h4 id="org2b4fafe">Example</h4>
+<section id="slide-org5876e5a">
+<h4 id="org5876e5a">Example</h4>
 <p class="fragment">
 Suppose \(a < b, c < d\).
 </p>
@@ -3764,8 +3764,8 @@ f(x, y) = \frac{\partial^2 F(x, y)}{\partial x \partial y}.
 </section>
 </section>
 <section>
-<section id="slide-org0a431c5">
-<h4 id="org0a431c5">Example</h4>
+<section id="slide-orge6c16d7">
+<h4 id="orge6c16d7">Example</h4>
 <p>
 Suppose the joint CDF of \((X, Y)\) is
 </p>
@@ -3806,15 +3806,15 @@ Then
 </section>
 </section>
 <section>
-<section id="slide-org6cb6eec">
-<h3 id="org6cb6eec">3.5. Marginal Distributions</h3>
-<div class="outline-text-3" id="text-org6cb6eec">
+<section id="slide-org0ad5ac3">
+<h3 id="org0ad5ac3">3.5. Marginal Distributions</h3>
+<div class="outline-text-3" id="text-org0ad5ac3">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org3ade73d">
-<h4 id="org3ade73d">Theorem</h4>
+<section id="slide-org1196207">
+<h4 id="org1196207">Theorem</h4>
 <p class="fragment">
 (1) If \(X\) and \(Y\) are discrete random variables, then the p.m.f. of \(X\) and \(Y\) are obtained from the joint p.m.f. of \((X, Y)\) by
 </p>
@@ -3855,8 +3855,8 @@ f_Y(y) = \int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dx.
 </section>
 </section>
 <section>
-<section id="slide-orgc262b10">
-<h4 id="orgc262b10">Example (Deriving Marginal p.m.f. from Joint p.m.f.)</h4>
+<section id="slide-orgb0ee76d">
+<h4 id="orgb0ee76d">Example (Deriving Marginal p.m.f. from Joint p.m.f.)</h4>
 <p class="fragment">
 Recall
 </p>
@@ -3938,8 +3938,8 @@ Recall
 </section>
 </section>
 <section>
-<section id="slide-orgf96ab2b">
-<h4 id="orgf96ab2b">Example (Deriving Marginal p.d.f. from Joint p.d.f.)</h4>
+<section id="slide-orgedc72c3">
+<h4 id="orgedc72c3">Example (Deriving Marginal p.d.f. from Joint p.d.f.)</h4>
 <p class="fragment">
 Recall
 </p>
@@ -3982,7 +3982,7 @@ What is \(f_X(x)\, (f_Y(y))\)?
 
 <div class="column" style="float:right; width: 50%">
 
-<div id="org1a5c79b" class="figure">
+<div id="org365a7a4" class="figure">
 <p><img src="../img/eg3-4-7.svg" alt="eg3-4-7.svg" class="fragment" />
 </p>
 </div>
@@ -4008,7 +4008,7 @@ What is \(f_X(x)\, (f_Y(y))\)?
 </div>
 
 
-<div id="org99e376b" class="figure">
+<div id="org3839da2" class="figure">
 <p><img src="../img/eg3-4-7.svg" alt="eg3-4-7.svg" class="fragment middle" width="60%" />
 </p>
 </div>
@@ -4016,8 +4016,8 @@ What is \(f_X(x)\, (f_Y(y))\)?
 </section>
 </section>
 <section>
-<section id="slide-orge5a1e32">
-<h4 id="orge5a1e32">Independent Random Variables</h4>
+<section id="slide-org9776e7b">
+<h4 id="org9776e7b">Independent Random Variables</h4>
 <p class="fragment">
 Recall: Events \(A\) and \(B\) are independent, if
 </p>
@@ -4058,8 +4058,8 @@ X ~\text{and}~ Y ~\text{are independent}~ \Rightarrow \mathbb{P}(X \le x, Y \le 
 </section>
 </section>
 <section>
-<section id="slide-org2acdcaa">
-<h4 id="org2acdcaa">Theorem</h4>
+<section id="slide-org58b9b95">
+<h4 id="org58b9b95">Theorem</h4>
 <p class="fragment">
 (1) \(X\) and \(Y\) are independent if and only if
 </p>
@@ -4085,8 +4085,8 @@ F_{X, Y}(x, y) = F_X(x) F_Y(y) \quad \forall x, y \in \mathbb{R}.
 </section>
 </section>
 <section>
-<section id="slide-org139e79f">
-<h4 id="org139e79f">Example</h4>
+<section id="slide-orgbd0f457">
+<h4 id="orgbd0f457">Example</h4>
 <p>
 Flip a fair coin twice.
 </p>
@@ -4144,8 +4144,8 @@ So \(X\) and \(Y\) are independent.
 </section>
 </section>
 <section>
-<section id="slide-org3d95806">
-<h4 id="org3d95806">Example</h4>
+<section id="slide-org7f9e3df">
+<h4 id="org7f9e3df">Example</h4>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -4225,8 +4225,8 @@ p_{X, Y}(1, 0) \neq p_X(1) p_Y(0).
 </section>
 </section>
 <section>
-<section id="slide-orga458586">
-<h4 id="orga458586">Example</h4>
+<section id="slide-orgfee1515">
+<h4 id="orgfee1515">Example</h4>
 <p class="fragment">
 Let \((X, Y) \sim \text{Unif}(A)\), where \(A = [a, b]\times [c, d]\), i.e.,
 </p>
@@ -4271,7 +4271,7 @@ First, we need to calculate the marginal p.d.f.s.
 </div>
 
 
-<div id="org9945276" class="figure">
+<div id="org80a335f" class="figure">
 <p><img src="../img/joint-uniform.svg" alt="joint-uniform.svg" class="fragment middle" width="60%" />
 </p>
 </div>
@@ -4308,8 +4308,8 @@ and thus \(X\) and \(Y\) are independent.
 </section>
 </section>
 <section>
-<section id="slide-org9447f57">
-<h4 id="org9447f57">Example</h4>
+<section id="slide-orgfecbb6a">
+<h4 id="orgfecbb6a">Example</h4>
 <p>
 Let \((X, Y) \sim \text{Unif}(A)\), where \(A\) is a triangle with vertices \((0, 0), (0, 1)\) and \((1, 0)\).
 </p>
@@ -4350,7 +4350,7 @@ Are \(X\) and \(Y\) independent?
 </div>
 
 
-<div id="org8b0ba30" class="figure">
+<div id="orgfe0413d" class="figure">
 <p><img src="../img/joint-uniform-triangle.svg" alt="joint-uniform-triangle.svg" class="fragment middle" width="60%" />
 </p>
 </div>
@@ -4397,15 +4397,15 @@ Therefore, \(X\) and \(Y\) are not independent.
 </section>
 </section>
 <section>
-<section id="slide-orgf78b6b5">
-<h3 id="orgf78b6b5">3.6. Conditional Distributions</h3>
-<div class="outline-text-3" id="text-orgf78b6b5">
+<section id="slide-org4c54b47">
+<h3 id="org4c54b47">3.6. Conditional Distributions</h3>
+<div class="outline-text-3" id="text-org4c54b47">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orge5520cb">
-<h4 id="orge5520cb">Definition</h4>
+<section id="slide-orgdf46273">
+<h4 id="orgdf46273">Definition</h4>
 <p class="fragment">
 Recall
 </p>
@@ -4435,8 +4435,8 @@ is called the <b>conditional p.m.f.</b> of \(X\) and \(Y\).
 </section>
 </section>
 <section>
-<section id="slide-orga532131">
-<h4 id="orga532131">Example</h4>
+<section id="slide-orgf76435e">
+<h4 id="orgf76435e">Example</h4>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -4520,8 +4520,8 @@ Similarly,
 </section>
 </section>
 <section>
-<section id="slide-org7268a18">
-<h4 id="org7268a18">Definition</h4>
+<section id="slide-orgc6aa7c4">
+<h4 id="orgc6aa7c4">Definition</h4>
 <p>
 Let \(X\) and \(Y\) be two continuous random variables, then
 </p>
@@ -4540,8 +4540,8 @@ is called the <b>conditional p.d.f.</b> of \(X\) given \(Y\).
 </section>
 </section>
 <section>
-<section id="slide-org44ad486">
-<h4 id="org44ad486">Example</h4>
+<section id="slide-orgd98f749">
+<h4 id="orgd98f749">Example</h4>
 <p>
 Recall
 \[
@@ -4593,8 +4593,8 @@ In particular,
 </section>
 </section>
 <section>
-<section id="slide-org7547e8d">
-<h4 id="org7547e8d">Multiplication Rule for Conditional Random Variables</h4>
+<section id="slide-org18b141e">
+<h4 id="org18b141e">Multiplication Rule for Conditional Random Variables</h4>
 <p class="fragment">
 Recall
 </p>
@@ -4618,8 +4618,8 @@ p_{X, Y}(k, l) &= p_{X | Y}(k | l )p_Y(l) = p_{Y | X}(l|k) p_X(k).
 </section>
 </section>
 <section>
-<section id="slide-orgbdd2abb">
-<h4 id="orgbdd2abb">Law of Total Probability for Random Variables</h4>
+<section id="slide-org4313a81">
+<h4 id="org4313a81">Law of Total Probability for Random Variables</h4>
 <p class="fragment">
 Recall
 </p>
@@ -4643,8 +4643,8 @@ p_X(k) & = \sum_l p_{X | Y}( k | l  )p_Y(l).
 </section>
 </section>
 <section>
-<section id="slide-org947e8cb">
-<h4 id="org947e8cb">Bayes&rsquo; Theorem for Random Variables</h4>
+<section id="slide-orgbbfddb0">
+<h4 id="orgbbfddb0">Bayes&rsquo; Theorem for Random Variables</h4>
 <div class="fragment">
 \begin{align*}
   f_{X | Y}(x | y) & = \frac{f_{Y|X}(y|x) f_X(x)}{\int_{-\infty}^{\infty} f_{Y|X}(y|x) f_X(x) \, dx},\\
@@ -4656,8 +4656,8 @@ p_{X|Y}(k | l) & = \frac{p_{Y|X}(l|k) p_X(k)}{\sum_k p_{Y|X}(l | k) p_X(k)}.
 </section>
 </section>
 <section>
-<section id="slide-org92a8576">
-<h4 id="org92a8576">Example 3.6.10</h4>
+<section id="slide-org9305e80">
+<h4 id="org9305e80">Example 3.6.10</h4>
 <p>
 Let \(X \sim \text{Unif}([0,1])\). For \(0 < x < 1\), after \(X=x\) has been observed, a point \(Y\) is chosen from a uniform distribution on \([x, 1]\).
 </p>
@@ -4726,7 +4726,7 @@ f_{Y|X}(y | x) = \begin{cases}
 
 </div>
 
-<div id="org8099ad7" class="figure">
+<div id="orga4d280e" class="figure">
 <p><img src="../img/eg3-6-10.svg" alt="eg3-6-10.svg" class="fragment middle" width="60%" />
 </p>
 </div>
@@ -4752,8 +4752,8 @@ What about \(f_{X|Y}(x | y) = ?\)
 </section>
 </section>
 <section>
-<section id="slide-org393d338">
-<h4 id="org393d338">Independence of Two Random Variables</h4>
+<section id="slide-orgffa0e73">
+<h4 id="orgffa0e73">Independence of Two Random Variables</h4>
 <p class="fragment">
 Recall: if two events \(A\) and \(B\) are independent,
 </p>
@@ -4779,8 +4779,8 @@ p_{X|Y}(k | l) = p_X(k).
 </section>
 </section>
 <section>
-<section id="slide-org8b21b4c">
-<h3 id="org8b21b4c">3.8. Functions of a Random Variable</h3>
+<section id="slide-org24c5765">
+<h3 id="org24c5765">3.8. Functions of a Random Variable</h3>
 <p>
 <b>Question</b>: Given the distribution of a random variable \(X\), what&rsquo;s the distribution of \(Y = h(X)\) for some function \(h\)?
 </p>
@@ -4788,8 +4788,8 @@ p_{X|Y}(k | l) = p_X(k).
 </section>
 </section>
 <section>
-<section id="slide-orgb673bcf">
-<h4 id="orgb673bcf">Discrete Case</h4>
+<section id="slide-org5253250">
+<h4 id="org5253250">Discrete Case</h4>
 <p class="fragment">
 <b>Example</b>
 </p>
@@ -4856,8 +4856,8 @@ p_Y(k) = \begin{cases}
 </section>
 </section>
 <section>
-<section id="slide-org9b8c0a1">
-<h4 id="org9b8c0a1">Theorem</h4>
+<section id="slide-orgddb7849">
+<h4 id="orgddb7849">Theorem</h4>
 <p class="fragment">
 Let \(X\) be a discrete random variable with p.m.f. \(p_X\) and \(Y = h(X)\) for some function \(h\) defined on the set of possible values of \(X\). Then the p.m.f. of \(Y\) is
 </p>
@@ -4873,8 +4873,8 @@ Let \(X\) be a discrete random variable with p.m.f. \(p_X\) and \(Y = h(X)\) for
 </section>
 </section>
 <section>
-<section id="slide-org748bfcd">
-<h4 id="org748bfcd">Continuous Case</h4>
+<section id="slide-orgfd52361">
+<h4 id="orgfd52361">Continuous Case</h4>
 <p class="fragment">
 <b>Example</b> (Averaging waiting time)
 </p>
@@ -4933,8 +4933,8 @@ If \(Y = h(X)\) is continuous, then
 </section>
 </section>
 <section>
-<section id="slide-orgc7ffbc3">
-<h4 id="orgc7ffbc3">Example</h4>
+<section id="slide-org9156ba3">
+<h4 id="org9156ba3">Example</h4>
 <p>
 Let \(X \sim \text{Unif}([-1, 1])\), and \(Y = X^2\). Find p.d.f. of \(Y\)?
 </p>
@@ -5019,8 +5019,8 @@ f_Y(y) = F'_Y(y) = \begin{cases}
 </section>
 </section>
 <section>
-<section id="slide-orgc93748f">
-<h4 id="orgc93748f">Linear Transformation</h4>
+<section id="slide-orgb2ba41b">
+<h4 id="orgb2ba41b">Linear Transformation</h4>
 <p>
 \[
 h(x) = a x + b, \quad a \neq 0.
@@ -5046,8 +5046,8 @@ Read the proof.
 </section>
 </section>
 <section>
-<section id="slide-org66d4399">
-<h4 id="org66d4399">The Probability Integral Transformation</h4>
+<section id="slide-org0feb096">
+<h4 id="org0feb096">The Probability Integral Transformation</h4>
 <p>
 <b>Example</b>
 Let \(X\) be continuous with p.d.f.
@@ -5128,15 +5128,15 @@ Therefore, \(Y \sim \text{Unif}([0, 1])\).
 </section>
 </section>
 <section>
-<section id="slide-org3baa1af">
-<h2 id="org3baa1af">Chapter 4 - Expectation</h2>
-<div class="outline-text-2" id="text-org3baa1af">
+<section id="slide-orgbfb018e">
+<h2 id="orgbfb018e">Chapter 4 - Expectation</h2>
+<div class="outline-text-2" id="text-orgbfb018e">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgff85cdd">
-<h3 id="orgff85cdd">4.1. The Expectation of a Random Variable</h3>
+<section id="slide-org2c559a1">
+<h3 id="org2c559a1">4.1. The Expectation of a Random Variable</h3>
 <p>
 Roughly speaking,
 \[
@@ -5147,8 +5147,8 @@ Roughly speaking,
 </section>
 </section>
 <section>
-<section id="slide-org86c6317">
-<h4 id="org86c6317">Definition</h4>
+<section id="slide-org21024a2">
+<h4 id="org21024a2">Definition</h4>
 <p class="fragment">
 (1) If \(X\) is discrete with p.m.f. \(p_X\), then the <b>expectation</b> of \(X\) is
 </p>
@@ -5181,8 +5181,8 @@ Roughly speaking,
 </section>
 </section>
 <section>
-<section id="slide-org0e2a70d">
-<h4 id="org0e2a70d">Example</h4>
+<section id="slide-orgbe29334">
+<h4 id="orgbe29334">Example</h4>
 <p>
 \(X \sim \text{Ber}(p)\), i.e.,
 </p>
@@ -5197,15 +5197,15 @@ Then
 </p>
 <p class="fragment">
 \[
-\mathbb{E}(X) = 1 \cdot \mathbb{P}(X = 1) + 0 \cdot \mathbb{P}(X = 0) = p.
+\mathbb{E}(X = 1 \cdot \mathbb{P}(X = 1) + 0 \cdot \mathbb{P}(X = 0) = p.
 \]
 </p>
 
 </section>
 </section>
 <section>
-<section id="slide-org8b59b04">
-<h4 id="org8b59b04">Example</h4>
+<section id="slide-org2c68c73">
+<h4 id="org2c68c73">Example</h4>
 <p>
 Suppose you got:
 </p>
@@ -5254,8 +5254,8 @@ According to our syllabus, what&rsquo;s your weighted average of your final grad
 </section>
 </section>
 <section>
-<section id="slide-org6f1c6ee">
-<h4 id="org6f1c6ee">Example</h4>
+<section id="slide-orgb580792">
+<h4 id="orgb580792">Example</h4>
 <p>
 \(X \sim \text{Bin}(n, p)\), Find \(\mathbb{E}(X)\).
 </p>
@@ -5282,8 +5282,8 @@ Recall that \(X\) is the number of &ldquo;successes&rdquo;, so
 </section>
 </section>
 <section>
-<section id="slide-orge26e5be">
-<h4 id="orge26e5be">Proof</h4>
+<section id="slide-org791ace8">
+<h4 id="org791ace8">Proof</h4>
 <p class="fragment">
 Note that \(\range (X) = \{0, 1, 2, \dots, n\}\). By definition,
 </p>
@@ -5324,8 +5324,8 @@ Note that \(\range (X) = \{0, 1, 2, \dots, n\}\). By definition,
 </section>
 </section>
 <section>
-<section id="slide-org30fa4f4">
-<h4 id="org30fa4f4">Example</h4>
+<section id="slide-orgad25173">
+<h4 id="orgad25173">Example</h4>
 <p>
 \(X \sim \text{Unif}([a, b])\), i.e.,
 \[
@@ -5352,8 +5352,8 @@ Find \(\mathbb{E}(X)\).
 </section>
 </section>
 <section>
-<section id="slide-org2d0f5e5">
-<h4 id="org2d0f5e5">Expectation of a Function of Random Variables</h4>
+<section id="slide-org463afd3">
+<h4 id="org463afd3">Expectation of a Function of Random Variables</h4>
 <p class="fragment">
 Given a random variable \(X\) and a function \(g: \mathbb{R} \mapsto \mathbb{R}\), by definition directly,
 </p>
@@ -5373,8 +5373,8 @@ Most of the time, we don&rsquo;t know the p.m.f. or p.d.f. of \(Y\), what can we
 </section>
 </section>
 <section>
-<section id="slide-orgd57dd2c">
-<h4 id="orgd57dd2c">Law of the Unconscious Statistician (LOTUS)</h4>
+<section id="slide-org8d26c92">
+<h4 id="org8d26c92">Law of the Unconscious Statistician (LOTUS)</h4>
 <p class="fragment">
 Discrete:
 </p>
@@ -5401,8 +5401,8 @@ In particular, if \(g(x)=x\), LOTUS is just the usual definition of the expectat
 </section>
 </section>
 <section>
-<section id="slide-org83108a4">
-<h4 id="org83108a4">Example</h4>
+<section id="slide-orgbd95e6b">
+<h4 id="orgbd95e6b">Example</h4>
 <p>
 Roll a fair six sided die.
 </p>
@@ -5432,8 +5432,8 @@ Then
 </section>
 </section>
 <section>
-<section id="slide-org5ffae9a">
-<h4 id="org5ffae9a">Example 4.1.6</h4>
+<section id="slide-org3b35726">
+<h4 id="org3b35726">Example 4.1.6</h4>
 <p class="fragment">
 Let \(X\) be a continuous random variable with p.d.f.
 </p>
@@ -5462,8 +5462,8 @@ Find \(\mathbb{E}(X)\).
 </section>
 </section>
 <section>
-<section id="slide-orge5f86eb">
-<h4 id="orge5f86eb">Solution 1</h4>
+<section id="slide-org221436d">
+<h4 id="org221436d">Solution 1</h4>
 <p>
 Find p.d.f. of \(Y\).
 </p>
@@ -5526,8 +5526,8 @@ Finally,
 </section>
 </section>
 <section>
-<section id="slide-orgaef38f3">
-<h4 id="orgaef38f3">Solution 2 (LOTUS)</h4>
+<section id="slide-org62768fa">
+<h4 id="org62768fa">Solution 2 (LOTUS)</h4>
 <div class="fragment">
 \begin{align*}
   \mathbb{E}(Y)
@@ -5540,15 +5540,15 @@ Finally,
 </section>
 </section>
 <section>
-<section id="slide-org5f003ef">
-<h3 id="org5f003ef">4.2. Properties of Expectations</h3>
-<div class="outline-text-3" id="text-org5f003ef">
+<section id="slide-org40fe88b">
+<h3 id="org40fe88b">4.2. Properties of Expectations</h3>
+<div class="outline-text-3" id="text-org40fe88b">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org1060177">
-<h4 id="org1060177">Theorem (Linearity)</h4>
+<section id="slide-org4cabcd2">
+<h4 id="org4cabcd2">Theorem (Linearity)</h4>
 <p class="fragment">
 If \(Y = aX + b\), where \(a, b \in \mathbb{R}\), then
 </p>
@@ -5567,11 +5567,12 @@ In particular, if \(a = 0\), \(Y = a X + b = b\), then
 \]
 </p>
 
+
 </section>
 </section>
 <section>
-<section id="slide-org45ee3bd">
-<h4 id="org45ee3bd">Proof (Continuous case)</h4>
+<section id="slide-org5967a2b">
+<h4 id="org5967a2b">Proof (Continuous case)</h4>
 <div class="fragment">
 \begin{align*}
   \mathbb{E}(Y)
@@ -5586,8 +5587,8 @@ In particular, if \(a = 0\), \(Y = a X + b = b\), then
 </section>
 </section>
 <section>
-<section id="slide-org6823776">
-<h4 id="org6823776">Theorem</h4>
+<section id="slide-org822df2b">
+<h4 id="org822df2b">Theorem</h4>
 <p class="fragment">
 Assume \(\mathbb{E}(X_i)\) is finite for \(i = 1, 2, \dots, n\). Then
 </p>
@@ -5609,8 +5610,8 @@ In particular,
 </section>
 </section>
 <section>
-<section id="slide-org4032139">
-<h4 id="org4032139">Example</h4>
+<section id="slide-org0ed77c8">
+<h4 id="org0ed77c8">Example</h4>
 <p>
 Recall that if \(X \sim \text{Bin}(n, p)\), we computed
 </p>
@@ -5642,8 +5643,8 @@ Thus,
 </section>
 </section>
 <section>
-<section id="slide-orgfb5c3b7">
-<h4 id="orgfb5c3b7">Example (Match Problem Revisited)</h4>
+<section id="slide-org47be7a2">
+<h4 id="org47be7a2">Example (Match Problem Revisited)</h4>
 <p>
 Suppose \(n\) men throw their hats into the center of a room. Then hats are mixed up, and each man randomly selects a hat.
 </p>
@@ -5700,8 +5701,8 @@ So
 </section>
 </section>
 <section>
-<section id="slide-org286899a">
-<h4 id="org286899a">Independence and Expectation</h4>
+<section id="slide-org6838ccf">
+<h4 id="org6838ccf">Independence and Expectation</h4>
 <p>
 <b>Theorem</b>
 </p>
@@ -5726,8 +5727,8 @@ In general, if \(X_1, \dots, X_n\) are independent, then
 </section>
 </section>
 <section>
-<section id="slide-org6071da6">
-<h4 id="org6071da6">Example</h4>
+<section id="slide-org080209a">
+<h4 id="org080209a">Example</h4>
 <p>
 Suppose \(X_1, X_2, X_3\) form a random sample, i.e., independent and identically distributed, such that
 \(\mathbb{E}(X_1) = 0, \mathbb{E}(X_1^2) = 1\).
@@ -5753,1306 +5754,21 @@ Compute
 \end{align*}
 
 </div>
-
 </section>
 </section>
 <section>
-<section id="slide-org82e8cd3">
-<h3 id="org82e8cd3">4.3 &amp; 4.6 Variance, Covariance and Correlation</h3>
-<div class="outline-text-3" id="text-org82e8cd3">
-</div>
+<section id="slide-org83e4a3f">
+<h3 id="org83e4a3f">4.4. Moments</h3>
 </section>
 </section>
 <section>
-<section id="slide-org3fd5fc3">
-<h4 id="org3fd5fc3">Definition</h4>
-<p>
-Let \(X\) be a random variable, let \(\mu_X = \mathbb{E}(X)\). Then
-</p>
-<p class="fragment">
-\[
-\text{Var}(X) = \mathbb{E}(X - \mu_X)^2,
-\]
-</p>
-<p class="fragment">
-is called the <b>variance</b> of \(X\), and measures how spread out of the distribution of \(X\) is.
-</p>
-
+<section id="slide-orge9c1a4c">
+<h3 id="orge9c1a4c">4.5. The Mean and Median</h3>
 </section>
 </section>
 <section>
-<section id="slide-orga700ad6">
-<h4 id="orga700ad6">Example</h4>
-<p>
-Let \(X \sim \text{Unif}([0, 1])\), then
-</p>
-<p class="fragment">
-\[
-\mu_X = \mathbb{E}(X) = \frac{1}{2}.
-\]
-</p>
-<p class="fragment">
-Thus,
-</p>
-<div class="fragment">
-\begin{align*}
-  \text{Var}(X)
-& = \mathbb{E}(X - 1/2)^2\\
-& = \int_{-\infty}^{\infty}  (x - 1/2)^2 f_X(x) \, dx\\
-& = \int_0^1 (x - 1/2)^2 \cdot 1 \, dx = \frac{1}{12}.
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-org86ca8db">
-<h4 id="org86ca8db">Example</h4>
-<p>
-Let \(X \sim \text{Ber}(p)\), what is \(\text{Var}(X)\)?
-</p>
-
-<p class="fragment">
-Since \(\mathbb{E}(X) = p\),
-</p>
-<div class="fragment">
-\begin{align*}
-  \text{Var}(X)
-& = \mathbb{E}(X - p)^2 \\
-& = (0 - p)^2 \mathbb{P}(X = 0) + (1-p)^2 \mathbb{P}(X = 1)\\
-& = p^2(1-p) + (1-p)^2 p\\
-& = p(1-p) [ p + (1-p)] = p(1-p).
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-org7036a6a">
-<h4 id="org7036a6a">Definition</h4>
-<p>
-Let \(X, Y\) be two random variables. Then
-\[
-\text{Cov}(X, Y) = \mathbb{E}(X - \mu_X)(Y - \mu_Y)
-\]
-is called the <b>covariance</b> of \((X, Y)\), and measures &ldquo;dependence&rdquo; between \(X\) and \(Y\).
-</p>
-
-<p class="fragment">
-Intuition
-</p>
-
-<p class="fragment">
-If \((X - \mu_X)(Y - \mu_Y) > 0\), then \(X\) and \(Y\) are both above or below their means.
-</p>
-
-<p class="fragment">
-If \((X - \mu_X)(Y - \mu_Y) < 0\), then \(X\) and \(Y\) are on opposite sides of their means.
-</p>
-
-<p class="fragment">
-In particular,
-\[
-\text{Cov}(X, X) = \mathbb{E}(X - \mu_X)^2 = \text{Var}(X).
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org3b51e29">
-<h4 id="org3b51e29">Formulas</h4>
-<p class="fragment">
-(1) \(\text{Cov}(X, Y) = \mathbb{E}(XY) - \mathbb{E}(X) \mathbb{E}(Y)\).
-</p>
-
-<p class="fragment">
-(2) \(\text{Var}(X) = \mathbb{E}(X^2) - \left(\mathbb{E}(X)\right)^2\).
-</p>
-
-<p class="fragment">
-Proof of (1).
-</p>
-<div class="fragment">
-\begin{align*}
-  \text{LHS}
-& = \mathbb{E}(X - \mu_X)(Y - \mu_Y) = \mathbb{E}(XY - \mu_Y X - \mu_X Y + \mu_X \mu_Y)\\
-& = \mathbb{E}(XY) - \mathbb{E}(\mu_Y X) - \mathbb{E}(\mu_X Y) + \mathbb{E}(\mu_X \mu_Y)\\
-& = \mathbb{E}(XY) - \mu_Y \mathbb{E}(X) - \mu_X \mathbb{E}(Y) + \mu_X \mu_Y\\
-& = \mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y) = \text{RHS}.
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-org15b78a5">
-<h4 id="org15b78a5">Example</h4>
-<p>
-Let \(X \sim \text{Unif}([0, 1])\), we computed
-\[
-\text{Var}(X) = \frac{1}{12}.
-\]
-</p>
-
-<p class="fragment">
-Now we apply the formula above to recompute the variance.
-</p>
-
-<p class="fragment">
-First, we have \(\mathbb{E}(X) = 1/2\).
-</p>
-
-<p class="fragment">
-Second,
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(X^2) = \int_0^1 x^2 \cdot 1 \, dx = \frac{1}{3}.
-\]
-</p>
-
-<p class="fragment">
-Therefore,
-</p>
-<p class="fragment">
-\[
-\text{Var}(X) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2 = \frac{1}{3} - \left(\frac{1}{2}\right)^2 = \frac{1}{12}.
-\]
-</p>
-
-<p class="fragment">
-Try to find \(\mathbb{E}(X), \text{Var}(X)\) for \(X \sim \text{Unif}([a, b])\).
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org03e4982">
-<h4 id="org03e4982">Example</h4>
-<p>
-Suppose \((X, Y)\) has the joint p.d.f.
-\[
-f(x, y) = \begin{cases}
-x + y, & 0 < x < 1, 0 < y < 1,\\
- 0, & \text{otherwise}.
-\end{cases}
-\]
-</p>
-
-<p class="fragment">
-Find \(\text{Cov}(X, Y)\).
-</p>
-
-<div class="fragment">
-\begin{align*}
-  \mathbb{E}(XY)
-& = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x y f(x, y) \, dx dy\\
-& = \int_0^1  \int_0^1 x y (x+ y) \, dx dy = \frac{1}{3}.
-\end{align*}
-
-</div>
-
-</section>
-<section>
-<div>
-\begin{align*}
-  \mathbb{E}(X)
-& = \int_{-\infty}^{\infty} x f_X(x) \, dx\\
-& = \int_{-\infty}^{\infty} x \left(\int_{-\infty}^{\infty} f(x, y) \, dy\right) \, dx\\
-& = \int_0^1  x \int_0^1 (x + y)\, dy dx\\
-& = \frac{7}{12}.
-\end{align*}
-
-</div>
-
-<p class="fragment">
-Similarly,
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(Y) = \frac{7}{12}.
-\]
-</p>
-
-<p class="fragment">
-Thus,
-</p>
-<p class="fragment">
-\[
-\text{Cov}(X, Y) = \frac{1}{3} - \left( \frac{7}{12}\right)^2 = - \frac{1}{144}.
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orgff251a2">
-<h4 id="orgff251a2">Properties of Covariance</h4>
-<p class="fragment">
-(1)
-</p>
-<p class="fragment">
-\[
-\text{Cov}(a X + b) = \text{Cov}(X, a Y + b) = a \text{Cov}(X, Y).
-\]
-</p>
-
-
-<p class="fragment">
-(2)
-</p>
-<p class="fragment">
-\[
-\text{Cov} \left( \sum_{i=1}^m X_i, \sum_{j=1}^n Y_j  \right) = \sum_{i=1}^m \sum_{j=1}^n \text{Cov}(X_i, Y_j).
-\]
-</p>
-
-<p class="fragment">
-Using (1) and (2), we have
-</p>
-
-<p class="fragment">
-(3)
-</p>
-<div class="fragment">
-\begin{align*}
-  \text{Cov} \left( \sum_{i=1}^m (a_i X_i + b_i), \sum_{j=1}^n (c_j Y_j + d_j) \right)
-& \overset{(2)}{=} \sum_{i=1}^m \sum_{j=1}^n \text{Cov} \left( a_i X_i + b_i, c_j Y_j + d_j \right)\\
-& \overset{(1)}{=} \sum_{i=1}^m \sum_{j=1}^n a_i c_j \text{Cov}(X_i, Y_j)
-\end{align*}
-
-</div>
-
-</section>
-<section>
-<p>
-In particular, take \(a = 0\) in (1), we have
-</p>
-<p class="fragment">
-(4)
-</p>
-<p class="fragment">
-\[
-\text{Cov}(b, Y) = 0, \quad \text{Var}(b) = \text{Cov}(b, b) = 0.
-\]
-</p>
-
-<p class="fragment">
-(5)
-</p>
-<div class="fragment">
-\begin{align*}
-  \text{Var}(a X + b)
-& = \text{Cov}(a X + b, a X + b) = a^2 \text{Cov}(X, X)\\
-& = a^2 \text{Var}(X).
-\end{align*}
-
-</div>
-</section>
-<section>
-<p>
-Proof of (1).
-</p>
-<p class="fragment">
-\[
-\text{Cov}(a X + b) = a \text{Cov}(X, Y).
-\]
-</p>
-
-<div class="fragment">
-\begin{align*}
-  \text{LHS}
-& = \mathbb{E}(a X + b - \mathbb{E}(a X + b))(Y - \mathbb{E}(Y))\\
-& = \mathbb{E}(a X + b - a \mathbb{E}(X) - b)(Y - \mathbb{E}(Y))\\
-& = a \mathbb{E}(X - \mathbb{E}(X))(Y - \mathbb{E}(Y))\\
-& = a \text{Cov}(X, Y) = \text{RHS}.
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-org5817748">
-<h4 id="org5817748">Variance of Sum</h4>
-<p class="fragment">
-Recall
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(X + Y) = \mathbb{E}(X) + \mathbb{E}(Y).
-\]
-</p>
-
-<p class="fragment">
-For the variance, we have
-</p>
-
-<p class="fragment">
-(1)
-</p>
-<div class="fragment">
-\begin{align*}
-  \text{Var}(X + Y)
-& = \text{Cov}(X + Y, X + Y)\\
-& = \text{Cov}(X, X) + \text{Cov}(X, Y) + \text{Y, X} + \text{Cov}(Y, X) + \text{Cov}(Y, Y)\\
-& = \text{Var}(X) + 2 \text{Cov}(X, Y) + \text{Var}(Y).
-\end{align*}
-
-</div>
-<p class="fragment">
-(2)
-</p>
-<p class="fragment">
-\[
-\text{Var}\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \text{Var}(X_i) + 2 \sum_{1 \le i < j \le n } \text{Cov}(X_i, X_j).
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orgb49e3e4">
-<h4 id="orgb49e3e4">Example (Match Problem again)</h4>
-<p>
-Suppose \(n\) men throw their hats into the center of a room. Then hats are mixed up, and each man randomly selects a hat.
-</p>
-
-<p>
-Let \(X\) be the number of men who gets his own hat.
-</p>
-
-<p class="fragment">
-Find \(\text{Var}(X)\).
-</p>
-
-<p class="fragment">
-Define
-</p>
-<p class="fragment">
-\[
-X_i = \begin{cases}
-1, & i^{\text{th}}~ \text{man gets his own hat},\\
-0, & \text{otherwise}.
-\end{cases}
-\]
-</p>
-
-<p class="fragment">
-Then
-</p>
-<p class="fragment">
-\[
-X = X_1 + X_2 + \cdots + X_n.
-\]
-</p>
-
-<p class="fragment">
-Note that \(X_i \sim \text{Ber}(p_i)\), where
-</p>
-<p class="fragment">
-\[
-p_i = \mathbb{P}(X_i = 1) = \frac{1}{n}.
-\]
-</p>
-
-</section>
-<section>
-<p>
-Also, we have
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(X_i) = p_i = \frac{1}{n}, \quad \text{Var}(X_i) = p_i(1-p_i) = \frac{1}{n} \left( 1 - \frac{1}{n} \right).
-\]
-\[
-\text{Var}(X) = \text{Var}\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \underbrace{\text{Var}(X_i)}_{\checkmark} + 2 \sum_{1 \le i < j \le n } \underbrace{\text{Cov}(X_i, X_j)}_{?}.
-\]
-</p>
-
-
-<p class="fragment">
-Fix \(1 \le i < j \le n\),
-</p>
-<p class="fragment">
-\[
-\text{Cov}(X_i, X_j) = \underbrace{\mathbb{E}(X_iX_j)}_{?} - \underbrace{\mathbb{E}(X_i)}_{\checkmark} \underbrace{\mathbb{E}(X_j)}_{\checkmark}.
-\]
-</p>
-<div class="fragment">
-\begin{align*}
-  \mathbb{E}(X_i X_j)
-& = \mathbb{P}(X_i X_j = 1) = \mathbb{P}(X_i=1, X_j=1)\\
-& = \underbrace{\mathbb{P}(X_i = 1)}_{\checkmark} + \underbrace{\mathbb{P}(X_j = 1)}_{\checkmark} - \underbrace{\mathbb{P}(X_i=1 ~\text{or}~ X_j=1)}_{?}.
-\end{align*}
-
-</div>
-<p class="fragment">
-\[
-\mathbb{P}(X_i = 1, X_j=1) = \mathbb{P}(X_i | X_j = 1) \mathbb{P}(X_j=1) = \frac{1}{n-1}\cdot \frac{1}{n}.
-\]
-</p>
-
-</section>
-<section>
-<p>
-So,
-</p>
-<p class="fragment">
-\[
-\text{Cov}(X_i, X_j) = \frac{1}{(n-1)n} - \frac{1}{n^2} = \frac{1}{n^2(n-1)}.
-\]
-</p>
-
-<p class="fragment">
-Finally,
-</p>
-<div class="fragment">
-\begin{align*}
- \text{Var}(X)
-& =  \text{Var}\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \text{Var}(X_i) + 2 \sum_{1 \le i < j \le n } \text{Cov}(X_i, X_j)\\
-& = \sum_{i=1}^n \frac{1}{n} \left( 1 - \frac{1}{n} \right) + 2 \sum_{1 \le i < j \le n} \frac{1}{n^2(n-1)}\\
-& = 1 - \frac{1}{n} + \frac{2}{n^2(n-1)} \left( \sum_{1 \le i < j \le n}  1 \right)\\
-& = 1 - \frac{1}{n} + \frac{1}{n}\\
-& = 1,
-\end{align*}
-
-</div>
-<p class="fragment">
-since
-</p>
-<p class="fragment">
-\[
-\sum_{1 \le i < j \le n} 1 = \frac{[1 + (n-1)](n-1)}{2} = \frac{n(n-1)}{2} = \binom{n}{2}.
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orgcf12a7f">
-<h4 id="orgcf12a7f">Correlation</h4>
-<p class="fragment">
-Suppose you have \(X, Y\) with \(\text{Cov}(X, Y) = 5\).
-</p>
-<p class="fragment">
-Define
-</p>
-<p class="fragment">
-\[
-U = 10 X, \quad V = 10 Y.
-\]
-</p>
-
-<p class="fragment">
-Then
-</p>
-<div class="fragment">
-\begin{align*}
- \text{Cov}(U, V)
-& = \text{Cov}(10 X, 10 Y) = 10 \cdot 10 \text{Cov}(X, Y)\\
-& = 100 \times 5 = 500.
-\end{align*}
-
-</div>
-
-
-<p class="fragment">
-<b>Question</b>: How to obtain a measure of &ldquo;dependence&rdquo; between \(X, Y\) that is not driven by changing the scales of random variables?
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org7255464">
-<h4 id="org7255464">Definition</h4>
-<p>
-\[
-\sigma_{X} = \sqrt{\text{Var}(X)}
-\]
-is called the <b>standard deviation</b> of \(X\), and
-\[
-\text{Corr}(X, Y) = \rho(X, Y) = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}
-\]
-is called the <b>correlation</b> of $X$and \(Y\).
-</p>
-
-<p class="fragment">
-Rearrange the terms, we have
-</p>
-<p class="fragment">
-\[
-\text{Cov}(X, Y) = \rho(X, Y) \sigma_X \sigma_Y.
-\]
-</p>
-
-</section>
-<section>
-<p>
-Let&rsquo;s come back to the previous example: \(U = 10 X, V = 10 Y\).
-</p>
-<div class="fragment">
-\begin{align*}
-  \text{Corr}(U, V)
-& = \frac{\text{Cov}(U, V)}{\sqrt{\text{Var}(U)} \sqrt{\text{Var}(V)}}\\
-& = \frac{100 \text{Cov}(X, Y)}{10 \sqrt{\text{Var}(X)} \cdot 10 \sqrt{\text{Var}(Y)}}\\
-& = \text{Corr}(X, Y).
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orgff4235a">
-<h4 id="orgff4235a">Properties of Correlation</h4>
-<p class="fragment">
-(1) \(-1 \le \rho(X, Y) \le 1\).
-</p>
-
-<p class="fragment">
-(2) \(\rho(X, Y) = 1\) if and only if \(Y = a X + b\) for some \(a > 0, b \in \mathbb{R}\).
-</p>
-
-<p class="fragment">
-(3) \(\rho(X, Y) = -1\) if and only if \(Y = a X + b\) for some \(a < 0, b \in \mathbb{R}\).
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org5a2a527">
-<h4 id="org5a2a527">Example</h4>
-<p>
-Assume that
-\[
-2 X + 3 Y = 5.
-\]
-</p>
-<p class="fragment">
-Then
-</p>
-<p class="fragment">
-\[
-Y = - \frac{2}{3} X + \frac{5}{3}, \quad\text{or}, \quad X = - \frac{3}{2}Y + \frac{5}{2}.
-\]
-</p>
-<p class="fragment">
-Thus,
-</p>
-<p class="fragment">
-\[
-\rho(X,Y) = -1.
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org90c47b2">
-<h4 id="org90c47b2">Example</h4>
-<p>
-Consider tossing a coin \(n\) times. The probability of &ldquo;success&rdquo; (getting a head) is \(p\).
-</p>
-
-<p class="fragment">
-Let \(X, Y\) be the number of heads and tails, respectively.
-</p>
-
-<p class="fragment">
-Compute \(\text{Corr}(X, Y)\).
-</p>
-
-<p class="fragment">
-It is clear that
-\[
-X + Y = n \quad \text{or}\quad Y = n- X,
-\]
-</p>
-<p class="fragment">
-so \(\rho(X, Y) = -1\).
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org97eb8dd">
-<h4 id="org97eb8dd">What about \(\rho(X, Y) = 0\)?</h4>
-<p class="fragment">
-In this case, we say that \(X, Y\) are <b>uncorrelated</b> if \(\rho(X, Y) = \text{Cov}(X, Y) = 0\).
-</p>
-
-<p class="fragment">
-<b>Theorem</b>
-</p>
-<p class="fragment">
-If two random variables \(X\) and \(Y\) are uncorrelated, then
-</p>
-<p class="fragment">
-\[
-\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y).
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orga0e56ea">
-<h4 id="orga0e56ea">Independence and Correlation</h4>
-<p class="fragment">
-<b>Theorem</b>
-</p>
-<p class="fragment">
-\[
-X, Y ~\text{are independent} \Rightarrow \text{Cov}(X, Y) = \rho(X, Y) = 0.
-\]
-</p>
-
-<p class="fragment">
-<span style="color: rgb(255,0,0)">Warning</span>:
-</p>
-<p class="fragment">
-\[
-\text{Cov}(X,Y) = 0 \nRightarrow X, Y ~\text{are independent}.
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org3505fd6">
-<h4 id="org3505fd6">Example</h4>
-<p>
-Let \(X\) be uniform on integers \(\{-1, 0, 1\}\), i.e.,
-</p>
-<p class="fragment">
-\[
-\mathbb{P}(X = -1) = \mathbb{P}(X = 0) = \mathbb{P}(X = 1) = \frac{1}{3}.
-\]
-</p>
-
-<p class="fragment">
-Let \(Y = X^2\), we have
-</p>
-<div class="fragment">
-\begin{align*}
- \text{Cov}(X, Y)
-& = \mathbb{E}(XY) - \mathbb{E}(X) \mathbb{E}(Y)\\
-& = \mathbb{E}(X^3) - \mathbb{E}(X) \mathbb{E}(Y)\\
-& = \mathbb{E}(X) - \mathbb{E}(X) \mathbb{E}(Y)\\
-& = 0.
-\end{align*}
-
-</div>
-
-<p class="fragment">
-Here we used the fact that \(X = X^3\) and
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(X) = (-1 + 0 + 1) \cdot \frac{1}{3} = 0.
-\]
-</p>
-
-<p class="fragment">
-Therefore, \(X\) and \(Y\) are uncorrelated.
-</p>
-
-</section>
-<section>
-<p>
-However, \(X\) are \(Y\) ar not independent since
-</p>
-<p class="fragment">
-\[
-\mathbb{P}(X = 1, Y = 0) = \mathbb{P}(X = 1, X = 0) = 0,
-\]
-</p>
-<p class="fragment">
-and
-</p>
-<p class="fragment">
-\[
-\mathbb{P}(X = 1) = \frac{1}{3}, \quad \mathbb{P}(Y = 0) = \mathbb{P}(X = 0) = \frac{1}{3}
-\]
-</p>
-<p class="fragment">
-which implies
-</p>
-<p class="fragment">
-\[
-\mathbb{P}(X = 1, Y = 0) \neq \mathbb{P}(X = 1) \mathbb{P}(Y = 0).
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orge3f5fd2">
-<h4 id="orge3f5fd2">Example</h4>
-<p>
-Let \(X_1, \dots X_n\) be a random sample from Bernoulli distribution with probability of success \(p\), and \(X = \sum_{i=1}^n X_i\).
-</p>
-
-<p class="fragment">
-\[
-\text{Var}(X) = \sum_{i=1}^n \text{Var}(X_i) = np(1 - p).
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org20f9d39">
-<h4 id="org20f9d39">Example</h4>
-<p>
-Assume \((X, Y)\) has a joint p.d.f.
-\[
-f(x, y) = \begin{cases}
-\frac{4y}{x^2}, & 1 < x < 2, 0 < y < 1,\\
-0, & \text{otherwise}.
-\end{cases}
-\]
-</p>
-<p class="fragment">
-Find \(\text{Cov}(X, Y)\).
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orga06debc">
-<h4 id="orga06debc">Solution 1</h4>
-<p class="fragment">
-To compute the covariance, we need to calculate \(\mathbb{E}(X), \mathbb{E}(Y)\) and \(\mathbb{E}(XY)\).
-</p>
-
-<p class="fragment">
-To this end, we compute
-</p>
-<p class="fragment">
-\[
-  f_X(x) = \int_{-\infty}^{\infty} f(x, y) \, dy = \int_0^1 \frac{4y}{x^2} \, dy = \frac{2}{x^2}, \, 1 < x < 2.
-\]
-</p>
-<p class="fragment">
-\[
-  f_Y(y) = \int_{-\infty}^{\infty} f(x, y) \, dx = \int_1^2 \frac{4y}{x^2} \, dx = 2y, \, 0 < y < 1.
-\]
-</p>
-
-<p class="fragment">
-Thus,
-</p>
-<div class="fragment">
-\begin{align*}
-  \mathbb{E}(X) & = \int_1^2 x \cdot \frac{2}{x^2}\, dx = \cdots\\
-\mathbb{E}(Y) &  = \int_0^1 y \cdot 2 y \, dy = \cdots\\
-\mathbb{E}(XY) & = \int_1^2 \int_0^1 x y f(x, y) \, dy dx = \cdots
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orgc359145">
-<h4 id="orgc359145">Solution 2</h4>
-<p class="fragment">
-Clearly,
-</p>
-<p class="fragment">
-\[
-f(x, y) = f_1(x) f_2(y),
-\]
-</p>
-<p class="fragment">
-where
-</p>
-<div class="fragment">
-\begin{align*}
- f_1(x)  & = \frac{1}{x^2},\quad  1 < x < 2\\
-f_2(y) & = 4y, \quad 0 < y < 1.
-\end{align*}
-
-</div>
-
-<p class="fragment">
-Therefore, \(X\) and \(Y\) are independent and thus they are uncorrelated.
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org5e30282">
-<h3 id="org5e30282">4.4. Moments</h3>
-<div class="outline-text-3" id="text-org5e30282">
-</div>
-</section>
-</section>
-<section>
-<section id="slide-org4ba94d8">
-<h4 id="org4ba94d8">Definition</h4>
-<p>
-Given a random variable \(X\), \(\mathbb{E}(X^k)\) is called the \(k^{\text{th}}\) <b>moment</b> of \(X\), for \(k \ge 0\), integer.
-</p>
-
-<p data-fragment-index="0" class="fragment">
-In particular,
-</p>
-
-<ul>
-<li data-fragment-index="1" class="fragment">\(k = 0: \mathbb{E}(X^0) = \mathbb{E}(1) = 1\).</li>
-<li data-fragment-index="2" class="fragment">\(k = 1: \mathbb{E}(X^1) = \mu_X\), mean or \(1^{\text{st}}\) moment.</li>
-<li data-fragment-index="3" class="fragment">\(k = 2: \mathbb{E}(X^2) = \sigma^2 + \mu^2\), \(2^{\text{nd}}\) moment.</li>
-
-</ul>
-
-</section>
-</section>
-<section>
-<section id="slide-org5f8eb44">
-<h4 id="org5f8eb44">Example</h4>
-<p data-fragment-index="0" class="fragment">
-Let \(X \sim \text{Ber}(p)\), then
-</p>
-
-<ul>
-<li data-fragment-index="1" class="fragment">\(\mathbb{E}(X) = p\)</li>
-<li data-fragment-index="2" class="fragment">\(\mathbb{E}(X^2) = 0^2 \mathbb{P}(X = 0) + 1^2 \mathbb{P}(X = 1) = p\)</li>
-<li data-fragment-index="3" class="fragment">\(\mathbb{E}(X^3)  = p\)</li>
-<li data-fragment-index="4" class="fragment">\(\mathbb{E}(X^k)  = p, \quad k \ge 1\).</li>
-
-</ul>
-
-<p data-fragment-index="5" class="fragment">
-In general, it is not easy to compute \(\mathbb{E}(X^k)\) for arbitrary \(k \ge 1\).
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orgf6d1218">
-<h4 id="orgf6d1218">Moment Generating Functions (m.g.f.)</h4>
-<p>
-Can generate moments
-</p>
-
-<p class="fragment">
-<b>Definition</b>
-</p>
-
-<p class="fragment">
-Given a random variable \(X\), we call
-</p>
-<p class="fragment">
-\[
-\psi_X(t) = \mathbb{E}(e^{tX})
-\]
-the m.g.f. of \(X\).
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org4c30431">
-<h4 id="org4c30431">Example</h4>
-<p>
-Let \(X \sim \text{Ber}(p)\), find \(\psi_X(t)\).
-</p>
-
-<p class="fragment">
-By definition,
-</p>
-<div class="fragment">
-\begin{align*}
-  \psi_X(t)
-& = \mathbb{E}(e^{tX}) = e^{t\cdot 0} \mathbb{P}(X = 0) + e^{t \cdot 1} \mathbb{P}(X = 1)\\
-& = 1 - p  + e^t p.
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-org52e8c8e">
-<h4 id="org52e8c8e">Example</h4>
-<p>
-Let \(X\) be a discrete random variable with \(\range (X) = \{k_1, k_2, \dots, k_n\}\) and
-</p>
-<p class="fragment">
-\[
-\mathbb{P}(X = k_i) = p_i, \quad \sum_{i=1}^n p_i = 1.
-\]
-</p>
-<p class="fragment">
-Find \(\psi_X(t)\).
-</p>
-
-<div class="fragment">
-\begin{align*}
-  \psi_X(t)
-& = \mathbb{E}(e^{tX})\\
-& = e^{tk_1} p_1 + e^{tk_2} p_2 + \cdots +e^{tk_n} p_n\\
-& = \sum_{i=1}^n e^{tk_i}  p_i.
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orge8e8dd4">
-<h4 id="orge8e8dd4">Example</h4>
-<p>
-Suppose the m.g.f. of \(X\) is
-\[
-\psi_X(t) = \frac{1}{5} e^t + \frac{2}{5} e^{4t} + \frac{2}{5} e^{8t}.
-\]
-</p>
-
-<p class="fragment">
-What&rsquo;s the distribution of \(X\)?
-</p>
-
-<p class="fragment">
-From the previous example, we have
-</p>
-<p class="fragment">
-\[
-p_X(1) = \frac{1}{5}, p_X(4) = \frac{2}{5}, p_X(8) = \frac{2}{5},
-\]
-</p>
-<p class="fragment">
-and so \(X\) is discrete with
-</p>
-<p class="fragment">
-\[
-\range (X) = \{1, 4, 8\}.
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org8f0dacb">
-<h4 id="org8f0dacb">Example</h4>
-<p>
-Suppose \(X\) has a p.d.f
-</p>
-
-<p>
-\[
-f(x) = \begin{cases}
-e^{-x}, & x > 0, \\
-0, & \ow .
-\end{cases}
-\]
-</p>
-<p class="fragment">
-Find \(\psi_X(t)\).
-</p>
-
-<div class="fragment">
-\begin{align*}
-  \psi_X(t)
-& = \mathbb{E}(e^{tX})  = \int_{-\infty}^{\infty} e^{t x} f(x) \, dx\\
-& = \int_0^{\infty} e^{tx} \cdot e^{-x} \, dx\\
-& = \int_0^{\infty} e^{(t - 1)x} \, dx.
-\end{align*}
-
-</div>
-
-</section>
-<section>
-<p>
-If \(t = 1\),
-</p>
-<p class="fragment">
-\[
-\int_0^{\infty} e^{(t - 1)x} \, dx = \int_0^{\infty} 1 \, dx = \infty.
-\]
-</p>
-
-<p class="fragment">
-If \(t \neq 1\),
-</p>
-
-<div class="fragment">
-\begin{align*}
-\int_0^{\infty} e^{(t - 1)x} \, dx
-& = \left. \frac{1}{t - 1} e^{(t-1) x} \right|_0^\infty\\
-& = \begin{cases}
-\frac{1}{1 - t}, & t < 1,\\
-\infty, & t > 1.
-\end{cases}
-\end{align*}
-
-</div>
-</section>
-<section>
-<p>
-To sum up,
-\[
-\psi_X(t) = \begin{cases}
-\frac{1}{1 - t}, & t < 1,\\
-\infty, & t \ge 1.
-\end{cases}
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-org231590a">
-<h4 id="org231590a">Why do we call \(\psi_X(t)\) the moment generating function?</h4>
-<p class="fragment">
-It is simply because it generates moments, but how?
-</p>
-
-<p class="fragment">
-\[
-\psi_X(t) = \mathbb{E}(e^{tX}) \overset{?}{\longrightarrow} \mathbb{E}(X^k)
-\]
-</p>
-
-<p class="fragment">
-Recall the Maclaurin series of \(e^x\):
-</p>
-<div class="fragment">
-\begin{align*}
-  e^x
-& = \sum_{k=0}^{\infty} \frac{(e^x)^{(k)}(0)}{k!} x^k = \sum_{k=0}^{\infty} \frac{x^k}{k!}\\
-& = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
-\end{align*}
-
-</div>
-
-</section>
-<section>
-<div>
-\begin{align*}
-  \psi_X(t) & = \mathbb{E}(e^{t X})\\
-\psi'_X(t) & = \frac{d}{dt} \mathbb{E}(e^{tX}) = \mathbb{E} \left( \frac{d}{dt} e^{tX} \right) = \mathbb{E}(e^{tX} X)\\
-\psi'_X(0) & = \mathbb{E}(e^{0\cdot X} X) = \mathbb{E}(X) \quad \text{$1^{\text{st}}$ moment}
-\end{align*}
-
-</div>
-
-
-<div class="fragment">
-\begin{align*}
-\psi''_X(t) & = \frac{d}{dt} \mathbb{E}(e^{tX} X) =  \mathbb{E}(e^{tX} X^2)\\
-\psi''_X(0) & = \mathbb{E}(e^{0\cdot X} X^2) = \mathbb{E}(X^2) \quad \text{$2^{\text{nd}}$ moment}
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orgda802fc">
-<h4 id="orgda802fc">Theorem</h4>
-<p>
-Given a random variable \(X\). If the m.g.f. of \(X\) is finite for all \(t\) in some open interval around \(t=0\), then
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(X^k) = \psi_X^{(k)}(0).
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orgd97eef7">
-<h4 id="orgd97eef7">Example</h4>
-<p>
-Recall:
-\[
-\psi_X(t) = \frac{1}{1 - t}, \quad t < 1.
-\]
-</p>
-
-<p class="fragment">
-Find \(\mathbb{E}(X)\) and \(\text{Var}(X)\).
-</p>
-
-<p class="fragment">
-Since
-</p>
-<p class="fragment">
-\[
-\psi_X'(t) = \frac{1}{(1 - t)^2},
-\]
-</p>
-<p class="fragment">
-we have
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(X) = \psi_X'(0) = 1.
-\]
-</p>
-
-</section>
-<section>
-<p>
-For the variance,
-</p>
-<p class="fragment">
-\[
-\text{Var}(X) = \underbrace{\mathbb{E}(X^2)}_{?} - \underbrace{(\mathbb{E}(X))^2}_{= 1}.
-\]
-</p>
-<p class="fragment">
-But
-</p>
-<p class="fragment">
-\[
-\psi_X''(t) = \frac{2}{(1 - t)^3},
-\]
-</p>
-<p class="fragment">
-and thus
-</p>
-<p class="fragment">
-\[
-\mathbb{E}(X^2) = \psi''_X(0) = 2.
-\]
-</p>
-<p class="fragment">
-Therefore,
-</p>
-<p class="fragment">
-\[
-\text{Var}(X) = 2 - 1^2 = 1.
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orga7bd97b">
-<h4 id="orga7bd97b">Properties of m.g.f.</h4>
-<p>
-<b>Theorem</b> (Linear transformation)
-</p>
-<p class="fragment">
-Given a random variable \(X\), and let \(Y = a X + b\), then
-</p>
-<p class="fragment">
-\[
-\psi_Y(t) = \mathbb{E}(e^{tY}) = e^{t b} \psi_X(at).
-\]
-</p>
-
-<p class="fragment">
-Proof.
-</p>
-<div class="fragment">
-\begin{align*}
- \mathbb{E}(e^{tY})
-& = \mathbb{E}(e^{t(aX + b)}) = \mathbb{E}(e^{t a X} \cdot e^{t b})\\
-& = e^{tb} \mathbb{E}(e^{at\cdot X}).
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orgce2c957">
-<h4 id="orgce2c957">Example</h4>
-<p>
-Recall again
-\[
-\psi_X(t) = \frac{1}{1 - t}, \quad t < 1.
-\]
-</p>
-
-<p class="fragment">
-Let \(Y = 3 - 2X\), find \(\psi_Y(t)\).
-</p>
-
-<div class="fragment">
-\begin{align*}
-  \mathbb{E}(e^{t Y})
-& = \mathbb{E}(e^{t (3 - 2X)})\\
-& = e^{3t} \mathbb{E}( e^{-2t X} )\\
-& = e^{3t} \psi_X(-2t)\\
-& = \frac{e^{3t}}{1 + 2t}.
-\end{align*}
-
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orgfb7f518">
-<h4 id="orgfb7f518">Independence and m.g.f.</h4>
-<p>
-<b>Theorem</b>
-</p>
-<p class="fragment">
-If two random variables \(X\) and \(Y\) are independent, then
-</p>
-<p class="fragment">
-\[
-\psi_{X+Y}(t) = \psi_X(t) \psi_Y(t).
-\]
-</p>
-
-<p class="fragment">
-Proof.
-</p>
-<div class="fragment">
-\begin{align*}
- \psi_{X + Y}(t)
-& = \mathbb{E}(e^{t (X + Y)}) = \mathbb{E}(e^{t X} \cdot e^{t Y})\\
-& = \mathbb{E}(e^{t X}) \mathbb{E}(e^{tY}).
-\end{align*}
-
-</div>
-
-<p class="fragment">
-In general, \(X_1, X_2, \dots, X_n\) are independent, then
-</p>
-<p class="fragment">
-\[
-\psi_{\sum_{i=1}^n X_i}(t) = \prod_{i=1}^n \psi_{X_i}(t).
-\]
-</p>
-
-</section>
-</section>
-<section>
-<section id="slide-orgfeeb232">
-<h4 id="orgfeeb232">Example</h4>
-<p class="fragment">
-Find the m.g.f. of \(X \sim \text{Bin}(n,p)\).
-</p>
-
-<p class="fragment">
-Since
-\[
-X = \sum_{i=1}^n X_i, \quad X_i \sim \text{Ber}(p), \, \text{i.i.d.}
-\]
-</p>
-<div class="fragment">
-\begin{align*}
-  \psi_X(t)
-& = \psi_{\sum_{i=1}^n X_i}(t) = \prod_{i=1}^n X_i \psi_{X_i}(t)\\
-& = \prod_{i=1}^n (1 - p + p e^t)\\
-& = (1 - p + pe^{t})^n.
-\end{align*}
-
-</div>
+<section id="slide-orgf422dce">
+<h3 id="orgf422dce">4.7. Conditional Expectation</h3>
 </section>
 </section>
 </div>
