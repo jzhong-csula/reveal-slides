@@ -1,0 +1,8291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MATH 4100 - Vector Analysis</title>
+<meta name="author" content="\\
+Jie Zhong \\
+Department of Mathematics \\
+California State University, Los Angeles"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../dist/reveal.css"/>
+
+<link rel="stylesheet" href="../dist/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/chalkboard/style.css"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/menu/font-awesome/css/fontawesome.css"/>
+
+<link rel="stylesheet" href="../gnohz.css"/>
+<script>window.MathJax = { TeX: {Macros: {range: "\\text{Range}", ow: "\\text{otherwise}"}} }</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>MATH 4100 - Vector Analysis</h1><h2></h2><h6> <br />
+Jie Zhong <br />
+Department of Mathematics <br />
+California State University, Los Angeles</h6>
+</section>
+
+<section>
+<section id="slide-orgbf00576">
+<h2 id="orgbf00576">Chapter 1 Vector Algebra</h2>
+<div class="outline-text-2" id="text-orgbf00576">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org7cb3c30">
+<h3 id="org7cb3c30">1.1 Definitions</h3>
+<div class="outline-text-3" id="text-org7cb3c30">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org2f6e46d">
+<h4 id="org2f6e46d">What is a vector?</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">A <b>vector</b> is a quantity that has both direction and magnitude. It can be visualized as a directed line segment.</li>
+<li data-fragment-index="2" class="fragment">A <b>line segment</b> \(PQ\) is a portion of the line between the points \(P\) and \(Q\)</li>
+<li data-fragment-index="3" class="fragment">A <b>directed line segment</b> is a line segment when the endpoints are given a definite order.</li>
+<li data-fragment-index="4" class="fragment">Two directed line segments are <b>equivalent</b> if they are parallel and have the same length.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgcfd188c">
+<h4 id="orgcfd188c">Definition (Vector)</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">A <b>vector</b> is a collection of equivalent directed line segments. It is denoted by \(\mathbf{A}\) (boldfaced letters), or \(\underline{A}\) or \(\overrightarrow{A}\).</li>
+<li data-fragment-index="2" class="fragment">In Figure 1.1, we see that \(PQ, RS\), and \(TU\) are all equivalent and they represent the same vector.</li>
+
+</ul>
+
+<div id="org4e860ae" class="figure">
+<p><img src="../img/math4100/fig1-1.jpeg" alt="fig1-1.jpeg" class="fragment middle" width="300px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org550faf9">
+<h4 id="org550faf9">More Definitions</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">The <b>magnitude</b> (or the <b>length</b>, or the <b>norm</b>) \(|\mathbf{A}|\) of a vector \(\mathbf{A}\) is the distance between the initial and terminal points of its (any) equivalent directed line segment.</li>
+<li data-fragment-index="2" class="fragment">If \(P\) and \(Q\) coincide, \(PQ\) is said to be <b>degenerate</b>, and the line segment is just a point. The corresponding vector is called the <b>zero vector</b>.</li>
+<li data-fragment-index="3" class="fragment">Zero vector has zero magnitude and does not have any direction.</li>
+<li data-fragment-index="4" class="fragment"><b>Scalar</b> is just a (real) number.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org674b3d1">
+<h4 id="org674b3d1">Example</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">Vectors: velocity, position, force, acceleration, etc.</li>
+<li data-fragment-index="2" class="fragment">Scalars: mass, energy, volume, temperature, etc.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf9d88e5">
+<h3 id="orgf9d88e5">1.2 Addition and Subtraction</h3>
+<ul>
+<li>The <b>sum</b> \(\mathbf{C} = \mathbf{A} + \mathbf{B}\) has the initial point at the initial point of \(\mathbf{A}\) and the endpoint at the endpoint of \(\mathbf{B}\).</li>
+<li>By definition, if \(\mathbf{A} = \mathbf{A}'\) and \(\mathbf{B} = \mathbf{B}'\), then
+\[
+    \mathbf{A} + \mathbf{B} = \mathbf{A}' + \mathbf{B}'.
+    \]</li>
+<li>Commutative:
+\[
+    \mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}.
+    \]</li>
+<li>Associative:
+\[
+    (\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C}).
+    \]</li>
+<li>If \(\mathbf{B}\) is a vector, \(-\mathbf{B}\) is defined to be the vector with the same magnitude as \(\mathbf{B}\) but <b>opposite</b> direction.</li>
+<li><b>Subtraction</b> of vectors:
+\[
+    \mathbf{A} - \mathbf{B} = \mathbf{A} + (-\mathbf{B}).
+    \]</li>
+<li>For the zero vector:
+<ul>
+<li>\(\mathbf{0} = - \mathbf{0}\)</li>
+<li>\(\mathbf{A} - \mathbf{A} = \mathbf{0}\)</li>
+<li>\(\mathbf{A} + \mathbf{0} = \mathbf{0} + \mathbf{A} = \mathbf{A}\)</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org5169dc4">
+<h3 id="org5169dc4">1.3 Multiplication of Vectors by Numbers</h3>
+<ul>
+<li>Properties of magnitude:
+<ul>
+<li>\(|\mathbf{A}| \ge 0\)</li>
+<li>\(|\mathbf{A}| = 0\) if and only if \(\mathbf{A} = 0\)</li>
+<li>\(|\mathbf{A}| = |-\mathbf{A}|\), and \(|\mathbf{A} - \mathbf{B}| = |\mathbf{B} - \mathbf{A}|\)</li>
+<li><b>Triangle inequality</b>: \(| \mathbf{A} + \mathbf{B} | \le | \mathbf{A} | + | \mathbf{B} |\)</li>
+
+</ul></li>
+<li>A <b>scalar multiple</b> of \(\mathbf{A}\) by a number \(s\) is defined by \(s \mathbf{A}\): a vector having the magnitude \(s\) times that of \(\mathbf{A}\) and the same direction if \(s>0\) or the opposite direction if \(s<0\).</li>
+<li>Properties of scalar multiplication:
+<ul>
+<li>\(0 \mathbf{A} = \mathbf{0}, 1 \mathbf{A} = \mathbf{A}, (-1) \mathbf{A} = - \mathbf{A}\)</li>
+<li>\((s + t) \mathbf{A} = s \mathbf{A} + t \mathbf{A}\)</li>
+<li>\(s(\mathbf{A} + \mathbf{B}) = s \mathbf{A} + s \mathbf{B}\)</li>
+<li>\(s(t \mathbf{A}) = (st) \mathbf{A}\)</li>
+
+</ul></li>
+<li><b>Unit vector</b>: a vector whose magnitude is \(1\).</li>
+<li>We can create a unit vector in the direction of any given (nonzero) vector \(\mathbf{A}\):
+\[
+    \frac{\mathbf{A}}{|\mathbf{A}|}\quad\text{so that}\quad \left|\frac{\mathbf{A}}{|\mathbf{A}|}  \right| = \frac{|\mathbf{A}|}{|\mathbf{A}|} = 1.
+    \]
+This process is called the <b>standardization</b> or <b>normalization</b> of a vector.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org34ca07e">
+<h3 id="org34ca07e">1.4 Cartesian Coordinates</h3>
+<ul>
+<li>In this section, we consider a cartesian coordinate system in the plan or \(\mathbb{R}^2\) by introducing two mutually perpendicular axes, labeled as \(x\) and \(y\).</li>
+<li>The unit vectors \(\mathbf{i}, \mathbf{j}\) parallel to the \(x\text{-axis}\), \(y\text{-axis}\), respectively, pointing to the positive directions.</li>
+<li>Every vector in the plane can be written uniquely in the form
+\[
+    \mathbf{A} = A_1 \mathbf{i} + A_2 \mathbf{j}.
+    \]</li>
+<li>The real numbers \(A_1, A_2\) are called the cartesian <b>components</b> (or <b>orthogonal projections</b>) of \(\mathbf{A}\).</li>
+<li>The magnitude of the vector \(\mathbf{A}\) is
+\[
+      \vert\mathbf{A}\vert  = \sqrt{A_1^{2} + A_{2}^{2}}
+  \]</li>
+<li>The angles between the vector and the coordinate axes are the <b>direction angles</b>, which can be determined by
+\[
+    \cos \alpha_1 = \frac{A_1}{|\mathbf{A}|}, \quad
+    \cos \alpha_2 = \frac{A_2}{|\mathbf{A}|}.
+    \]</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org0afb5e0">
+<h3 id="org0afb5e0">1.5 Space Vectors</h3>
+<ul>
+<li>All concepts or ideas from Sec 1.4 can be extended to \(\mathbb{R}^3\).</li>
+<li>The unit vectors \(\mathbf{i}, \mathbf{j}, \mathbf{k}\) parallel to the \(x\text{-axis}\), \(y\text{-axis}\), \(z\text{-axis}\) respectively, pointing to the positive directions.</li>
+<li>Every vector in the plane can be written uniquely in the form
+\[
+    \mathbf{A} = A_1 \mathbf{i} + A_2 \mathbf{j} + A_3 \mathbf{k}.
+    \]</li>
+<li>The real numbers \(A_1, A_2, A_3\) are called the cartesian <b>components</b> (or <b>orthogonal projections</b>) of \(\mathbf{A}\).</li>
+<li>The magnitude of the vector \(\mathbf{A}\) is
+\[
+      \vert\mathbf{A}\vert  = \sqrt{A_1^{2} + A_{2}^{2} + A_3^2}
+  \]</li>
+<li>The angles between the vector and the coordinate axes are the <b>direction angles</b>, which can be determined by
+\[
+    \cos \alpha = \frac{A_1}{|\mathbf{A}|}, \quad
+    \cos \beta = \frac{A_2}{|\mathbf{A}|}, \quad
+    \cos \gamma = \frac{A_3}{|\mathbf{A}|}.
+    \]</li>
+<li><b>Pythagorean Theorem</b>
+\[
+    \cos^2 \alpha + \cos^2 \beta + \cos^2 \gamma = 1.
+    \]</li>
+<li>Vector addition and scalar multiplication proceeds <b>component-wise</b>:
+<ul>
+<li>\(\mathbf{A} + \mathbf{B} = (A_1 + B_1) \mathbf{i} + (A_2 + B_2) \mathbf{j} + (A_3 + B_3) \mathbf{k}\)</li>
+<li>\(s \mathbf{A} = (s A_1) \mathbf{i} + (s A_2) \mathbf{j} + (s A_3) \mathbf{k}\)</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgbbb4974">
+<h3 id="orgbbb4974">1.6 Types of Vectors</h3>
+<ul>
+<li><b>Position vector</b> of the particle: directed line segment extending from the origin \((0, 0, 0)\) to the point \((x, y, z)\) where the particle is located.
+\[
+    \mathbf{R} = x \mathbf{i} + y \mathbf{j}  + z \mathbf{k}.
+    \]</li>
+<li><b>Displacement vector</b> of the particle: directed line segment extending from the initial position \(\mathbf{R}_1 = (x_1, y_1, z_1)\) to its final position \(\mathbf{R}_2 = (x_2, y_2, z_2)\).
+\[
+     \mathbf{R}_2 - \mathbf{R}_1 = (x_2 - x_1) \mathbf{i} + (y_2 - y_1) \mathbf{j} + (z_2 - z_1) \mathbf{k}.
+    \]</li>
+<li>The displacement vector is an <b>intrinsic</b> property of the particle, i.e, it does not depend on the choice of the coordinate system.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orged44f70">
+<h3 id="orged44f70">1.7 Some Problems in Geometry</h3>
+<ul>
+<li><p>
+Example 1.2
+If the midpoints of the consecutive sides of a quadrilateral are joined by line segments, is the resulting quadrilateral a parallelogram?
+</p>
+
+<p>
+<span style="color: rgb(24,116,205)">Note</span>: <i>The quadrilateral needs not be a plane figure</i>.
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>Let the sides be made into directed line segments \(\mathbf{A}, \mathbf{B}, \mathbf{C}\), and \(\mathbf{D}\), as shown.</li>
+
+<li>\(\mathbf{A} + \mathbf{B} + \mathbf{C} + \mathbf{D} = \mathbf{0}\).</li>
+
+<li>To conclude that \(TUVW\) is a parallelogram, we will show that \(TU\) is parallel to \(-VW\).</li>
+
+<li><p>
+We have
+\[
+      TU = \frac{1}{2}\mathbf{A} + \frac{1}{2} \mathbf{B} = \frac{1}{2}( \mathbf{A} + \mathbf{B} ),
+    \]
+</p>
+
+<p>
+\[
+      VW = \frac{1}{2}\mathbf{C} + \frac{1}{2} \mathbf{D} = \frac{1}{2}( \mathbf{C} + \mathbf{D} ).
+    \]
+</p></li>
+
+<li>Since \(\mathbf{A} + \mathbf{B} = - \mathbf{C} + \mathbf{D}\), we have \(TU = - VW\) and thus \(TU\) is parallel to \(-VW\).</li>
+
+</ul></li>
+<li><p>
+Example 1.5
+Let \(\theta\) denote the angle between two nonzero vectors \(\mathbf{A}\) and \(\mathbf{B}\). Show that
+\[
+    \cos \theta = \frac{A_1 B_1 + A_2 B_2 + A_3 B_3}{|\mathbf{A}| |\mathbf{B}|}.
+    \]
+<span style="color: rgb(24,116,205)">Note</span>: <i>This is one of the most important identities in vector algebra</i>.
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>Idea of the proof: compare component-wise and geometric derivation of \(|\mathbf{A}- \mathbf{B}|\).</li>
+
+<li><p>
+Using components:
+</p>
+<div>
+\begin{align*}
+  \vert \mathbf{A} - \mathbf{B} \vert^2
+& = (A_1 - B_1)^2 + (A_2 - B_2)^2 + (A_3 - B_3)^2 \\
+& = \vert \mathbf{A} \vert^2 + \vert \mathbf{B} \vert^2 - 2(A_1 B_1 + A_2 B_2 + A_3 B_3).
+\end{align*}
+
+</div></li>
+
+<li><p>
+Using geometry:
+</p>
+<div>
+\begin{align*}
+  \vert \mathbf{A} - \mathbf{B} \vert^2
+& = (|\mathbf{B}| \sin \theta)^2 + (|\mathbf{A}| - |\mathbf{B}| \cos \theta)^2 \\
+& = \vert \mathbf{B} \vert^2 (\sin^2 \theta + \cos^2 \theta) + \vert \mathbf{A} \vert^2 - 2 |\mathbf{A}| |\mathbf{B}| \cos \theta\\
+& = \vert \mathbf{A} \vert^2  + \vert \mathbf{B} \vert^2 - 2 |\mathbf{A}| |\mathbf{B}| \cos \theta.
+\end{align*}
+
+</div></li>
+<li>Comparing two expressions of \(|\mathbf{A} - \mathbf{B}|^2\), we conclude
+\[
+       \vert \mathbf{A} \vert   \vert \mathbf{B} \vert \cos \theta = A_1 B_1 + A_2 B_2 + A_3 B_3.
+    \]</li>
+
+</ul></li>
+<li><p>
+Example 1.6
+Show that the vectors \(\mathbf{A} = 2 \mathbf{i} - \mathbf{j} + 5 \mathbf{k}\) and \(\mathbf{B} = \mathbf{i} + 7 \mathbf{j} + \mathbf{k}\) are perpendicular to each other.
+</p>
+
+<p>
+<i>Solution</i>
+\[
+    \cos \theta = \frac{2 - 7 + 5}{\sqrt{30} \sqrt{51}} = 0,
+    \]
+  so \(\theta = 90^\circ\).
+</p></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgc8f0cae">
+<h3 id="orgc8f0cae">1.8 Equations of a Line</h3>
+<ul>
+<li>Given a point \(\mathbf{R}_0 = x_0 \mathbf{i}+  y_0 \mathbf{j} +  z_0 \mathbf{k}\), and a nonzero vector \(\mathbf{V}= a \mathbf{i} + b \mathbf{j} + c \mathbf{k}\), the <b>parametric equation of the line</b> that passing through \(\mathbf{R}_0\) and parallel to \(\mathbf{V}\) is
+\[
+  \mathbf{R} = \mathbf{R}_0 + t \mathbf{V}\quad\text{or}\quad \begin{cases}
+    x & = x_0 + at\\
+    y & = y_0 + bt\\
+    z & = z_0 + ct
+    \end{cases},
+        \]
+where \(t\) is a <b>parameter</b> that ranges between \(-\infty\) and \(\infty\) (you may think of it as time).</li>
+<li>How to derive the equation?
+<ul>
+<li>Note that \(\mathbf{R}\) and \(\mathbf{R}_0\) are two points on the line, so the vector from \(\mathbf{R}_0\) to \(\mathbf{R}\) should be parallel to the desired line, and thus should be parallel to \(\mathbf{V}\), that is,
+\[
+        \mathbf{R} - \mathbf{R}_0 = t \mathbf{V}.
+    \]</li>
+<li>Here, we used the fact that <i>two vectors are parallel to each other if and only if they are scalar multiple of each other</i>.</li>
+
+</ul></li>
+<li>Try out some values of \(t\):
+<ul>
+<li>\(t = 0\), then \(\mathbf{R} = \mathbf{R}_0\)</li>
+<li>\(t = 1\), then \(\mathbf{R} = \mathbf{R}_0 + \mathbf{V}\)</li>
+<li>\(t = -1\), then \(\mathbf{R} = \mathbf{R}_0 - \mathbf{V}\)</li>
+
+</ul></li>
+<li>Can replace \(t\) by any scalar function of \(t\), as long as the function takes <b>all</b> values between \(-\infty\) and \(\infty\).
+For example,
+\[
+    t/2, -t, ~\text{or} ~ t^3.
+    \]</li>
+<li><p>
+However, if we write
+\[
+   \mathbf{R} = \mathbf{R}_0 + t^2 \mathbf{V},
+    \]
+then it represents only &ldquo;half&rdquo; of the line.
+</p>
+
+<p>
+Or, if we write
+\[
+   \mathbf{R} = \mathbf{R}_0 + (\sin t) \mathbf{V},
+    \]
+then it represents just the segment of the line between \(\mathbf{R}_0 - \mathbf{V}\) and \(\mathbf{R}_0 + \mathbf{V}\).
+</p></li>
+<li><p>
+Parametric form is <b>not</b> unique.
+</p>
+
+<p>
+Alternatively, if we eliminate \(t\) (assuming \(a, b, c\) nonzero), we obtain the <b>non-parametric</b> equation of the line
+\[
+  \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}.
+    \]
+</p></li>
+<li><p>
+Example 1.8
+Find equations of the line passing through \((2, 0, 4)\) and parallel to \(2 \mathbf{i} + \mathbf{j} + 3 \mathbf{k}\), both in the parametric and non-parametric form.
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+
+<ul>
+<li>The condition that \(\mathbf{R} - \mathbf{R}_0\) is parallel to \(\mathbf{V}\) becomes
+\[
+    x - 2 = 2t, \quad y - 0 = 1 t, \quad z - 4 = 3t.
+    \]</li>
+
+<li>Equivalently,
+\[
+    x = 2 + 2t, \quad y = t, \quad z = 4 + 3t.
+    \]</li>
+
+<li>Non-parametric form:
+\[
+    \frac{x - 2}{2} = y = \frac{z - 4}{3}.
+    \]</li>
+
+</ul></li>
+<li>Example 1.10
+Find a unit vector parallel to the line
+\[
+  x - 2 = 2 y -3 = \frac{- 2z + 1}{2}.
+    \]
+<i>Solution</i>
+
+<ul>
+<li>By comparing with the general non-parametric form
+\[
+    \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c},
+    \]
+we have
+\[
+    a = 1, b = \frac{1}{2}, c = -1,
+    \]
+so a vector parallel to the line is
+\[
+    \mathbf{i} + \frac{1}{2} \mathbf{j} - \mathbf{k}.
+    \]</li>
+
+<li>Normalization:
+\[
+    \frac{\mathbf{i} + \frac{1}{2} \mathbf{j} - \mathbf{k}}{|\mathbf{i} + \frac{1}{2} \mathbf{j} - \mathbf{k}|} = \frac{2}{3} \mathbf{i} + \frac{1}{3} \mathbf{j} - \frac{2}{3} \mathbf{k}.
+    \]</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org3e2c120">
+<h3 id="org3e2c120">1.9 Scalar Products</h3>
+<ul>
+<li>Recall the identity:
+\[
+    \cos \theta = \frac{A_1 B_1 + A_2 B_2 + A_3 B_3}{|\mathbf{A}| |\mathbf{B}|},
+    \]
+or, equivalently,
+\[
+  \vert \mathbf{A} \vert \vert \mathbf{B} \vert \cos \theta = A_1 B_1 + A_2 B_2 + A_3 B_3.
+    \]</li>
+<li><p>
+<b>Scalar product</b> (<b>dot product</b> or <b>inner product</b>) of vectors \(\mathbf{A}\) and \(\mathbf{B}\):
+</p>
+<div>
+\begin{align*}
+ \mathbf{A}\cdot \mathbf{B} & = \vert \mathbf{A}\vert \vert \mathbf{B} \vert \cos \theta && \textit{geometric form}\\
+  & = A_1 B_1 + A_2 B_2 + A_3 B_3 && \textit{component form}
+  \end{align*}
+
+</div></li>
+<li>We identify \(\mathbf{B}\cos \theta\) as the length of the orthogonal projection of \(\mathbf{B}\) in the direction of \(\mathbf{A}\), with positive sign if \(\theta < \pi /2\) or negative sign if \(\theta > \pi / 2\).</li>
+<li>Geometric interpretation of \(\mathbf{A} \cdot \mathbf{B}\):
+\[(\text{length of $\mathbf{A}$})(\text{signed component of $\mathbf{B}$ along $\mathbf{A}$})\]</li>
+<li>Two nonzero vectors \(\mathbf{A}, \mathbf{B}\) are <b>orthogonal</b> (or <b>perpendicular</b>), denoted by \(\mathbf{A} \perp \mathbf{B}\), if
+\[
+  \mathbf{A} \cdot \mathbf{B} = 0.
+    \]</li>
+<li>\(\mathbf{A} \cdot \mathbf{A} = |\mathbf{A}|^2\).</li>
+<li>Properties of scalar product:
+<ul>
+<li>\(\mathbf{A} \cdot \mathbf{A} \ge 0\)</li>
+<li>\(\mathbf{A} \cdot \mathbf{A} = 0\) if and only if \(\mathbf{A} = \mathbf{0}\)</li>
+<li>\(\mathbf{A} \cdot \mathbf{B} = \mathbf{B} \cdot \mathbf{A}\)</li>
+<li>\((\mathbf{A} + \mathbf{B}) \cdot \mathbf{C} = \mathbf{A} \cdot \mathbf{C} + \mathbf{B} \cdot \mathbf{C}\)</li>
+<li>\((a \mathbf{A})\cdot \mathbf{B} = \mathbf{A} \cdot (a \mathbf{B}) = a(\mathbf{A} \cdot \mathbf{B})\)</li>
+
+</ul></li>
+<li>Scalar product in physics:
+\[
+  \text{Work} = \mathbf{F} \cdot \mathbf{D},
+    \]
+where \(\mathbf{F}\) is a constant force acting through a displacement \(\mathbf{D}\).</li>
+<li><p>
+Example 1.13
+Find the scalar product of \(4 \mathbf{i} - 5 \mathbf{j} - \mathbf{k}\) and \(\mathbf{i} + 2 \mathbf{j} + 3 \mathbf{k}\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+
+<p>
+\[
+  4 \cdot 1 + (-5) \cdot 2 + (-1) \cdot 3 = - 9.
+    \]
+</p></li>
+<li><p>
+Example 1.14
+Find the angle between the vectors \(\mathbf{A} = 2 \mathbf{i} + 2 \mathbf{j} - \mathbf{k}\) and \(\mathbf{B} = 3 \mathbf{i} + 4 \mathbf{j}\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>\(|\mathbf{A}| = 3\) and \(|\mathbf{B}| = 5\).</li>
+
+<li>\(\mathbf{A} \cdot \mathbf{B} = 14\).</li>
+
+<li>\(\cos \theta = \mathbf{A} \cdot \mathbf{B} / |\mathbf{A}| |\mathbf{B}| = 14/15\).</li>
+
+<li>\(\theta = \cos^{-1}(14/ 15)\).</li>
+
+</ul></li>
+<li><p>
+Example 1.16 (A Maximal Principle)
+<br />
+<i>The unit vector \(\mathbf{n}\) making \(\mathbf{D}\cdot \mathbf{n}\) a maximum is the unit vector pointing in the same direction as \(\mathbf{D}\).</i>
+</p>
+
+<p>
+Why?
+</p>
+<ul>
+<li>\(\mathbf{D} \cdot \mathbf{n} = |\mathbf{D}||\mathbf{n}| \cos \theta = |\mathbf{D}| \cos \theta\).</li>
+
+<li>This will be a maximum when \(\cos \theta = 1\), i.e., \(\theta = 0\).</li>
+
+</ul></li>
+<li><p>
+Example 1.17
+The scalar product can be used to express components along the axes.
+</p>
+
+<p>
+For any vector \(\mathbf{A} = x \mathbf{i} + y \mathbf{j} + z \mathbf{k}\), we have
+\[
+  x = \mathbf{A} \cdot \mathbf{i}, y = \mathbf{A} \cdot \mathbf{j}, z = \mathbf{A} \cdot \mathbf{k},
+    \]
+and thus
+\[
+  \mathbf{A} = (\mathbf{A} \cdot \mathbf{i}) \mathbf{i} + (\mathbf{A} \cdot \mathbf{j}) \mathbf{j} + (\mathbf{A} \cdot \mathbf{k}) \mathbf{k}.
+    \]
+</p></li>
+<li><p>
+Another application of scalar product (parallel and perpendicular decomposition)
+</p>
+
+<p>
+Given two vectors \(\mathbf{A}\) and \(\mathbf{B}\), and we would like to decompose \(\mathbf{B}\) as follows:
+\[
+  \mathbf{B} = \mathbf{B}_{\|} + \mathbf{B}_\perp,
+    \]
+where \(\mathbf{B}_{\|}\) is parallel to \(\mathbf{A}\) and \(\mathbf{B}_\perp\) is perpendicular to \(\mathbf{A}\).
+</p>
+
+<ul>
+<li><p>
+By the geometric interpretation of the scalar product,
+</p>
+<div>
+    \begin{align*}
+& \text{The (signed) length of component of $\mathbf{B}$ along $\mathbf{A}$}\\
+ = &\vert \mathbf{B}\vert \cos \theta
+ =  \frac{\mathbf{B} \cdot \mathbf{A}}{|\mathbf{A}|}.
+\end{align*}
+
+</div></li>
+
+<li><p>
+Now we would like to construct a vector of the length above, but in the direction of \(\mathbf{A}\) (so it will be parallel to \(\mathbf{A}\)).
+</p>
+
+<p>
+We just simply take the unit vector along \(\mathbf{A}\) and multiply by the length, and we have the following:
+\[
+    \mathbf{B}_{\|} = \frac{\mathbf{B}\cdot \mathbf{A}}{|\mathbf{A}|} \frac{\mathbf{A}}{|\mathbf{A}|} = \frac{\mathbf{B}\cdot \mathbf{A}}{\mathbf{A} \cdot \mathbf{A}} \mathbf{A}.
+    \]
+</p></li>
+
+<li>Then we see that \(\mathbf{B}_\perp\) is just the rest of \(\mathbf{B}\):
+\[
+    \mathbf{B}_\perp = \mathbf{B} - \mathbf{B}_{\|} = \mathbf{B} - \frac{\mathbf{B}\cdot \mathbf{A}}{\mathbf{A} \cdot \mathbf{A}} \mathbf{A}.
+    \]</li>
+
+<li>This is also the basic idea of the <i>Gram-Schmidt</i> process to orthogonalize a set of vectors.</li>
+
+</ul></li>
+<li><p>
+Example 1.18
+Decompose the vector \(6 \mathbf{i}+2 \mathbf{j} - 2 \mathbf{k}\) into vectors parallel and perpendicular to \(\mathbf{i} + \mathbf{j} + \mathbf{k}\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>The parallel vector is
+\[
+    \frac{6 + 2 - 2}{1 + 1 + 1}(\mathbf{i} + \mathbf{j} + \mathbf{k}) = 2(\mathbf{i} + \mathbf{j} + \mathbf{k}).
+    \]</li>
+
+<li>The perpendicular vector is
+\[
+    6 \mathbf{i}+2 \mathbf{j} - 2 \mathbf{k} - 2(\mathbf{i} + \mathbf{j} + \mathbf{k}) = 4 \mathbf{i} - 4 \mathbf{k}.
+    \]</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org9127965">
+<h3 id="org9127965">1.10 Equations of a Plane</h3>
+<ul>
+<li>Recall that in Section 1.8, we specified a straight line by giving a point \(\mathbf{R}_0\) on the line and a vector \(\mathbf{V}\) parallel to the line:
+\[
+  \mathbf{R} - \mathbf{R}_0 = t \mathbf{V}.
+    \]</li>
+<li>Similarly, we specify a plane by giving a point \(\mathbf{R}_0\) in the plane, and <b>two</b> vectors \(\mathbf{A}\) and \(\mathbf{B}\) parallel to the plane:
+\[
+  \mathbf{R} - \mathbf{R}_0 = s \mathbf{A} + t \mathbf{B},
+    \]
+for \(-\infty < s, t < \infty\).</li>
+<li>The expressions
+\[
+  s \mathbf{A} + t \mathbf{B}
+    \]
+is called a <b>linear combination</b> of \(\mathbf{A}\) and \(\mathbf{B}\), which <b>spans</b> the plane.</li>
+<li>Non-parametric equation of a plane
+<ul>
+<li><b>Key</b> observation: can use one <b>normal</b> (or <b>perpendicular</b>) vector \(\mathbf{N}\) to the plane, instead of \(\mathbf{A}\) and \(\mathbf{B}\).</li>
+<li>If \(\mathbf{R}\) is the position vector to a point in the plane, then
+\[
+    \mathbf{R} - \mathbf{R}_0 \perp \mathbf{N},
+    \]
+or equivalently,
+\[
+    \mathbf{R} - \mathbf{R}_0 \cdot \mathbf{N} = 0.
+    \]</li>
+<li>Assume that \(\mathbf{N} = a \mathbf{i} + b \mathbf{j} + c \mathbf{k}\), then
+\[
+    a(x - x_0) + b(y - y_0) + c(z - z_0) = 0,
+    \]
+or equivalently,
+\[
+        a x + by + cz = d,
+    \]
+where \(d = a x_0 + b y_0 + c y_0\).</li>
+
+</ul></li>
+<li><p>
+Example 1.20
+Find an equation of the plan passing through \((1, 3, -6)\) perpendicular to the vector \(3 \mathbf{i} - 2 \mathbf{j} + 7 \mathbf{k}\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>\(3(x -1) -2(y - 3) + 7 (z + 6)=0\), or</li>
+
+<li>\(3x - 2y + 7 z = -45\).</li>
+
+</ul></li>
+<li><p>
+Example 1.21
+Find an equation of the plane passing through \((1, 2, 3)\) perpendicular to the line
+\[
+  \frac{x - 1}{4} = \frac{y}{5} = \frac{z + 5}{6}.
+    \]
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>A vector parallel to the given line above can be read off the coefficients in the denominator:
+\[
+    4 \mathbf{i} + 5 \mathbf{j} + 6 \mathbf{k}.
+    \]</li>
+
+<li>This vector is perpendicular to the desired plane, so
+\[
+    4(x - 1) + 5 (y -2) + 6(z -3) = 0.
+    \]</li>
+
+</ul></li>
+
+<li><p>
+Example 1.23
+Find the angle between the two planes \(3x + 4y = 0\) and \(2x + y - 2z = 5\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li><p>
+<b>Key</b> observation:
+</p>
+<div>
+\begin{align*}
+& ~\text{The angle between two planes}\\
+= & ~\text{The angle between normal vectors to the two planes}
+\end{align*}
+
+</div></li>
+
+<li>The normal vectors are
+\[
+    \mathbf{N}_1 = 3 \mathbf{i} + 4 \mathbf{j}, \quad \mathbf{N}_2 = 2 \mathbf{i} + \mathbf{j} - 2 \mathbf{k}.
+    \]</li>
+
+<li>The angle is obtained via
+\[
+        \cos \theta = \frac{\mathbf{N}_1 \cdot \mathbf{N}_2}{|\mathbf{N}_1| |\mathbf{N}_2|} = \frac{6 + 4}{5 \cdot 3} = \frac{2}{3}.
+    \]</li>
+
+<li>\(\theta = \cos^{-1}(2/3) \approx 48^\circ\).</li>
+
+</ul></li>
+<li><p>
+Example 1.24
+Show that the distance between an arbitrary point \((x_1, y_1, z_1)\) and the plane \(ax + by + cz = d\) is given by
+\[
+  \frac{|a x_1 + b y_1 + c z_1 - d|}{(a^2 + b^2 + c^2)^{1/2}}.
+    \]
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>The desired distance is the <b>absolute value</b> of the (signed) length of the component of \(\mathbf{R}_1 - \mathbf{R}_0\) along the normal vector, where \(\mathbf{R}_1\) is the position vector of the point \((x_1, y_1, z_1)\), and \(\mathbf{R}_0\) is the position vector of the point \((x, y, z)\) in the plane.</li>
+
+<li>Thus, the distance is
+\[
+    \frac{|(\mathbf{R}_1 - \mathbf{R}_0) \cdot \mathbf{N}|}{|\mathbf{N}|} = \frac{|\mathbf{R}_1 \cdot \mathbf{N} - d|}{|\mathbf{N}|}.
+    \]</li>
+
+</ul></li>
+<li><p>
+Example 1.25
+Find the distance between the parallel planes \(x + y + z = 5\) and \(x + y + z = 10\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>We first pick an arbitrary point in the first plane, say \((1, 1, 3)\).</li>
+
+<li>Then we desired distance is the distance between this point and the second plane:
+\[
+    \frac{|1 \cdot 1 + 1 \cdot 1 + 3 \cdot 1 - 10|}{(1^2 + 1^2 + 1^2)^{1/2}} = \frac{|5 - 10|}{\sqrt{3}} = \frac{5\sqrt{3}}{3}.
+    \]</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org85f7944">
+<h3 id="org85f7944">1.11 Orientation</h3>
+<ul>
+<li>Right-handed system
+<ul>
+<li>Let \(\mathbf{A}, \mathbf{B}\) and \(\mathbf{C}\) be nonzero vectors, not all parallel to the same plane.</li>
+<li>The vectors \(\mathbf{A}\) and \(\mathbf{B}\) determine a plane passing through the origin.</li>
+<li>The rotation of \(\mathbf{A}\) into \(\mathbf{B}\) will advance a right-handed screw into the general direction of \(\mathbf{C}\).</li>
+<li>The triple \(\{\mathbf{A}, \mathbf{B}, \mathbf{C}\}\) forms a <b>right-handed</b> system.</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org9f416fc">
+<h3 id="org9f416fc">1.12 Vector Products</h3>
+<ul>
+<li><p>
+Recall that
+</p>
+<div>
+\begin{align*}
+    \mathbf{A}\cdot \mathbf{B}
+  & = (\text{length of $\mathbf{A}$})(\text{signed component of $\mathbf{B}$ parallel to $\mathbf{A}$})\\
+  & = |\mathbf{A}| |\mathbf{B}| \cos \theta
+  \end{align*}
+
+</div></li>
+<li>In mechanics,
+\[\mathbf{A}\cdot \mathbf{B} = \text{The work done by a force $\mathbf{B}$ exerted through a displacement $\mathbf{A}$}\]</li>
+<li>The <b>vector product</b> (or <b>cross product</b>) of two nonzero vectors \(\mathbf{A}\) and \(\mathbf{B}\), is defined by
+\[
+  \mathbf{A} \times \mathbf{B} = |\mathbf{A}||\mathbf{B}| \sin \theta \mathbf{n},
+    \]
+where \(\mathbf{n}\) is the unit vector perpendicular to both \(\mathbf{A}\) and \(\mathbf{B}\) and such that the triple \(\{\mathbf{A}, \mathbf{B}, \mathbf{n}\}\) is a right-handed system.</li>
+<li><p>
+The magnitude of the vector product
+</p>
+<div>
+\begin{align*}
+ \vert \mathbf{A}\times \mathbf{B} \vert
+   & =  (\text{length of $\mathbf{A}$})(\text{the component of $\mathbf{B}$ perpendicular to $\mathbf{A}$})\\
+   & = \text{The area of the parallelogram formed by $\mathbf{A}$ and $\mathbf{B}$}.
+  \end{align*}
+
+</div></li>
+<li>In physics,
+\[
+  \mathbf{A} \times \mathbf{B} = \text{The torque due to the force $\mathbf{B}$ applied at the point $\mathbf{A}$}.
+    \]
+The torque is the rotational equivalent of linear force and represents the capability to produce the change in the rotational motion of a (rigid) body.</li>
+<li><span style="color: rgb(24,116,205)">Note</span>: The direction of the torque \(\mathbf{A} \times \mathbf{B}\) is perpendicular to the plane spanned by \(\mathbf{A}\) and \(\mathbf{B}\).</li>
+<li>Properties of the vector product:
+<ul>
+<li>\(\mathbf{A} \times \mathbf{B} = \mathbf{0}\)</li>
+<li>\(\mathbf{A} \times \mathbf{B} = - \mathbf{B} \times \mathbf{A}\)</li>
+<li>\((\mathbf{A} + \mathbf{B}) \times \mathbf{C} = \mathbf{A} \times  \mathbf{C} + \mathbf{B} \times \mathbf{C}\)</li>
+<li>\((a \mathbf{A}) \times \mathbf{B} = \mathbf{A} \times (a \mathbf{B}) = a(\mathbf{A} \times \mathbf{B})\)</li>
+<li>\(\mathbf{A} \times \mathbf{B} = \mathbf{0}\) if and only if one of the vectors are zero or they are parallel.</li>
+
+</ul></li>
+<li>In particular, the vector product of orthogonal unit vectors \(\mathbf{i}\) and \(\mathbf{j}\) is
+\[
+    \mathbf{i} \times \mathbf{j} = \mathbf{k}
+    \]
+such that the triple \(\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}\) is a right-handed coordinate system.
+<ul>
+<li>\(\mathbf{j} \times \mathbf{k} = \mathbf{i}\), \(\mathbf{k} \times \mathbf{i} = \mathbf{j}\)</li>
+<li>\(\mathbf{i} \times \mathbf{k} = - \mathbf{j}\), \(\mathbf{j} \times \mathbf{i} = - \mathbf{k}\), \(\mathbf{k} \times \mathbf{j} = - \mathbf{i}\)</li>
+<li>\(\mathbf{i} \times \mathbf{i} = \mathbf{j} \times \mathbf{j} = \mathbf{k} \times \mathbf{k} = \mathbf{0}\)</li>
+
+</ul></li>
+<li>Determinant form of vector product
+<ul>
+<li>If \(\mathbf{A} = A_1 \mathbf{i} + A_2 \mathbf{j} + A_3 \mathbf{k}\) and \(\mathbf{B} = B_1 \mathbf{i} + B_2 \mathbf{j} + B_3 \mathbf{k}\), by the distributive property,
+\[
+    \mathbf{A} \times \mathbf{B} = (A_2B_3 - A_3B_2) \mathbf{i} + (A_3 B_1 - A_1 B_3) \mathbf{j} + (A_1 B_2 - A_2 B_1) \mathbf{k}.
+    \]</li>
+<li>This is equivalent to the <b>determinant</b> form:
+\[
+    \mathbf{A} \times \mathbf{B} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+    A_1 & A_2 & A_3\\
+    B_1 & B_2 & B_3
+    \end{vmatrix}
+    \]</li>
+
+</ul></li>
+<li>Digression to matrices and determinants
+<ul>
+<li>We define a \(2\times 2\) <b>matrix</b> to be an array
+\[\begin{bmatrix}
+        a_{11} & a_{12}\\
+        a_{21} & a_{22}
+        \end{bmatrix},
+    \]
+where \(a_{11}, a_{12}, a_{21}\) and \(a_{22}\) are four scalars.</li>
+<li>The <b>determinant</b>
+\[\begin{vmatrix}
+    a_{11} & a_{12}\\
+        a_{21} & a_{22}
+    \end{vmatrix} \triangleq a_{11} a_{22} - a_{12} a_{21}.
+    \]</li>
+<li>Example
+\[\begin{vmatrix}
+    1 & 1 \\
+    1 & 1
+    \end{vmatrix} = 1 - 1 =  0
+    \]
+\[\begin{vmatrix}
+    1 & 2 \\
+    3 & 4
+    \end{vmatrix} = 4 - 6 = -2
+    \]</li>
+<li>A \(3 \times 3\) matrix is an array
+\[\begin{bmatrix}
+        a_{11} & a_{12} & a_{13}\\
+        a_{21} & a_{22} & a_{23}\\
+        a_{31} & a_{32} & a_{33}
+        \end{bmatrix},
+    \]
+where, again, each \(a_{ij}\) is a scalar denoting the entry in the array that is the \(i\text{-th}\) row and the \(j\text{-th}\) column.</li>
+<li>We define the <b>determinant</b> of a \(3\times 3\) matrix by the rule
+\[\begin{vmatrix}
+    a_{11} & a_{12} & a_{13}\\
+        a_{21} & a_{22} & a_{23}\\
+        a_{31} & a_{32} & a_{33}
+    \end{vmatrix} \triangleq a_{11} \begin{vmatrix}
+    a_{22} & a_{23}\\
+        a_{32} & a_{33}
+    \end{vmatrix}  - a_{12} \begin{vmatrix}
+    a_{21} & a_{23}\\
+        a_{31} & a_{33}
+    \end{vmatrix} + a_{13}\begin{vmatrix}
+    a_{21} & a_{22}\\
+        a_{31} & a_{32}
+    \end{vmatrix}.
+    \]</li>
+<li>In fact, we can <b>expand</b> a \(3 \times 3\) determinant <b>along any row or column</b> using the signs in the following checkerboard pattern:
+\[\begin{vmatrix}
+      \texttt{+} & \texttt{-} &\texttt{+}  \\
+      \texttt{-}&   \texttt{+} & \texttt{-}\\
+      \texttt{+} &  \texttt{-} & \texttt{+}
+    \end{vmatrix}
+    \]</li>
+<li><p>
+Example
+</p>
+
+<p>
+Expand along the first row.
+\[\begin{vmatrix}
+      1 & 2 & 3 \\
+      4&   5 & 6\\
+      7 &  8 & 9
+    \end{vmatrix} = 1 \begin{vmatrix}
+    5 & 6 \\
+    8 & 9
+    \end{vmatrix} - 2 \begin{vmatrix}
+    4 & 6 \\
+    7 & 9
+    \end{vmatrix} + 3 \begin{vmatrix}
+    4 & 5 \\
+    7 & 8
+    \end{vmatrix} = -3 + 12 - 9 = 0.
+    \]
+</p>
+
+<p>
+Expand along the second column.
+\[\begin{vmatrix}
+      1 & 2 & 3 \\
+      4&   5 & 6\\
+      7 &  8 & 9
+    \end{vmatrix} = - 2 \begin{vmatrix}
+    4 & 6 \\
+    7 & 9
+    \end{vmatrix} + 5 \begin{vmatrix}
+    1 & 3 \\
+    7 & 9
+    \end{vmatrix} -8 \begin{vmatrix}
+    1 & 3 \\
+    4 & 6
+    \end{vmatrix} = 12 - 60 + 48 = 0.
+    \]
+</p></li>
+
+</ul></li>
+<li>Therefore,
+\[
+    \mathbf{A} \times \mathbf{B} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+    A_1 & A_2 & A_3\\
+    B_1 & B_2 & B_3
+    \end{vmatrix} = \begin{vmatrix}
+    A_2 & A_3 \\
+    B_2 & B_3
+    \end{vmatrix} \mathbf{i} - \begin{vmatrix}
+    A_1 & A_3 \\
+    B_1 & B_3
+    \end{vmatrix} \mathbf{j} + \begin{vmatrix}
+    A_1 & A_2 \\
+    B_1 & B_2
+    \end{vmatrix} \mathbf{k}.
+    \]</li>
+<li><p>
+Example 1.26
+Find the vector product \(\mathbf{A} \times \mathbf{B}\) if \(\mathbf{A} = 3 \mathbf{i} + 4 \mathbf{j}\) and \(\mathbf{B} = \mathbf{i} - 2 \mathbf{j} + 5 \mathbf{k}\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+
+<p>
+\[
+  \mathbf{A} \times \mathbf{B} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} &  \mathbf{k} \\
+    3 & 4 & 0 \\
+    1 & -2 & 5
+    \end{vmatrix} = 20 \mathbf{i} - 15 \mathbf{j} -10 \mathbf{k}.
+        \]
+</p></li>
+<li><p>
+Example 1.27
+Find two unit vectors perpendicular to both \(\mathbf{A} = 2 \mathbf{i} + 2 \mathbf{j} - 3 \mathbf{j}\) and \(\mathbf{B} = \mathbf{i} + 3 \mathbf{j} + \mathbf{k}\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>\(\mathbf{A} \times \mathbf{B}\) is perpendicular to both \(\mathbf{A}\) and \(\mathbf{B}\), and
+\[
+     \mathbf{A} \times \mathbf{B} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} &  \mathbf{k} \\
+    2 & 2 & -3 \\
+    1 & 3 & 1
+    \end{vmatrix} = 11 \mathbf{i} - 5 \mathbf{j} + 4 \mathbf{k}.
+        \]</li>
+
+<li>The desired unit vector is
+\[
+    \frac{\mathbf{A} \times \mathbf{B}}{|\mathbf{A} \times \mathbf{B}|} = \frac{\mathbf{A} \times \mathbf{B}}{9 \sqrt{2}} = \frac{11}{9\sqrt{2}} \mathbf{i} - \frac{5}{9\sqrt{2}} \mathbf{j} + \frac{4}{9\sqrt{2}} \mathbf{k}.
+    \]</li>
+
+<li>How to find another perpendicular vector?
+\[
+    \frac{\mathbf{B} \times \mathbf{A}}{|\mathbf{A} \times \mathbf{B}|} = - \frac{\mathbf{A} \times \mathbf{B}}{|\mathbf{A} \times \mathbf{B}|}  = - \frac{11}{9\sqrt{2}} \mathbf{i} + \frac{5}{9\sqrt{2}} \mathbf{j} - \frac{4}{9\sqrt{2}} \mathbf{k}.
+    \]</li>
+
+</ul></li>
+<li><p>
+Example 1.28
+Find the area of the parallelogram determined by \(\mathbf{A} = \mathbf{i} + \mathbf{j} - 3 \mathbf{k}\) and \(\mathbf{B} = -6 \mathbf{j} + 5 \mathbf{k}\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>\(\mathbf{A} \times \mathbf{B} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} &  \mathbf{k} \\
+    1 & 1 & -3 \\
+    0 & -6 & 5
+    \end{vmatrix} = -13 \mathbf{i} - 5 \mathbf{j} -6 \mathbf{k}\).</li>
+
+<li>The desired area is \(\mathbf{A} \times \mathbf{B} = \sqrt{13^2 + 5^2 + 6^2} = \sqrt{230}\).</li>
+
+</ul></li>
+<li><p>
+Example 1.29
+Find the equation of the line passing through \((3, 2, -4)\) parallel to the line of intersection of th two planes \(x + 3y - 2z =8\) and \(x-3y + z =0\).
+</p>
+
+<p>
+<i>Solution</i>
+</p>
+<ul>
+<li>Recall from Sec 1.8 that the non-parametric equation of the line that passing through a point \((x_0, y_0, z_0)\) and parallel to a nonzero vector \(\mathbf{V} = a \mathbf{i} + b \mathbf{j} + c \mathbf{k}\) is
+\[
+    \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}.
+    \]</li>
+
+<li>Now we only need to find a nonzero vector parallel to the line of the intersection of the two planes, which is parallel to the desired line.</li>
+
+<li>Note that
+\[
+    \mathbf{A} = \mathbf{i} + 3 \mathbf{j} - 2 \mathbf{k}, \quad \mathbf{B} = \mathbf{i} - 3 \mathbf{j} + \mathbf{k}
+    \]
+are the normal vectors to the two planes.</li>
+
+<li>\(\mathbf{A} \times \mathbf{B}\) is perpendicular to both \(\mathbf{A}\) and \(\mathbf{B}\), and so it is parallel to the two planes. Hence, \(\mathbf{A} \times \mathbf{B}\) is parallel to the line of intersection.</li>
+<li>\(\mathbf{A} \times \mathbf{B} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} &  \mathbf{k} \\
+    1 & 3 & -2 \\
+    1 & -3 & 1
+    \end{vmatrix} = -3 \mathbf{i} - 3 \mathbf{j} -6 \mathbf{k}\).</li>
+<li>The equation of the desired line:
+\[
+    \frac{x - 3}{-3} = \frac{y - 2}{-3} = \frac{z + 4}{-6},
+    \]
+or, equivalently,
+\[
+    x - 3 = y - 2 = \frac{z + 4}{2}.
+    \]</li>
+
+</ul></li>
+<li><b>Angular velocity</b>
+<ul>
+<li>Consider a rigid body rotating about a fixed axis with a constant angular speed \(\omega\). Then the velocity of the particle at the point \(\mathbf{R}\) is
+\[
+    \mathbf{v} = \omega \times \mathbf{R},
+    \]
+where \(\omega\) is directed along the axis of rotation and with the magnitude \(|\omega| = \omega\).</li>
+
+<li>The speed (magnitude of the velocity) of the particle is
+\[
+    \vert \mathbf{v} \vert = \omega | \mathbf{R} | \sin \theta,
+    \]
+where \(\theta\) is the angle between \(\mathbf{R}\) and the axis of rotation.</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org70e86f7">
+<h3 id="org70e86f7">1.13 Triple Scalar Product</h3>
+<ul>
+<li>The <b>triple scalar product</b> of three vectors \(\mathbf{A}, \mathbf{B}\) and \(\mathbf{C}\) is defined by
+\[
+  [\mathbf{A}, \mathbf{B}, \mathbf{C}] = \mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}).
+    \]</li>
+<li>Determinant form:
+\[
+  [\mathbf{A}, \mathbf{B}, \mathbf{C}] = \mathbf{A} \cdot \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} &  \mathbf{k} \\
+    B_1 & B_2 & B_3 \\
+    C_1 & B_2 & C_3
+    \end{vmatrix}  = \begin{vmatrix}
+    A_1 & A_2 &  A_3 \\
+    B_1 & B_2 & B_3 \\
+    C_1 & B_2 & C_3
+    \end{vmatrix}.
+    \]</li>
+<li>In particular,
+\[
+  [\mathbf{i}, \mathbf{j}, \mathbf{k}] = 1.
+    \]</li>
+<li>Geometric interpretation of the triple scalar product: the <b>volume</b> of the parallelepiped with coterminal edges \(\mathbf{A}, \mathbf{B}\) and \(\mathbf{C}\) is given, up to sign, by \([\mathbf{A}, \mathbf{B}, \mathbf{C}]\).</li>
+<li>\([\mathbf{A}, \mathbf{B}, \mathbf{C}]\) is positive if and only if \(\{\mathbf{A}, \mathbf{B}, \mathbf{C}\}\) forms a right-handed system.</li>
+<li><p>
+Example 1.33
+Compute \([\mathbf{A}, \mathbf{B}, \mathbf{C}]\) if \(\mathbf{A} = 2 \mathbf{i} + \mathbf{k}, \mathbf{B} = 3 \mathbf{i} + \mathbf{j} + \mathbf{k}\), and \(\mathbf{C} = \mathbf{i} + \mathbf{j} + 4 \mathbf{k}\).
+</p>
+
+<p>
+<i>Solution</i>
+\[
+  [\mathbf{A}, \mathbf{B}, \mathbf{C}] = \begin{vmatrix}
+    2 & 0 &  1 \\
+    3 & 1 & 1 \\
+    1 & 1 & 4
+    \end{vmatrix} = 8 + 3 - 1 - 2 = 8.
+    \]
+</p></li>
+<li>Properties of the triple scalar product:
+<ul>
+<li>\([\mathbf{A}, \mathbf{B}, \mathbf{C}] = [\mathbf{B}, \mathbf{C}, \mathbf{A}] = [\mathbf{C}, \mathbf{A}, \mathbf{B}]= - [\mathbf{B}, \mathbf{A}, \mathbf{C}] = - [\mathbf{C}, \mathbf{B}, \mathbf{A}]= - [\mathbf{A}, \mathbf{C}, \mathbf{B}]\).</li>
+
+<li>\([\mathbf{A}, \mathbf{B}, \mathbf{C}] = 0\) if and only if three vectors are coplanar, i.e., on the same plane.</li>
+
+<li>\([\mathbf{A}, \mathbf{B}, \mathbf{C}]\) is <b>linear</b> in each argument. For example,
+\[
+    [s \mathbf{A} +  \mathbf{B}, \mathbf{C}, \mathbf{D}] = s [\mathbf{A}, \mathbf{C}, \mathbf{D}] + [\mathbf{B}, \mathbf{C}, \mathbf{D}].
+    \]</li>
+
+<li>All these properties can be proved by the properties of determinant of matrices.</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org8d3036b">
+<h3 id="org8d3036b">1.14 Vector Identities</h3>
+<ul>
+<li><p>
+Of the following identities, the first is the most important because the other three can be derived from it fairly easily:
+</p>
+<div>
+\begin{align}
+  \mathbf{A} \times (\mathbf{B} \times \mathbf{C})
+  & = (\mathbf{A} \cdot \mathbf{C}) \mathbf{B} - (\mathbf{A} \cdot \mathbf{B})\mathbf{C}\label{eq:1.30}\tag{1.30}\\
+  (\mathbf{A} \times \mathbf{B}) \times \mathbf{C}
+  & = (\mathbf{A} \cdot \mathbf{C}) \mathbf{B} - (\mathbf{B} \cdot \mathbf{C})\mathbf{A}\label{eq:1.31}\tag{1.31}\\
+  (\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{D})
+  & = [\mathbf{A}, \mathbf{C}, \mathbf{D}]\mathbf{B} - [\mathbf{B}, \mathbf{C}, \mathbf{D}] \mathbf{A}\label{eq:1.32}\tag{1.32}\\
+  (\mathbf{A} \times \mathbf{B}) \cdot (\mathbf{C} \times \mathbf{D})
+  & = (\mathbf{A} \cdot \mathbf{C}) (\mathbf{B} \cdot \mathbf{D}) - (\mathbf{A} \cdot \mathbf{D})(\mathbf{B} \cdot \mathbf{C})\label{eq:1.33}\tag{1.33}.
+  \end{align}
+
+</div></li>
+<li>Intuitive interpretation of identity \eqref{eq:1.30}
+<ul>
+<li>\(\mathbf{V} = \mathbf{A} \times (\mathbf{B} \times \mathbf{C})\) (if not the zero vector) must be perpendicular to \(\mathbf{B} \times \mathbf{C}\).</li>
+<li>\(\mathbf{B}\times \mathbf{C}\) is perpendicular to both \(\mathbf{B}\) and \(\mathbf{C}\).</li>
+<li>\(\mathbf{V}\) must be in the plane spanned by \(\mathbf{B}\) and \(\mathbf{C}\), i.e.,
+\[
+    \mathbf{V} = m \mathbf{B} + n \mathbf{C},
+    \]
+for suitable scalars \(m\) and \(n\).</li>
+<li>The fact that \(m = \mathbf{A} \cdot \mathbf{C}\) and \(n = - \mathbf{A} \cdot \mathbf{B}\) is not obvious here, but please read Sec 1.5.</li>
+
+</ul></li>
+<li>For identity \eqref{eq:1.31}:
+<ul>
+<li>Note that
+\[
+    (\mathbf{A} \times \mathbf{B}) \times \mathbf{C} = - \mathbf{C} \times (\mathbf{A} \times \mathbf{B}).
+    \]</li>
+<li>Then by using identity \eqref{eq:1.30}, we have
+\[
+      \texttt{$-$}  \mathbf{C} \times (\mathbf{A} \times \mathbf{B}) = - [ (\mathbf{C} \cdot \mathbf{B}) \mathbf{A} - (\mathbf{C} \cdot \mathbf{A}) \mathbf{B}] = (\mathbf{A} \cdot \mathbf{C}) \mathbf{B} - (\mathbf{A} \cdot \mathbf{B})\mathbf{C}.
+    \]</li>
+
+</ul></li>
+<li>For identity \eqref{eq:1.32}:
+<ul>
+<li>Let \(\mathbf{U} = \mathbf{C} \times \mathbf{D}\), then by identity \eqref{eq:1.31},
+\[
+    (\mathbf{A} \times \mathbf{B}) \times \mathbf{U}
+     = (\mathbf{A} \cdot \mathbf{U}) \mathbf{B} - (\mathbf{B} \cdot \mathbf{U})\mathbf{A}.
+    \]</li>
+<li>By the definition of the triple scalar product, we have
+\[
+    \mathbf{A}\cdot \mathbf{U} = \mathbf{A} \cdot \mathbf{C} \cdot \mathbf{D} = [\mathbf{A}, \mathbf{C}, \mathbf{D}], \quad \mathbf{B}\cdot \mathbf{U} = \mathbf{B} \cdot \mathbf{C} \cdot \mathbf{D} = [\mathbf{B}, \mathbf{C}, \mathbf{D}].
+    \]</li>
+
+</ul></li>
+<li><p>
+For identity \eqref{eq:1.33}:
+</p>
+<div>
+\begin{align*}
+(\mathbf{A} \times \mathbf{B}) \cdot \mathbf{U}
+& = [\mathbf{A}, \mathbf{B}, \mathbf{U}] = \mathbf{A} \cdot (\mathbf{B} \times \mathbf{U}) = \mathbf{A} \cdot [\mathbf{B} \times (\mathbf{C} \times \mathbf{D})]\\
+& = \mathbf{A} \cdot [(\mathbf{B} \cdot \mathbf{D}) \mathbf{C} - (\mathbf{B} \cdot \mathbf{C}) \mathbf{D}]\\
+& = (\mathbf{B}\cdot \mathbf{D})(\mathbf{A}\cdot \mathbf{C}) - (\mathbf{B} \cdot \mathbf{C})(\mathbf{A}\cdot \mathbf{D}).
+  \end{align*}
+
+</div></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1c9fff3">
+<h2 id="org1c9fff3">Chapter 1 - Introduction to Probability</h2>
+<div class="outline-text-2" id="text-org1c9fff3">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org9531a70">
+<h3 id="org9531a70">1.4. Set Theory</h3>
+</section>
+</section>
+<section>
+<section id="slide-org6f2afb4">
+<h3 id="org6f2afb4">1.5. The Definition of Probability</h3>
+</section>
+</section>
+<section>
+<section id="slide-org55dfad2">
+<h3 id="org55dfad2">1.6. Finite Sample Spaces</h3>
+</section>
+</section>
+<section>
+<section id="slide-org2400ed7">
+<h3 id="org2400ed7">1.7. Counting Methods</h3>
+</section>
+</section>
+<section>
+<section id="slide-org4519efc">
+<h3 id="org4519efc">1.8. Combinatorial Methods</h3>
+<div class="outline-text-3" id="text-org4519efc">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org6cab23a">
+<h4 id="org6cab23a">Example 1.8.1 (choosing subsets)</h4>
+<p class="fragment">
+Consider the set \(\{a, b, c, d\}\).
+</p>
+
+<p class="fragment">
+How many distinct subsets of size two?
+</p>
+
+<p class="fragment">
+<span style="color: rgb(30,144,255)">Note</span>: \(\{a, b\} = \{b, a\}\), where the order does not matter!
+</p>
+<p class="fragment">
+All subsets of size two:
+\[
+\{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\},
+\]
+and the total is \(6\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org0316851">
+<h4 id="org0316851">Combination</h4>
+<p class="fragment">
+A selection of items from a set such that the order of the selection does not matter.
+</p>
+
+<p class="fragment">
+In fact, a combination is an <span style="color: rgb(30,144,255)">unordered</span> sampling <span style="color: rgb(30,144,255)">without replacement</span>.
+</p>
+
+<p class="fragment">
+<b>Question</b>: How many combinations of \(k\) items selected from a set of \(n\) distinct items are possible?
+</p>
+
+<p class="fragment">
+We call this number &ldquo;\(n\) choose \(k\)&rdquo;, denoted by
+\[
+C_{n, k}, \quad\text{or}\quad C^n_k, \quad\text{or}\quad \binom{n}{k}
+\]
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org5960f66">
+<h4 id="org5960f66">How to find this number \(C_{n,k}\)?</h4>
+<p class="fragment">
+We will use a different way to compute \(P_{n,k}\).
+</p>
+
+<p class="fragment">
+Making an ordered selection of \(k\) items (\(k\text{-permutation}\)) is the same as choosing a combination of \(k\) items and then ordering them.
+</p>
+
+<p class="fragment">
+This is a \(2\text{-step}\) procedure:
+</p>
+
+<div class="fragment">
+\begin{align*}
+&\text{"number of $k\text{-permutations}$"}\\
+ = &\text{"number of combination of $k$ items"}\\
+ &\quad \times \text{"number of ways to order $k$ items"}
+\end{align*}
+
+</div>
+
+<p class="fragment">
+So,
+\[
+P_{n, k} = C_{n,k} \cdot k!.
+\]
+</p>
+
+</section>
+<section>
+<p>
+Thus,
+\[
+C_{n,k} = \frac{P_{n,k}}{k!} = \frac{n!}{(n-k)! k!}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgea89b09">
+<h4 id="orgea89b09">Example</h4>
+<p class="fragment">
+Select \(5\) of \(30\) students in a class without regard to the order:
+</p>
+
+<p class="fragment">
+\[
+C_{30, 5} = \frac{30!}{25!5!}
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc1fe558">
+<h4 id="orgc1fe558">Binomial coefficient</h4>
+<p class="fragment">
+\[
+\binom{n}{k} = C_{n,k} = \frac{n!}{(n-k)! k!}
+\]
+</p>
+
+<p class="fragment">
+<b>Theorem</b>. For any real numbers \(x\) and \(y\), \(n\in \mathbb{N}\),
+\[
+(x + y)^n = \sum_{k=0}^n \binom{n}{k} x^k y^{n-k}.
+\]
+</p>
+
+<p class="fragment">
+For the case \(n=2\):
+</p>
+
+<div class="fragment">
+\begin{align*}
+  (x + y)^2
+& = \binom{2}{0} x^0 y^{2 -0} + \binom{2}{1} x^1 y^{2-1} + \binom{2}{2}x^2 y^{2-2}\\
+& = 1 \cdot 1 \cdot y^2 + 2\cdot x\cdot y + 1\cdot x^2 \cdot y^0\\
+& = x^2 + 2xy + y^2.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+\[
+(x + y)^n = \sum_{k=0}^n \binom{n}{k} x^k y^{n-k}.
+\]
+</p>
+
+<p class="fragment">
+Idea of the proof
+</p>
+
+<p class="fragment">
+\[
+(x + y)^n = (x + y)(x + y)\cdots (x + y).
+\]
+</p>
+
+<p class="fragment">
+After expansion, a typical term should look like
+</p>
+<p class="fragment">
+\[
+\text{const}\times x^k y^j, \quad k + j = n; \quad \text{or}\quad \text{const}\times x^k y^{n-k}.
+\]
+</p>
+
+<p class="fragment">
+This &ldquo;const&rdquo; is the number of copies of each \(x^ky^{n-k}\), which is a combination number selecting \(k\) times of \(x\) out of total number \(n\).
+</p>
+
+</section>
+<section>
+<p>
+<b>Note</b>:
+</p>
+
+<p class="fragment">
+(1) \(\binom{n}{0} = \binom{n}{n} = 1\).
+</p>
+
+<p class="fragment">
+(2) \(\binom{n}{k} = \binom{n}{n-k}\)
+</p>
+
+<p class="fragment">
+Proof of (2):
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{LHS}
+& = \frac{n!}{(n-k)!k!} = \frac{n!}{k!(n-k)!}\\
+& = \frac{n!}{(n-(n-k))!(n-k)!} = \text{RHS}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+The second formula above suggests that choosing \(k\) items from a set of \(n\) distinct items is the same as choosing \((n-k)\) items.
+</p>
+
+<p class="fragment">
+In other words, a combination is in fact a <span style="color: rgb(30,144,255)">partition</span> of a set into two parts.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3cf48a9">
+<h4 id="org3cf48a9">Example</h4>
+<p>
+Flip a fair coin \(10\) times.
+</p>
+
+<p class="fragment">
+(1) What&rsquo;s the probability \(p\) of obtaining exactly three heads?
+</p>
+
+<p class="fragment">
+One typical (possible) outcome could be \(H T \dots T\), or \(10\dots 0\).
+</p>
+
+<p class="fragment">
+Thus, the sample space here is
+</p>
+
+<p class="fragment">
+\[
+S = \{(i_1, \dots, i_{10}) \mid i_j = 0 ~\text{or}~ 1, j = 1, \dots, 10 \}.
+\]
+</p>
+
+<p class="fragment">
+Let \(A\) be the event that we obtain exactly three heads when flipping a coin \(10\) times, so
+</p>
+
+<p class="fragment">
+\[
+p = \frac{\# A}{\# S} = \frac{\binom{10}{3}}{2^{10}}.
+\]
+</p>
+
+</section>
+<section>
+
+<p>
+Flip a fair coin \(10\) times.
+</p>
+
+<p>
+(2) What&rsquo;s the probability \(p'\) of obtaining three or fewer heads?
+</p>
+
+<p class="fragment">
+Let \(A'\) be the event that we obtain three or fewer heads. Then
+</p>
+
+<p class="fragment">
+\[
+\# A' = \binom{10}{0} + \binom{10}{1} + \binom{10}{2} + \binom{10}{3},
+\]
+and so
+</p>
+
+<p class="fragment">
+\[
+p' = \frac{\# A'}{\# S} = \frac{\binom{10}{0} + \binom{10}{1} + \binom{10}{2} + \binom{10}{3}}{2^{10}}.
+\]
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org0ccc474">
+<h4 id="org0ccc474">Sampling with replacement but unordered</h4>
+<p class="fragment">
+Recall: sampling with replacement but ordered
+\[
+n^k.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfb0fafa">
+<h4 id="orgfb0fafa">Example 1.8.4 (Blood types)</h4>
+<p class="fragment">
+The gene for human blood types consists of a pair of alleles chosen from three alleles, called \(A, B\) and \(O\).
+</p>
+
+<p class="fragment">
+\(OA\) is the same as \(AO\): <span style="color: rgb(30,144,255)">order does not matter</span>.
+</p>
+
+<p class="fragment">
+\(AA, BB, OO\) are valid types: <span style="color: rgb(30,144,255)">with replacement</span>.
+</p>
+
+<p class="fragment">
+<b>Question</b>: How many genotypes are there for the blood type?
+</p>
+
+<p class="fragment">
+We can simply list all cases: \(AA, BB, OO, AB, BO, AO\), and there are \(6\) in total.
+</p>
+
+<p class="fragment">
+<b><span style="color: rgb(255,0,0)">Warning</span></b>: \(6\) here is not \(C_{3,2} = 3\), nor \(3^2 = 9\).
+</p>
+
+</section>
+<section>
+<p>
+What if a gene consists of a pair chosen from a set of \(n\) different alleles? How many genotypes?
+</p>
+
+<p class="fragment">
+Case 1: there \(n\) pairs where both alleles are the same.
+</p>
+
+<p class="fragment">
+Case 2: there are \(\binom{n}{2}\) pairs where two alleles are different.
+</p>
+
+<p class="fragment">
+Then the total is
+</p>
+
+<div class="fragment">
+\begin{align*}
+  n + \binom{n}{2}
+& = n + \frac{n(n-1)}{2}\\
+& = n + \frac{n^2 - n}{2}\\
+& = \frac{n^{2} + n}{2}.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+In general, the number of unordered sampling of size \(k\) items with replacement for \(n\) items is
+\[
+\binom{n+k-1}{k}, \qquad \text{see Exercise 19}.
+\]
+</p>
+
+<p class="fragment">
+When \(k=2\),
+</p>
+
+<p class="fragment">
+\[
+\frac{n^{2} + n}{2} = \frac{n(n+1)}{2} = \binom{n+1}{2}.
+\]
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org67141fe">
+<h4 id="org67141fe">Summary</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">Sampling with replacement, order matters.<br />
+Example: flip a fair coin \(10\) times, then \(\# S = 2^{10} (n^k)\).</li>
+<li data-fragment-index="2" class="fragment">Sampling without replacement, order matters.<br />
+Example: pick \(5\) students out of 30 to form a line: \(P_{30, 5}, \quad(P_{n,k})\).</li>
+<li data-fragment-index="3" class="fragment">Sampling without replacement, order does not matter.<br />
+Example: pick \(5\) students out of \(30\) to form a team/committee: \(C_{30, 5} = \binom{30}{5}\).<br /></li>
+<li data-fragment-index="4" class="fragment">Sampling with replacement, order does not matter (tricky).
+Example 1.8.4, Exercise 19.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org363a84e">
+<h4 id="org363a84e">Example</h4>
+<p>
+Suppose we have a class of \(24\) children. We consider three different scenarios that each involves choosing \(3\) children.
+</p>
+
+<p>
+Every day a random child is chosen to lead the class to lunch, without regard to previous choices.
+</p>
+
+</section>
+<section>
+<p>
+(1) What is the probability that Carlos was chosen on Monday and Wednesday, Aaron on Tuesday?
+</p>
+
+<p class="fragment">
+Let \(A\) denote the event that Carlos was chosen on Monday and Wednesday, Aaron on Tuesday.
+</p>
+
+<p class="fragment">
+There are two ways to count in this problem:
+</p>
+<p class="fragment">
+\[
+\# S = 24^3,~ \# A = 1\qquad \text{or}\qquad \# S = 24^5, ~ \# A = 24^2,
+\]
+but both give you
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A) = \frac{1}{24^{3}}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+(2) Three children are chosen randomly to be the class president, vice president and treasurer. No student can hold more than one position. What&rsquo;s the probability that Mary is president, Cory is vice president and Matt is treasurer?
+</p>
+
+<p class="fragment">
+Let \(A'\) be the event that Mary is president, Cory is vice president and Matt is treasurer. Then
+</p>
+<p class="fragment">
+\[
+\# S = P_{24, 3}, \quad \# A' = 1,
+\]
+and
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A') = \frac{1}{P_{24,3}}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+(3) A team of three children is chosen at random. What&rsquo;s the probability that Mary is on the team?
+</p>
+
+<p class="fragment">
+Let \(A''\) be the event that Mary is on the team. Then
+</p>
+
+<p class="fragment">
+\[
+\# S = \binom{24}{3}, \quad \# A'' = \binom{1}{1} \binom{23}{2},
+\]
+</p>
+<p class="fragment">
+and
+\[
+\mathbb{P}(A') = \frac{\binom{1}{1} \binom{23}{2}}{\binom{24}{3}}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb7e3a3e">
+<h3 id="orgb7e3a3e">1.9. Multinomial Coefficients</h3>
+<p>
+Recall: Binomial coefficient
+\[\binom{n}{k} = C_{n, k} = \binom{n}{n-k}\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3f0bc10">
+<h4 id="org3f0bc10">Partitions</h4>
+<p class="fragment">
+A combination is a choice of \(k\) items of an \(n\text{-item}\) set, and the order does not matter.
+</p>
+
+<p class="fragment">
+This is the same as partitioning the set into two parts. One part contains \(k\) items, and the other contains the remaining \(n-k\) items.
+</p>
+
+<p class="fragment">
+Now consider partitions into more than two parts.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org01292f3">
+<h4 id="org01292f3">Example</h4>
+<p>
+Suppose that \(20\) members of an organization are to be divided into three committees \(A, B\) and \(C\), in such a way \(A\) and \(B\) each has \(8\) members, \(C\) has \(4\) members. Each member can be assigned to only one committee.
+</p>
+
+<p class="fragment">
+<b>Question</b>: How many ways to assign the members?
+</p>
+
+<p class="fragment">
+\(3\text{-step}\) procedure: in each step we choose the members to one committee.
+</p>
+<div class="fragment">
+\begin{align*}
+  & \binom{20}{8} \cdot \binom{12}{8} \cdot \binom{4}{4}\\
+  = & \frac{20!}{8!12!} \cdot \frac{12!}{8!4!} \cdot 1\\
+  = & \frac{20!}{8!8!4!}
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org60f2e5e">
+<h4 id="org60f2e5e">Partitions - General Case</h4>
+<p class="fragment">
+Given a set of \(n\) distinct items and non-negative integers \(n_{1}, n_{2}, \dots, n_{r}\) with \(n_1 + n_2 + \cdots +n _r = n\).
+</p>
+
+<p class="fragment">
+<b>Question</b>: How many ways can the set be partitioned into \(r\) disjoint subsets with \(n_i\) items in its \(i^{\text{th}}\) subset?
+</p>
+
+<p class="fragment">
+We call this number
+\[
+  \binom{n}{n_1, n_{2}, \dots, n_{r}}
+\]
+</p>
+
+</section>
+<section>
+<p>
+This is  a \(r\text{-step}\) procedure:
+</p>
+<div class="fragment">
+\begin{align*}
+  &\binom{n}{n_1, n_{2}, \dots, n_{r}}=
+ \binom{n}{n_{1}} \cdot \binom{n-n_{1}}{n_{2}} \cdots \binom{n-n_{1}-n_{2}-\cdots - n_{r-1}}{n_{r}}\\
+  = & \frac{n!}{n_{1}!(n-n_{1})!} \cdot \frac{(n-n_{1})!}{n_{2}!(n-n_{1} - n_{2})!} \cdot \frac{(n-n_{1} -n_{2})!}{n_{3}!(n-n_{1} - n_{2}-n_{3})!}\\
+   &  \qquad \cdots \frac{(n-n_{1} -n_{2}- \cdots n_{r-1})!}{n_{r}!(n-n_{1} - n_{2}-\cdots - n_{r-1} - n_{r})!}\\
+= & \frac{n!}{n_{1}!n_{2}! \cdots n_{r}!}
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Check for \(r=2\): \(n_1 = k, n_2 = n-k\),
+\[
+\binom{n}{k} = \binom{n}{n-k} = \binom{n}{k, n-k} = \frac{n!}{k!(n-k)!}
+\]
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgfc37971">
+<h4 id="orgfc37971">Example</h4>
+<p>
+How many arrangements are there of the letters &ldquo;BANANA&rdquo;?
+</p>
+
+
+</section>
+<section>
+<p>
+Solution (1):
+</p>
+
+<p class="fragment">
+There are \(6\) positions for the \(3\) letters.
+</p>
+
+<p class="fragment">
+Each arrangement is a partition of the set of \(6\) positions into a subset of size \(3\) (the positions that get the letter \(A\)), and subset of size \(2\) (the positions that get the letter \(N\)), and a subset of size \(1\) (the position that gets the letter \(B\)).
+</p>
+
+<p class="fragment">
+For example,
+</p>
+<p class="fragment">
+\[
+A A A B N N \leftrightarrow \{1, 2, 3\}, \{4\}, \{5, 6\}
+\]
+</p>
+<p class="fragment">
+\[
+B A N A N A \leftrightarrow \{2, 4, 6\}, \{1\}, \{3, 5\}
+\]
+</p>
+
+<p class="fragment">
+Total number of arrangements:
+</p>
+<p class="fragment">
+\[
+\binom{6}{3,2,1} = \frac{6!}{3!2!1!} = 60.
+\]
+</p>
+
+</section>
+<section>
+<p>
+Solution (2):
+</p>
+
+<p class="fragment">
+We first pretend the \(6\) letters are distinct:
+</p>
+<p class="fragment">
+\[
+B, A_1, A_2, A_3, N_1, N_2.
+\]
+</p>
+<p class="fragment">
+There are \(6!\) ways to arrange them.
+</p>
+
+<p class="fragment">
+But each of \(3!\) ways to arrange \(A\)&rsquo;s and each of the 2! ways to arrange \(N\)&rsquo;s correspond to the same arrangement.
+</p>
+
+<p class="fragment">
+For example,
+\[
+B A_1 N_1 A_2 N_2 A_3 \quad\text{and}\quad B A_2 N_1 A_3 N_2 A_{1}
+\]
+both spell as \(BANANA\).
+</p>
+
+<p class="fragment">
+So we need to divide it by \(3!2!\), and the total number ways is
+\[
+\frac{6!}{3!2!} = 60 = \binom{6}{3, 2, 1}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgee7e79a">
+<h4 id="orgee7e79a">Example 1.9.4</h4>
+<p>
+A deck of \(52\) cards, containing \(13\) hearts. Suppose cards are shuffled and distributed among \(A, B, C\) and \(D\) four players.
+</p>
+
+<p>
+What is the probability that \(A\) gets \(6\) hearts, \(B\) gets \(4\) hearts, \(C\) gets \(2\) hearts, and \(D\) gets \(1\) heart?
+</p>
+
+</section>
+<section>
+<p>
+Solution (1):
+</p>
+<p class="fragment">
+\[
+\# S = \binom{52}{13, 13, 13, 13} = \frac{52!}{(13!)^4}.
+\]
+</p>
+<p class="fragment">
+Let \(E\) be the event that \(A\) gets \(6\) hearts, \(B\) gets \(4\) hearts, \(C\) gets \(2\) hearts, and \(D\) gets \(1\) heart, then
+</p>
+<p class="fragment">
+\[
+\# E = \binom{13}{6, 4, 2, 1} \cdot \binom{39}{7, 9, 11, 12}.
+\]
+</p>
+<p class="fragment">
+Thus,
+\[
+\mathbb{P}(E) = \frac{\# E}{\# S} = \frac{13!}{6!4!2!} \cdot \frac{39!}{7!9!11!12!} \cdot \frac{(13!)^{4}}{52!}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+Solution (2):
+</p>
+<p class="fragment">
+Consider \(52\) cards are distributed one by one.
+</p>
+
+<p class="fragment">
+So there are \(\# S = \binom{52}{13}\) total number of combinations of positions of \(13\) hearts, and
+</p>
+<p class="fragment">
+\[
+\# E = \binom{13}{6} \binom{13}{4} \binom{13}{2} \binom{13}{1}.
+\]
+</p>
+<p class="fragment">
+Of course, the probability \(\mathbb{P}(E)\) is the same as before.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3de08c1">
+<h3 id="org3de08c1">1.10. The Probability of a Union of Events</h3>
+<p>
+Recall: Inclusion-Exclusion formula
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A\cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B).
+\]
+</p>
+
+
+<div id="org3fa2214" class="figure">
+<p><img src="../img/20220610-164412intersection-of-two-sets.png" alt="20220610-164412intersection-of-two-sets.png" class="fragment middle" width="600px" />
+</p>
+</div>
+
+</section>
+<section>
+<p>
+<b>Theorem</b>
+</p>
+
+<p>
+(1) Three events:
+</p>
+<div>
+\begin{align*}
+\mathbb{P}(A\cup B\cup C)
+& = \mathbb{P}(A) + \mathbb{P}(B) + \mathbb{P}(C) - \mathbb{P}(A\cap B) - \mathbb{P}(A\cap C)\\
+& \quad  - \mathbb{P}(B\cap C) + \mathbb{P}(A\cap B\cap C).
+\end{align*}
+
+</div>
+
+
+<div id="org7519c5c" class="figure">
+<p><img src="../img/20220610-164431intersection-venn-diagram.png" alt="20220610-164431intersection-venn-diagram.png" class="fragment middle" width="400px" />
+</p>
+</div>
+
+</section>
+<section>
+<p>
+(2) General case:
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(\cup_{i=1}^n A_i)
+& = \sum_{i=1}^n \mathbb{P}(A_i) - \sum_{i < j}  \mathbb{P}(A_i \cap A_j)\\
+& \quad + \sum_{i< j < k } \mathbb{P}(A_i \cap A_j \cap A_{k})  \\
+& \quad - \sum_{i < j < k < l} \mathbb{P}(A_i \cap A_j \cap A_k \cap A_{l})\\
+& \quad + \cdots + (-1)^{n+1} \mathbb{P}(A_1\cap A_2\cap \cdots \cap A_n).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Example 1.10.1 (easy, read by yourself)
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org11e6579">
+<h4 id="org11e6579">Matching Problem</h4>
+<p class="fragment">
+Suppose \(3\) men throw their hats into the center of a room. The hats are mixed up, and then each man randomly selects a hat.
+</p>
+
+<p class="fragment">
+What&rsquo;s the probability that at least one man selects his own hat?
+</p>
+
+<p class="fragment">
+<b>Want</b>: \(\mathbb{P}(A)\), where \(A\) is the event that at least one man selects his own hat.
+</p>
+
+
+</section>
+<section>
+<p>
+What is the sample space \(S\)?
+</p>
+
+<p class="fragment">
+Consider each outcome is a vector of \(3\) members.
+</p>
+
+<p class="fragment">
+For example,
+</p>
+
+<p class="fragment">
+\((1, 2, 3)\) means each man selects his own hat;
+</p>
+
+<p class="fragment">
+\((2, 1, 3)\) means 1st man selects the hat \(2\), 2nd man selects the hat \(1\), and 3rd man selects his own.
+</p>
+
+<p class="fragment">
+Therefore,
+</p>
+
+<p class="fragment">
+\(\# S = 3! = 6\).
+</p>
+
+</section>
+<section>
+<p>
+What is the event \(A\)?
+</p>
+
+<p class="fragment">
+Denote by \(E_i\) the event that \(i^{\text{th}}\) man selects his own hat, then
+</p>
+
+<p class="fragment">
+\[
+A = E_1\cup E_2\cup E_3.
+\]
+</p>
+
+</section>
+<section>
+<p>
+To compute \(\mathbb{P}(A)\), we need \(\mathbb{P}(E_{i}), \mathbb{P}(E_{i}\cap E_j)\) and \(\mathbb{P}(E_1\cap E_2\cap E_3)\):
+</p>
+<div class="fragment">
+\begin{align*}
+  & \mathbb{P}(E_1) = \frac{2}{6} = \mathbb{P}(E_2) = \mathbb{P}(E_3)\\
+ & \mathbb{P}(E_1\cap E_2) = \frac{1}{6} = \mathbb{P}(E_2\cap E_3) = \mathbb{P}(E_1\cap E_3)\\
+& \mathbb{P}(E_1\cap E_2\cap E_3) = \frac{1}{6}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Therefore,
+\[
+\mathbb{P}(A) = \frac{1}{3} \cdot 3 - 3 \cdot \frac{1}{6} + \frac{1}{6} = 1 - \frac{1}{2} + \frac{1}{6} = \frac{2}{3}.
+\]
+</p>
+
+<p class="fragment">
+<b>Note</b>: see the &ldquo;hat problem&rdquo; on page 49 for the general case.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org6d02d1e">
+<h2 id="org6d02d1e">Chapter 2 - Conditional Probability</h2>
+<div class="outline-text-2" id="text-org6d02d1e">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org0c20a71">
+<h3 id="org0c20a71">2.1. The Definition of Conditional Probability</h3>
+<p class="fragment">
+Given an experiment with probability model \((S, \mathbb{P}, \mathcal{F})\).
+</p>
+
+<p class="fragment">
+<span style="color: rgb(30,144,255)">Suppose</span> we know the outcome belongs to a given event \(B\), such that \(\mathbb{P}(B)>0\).
+</p>
+
+<p class="fragment">
+The probability that the outcome also belongs to the event \(A\) is called the <span style="color: rgb(30,144,255)">conditional probability</span> of \(A\) given \(B\), and is defined by
+\[
+\mathbb{P}(A|B) = \frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+Intuitively, out of the total probability assigned to elements of \(B\), \(\mathbb{P}(A|B)\) is the fraction assigned to elements that also belongs to \(A\):
+</p>
+
+
+<div id="orgf0abc4e" class="figure">
+<p><img src="../img/20220610-211829Complement of a Set.svg" alt="20220610-211829Complement of a Set.svg" class="fragment middle" width="400px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org69919a0">
+<h4 id="org69919a0">Example</h4>
+<p>
+A fair six-sided die is rolled twice.
+</p>
+
+<p class="fragment">
+You were told that the sum of two rolls is \(9\). How likely is it that the first roll is \(6\)?
+</p>
+
+<p class="fragment">
+Let \(A\) be the event that the first roll is \(6\), and \(B\) be the event that the sum of two is \(9\).
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A) = \frac{6}{36} = \frac{1}{6}.
+\]
+</p>
+<p class="fragment">
+What about \(\mathbb{P}(A|B)\)?
+</p>
+
+</section>
+<section>
+<p>
+By definition,
+</p>
+
+<div>
+\begin{align*}
+  \mathbb{P}(A|B)
+& = \frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)} = \frac{\frac{\# (A\cap B)}{\# S}}{\frac{\# B}{\# S}}\\
+& = \frac{\# (A\cap B)}{\# B}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+\[
+B = \{(3, 6), (6, 3), (4, 5), (5, 4)\}, \quad\text{so,}~\# B = 4.
+\]
+</p>
+
+<p class="fragment">
+\[
+A\cap B = \{(6, 3)\}, \quad\text{so,}~\# A = 1.
+\]
+</p>
+
+<p class="fragment">
+Therefore,
+\[
+\mathbb{P}(A|B) = \frac{1}{4}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfe70db2">
+<h4 id="orgfe70db2">Theorem</h4>
+<p>
+If we have a simple sample space, then
+\[
+\mathbb{P}(A|B)
+ = \frac{\# (A\cap B)}{\# B}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf413045">
+<h4 id="orgf413045">Example</h4>
+<p>
+Toss a fair coin \(5\) times.
+</p>
+
+<p class="fragment">
+What is the probability that there are more heads than tails given that the first toss is heads?
+</p>
+
+</section>
+<section>
+<p>
+Let \(A\) be the event that there are more heads than tails, and \(B\) be the event that the first toss is heads.
+</p>
+
+<p class="fragment">
+\[
+\# B = 1\cdot 2\cdot 2\cdot 2 \cdot 2 = 2^4,
+\]
+</p>
+<p class="fragment">
+and
+\[
+\# (A\cap B) = \binom{4}{2} + \binom{4}{3} + \binom{4}{4} = 11.
+\]
+</p>
+<p class="fragment">
+So
+\[
+\mathbb{P}(A|B) = \frac{\# (A\cap B)}{\# B} = \frac{11}{2^{4}} = \frac{11}{16}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org88a6a86">
+<h4 id="org88a6a86">Important Fact</h4>
+<p>
+<span style="color: rgb(30,144,255)">A conditional probability is a probability measure.</span>
+</p>
+
+<p class="fragment">
+Specifically, given a probability model \((S, \mathbb{P}, \mathcal{F})\), an event \(B\) with \(\mathbb{P}(B)>0\), then the set function \(\mathbb{P}(\cdot | B)\) satisfies the probability axioms and consequences, i.e.,
+</p>
+
+<p class="fragment">
+(1) \(\mathbb{P}(A|B) \ge 0\), for all event \(A\).
+</p>
+
+<p class="fragment">
+(2) \(\mathbb{P}(S | B) = 1\).
+</p>
+
+<p class="fragment">
+(3) If \(A_1, A_2, \dots\) is any countable sequence of disjoint events.
+\[
+\mathbb{P}(\cup_i A_i | B) = \sum_i \mathbb{P}(A_i| B).
+\]
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgbbbeef5">
+<h4 id="orgbbbeef5">Example</h4>
+<p class="fragment">
+Exercise. 11.
+\[
+\mathbb{P}(A^c|B) = 1 - \mathbb{P}(A|B).
+\]
+</p>
+
+<p class="fragment">
+Exercise. 12.
+\[
+\mathbb{P}(A\cup B|C) = \mathbb{P}(A|C) + \mathbb{P}(B | C) - \mathbb{P}(A\cap B| C).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org6e489d4">
+<h4 id="org6e489d4">Multiplication rule for conditional probability</h4>
+<p class="fragment">
+Recall:
+\[
+\mathbb{P}(A|B) = \frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}, \quad \mathbb{P}(B|A) = \frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}.
+\]
+</p>
+<p class="fragment">
+By reordering the terms, we have
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(A\cap B)
+& = \mathbb{P}(A|B)\mathbb{P}(B)\\
+& = \mathbb{P}(B|A)\mathbb{P}(A).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+More general version of this rule:
+</p>
+<div class="fragment">
+\begin{multline*}
+\mathbb{P}(\cap_{i=1}^nA_i) = \mathbb{P}(A_1) \mathbb{P}(A_2|A_1)\mathbb{P}(A_3|A_1\cap A_2)\\
+\cdot \mathbb{P}(A_4| A_1\cap A_2\cap A_3) \cdots \mathbb{P}(A_n |\cap_{i=1}^{n-1}A_i)
+\end{multline*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orga3f2cdf">
+<h4 id="orga3f2cdf">Example</h4>
+<p>
+Draw \(3\) cards from a deck of \(52\) cards without replacement. What&rsquo;s the probability that you draw \(A22\) in that order?
+</p>
+
+<p class="fragment">
+Let \(B\) be the event of interest, and define
+</p>
+<div class="fragment">
+\begin{align*}
+  A_1 & = ~\text{the first card is}~A,\\
+  A_2 & = ~\text{the second card is}~2,\\
+  A_3 & = ~\text{the third card is}~2.
+\end{align*}
+
+</div>
+<p class="fragment">
+So, \(B = A_1 \cap A_2 \cap A_3\), and thus,
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(B)
+& = \mathbb{P}(A_1\cap A_2\cap A_3)\\
+& = \mathbb{P}(A_1) \mathbb{P}(A_2|A_1)\mathbb{P}(A_3|A_1\cap A_2)\\
+& = \frac{4}{52}\cdot \frac{4}{51}\cdot \frac{3}{50}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf95634c">
+<h4 id="orgf95634c">Example (Radar detection)</h4>
+<p>
+An aircraft is present in a certain area with probability \(0.05\). If an aircraft is present, the radar correctly detects it with probability \(0.99\). If an aircraft is not present, the radar incorrectly registers it with probability \(0.1\).
+</p>
+
+<p class="fragment">
+(1) What&rsquo;s the probability of a false alarm (no aircraft but radar sees one)?
+</p>
+
+<p class="fragment">
+Let \(A\) be the event that an aircraft is present, and \(B\) be the event that radar sees one.
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(A^c\cap B) & = \mathbb{P}(B)\mathbb{P}(A^c|B) = \mathbb{P}(A^c)\mathbb{P}(B|A^c)\\
+& = (1 - \mathbb{P}(A)) \cdot 0.1 = 0.95 \cdot 0.1 = 0.095.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+(2) What&rsquo;s the probability of a missed detection (that there is an aircraft and radar does not see it)?
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(A\cap B^c) & = \mathbb{P}(A)\mathbb{P}(B^c|A) = 0.05 \cdot (1 - \mathbb{P}(B|A))\\
+& = 0.05 \cdot (1 - 0.99) = 0.0005.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org7d38780">
+<h4 id="org7d38780">Law of total probability</h4>
+<p class="fragment">
+Let \(B_1, B_2, \dots\) be a countable sequence of events that form a <span style="color: rgb(30,144,255)">partition</span> of the sample space \(S\):
+</p>
+
+<p class="fragment">
+(1) \(B_1, B_2, \dots\) are disjoint, and
+</p>
+
+<p class="fragment">
+(2) \(\cup_{i=1}^{\infty} B_i = S\).
+</p>
+
+<p class="fragment">
+Then for any event \(A\), we have that \(A\cap B_1, A\cap B_2, \dots\) are also disjoint, and
+</p>
+<p class="fragment">
+\[
+A = \cup_i (A \cap B_i),
+\]
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A) = \sum_i \mathbb{P}(A\cap B_i) = \sum_i \mathbb{P}(A|B_i) \mathbb{P}(B_i).
+\]
+</p>
+
+</section>
+<section>
+
+<div id="org303134b" class="figure">
+<p><img src="../img/20220619_191957Total-prob.png" alt="20220619_191957Total-prob.png" class="middle" width="600px" />
+</p>
+</div>
+
+
+</section>
+<section>
+<p>
+Special case: \(S = B \cup B^c\).
+</p>
+<p class="fragment">
+\[
+A = (A \cap B)\cup (A \cap B^c),
+\]
+</p>
+<p class="fragment">
+and
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(A)
+& = \mathbb{P}(A\cap B) + \mathbb{P}(A \cap B^c)\\
+& = \mathbb{P}(B)\mathbb{P}(A|B) + \mathbb{P}(B^c) \mathbb{P}(A|B^c).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org372d33c">
+<h4 id="org372d33c">Example</h4>
+<p>
+There are \(3\) urns. Urn \(1\) has \(3\) red, \(4\) green, and \(5\) blue balls; urn \(2\) has \(3\) red, \(10\) green, and \(1\) blue balls; urn \(3\) has \(3\) red, \(2\) green, and \(2\) blue balls.
+</p>
+
+<p class="fragment">
+Choose one of the urns at random and draw a ball from this urn. What&rsquo;s the probability that the ball we choose is green?
+</p>
+
+</section>
+<section>
+<p>
+Let \(A\) be the event of interest.
+</p>
+
+<p class="fragment">
+Partition \(S\) into \(3\) events:
+\[
+B_i = ~\text{the ball chosen is from the $i\text{-th}$ urn}, i = 1, 2, 3.
+\]
+</p>
+<p class="fragment">
+Then we have
+</p>
+<p class="fragment">
+\[
+S = B_{1} \cup B_2 \cup B_3, \quad B_i\cap B_j = \emptyset, i \neq j,
+\]
+</p>
+<p class="fragment">
+and thus
+</p>
+<div class="fragment">
+\begin{align*}
+ \mathbb{P}(A)
+& = \mathbb{P}(A\cap B_1) + \mathbb{P}(A\cap B_2) + \mathbb{P}(A\cap B_3)\\
+& = \mathbb{P}(B_1)\mathbb{P}(A|B_1) + \mathbb{P}(B_2)\mathbb{P}(A|B_2) + \mathbb{P}(B_3)\mathbb{P}(A|B_3)\\
+& = \frac{1}{3}\cdot \frac{4}{12} + \frac{1}{3}\cdot \frac{10}{14} + \frac{1}{3} \cdot \frac{2}{7}.
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org8631bc8">
+<h3 id="org8631bc8">2.2. Independent Events</h3>
+<div class="outline-text-3" id="text-org8631bc8">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org64d2db5">
+<h4 id="org64d2db5">Definition</h4>
+<p>
+We say two events \(A\) and \(B\) are <b>independent</b> if
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A\cap B) = \mathbb{P}(A) \mathbb{P}(B).
+\]
+</p>
+
+<p class="fragment">
+<b>Note</b>:
+</p>
+
+<p class="fragment">
+(1) \(A\) and \(B\) are disjoint if
+\[
+\mathbb{P}(A\cup B) = \mathbb{P}(A) + \mathbb{P}(B).
+\]
+</p>
+
+<p class="fragment">
+(2) Suppose \(\mathbb{P}(B)>0\), events \(A\) and \(B\) are independent if
+\[
+\mathbb{P}(A|B) = \mathbb{P}(A). \qquad\text{Why?}
+\]
+</p>
+
+
+<p class="fragment">
+<b>Intuition</b>: \(A\) and \(B\) are independent if the occurrence of \(B\) does not affect the occurrence of \(A\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga91fa59">
+<h4 id="orga91fa59">Example</h4>
+<p>
+Flip two fair coins.
+</p>
+
+<p class="fragment">
+Let \(A\) be the event that the first coin is heads, and \(B\) be the event that the second is tails.
+</p>
+
+<p class="fragment">
+By intuition, it seems \(A\) and \(B\) are independent.
+</p>
+
+<p class="fragment">
+<b>Check</b>: if \(\mathbb{P}(A\cap B) = \mathbb{P}(A) \mathbb{P}(B)\) ?
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A\cap B) = \frac{1}{4}, \quad \mathbb{P}(A) = \mathbb{P}(B) = \frac{1}{2}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org9d61d38">
+<h4 id="org9d61d38">Example</h4>
+<p>
+Roll a six-sided die.
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(\{6\}) = \frac{1}{6}.
+\]
+</p>
+
+<p class="fragment">
+If you know the outcome is even, would you change the answer to the probability of getting \(6\)?
+</p>
+
+<p class="fragment">
+Let \(A\) be the event of obtaining \(6\), and \(B\) be the event that you get an even number. Then
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A|B) = \frac{1}{3} \neq \frac{1}{6} = \mathbb{P}(A).
+\]
+So \(A\) and \(B\) are <span style="color: rgb(255,0,0)">not</span> independent.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgec28fcd">
+<h4 id="orgec28fcd">Equivalent definitions</h4>
+<p data-fragment-index="0" class="fragment">
+The following statements are equivalent:
+</p>
+
+<ul>
+<li data-fragment-index="1" class="fragment">\(A\) and \(B\) are independent.</li>
+<li data-fragment-index="2" class="fragment">\(\mathbb{P}(A\cap B) = \mathbb{P}(A) \mathbb{P}(B)\).</li>
+<li data-fragment-index="3" class="fragment">\(\mathbb{P}(A|B) = \mathbb{P}(A)\).</li>
+<li data-fragment-index="4" class="fragment">\(\mathbb{P}(B|A) = \mathbb{P}(B)\).</li>
+<li data-fragment-index="5" class="fragment">\(\mathbb{P}(A|B^c) = \mathbb{P}(A)\).</li>
+<li data-fragment-index="6" class="fragment">\(\mathbb{P}(B|A^c) = \mathbb{P}(B)\).</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org02e0a69">
+<h4 id="org02e0a69">Definition (for three events)</h4>
+<p class="fragment">
+The events \(A_1, A_2, A_3\) are independent if <span style="color: rgb(30,144,255)">all</span> of the following conditions hold:
+</p>
+<ul class="fragment">
+<li>\(\mathbb{P}(A_1\cap A_2\cap A_3) = \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)\).</li>
+<li>\(\mathbb{P}(A_1\cap A_2) = \mathbb{P}(A_1)\mathbb{P}(A_2)\).</li>
+<li>\(\mathbb{P}(A_1\cap A_3) = \mathbb{P}(A_1)\mathbb{P}(A_3)\).</li>
+<li>\(\mathbb{P}(A_2\cap A_3) = \mathbb{P}(A_2)\mathbb{P}(A_3)\).</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org469d2e4">
+<h4 id="org469d2e4">Example</h4>
+<p>
+Flip a fair coin twice.
+</p>
+
+<p class="fragment">
+\[
+S = \{HH, TT, TH, HT\}.
+\]
+</p>
+
+<p class="fragment">
+Let
+</p>
+<div class="fragment">
+\begin{align*}
+  A & = ~\text{the first coin is H} ~ = \{HH, HT\},\\
+  B & = ~\text{the second coin is H} ~ = \{HH, TH\},\\
+  C & = ~\text{the first and second are the same} ~ = \{HH, TT\}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Then
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A) = \mathbb{P}(B) = \mathbb{P}(C) = \frac{2}{4} = \frac{1}{2}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+Are \(A\) and \(B\) independent?
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A\cap B) = \frac{1}{4} = \frac{1}{2}\cdot \frac{1}{2} = \mathbb{P}(A)\mathbb{P}(B).
+\]
+</p>
+
+<p class="fragment">
+However,
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A\cap B \cap C) = \mathbb{P}(\{HH\}) = \frac{1}{4},
+\]
+and
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A) \mathbb{P}(B) \mathbb{P}(C) = \frac{1}{2}\cdot \frac{1}{2}\cdot\frac{1}{2} = \frac{1}{8}.
+\]
+</p>
+<p class="fragment">
+Therefore, \(A, B\) and \(C\) are <span style="color: rgb(255,0,0)">not</span> independent.
+</p>
+
+<p class="fragment">
+<b>Read</b>: Example 2.2.5.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga81dd65">
+<h4 id="orga81dd65">Definition (for \(n\) events)</h4>
+<p class="fragment">
+The events \(A_1, A_2, \dots, A_n\) are <b>independent</b> if
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(\cap_{i\in I} A_i) = \prod_{i\in I} \mathbb{P}(A_i)
+\]
+for any index subset \(I\subseteq \{1, 2, \dots, n\}\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org83d5037">
+<h4 id="org83d5037">Another equivalent definition</h4>
+<p class="fragment">
+The events \(A_1, A_2, \dots, A_n\) are <b>independent</b> if
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(\cap_{i\in I} A_i^{\ast}) = \prod_{i\in I} \mathbb{P}(A_i^{\ast})
+\]
+for any subset \(I\subseteq \{1, 2, \dots, n\}\), where
+\[
+A^{\ast}_i = A_i ~\text{or}~ A^c_i.
+\]
+</p>
+<p class="fragment">
+In particular, if \(A\) and \(B\) are independent, then
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(A\cap B)&  = \mathbb{P}(A)\mathbb{P}(B),\\
+  \mathbb{P}(A^{c}\cap B)&  = \mathbb{P}(A^{c})\mathbb{P}(B),\\
+\cdots & = \cdots
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org912b41e">
+<h4 id="org912b41e">Example 2.2.5 (Inspecting items)</h4>
+<p class="fragment">
+A machine produces a defective item with probability \(p\), and a non-defective item with probability \(1-p\).
+</p>
+
+<p class="fragment">
+\(6\) items are produced, and randomly selected, inspected. What&rsquo;s the probability that there are exactly \(2\) items are defective?
+</p>
+
+<p class="fragment">
+Label the items by \(1, 2, 3, 4, 5, 6\), and define
+</p>
+<p class="fragment">
+\[
+D_j = \{ j\text{-th item is defective} \}.
+\]
+</p>
+<p class="fragment">
+Then \(D_1, D_2, \dots, D_6\) are independent.
+</p>
+
+</section>
+<section>
+<p>
+A typical desired outcome:
+</p>
+<p class="fragment">
+\[
+E = D^c_1 \cap D_2 \cap D_3^c \cap D_4^c \cap D_5 \cap D^c_6.
+\]
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(E)
+& = \mathbb{P}(D^c_1) \mathbb{P}(D_2) \mathbb{P}(D^c_3) \mathbb{P}(D^c_4) \mathbb{P}(D_{5}) \mathbb{P}(D^c_6)\\
+& = (1 - p) \cdot p \cdot (1-p) \cdot (1-p) \cdot p \cdot (1-p)\\
+& = p^2 (1-p)^4.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<b>Key observation</b>: all desired outcomes have the same probability \(p^2 (1-p)^4\).
+</p>
+
+<p class="fragment">
+Thus, we only need to count the number of such outcomes, which is
+</p>
+<p class="fragment">
+\[
+\binom{6}{2}.
+\]
+</p>
+<p class="fragment">
+Therefore,
+\[
+\mathbb{P}(\{\text{exactly $2$ defective items}\}) = \binom{6}{2} p^2 (1-p)^4.
+\]
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org2b28586">
+<h3 id="org2b28586">2.3. Bayes&rsquo; Theorem</h3>
+<p>
+\[
+\text{"conditional probability"} ~+~ \text{"law of total probability"}
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org7dc1bc7">
+<h4 id="org7dc1bc7">Version 1</h4>
+<p class="fragment">
+\[
+\mathbb{P}(A|B) = \frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(B)}.
+\]
+</p>
+
+<p class="fragment">
+Bayes&rsquo; formula allows you to <span style="color: rgb(30,144,255)">reverse</span> the order of conditioning.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd4dae74">
+<h4 id="orgd4dae74">Version 2</h4>
+<p class="fragment">
+\[
+\mathbb{P}(A|B) =  \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(B|A)\mathbb{P}(A) + \mathbb{P}(B|A^c)\mathbb{P}(A^c)}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org272b52b">
+<h4 id="org272b52b">Version 3</h4>
+<p class="fragment">
+Let \(A_1, A_2,\dots\), be a countable partition of \(S\), then
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A_k|B) =  \frac{\mathbb{P}(B|A_k)\mathbb{P}(A_k)}{\sum_i \mathbb{P}(B|A_i)\mathbb{P}(A_i)}
+\]
+</p>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org56a7911">
+<h4 id="org56a7911">Example (Medical test)</h4>
+<p>
+Suppose \(0.1\%\) of the population carries a certain disease. For people with disease, there is a test that correctly gives a positive result \(99.8\%\) of the time.
+For people without disease, the test correctly gives a negative result \(99.7\%\) of the time.
+</p>
+
+<p class="fragment">
+If one&rsquo;s test is positive, what is the probability that the person has the disease?
+</p>
+
+<p class="fragment">
+Define
+</p>
+
+<div class="fragment">
+\begin{align*}
+  A & = \{ \text{has the disease} \},\\
+B & = \{ \text{test is positive} \}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<b>Have</b>:
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A), \quad \mathbb{P}(B|A), \quad \mathbb{P}(B^c|A^c).
+\]
+</p>
+
+</section>
+<section>
+
+<p>
+<b>Have</b>:
+\[
+\mathbb{P}(A), \quad \mathbb{P}(B|A), \quad \mathbb{P}(B^c|A^c).
+\]
+</p>
+
+<p class="fragment">
+<b>Want</b>:
+</p>
+
+<p class="fragment">
+\(\mathbb{P}(A\cap B)\)?
+</p>
+
+<p class="fragment">
+No, but
+\[
+\mathbb{P}(A|B) = \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(B|A)\mathbb{P}(A) + \mathbb{P}(B|A^c)\mathbb{P}(A^c)}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+How to compute \(\mathbb{P}(B|A^c)\) ?
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(B|A^c) = 1 - \mathbb{P}(B^c|A^c) = 0.003
+\]
+</p>
+<p class="fragment">
+Thus,
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A|B) = \frac{0.998\cdot 0.001}{0.998 \cdot 0.001 + 0.003 \cdot 0.999} \approx 24.98\%.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org506c386">
+<h4 id="org506c386">Terminology</h4>
+<ul>
+<li>\(\mathbb{P}(B|A) = 0.998\): true positive rate</li>
+<li>\(\mathbb{P}(B^c|A) = 0.002\): false negative rate</li>
+<li>\(\mathbb{P}(B^c|A^c) = 0.997\): true negative rate</li>
+<li>\(\mathbb{P}(B|A^c) = 0.003\): false positive rate</li>
+
+</ul>
+
+<p class="fragment">
+In this example, \(\mathbb{P}(A)\) is often called the <span style="color: rgb(30,144,255)">prior probability</span>, and \(\mathbb{P}(A|B)\) is called the <span style="color: rgb(30,144,255)">posterior probability</span>.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org9299d62">
+<h4 id="org9299d62">Example</h4>
+<p>
+A grocery store gets eggs from \(3\) different farms.
+</p>
+<ul>
+<li>\(20\%\) of eggs come from farm \(1\)</li>
+<li>\(30\%\) of eggs come from farm \(2\)</li>
+<li>\(50\%\) of eggs come from farm \(3\)</li>
+<li>\(5\%\) of egg cartons from farm \(1\) contain a cracked egg</li>
+<li>\(3\%\) of egg cartons from farm \(2\) contain a cracked egg</li>
+<li>\(2\%\) of egg cartons from farm \(3\) contain a cracked egg</li>
+
+</ul>
+
+<p class="fragment">
+If you open a carton, and find a cracked egg, what is the probability that the carton came from farm \(3\)?
+</p>
+
+</section>
+<section>
+<p>
+Define
+</p>
+
+<div class="fragment">
+\begin{align*}
+  A_i & = \{ \text{carton from farm $i$ }\}, i = 1, 2, 3,\\
+B &  = \{ \text{carton has a cracked egg} \}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<b>Want</b>:
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A_3|B) = \frac{\mathbb{P}(B|A_3)\mathbb{P}(A_3)}{\mathbb{P}(B)}.
+\]
+</p>
+
+<p class="fragment">
+Since
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(B) & = \mathbb{P}(B\cap A_1) + \mathbb{P}(B\cap A_2) + \mathbb{P}(B\cap A_3)\\
+& = \mathbb{P}(B|A_1)\mathbb{P}(A_1) + \mathbb{P}(B|A_2)\mathbb{P}(A_2) + \mathbb{P}(B|A_3)\mathbb{P}(A_3),
+\end{align*}
+
+</div>
+
+<p class="fragment">
+\[
+\mathbb{P}(A_3|B) = \frac{10}{29}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4d440ed">
+<h2 id="org4d440ed">Chapter 3 - Random Variables and Distributions</h2>
+<div class="outline-text-2" id="text-org4d440ed">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org5173dd7">
+<h3 id="org5173dd7">3.1. Random Variables and Discrete Distributions</h3>
+<div class="outline-text-3" id="text-org5173dd7">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org9fae072">
+<h4 id="org9fae072">Definition</h4>
+<p class="fragment">
+Given an probability model \((S, \mathbb{P}, \mathcal{F})\), a <b>random variable</b> is a function \(X\) mapping from \(S\) to a set of real numbers:
+</p>
+
+<p class="fragment">
+\[
+X : S \mapsto \mathbb{R}.
+\]
+</p>
+
+<p class="fragment">
+To each possible outcome \(\omega\in S\), \(X\) assigns a real number \(X(\omega)\), which is called an experimental value or a realization of \(X\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org6aa5cda">
+<h4 id="org6aa5cda">Example</h4>
+<p>
+Roll two fair six-sided dice.
+</p>
+
+<p class="fragment">
+Define
+</p>
+<div class="fragment">
+\begin{align*}
+  X_1 & = \{ \text{outcome from the first die}\},\\
+  X_2 & = \{ \text{outcome from the second die}\},\\
+  X & = \{ \text{ sum of the two dice}\},\\
+  Y & = \{ \text{ outcome of the second die raised to the fourth power}\},\\
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Sample space
+</p>
+<p class="fragment">
+\[
+S = \{ (i, j) \mid 1\le i, j\le 6, i, j \in \mathbb{N} \},
+\]
+and \(\# S = 36\).
+</p>
+
+</section>
+<section>
+<p>
+Are these functions (mappings) random variables?
+</p>
+
+<div class="fragment">
+\begin{align*}
+  X_1((i, j)) & = i\\
+X_2((i,j)) & = j\\
+X((i,j)) & = i + j\\
+Y((i,j)) & = j^4.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<b>Questions</b>: How can we use such notations to express events?
+</p>
+
+</section>
+<section>
+<p>
+Let&rsquo;s compute the probability that the outcome from the first die is \(3\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  & \{ \text{outcome from the first die is $3$}\} = \{ X_1 = 3\}\\
+= & \{(i, j) \in S \mid X_1((i,j)) = 3\} = \{(i, j) \in S \mid i = 3\}\\
+= & \{(3, 1), (3, 2), \dots, (3, 6)\}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+So,
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(\{X_1 = 3\}) = \mathbb{P}(X_1 = 3) = \frac{6}{36} = \frac{1}{6}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+We can compute other probabilities, like
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X_1 = 3, X_2 = 5) = \mathbb{P}(\{X_1 = 3\} \cap \{X_2 = 5\}) = \frac{1}{36},
+\]
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(X_1 = 3~\text{or}~ X_2 = 5)
+& = \mathbb{P}(X_1 = 3) + \mathbb{P}(X_2 = 5) - \mathbb{P}(X_1 = 3, X_2 = 5)\\
+& = \frac{1}{6} + \frac{1}{6} - \frac{1}{36} = \frac{11}{36},
+\end{align*}
+
+</div>
+<p class="fragment">
+and
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X = 3) = \mathbb{P}(\{(1, 2), (2, 1)\}) = \frac{2}{36}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb9d15cf">
+<h4 id="orgb9d15cf">Notations</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">\(\{X = c\} = \{\omega \in S \mid X(\omega) = c\}\).</li>
+<li data-fragment-index="2" class="fragment">\(\{ a \le X \le b \} = \{ \omega \in S \mid a \le X(\omega) \le b\}\).</li>
+<li data-fragment-index="3" class="fragment">\(\{X\in B\} = \{ \omega \in S \mid X(\omega) \in B \}\), \(B\) is a subset of \(\mathbb{R}\).</li>
+<li data-fragment-index="4" class="fragment">\(\{X = a, Y = b\} = \{X = a\} \cap \{ Y = b\}\).</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org635e4d0">
+<h4 id="org635e4d0">Definition (Probability distribution)</h4>
+<p class="fragment">
+The <b>probability distribution</b> of a random variable \(X\) is a collection of all probabilities of the form \(\mathbb{P}(X\in B)\), for all subset \(B\subseteq \mathbb{R}\), such that \(\{X\in B\} \in \mathcal{F}\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf64484e">
+<h4 id="orgf64484e">Two types of random variables</h4>
+<p class="fragment">
+If the <span style="color: rgb(30,144,255)">range</span> of the random variable \(X\) is at most countable (finite or infinitely countable), we call \(X\) a <b>discrete</b> random variable. Otherwise, we call \(X\) is a <b>continuous</b> random variable.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd342b3a">
+<h4 id="orgd342b3a">Definition</h4>
+<p class="fragment">
+Let \(X\) be a discrete random variable. The <b>probability mass function</b> (p.m.f.) \(p_X\) is defined by
+</p>
+<p class="fragment">
+\[
+p_X(k) = \mathbb{P}(X = k), ~\text{for every real number } k.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2052884">
+<h4 id="org2052884">Theorem</h4>
+<p class="fragment">
+The probability distribution of a discrete random variable is completely determined by its p.m.f.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4e94be8">
+<h4 id="org4e94be8">Proof</h4>
+<p class="fragment">
+For every \(B\subseteq \mathbb{R}\), we have
+</p>
+<p class="fragment">
+\[
+\{ X \in B\} = \{ X\in B \cap ~\text{Range}(X)\}.
+\]
+</p>
+
+<p class="fragment">
+Since \(X\) is discrete, \(\text{Range}(X)\) is at most countable, \(B\cap~\text{Range}(X)\) is also at most countable, say
+\[
+B\cap~\text{Range}(X) = \{k_1, \dots, k_n\} ~\text{or}~ \{k_1, \dots, k_n, \dots \}.
+\]
+</p>
+
+<p class="fragment">
+Therefore,
+</p>
+<div class="fragment">
+\begin{align*}
+\mathbb{P}(X \in B)
+& = \mathbb{P}(X\in B \cap ~\text{Range}(X)) = \mathbb{P}(\cup_i \{X = k_i\})\\
+& = \sum_i \mathbb{P}(X = k_i)\\
+& = \sum_i p_X(k_i).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org2bfdbb1">
+<h4 id="org2bfdbb1">Example</h4>
+<p>
+Roll two fair dice. Let
+</p>
+<div>
+\begin{align*}
+  X_1 & = \{\text{outcome of the first die}\},\\
+X & = \{\text{sum of the two dice}\}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+What are the p.m.f.s of \(X_1\) and \(X\)?
+</p>
+
+</section>
+<section>
+<p>
+For \(X_1\),
+</p>
+
+<p class="fragment">
+\(\text{Range}(X_1) = \{1, 2, 3, 4, 5, 6\}\), and so \(X_1\) is a discrete random variable.
+</p>
+
+<p class="fragment">
+Obviously, if \(k\notin \text{Range}(X_1)\),
+\[
+p_{X_1} (k) = 0.
+\]
+</p>
+
+<p class="fragment">
+For example,
+</p>
+
+<p class="fragment">
+\[
+p_{X_1}(1.5) = \mathbb{P}(X_1 = 1.5) = 0.
+\]
+</p>
+
+</section>
+<section>
+<p>
+So we only need to consider the case that \(k\in \text{Range}(X_1)\):
+</p>
+
+<p class="fragment">
+\[
+p_{X_1}(k) = \mathbb{P}(X_1 = k) = \frac{1}{6}.
+\]
+</p>
+
+<p class="fragment">
+To sum up,
+</p>
+
+<p class="fragment">
+\[
+p_{X_1}(k) =\begin{cases}
+\frac{1}{6}, & k\in \{1, 2, 3, 4, 5, 6\},\\
+0, &  k\notin \{1, 2, 3, 4, 5, 6\}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Another way of presenting the probability mass function:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\(k\)</th>
+<th scope="col" class="org-left">\(1\)</th>
+<th scope="col" class="org-left">\(2\)</th>
+<th scope="col" class="org-left">\(3\)</th>
+<th scope="col" class="org-left">\(4\)</th>
+<th scope="col" class="org-left">\(5\)</th>
+<th scope="col" class="org-left">\(6\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(p_{X_1}(k)\)</td>
+<td class="org-left">\(1/6\)</td>
+<td class="org-left">\(1/6\)</td>
+<td class="org-left">\(1/6\)</td>
+<td class="org-left">\(1/6\)</td>
+<td class="org-left">\(1/6\)</td>
+<td class="org-left">\(1/6\)</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section>
+<p>
+What about \(X\)?
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\(k\)</th>
+<th scope="col" class="org-left">\(2\)</th>
+<th scope="col" class="org-left">\(3\)</th>
+<th scope="col" class="org-left">\(4\)</th>
+<th scope="col" class="org-left">\(5\)</th>
+<th scope="col" class="org-left">\(6\)</th>
+<th scope="col" class="org-left">\(7\)</th>
+<th scope="col" class="org-left">\(8\)</th>
+<th scope="col" class="org-left">\(9\)</th>
+<th scope="col" class="org-left">\(10\)</th>
+<th scope="col" class="org-left">\(11\)</th>
+<th scope="col" class="org-left">\(12\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(p_{X}(k)\)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgcfbd367">
+<h4 id="orgcfbd367">Theorem</h4>
+<p class="fragment">
+(1) \(p_X(k) = 0\) if \(k\notin \text{Range}(X)\).
+</p>
+
+<p class="fragment">
+(2) \(\sum_{k\in \text{Range}(X)} p_X(k) = 1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org5291374">
+<h4 id="org5291374">Uniform Distribution on Integers</h4>
+<p>
+Let \(m< n\) be two integers. Suppose that the value of a random variable \(X\) is equally likely to be each of the integer \(m, m+1, \dots, n\).
+</p>
+
+<p class="fragment">
+Then we say that \(X\) has the <b>uniform distribution on the integers</b> \(m, m+1, \dots, n\).
+</p>
+
+</section>
+<section>
+<p>
+Also, the p.m.f. of \(X\)
+</p>
+
+<p class="fragment">
+\[
+p_X(k) = \begin{cases}
+\frac{1}{n-m+1}, &\text{for}~k = m, m+1, \dots, n,\\
+0, &\text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+The random variable \(X_1\) in the previous example has the uniform distribution on the integers \(1, 2, \dots, 6\).
+</p>
+
+<p class="fragment">
+<b>Note</b>: <span style="color: rgb(30,144,255)">Random Variables Can Have the Same Distribution without Being the Same Random Variable.</span>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4a25c8f">
+<h4 id="org4a25c8f">Bernoulli Distributions.</h4>
+<p class="fragment">
+Flip a coin. Suppose the probability that you get heads is \(p\) (not necessarily to be \(1/2\)), \(p\in [0, 1]\).
+</p>
+
+<p class="fragment">
+Define \(X\) to be the outcome of the experiment:
+</p>
+
+<p class="fragment">
+\[
+ X(H) = 1, X(T) = 0,
+\]
+</p>
+
+<p class="fragment">
+and
+</p>
+
+<p class="fragment">
+\[
+\text{Range}(X) = \{0, 1\}.
+\]
+</p>
+
+<p class="fragment">
+So the p.m.f. of \(X\):
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\(k\)</th>
+<th scope="col" class="org-right">1</th>
+<th scope="col" class="org-right">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(p_X(k)\)</td>
+<td class="org-right">\(p\)</td>
+<td class="org-right">\(1-p\)</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-org93afa55">
+<h4 id="org93afa55">Definition</h4>
+<p>
+Let \(0\le p\le 1\). A random variable \(X\) has the Bernoulli distribution with the &ldquo;success&rdquo; probability \(p\) if \(X\) is \(\{0, 1\}\text{-valued}\) and satisfies \(\mathbb{P}(X=1) = p\) and \(\mathbb{P}(X=0) = 1-p\).
+</p>
+
+<p class="fragment">
+We write \(X\sim \text{Ber}(p)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2a90da0">
+<h4 id="org2a90da0">Binomial Distribution</h4>
+<p class="fragment">
+Flip a (possibly biased) coin \(n\) times.
+</p>
+
+<p class="fragment">
+\[
+S = \{(i_1, i_2, \dots, i_n\}\mid i_1, i_2, \dots, i_n\in \{0, 1\}\}
+\]
+</p>
+
+<p class="fragment">
+Let
+</p>
+
+<p class="fragment">
+\[
+X_i = i\text{-th outcome}, i = 1, 2, \dots, n.
+\]
+</p>
+
+<p class="fragment">
+Then
+</p>
+
+<p class="fragment">
+\[
+X_i \sim \text{Ber}(p),
+\]
+</p>
+
+<p class="fragment">
+where
+</p>
+<p class="fragment">
+\[
+p = \mathbb{P}(\{H\}) = \mathbb{P}(X_i = 1).
+\]
+</p>
+
+
+</section>
+<section>
+<p>
+Now we define
+</p>
+
+<p class="fragment">
+\[
+X = X_1 + X_2 + \dots + X_n.
+\]
+</p>
+
+<p class="fragment">
+So what does \(X\) mean here?
+</p>
+
+<p class="fragment">
+For example,
+</p>
+
+<p class="fragment">
+\[
+X((1, 0, \dots, 0)) = 1, X((1, 0, 1, 0, \dots, 0)) = 2.
+\]
+</p>
+
+<p class="fragment">
+What is the p.m.f. of \(X\)?
+</p>
+
+</section>
+<section>
+<p>
+First of all,
+\[
+\text{Range}(X) = \{0, 1, \dots, n\},
+\]
+and
+\[
+p_X(k) = 0 \quad \text{if}~ k \notin \text{Range}(X).
+\]
+</p>
+
+<p class="fragment">
+If \(k\in \text{Range}(X)\),
+</p>
+
+<p class="fragment">
+\[
+\{X = k\} = \{\text{we have exactly $k$ times of successes (heads) out of $n$ flips}\}
+\]
+</p>
+
+
+<p class="fragment">
+Therefore,
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2426600">
+<h4 id="org2426600">Definition</h4>
+<p>
+Let \(0\le p\le 1\). A random variable is \(X\) has the <b>binomial distribution</b> with parameter \(n\) and \(p\) if
+\[
+\mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n-k},
+\]
+for \(k\in \{0, 1, \dots, n\}\).
+</p>
+
+<p class="fragment">
+We write \(X\sim \text{Bin}(n, p)\).
+</p>
+
+</section>
+<section>
+<p>
+<b>Note</b>:
+</p>
+
+<p>
+\[
+\sum_{k=0}^n \binom{n}{k}p^k (1-p)^{n-k} = ( p + (1-p) )^n = 1^n = 1.
+\]
+</p>
+
+
+<p class="fragment">
+In particular, if \(p=1/2\), we have
+</p>
+
+<p class="fragment">
+\[
+\sum_{k=0}^n \binom{n}{k} = 2^{n}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc725a0d">
+<h4 id="orgc725a0d">Example</h4>
+<p>
+What is the probability that five rolls of a fair die yield two or three sixes?
+</p>
+
+<p class="fragment">
+Let \(S_5\) be the number of sixes that appear in the five rolls.
+</p>
+
+<p class="fragment">
+Want:
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(S_5 = 2 ~\text{or}~ S_5 = 3) = \mathbb{P}(S_5 = 2) + \mathbb{P}(S_5 =3).
+\]
+</p>
+
+<p class="fragment">
+Key: \(S_5 \sim \text{Bin}(5, 1/6)\).
+</p>
+
+<p class="fragment">
+Thus,
+</p>
+<div class="fragment">
+\begin{align*}
+ \mathbb{P}(S_5 = 2 ~\text{or}~ S_5 = 3) &
+= \mathbb{P}(S_5 = 2) + \mathbb{P}(S_5 =3)\\
+& = \binom{5}{2} \left(\frac{1}{6}\right)^2 \left(\frac{5}{6}\right)^3 + \binom{5}{3} \left(\frac{1}{6}\right)^3 \left(\frac{5}{6}\right)^2\\
+& \approx 0.193
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org9d0673a">
+<h3 id="org9d0673a">3.2. Continuous Distributions</h3>
+<p>
+For a continuous random variable, we introduce its probability density function (p.d.f.).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc916d84">
+<h4 id="orgc916d84">Definition</h4>
+<p>
+For a continuous random variable \(X\), if there exists a function \(f_X\), such that
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X\in B) = \int_B f_X(x)\, dx, \quad B\subseteq \mathbb{R},
+\]
+</p>
+
+<p class="fragment">
+then we call this function \(f_X\) the <b>probability density function</b> of \(X\).
+</p>
+
+<p class="fragment">
+In particular, \(B = [a, b]\),
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(a\le X \le b) = \int_a^b f_X(x)\, dx.
+\]
+</p>
+
+<p class="fragment">
+<b>Note</b>:
+</p>
+
+<p class="fragment">
+(1) \(f_{X}(x) \ge 0\).
+</p>
+
+<p class="fragment">
+(2) \(\int_{-\infty}^{\infty} f_X(x)\, dx = \mathbb{P}(-\infty < X < \infty) = 1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org9638b13">
+<h4 id="org9638b13">Example (Uniform Distribution on Intervals)</h4>
+<p class="fragment">
+Choose a real number uniformly at random from the interval \([0, 1]\), so the sample space \(S = [0, 1]\).
+Assume that \([a, b]\subseteq S\), the probability that the chosen number lies in the interval \([a, b]\) should be equal to the proportion of \(S\) covered by \([a, b]\),
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}([a, b]) = \frac{b-a}{1-0} = b-a.
+\]
+</p>
+
+<p class="fragment">
+We call the probability model in this example, the <b>uniform distribution</b> on \([0, 1]\), and we write \(X\sim \text{Unif}([0, 1])\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org29c386b">
+<h4 id="org29c386b">Example</h4>
+<p>
+Let \(X\sim\text{Unif}([0, 1])\).
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(0.5 \le X\le 0.8) = 0.8 - 0.5 = 0.3.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org22767dd">
+<h4 id="org22767dd">Example</h4>
+<p>
+What if we change the sample space \(S\) to \([-1, 1]\)?
+</p>
+
+<p class="fragment">
+Consider \([a, b]\subseteq [-1, 1]\),
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}([a, b]) = \frac{b-a}{1 - (-1)} = \frac{b-a}{2}.
+\]
+</p>
+
+<p class="fragment">
+In general, we say a random variable \(X\) has a uniform distribution on \([c, d], (d>c)\), if
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}([a, b]) = \frac{b-a}{d-c}, \quad\text{for}~ [a, b]\subseteq [c, d].
+\]
+</p>
+
+</section>
+<section>
+<p>
+Note that \(\text{Range}(X) = [c, d]\), so what is the p.d.f. of \(X\)?
+</p>
+
+
+<p class="fragment">
+\[
+f_X(x) = \begin{cases}
+\frac{1}{d-c}, &\text{if}~ c\le x\le d;\\
+0, &\text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+For example, \([a, b] \subseteq [c, d]\),
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(a\le X \le b) = \int_a^b f_X(x)\, dx = \int_a^b \frac{1}{d-c} \, dx = \frac{b-a}{d-c}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org305a0cb">
+<h4 id="org305a0cb">Other continuous distributions.</h4>
+<p>
+Incompletely specified p.d.f.
+</p>
+
+<p class="fragment">
+Suppose \(X\) has the p.d.f. defined by
+</p>
+
+<p class="fragment">
+\[
+f_X(x) = \begin{cases}
+c x, &\text{if}~ 0 < x < 4,\\
+0, &\text{otherwise}.
+\end{cases}
+\]
+</p>
+
+</section>
+<section>
+<p>
+(1) Find \(c\)?
+</p>
+
+<p class="fragment">
+Fact:
+</p>
+
+<p class="fragment">
+\[
+\int_{-\infty}^{\infty} f_X(x) \, dx = 1.
+\]
+</p>
+
+<p class="fragment">
+But,
+</p>
+
+<p class="fragment">
+\[
+\int_{-\infty}^{\infty} f_X(x) \, dx = \int_{-\infty}^{0} f_X(x) \, dx  +  \int_{0}^{4} f_X(x) \, dx + \int_{4}^{\infty} f_X(x) \, dx  = \int_{0}^{4} f_X(x) \, dx,
+\]
+</p>
+
+<p class="fragment">
+and
+</p>
+
+<p class="fragment">
+\[
+\int_{0}^{4} f_X(x) \, dx = \int_{0}^{4} c x \, dx = 8c.
+\]
+</p>
+
+<p class="fragment">
+Therefore,
+</p>
+
+<p class="fragment">
+\[
+c = \frac{1}{8}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+(2) Compute \(\mathbb{P}(1\le X\le 2)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(1 \le X \le 2)
+& = \int_1^2 f_X(x)\, dx = \int_1^2 \frac{1}{8} x \, dx\\
+& = \frac{3}{16}.
+\end{align*}
+
+</div>
+
+
+</section>
+<section>
+<p>
+(3) Compute \(\mathbb{P}(-5\le X\le 3)\).
+</p>
+
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(-5 \le X \le 3)
+& = \int_{-5}^0 f_X(x)\, dx + \int_0^3 f_X(x)\, dx\\
+& = \int_0^3 \frac{1}{8} x \, dx = \frac{9}{16}.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+(4) Compute \(\mathbb{P}(-5 \le X\le 5)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(-5 \le X \le 5)
+& = \int_{-5}^5 f_X(x)\, dx = \int_0^4 \frac{1}{8} x \, dx\\
+& = 1.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf225252">
+<h3 id="orgf225252">3.3. The Cumulative Distribution Functions</h3>
+<div class="outline-text-3" id="text-orgf225252">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org3ad5c66">
+<h4 id="org3ad5c66">Example</h4>
+<p class="fragment">
+Suppose the p.d.f of \(X\) is defined by
+</p>
+
+<p class="fragment">
+\[
+  f_X(x) =\begin{cases}
+  \dfrac{1}{(1+x)^2}, & x>0,\\
+  0, & x\le 0.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Compute
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le t),\quad \text{for all}~ t \in \mathbb{R}.
+\]
+</p>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  \mathbb{P}(X\le t)
+& = \mathbb{P}(-\infty < X \le t) = \int_{-\infty}^t f_X(x)\, dx\\
+& = \int_{-\infty}^0 f_X(x)\, dx + \int_0^t f_X(x)\, dx\\
+& = \int_0^t \frac{1}{(1 + x)^2}\, dx = \int_1^{1+t} \frac{1}{u^{2}}\, du\\
+& = - \left.\frac{1}{u}\right|_1^{1+t} = - \frac{1}{1+t} + 1\\
+& =  1 - \frac{1}{1+t} = \frac{t}{1+t}.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+If \(t = 3\),
+</p>
+
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le 3) = \frac{3}{1+3} = \frac{3}{4}.
+\]
+</p>
+
+<p class="fragment">
+If \(t= 2\),
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le 2) = \frac{2}{3}.
+\]
+</p>
+
+
+</section>
+<section>
+<p>
+Also, we can compute
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X > 2) = 1 - \mathbb{P}(X \le 2) = 1 - \frac{2}{3} = \frac{1}{3},
+\]
+and
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(2 < X \le 3)
+& = \mathbb{P}(X \le 3) - \mathbb{P}(X \le 2)\\
+& = \frac{3}{4} - \frac{2}{3} = \frac{1}{12}.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+What if \(t = -1\)?
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le -1) = \frac{-1}{1 + (-1)} = \frac{-1}{0}?
+\]
+</p>
+
+<p class="fragment">
+Where went <span style="color: rgb(255,0,0)">wrong</span>?
+</p>
+
+<p class="fragment">
+<span style="color: rgb(255,0,0)">Warning</span>:
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le t) = \frac{t}{1+t}, \quad \text{only when} ~t \ge 0!
+\]
+</p>
+
+<p class="fragment">
+If \(t<0\), we have
+</p>
+
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le t) = 0.
+\]
+</p>
+
+</section>
+<section>
+<p>
+To sum up,
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le t) = \begin{cases}
+\frac{t}{1+t}, & t\ge 0,\\
+0, & t<0.
+\end{cases}
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org1ce8e37">
+<h4 id="org1ce8e37">Definition</h4>
+<p>
+Let \(X\) be a random variable. The <b>cumulative distribution function</b> (CDF) of \(X\) is defined by
+</p>
+
+<p class="fragment">
+\[
+F_X(t) = \mathbb{P}(X \le t), \quad t\in \mathbb{R}.
+\]
+</p>
+
+<p class="fragment">
+<b>Note</b>: CDF can be defined for both discrete and continuous random variables.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgeb2eae7">
+<h4 id="orgeb2eae7">Example</h4>
+<p>
+What is the CDF of a Bernoulli random variable?
+</p>
+
+<p class="fragment">
+Suppose \(X\sim \text{Ber}(p)\), i.e., \(p_X(1) = p, p_X(0)=1-p\).
+</p>
+
+<p class="fragment">
+<b>Want</b>: \(F_{X}(t) = \mathbb{P}(X \le t)\) for all \(t \in \mathbb{R}\).
+</p>
+
+<p class="fragment">
+Let&rsquo;s just try out some values of \(t\).
+</p>
+
+<p class="fragment">
+\[
+F_X(0) = \mathbb{P}(X \le 0) = p_X(0) = \mathbb{P}(X =0) = 1 - p.
+\]
+</p>
+
+<p class="fragment">
+\[
+F_X(0.5) = \mathbb{P}(X \le 0.5) = p_X(0)  = 1 - p.
+\]
+</p>
+
+<p class="fragment">
+\[
+F_X(-1) = \mathbb{P}( X \le -1 ) = 0.
+\]
+</p>
+
+<p class="fragment">
+\[
+F_X(5) = \mathbb{P}(X \le 5) = p_X(0) + p_X(1) = 1 - p + p = 1.
+\]
+</p>
+
+</section>
+<section>
+<p>
+To sum up,
+</p>
+
+<p class="fragment">
+\[
+F_X(t) = \begin{cases}
+1, & t \ge 1,\\
+1 - p , & 0 \le t < 1, \\
+0, & t < 0.
+\end{cases}
+\]
+</p>
+
+
+<p class="fragment">
+The following is the plot of the CDF of Ber\((p)\).
+</p>
+
+
+<div id="org211b145" class="figure">
+<p><img src="../img/beroulli-cdf.svg" alt="beroulli-cdf.svg" class="fragment middle" width="75%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orge0110e9">
+<h4 id="orge0110e9">Properties of CDF</h4>
+<p class="fragment">
+(1) \(F\) is non-decreasing: if \(s < t\), \(F(s) \le F(t)\).
+</p>
+
+<p class="fragment">
+(2) \(\lim_{t \to -\infty} F(t) = \lim_{t \to -\infty} \mathbb{P}(X \le t) = 0\).
+</p>
+
+<p class="fragment">
+(3) \(0 \le F(t) \le 1\).
+</p>
+
+<p class="fragment">
+(4) \(F\) is right-continuous.
+</p>
+
+</section>
+<section>
+<p>
+If \(X\) is discrete with p.m.f. \(p_X\), then
+</p>
+
+<p class="fragment">
+\[
+F_X(t) = \mathbb{P}(X \le t) = \sum_{k \le t} p_X(k).
+\]
+</p>
+
+<p class="fragment">
+The graph of \(F\) is a non-decreasing right-continuous staircase.
+</p>
+
+
+<div id="orgde96f12" class="figure">
+<p><img src="../img/discrete-cdf.svg" alt="discrete-cdf.svg" class="fragment middle" width="75%" />
+</p>
+</div>
+
+</section>
+<section>
+<p>
+If \(X\) is continuous with p.d.f. \(f_X(x)\), then
+</p>
+
+<p class="fragment">
+\[
+F_X(t) = \mathbb{P}(X \le t) = \int_{-\infty}^t  f_X(x) \, dx.
+\]
+</p>
+
+<p class="fragment">
+\[
+F'_X(t) = f_X(t).
+\]
+</p>
+
+<p class="fragment">
+The graph of \(F_X\) is non-decreasing and continuous.
+</p>
+
+<div id="org718a3f5" class="figure">
+<p><img src="../img/normal-cdf.svg" alt="normal-cdf.svg" class="fragment middle" width="75%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org26d991a">
+<h4 id="org26d991a">Theorem</h4>
+<p class="fragment">
+For \(t \in \mathbb{R}\),
+</p>
+
+<p class="fragment">
+(1) \(\mathbb{P}(X > t) = 1 - \mathbb{P}(X \le t) = 1 - F_X(t)\).
+</p>
+
+<p class="fragment">
+(2) \(\mathbb{P}(s < X \le t) = \mathbb{P}(X \le t) - \mathbb{P}(X \le s) = F_X(t) - F_X(s)\).
+</p>
+
+<p class="fragment">
+(3) \(\mathbb{P}(X < t) = \lim_{s \to t - } \mathbb{P}(X \le s) = F_X(t-)\).
+</p>
+
+<p class="fragment">
+(4) \(\mathbb{P}(X = t) = \mathbb{P}(X \le t) - \mathbb{P}(X < t) = F_X(t) - F_X(t-)\).
+</p>
+
+<p class="fragment">
+In particular, if \(F_X\) is continuous,
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X = t) = 0,
+\]
+</p>
+
+<p class="fragment">
+which can also be derived by the fact that
+</p>
+
+<p class="fragment">
+\[
+\int_t^t  f_X(x) \, dx = 0.
+\]
+</p>
+
+</section>
+<section>
+<p>
+<b>Note</b>:
+</p>
+
+<p class="fragment">
+\[
+X~ \text{is continuous} \Rightarrow F_X~ \text{is continuous}
+\]
+</p>
+
+<p class="fragment">
+<span style="color: rgb(255,0,0)">Warning</span>:
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A) = 0 \nRightarrow A = \emptyset.
+\]
+</p>
+
+<p class="fragment">
+For example, Let \(A\) be the event that you pick \(0.4\) uniformly from \([0, 1]\), then \(\mathbb{P}(A) = 0\), but \(A \neq \emptyset\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org828f087">
+<h3 id="org828f087">3.4. Bivariate Distributions</h3>
+<div class="outline-text-3" id="text-org828f087">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge30f418">
+<h4 id="orge30f418">Definition</h4>
+<p>
+Let \(X\) and \(Y\) be two random variables. The <b>bivariate (or joint) distributions</b> of \(X\) and \(Y\) is the collection of all probabilities of the form \(\mathbb{P}((X, Y) \in C)\) for all sets \(C\) of pair of real numbers such that
+</p>
+
+<p class="fragment">
+\[
+\{ (X, Y) \in C\} = \{ \omega \in S \mid ((X(\omega), Y(\omega)) \in C\},
+\]
+</p>
+
+<p class="fragment">
+where \(C \in \mathbb{R}^2 = \mathbb{R}\times \mathbb{R}\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org0b098fa">
+<h4 id="org0b098fa">Discrete Joint Distributions</h4>
+<p class="fragment">
+<b>Theorem</b>. If \(X\) and \(Y\) are both discrete, then \((X, Y)\) has a discrete joint distribution.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org0400c80">
+<h4 id="org0400c80">Joint Probability Mass Function</h4>
+<p class="fragment">
+Recall: p.m.f. of \(X\)
+</p>
+
+<p class="fragment">
+\[
+p_X(k) = \mathbb{P}(X = k).
+\]
+</p>
+
+<p class="fragment">
+For \((X, Y)\), we define
+</p>
+
+<p class="fragment">
+\[
+p_{X, Y}(k, l) = \mathbb{P}(X = k, Y = l), \quad \text{for all}~ k, l \in \mathbb{R}.
+\]
+</p>
+
+<p class="fragment">
+Facts:
+</p>
+
+<p class="fragment">
+(1) \(p_{X, Y}(k, l) = 0\) if either \(k \notin \text{Range}(X)\) or \(l \notin \text{Range}(Y)\).
+</p>
+
+<p class="fragment">
+(2) \(\sum_{k, l} p_{X, Y}(k, l) = 1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org71fdc49">
+<h4 id="org71fdc49">Example</h4>
+<p>
+Roll 2 fair four sided dice.
+</p>
+
+<p class="fragment">
+Let \(U\) be the outcome of the first die and \(V\) be the outcome of the second die. Then
+</p>
+
+<p class="fragment">
+\[
+\text{Range}(U) = \text{Range}(V) = \{1, 2, 3, 4\}.
+\]
+</p>
+
+<p class="fragment">
+The joint p.m.f. of \((U, V)\) is
+</p>
+
+<p class="fragment">
+\[
+p_{U, V}(k, l) = \mathbb{P}(U = k, V = l) = \begin{cases}
+\frac{1}{16}, & k, l \in \{1, 2, 3, 4\},\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+</section>
+<section>
+<p>
+We can also use a two way table to present the joint p.m.f. as follows:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">\(1\)</th>
+<th scope="col" class="org-left">\(2\)</th>
+<th scope="col" class="org-left">\(3\)</th>
+<th scope="col" class="org-left">\(4\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(1\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(2\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(3\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(4\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/16\)</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section>
+<p>
+Now define
+</p>
+
+<div class="fragment">
+\begin{align*}
+  X & = \min\{U, V\},\\
+Y & = |U - V|.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+For example,
+</p>
+
+<p class="fragment">
+\[
+U = 2, V = 4 \Rightarrow X = 2, Y = 2,
+\]
+</p>
+
+<p class="fragment">
+and
+</p>
+
+<p class="fragment">
+\[
+U = 3, V = 1 \Rightarrow X = 1, Y = 2.
+\]
+</p>
+
+<p class="fragment">
+Note that
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \text{Range}(X) & = \{1, 2, 3, 4\},\\
+\text{Range}(Y) & = \{0, 1, 2, 3\}.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+What is the joint p.m.f. of \((X, Y)\)?
+</p>
+
+<p>
+For example,
+</p>
+<p class="fragment">
+\[
+p_{X, Y}(3, 0) = \mathbb{P}(X = 3, Y = 0) = \mathbb{P}(U = 3, V = 3) = \frac{1}{16},
+\]
+</p>
+
+<p class="fragment">
+and
+</p>
+<div class="fragment">
+\begin{align*}
+p_{X, Y}(1, 3) & = \mathbb{P}(X = 1, Y = 3) \\
+& = \mathbb{P}(U = 1, V = 4) + \mathbb{P}(U = 4, V = 1) = \frac{1}{8}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+However,
+</p>
+
+<p class="fragment">
+\[
+p_{X, Y}(2, 3) = \mathbb{P}(X = 2, Y = 3) = 0.
+\]
+</p>
+
+</section>
+<section>
+<p>
+(1) For \(k \in \{1, 2, 3, 4\}, l = 0\):
+</p>
+
+<p class="fragment">
+\[
+p_{X, Y}(k, 0) = \mathbb{P}(X = k, Y = 0) = \mathbb{P}(U = k, V = k) = \frac{1}{16}.
+\]
+</p>
+
+<p class="fragment">
+(2) For \(k\in \{1, 2, 3, 4\}, l \in \{1, 2, 3\}\):
+</p>
+
+<div class="fragment">
+\begin{align*}
+  p_{X, Y}(k, l) & = \mathbb{P}(\text{one die is $k$, and the other is $k+l$})\\
+& = \mathbb{P}(U = k, V = k+ l) + \mathbb{P}(U = k + l, V = k)\\
+& \begin{cases}
+\frac{1}{8}, & \text{if}~k + l \le 4,\\
+0, & \text{if}~ k + l > 4.
+\end{cases}
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+Therefore, we have the following table:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">\(0\)</th>
+<th scope="col" class="org-left">\(1\)</th>
+<th scope="col" class="org-left">\(2\)</th>
+<th scope="col" class="org-left">\(3\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(1\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(2\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(3\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(4\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fragment">
+Now we can even compute:
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X \le 2, Y \le 1) = \frac{1}{16} + \frac{1}{8} +\frac{1}{16} + \frac{1}{8} = \frac{3}{8}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf81fa23">
+<h4 id="orgf81fa23">Continuous Joint Distributions</h4>
+<p>
+<b>Definition</b>
+Two random variables \(X\) and \(Y\) have a <b>continuous joint distribution</b> if there exists a non-negative function \(f\) such that
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}((X, Y) \in C) = \iint_C f(x, y) \, dx dy.
+\]
+</p>
+
+<p class="fragment">
+Here, \(f(x, y)\) is called the joint p.d.f. of \(X\) and \(Y\).
+</p>
+
+
+<p class="fragment">
+<b>Note</b>:
+</p>
+
+<p class="fragment">
+(1) \(f(x, y) \ge 0, \forall x, y \in \mathbb{R}\).
+</p>
+
+<p class="fragment">
+(2) \(\int_{-\infty}^\infty \int_{-\infty}^\infty f(x, y) \, dx dy = 1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org5530b35">
+<h4 id="org5530b35">Example 3.4.7</h4>
+<p>
+Suppose that the joint p.d.f. of \(X\) and \(Y\) is
+</p>
+
+<p class="fragment">
+\[
+f(x, y) = \begin{cases}
+c x^2y, & x^2 \le y \le 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+(1) Find \(c\)?
+</p>
+
+<div class="column" style="float:left; width: 50%">
+<div class="fragment">
+\begin{align*}
+ 1 & = \int_{-\infty}^\infty \int_{-\infty}^\infty f(x, y) \, dx dy\\
+& = \iint_A c x^2 y \, dx dy\\
+& = \int_{-1}^1  \int_{x^2}^1 c x^2 y \, dy dx\\
+& = \frac{4}{21} c,
+\end{align*}
+
+</div>
+
+</div>
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgc90ca02" class="figure">
+<p><img src="../img/eg3-4-7.svg" alt="eg3-4-7.svg" class="fragment" />
+</p>
+</div>
+</div>
+
+<p class="fragment">
+so \(c = 21/4\).
+</p>
+
+</section>
+<section>
+<p>
+(2) Compute \(\mathbb{P}(X \ge Y)\).
+</p>
+
+<p class="fragment">
+Recall that
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}((X, Y) \in C) = \iint_C f(x, y) \, dx dy.
+\]
+</p>
+
+<p class="fragment">
+Thus,
+</p>
+
+<div class="column" style="float:left; width: 50%">
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(X \ge Y)
+& = \iint_{\{x \ge y\}} f(x, y) \, dx dy \\
+& = \iint_{\{x \ge y\} \cap A} \frac{21}{4} x^2 y \, dx dy \\
+& = \int_{0}^1 \int_{x^2}^x  \frac{21}{4} x^2 y \, dy dx\\
+&  = \frac{3}{20}.
+\end{align*}
+
+</div>
+
+</div>
+<div class="column" style="float:right; width: 50%">
+
+<div id="org5858617" class="figure">
+<p><img src="../img/eg3-4-7-2.svg" alt="eg3-4-7-2.svg" class="fragment" />
+</p>
+</div>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orge969472">
+<h4 id="orge969472">Bivariate CDF</h4>
+<p>
+<b>Definition</b>.
+Given two random variables \(X\) and \(Y\), then the <b>joint CDF</b> of \((X, Y)\) is
+</p>
+
+<p class="fragment">
+\[
+F_{X, Y}(x, y) = F(x, y) = \mathbb{P}(X \le x, Y \le y).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org91874c7">
+<h4 id="org91874c7">Example</h4>
+<p class="fragment">
+Suppose \(a < b, c < d\).
+</p>
+
+<p class="fragment">
+Express \(\mathbb{P}(a < X \le b, c < Y \le d)\) in terms of \(F_{X, Y}\).
+</p>
+
+<p class="fragment">
+Recall that
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(X \le t)& = F_X(t),\\
+\mathbb{P}(s < X \le t) & = F_X(t) - F_X(s).
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  \mathbb{P}(a < X \le b, c < Y \le d)
+& = \mathbb{P}(X \le b, c < Y \le d) - \mathbb{P}(X \le a, c < Y, \le d)\\
+& = \mathbb{P}(X \le b, Y \le d) - \mathbb{P}(X \le b, Y \le c )\\
+& \quad - \left(\mathbb{P}( X \le a, Y \le d ) - \mathbb{P}(X \le a, Y \le c)\right)\\
+& = F(b, d)  - F(b, c) - F(a, d) + F(a, c).
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+Recall that if \(X\) is continuous with p.d.f. \(f(x)\), then
+</p>
+
+<p class="fragment">
+\[\begin{cases}
+F(x) & = \mathbb{P}(X \le x) = \int_{-\infty}^x f(t) \, dt, \\
+F'(x) &= f(x).
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+If \(X, Y\) are continuous, then
+</p>
+
+<p class="fragment">
+\[
+F(x, y) = \mathbb{P}(X \le x, Y \le y) = \int_{-\infty}^y \int_{-\infty}^x f(u, v)\, du dv,
+\]
+</p>
+
+<p class="fragment">
+and
+</p>
+
+<p class="fragment">
+\[
+f(x, y) = \frac{\partial^2 F(x, y)}{\partial x \partial y}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org043ba9b">
+<h4 id="org043ba9b">Example</h4>
+<p>
+Suppose the joint CDF of \((X, Y)\) is
+</p>
+<p class="fragment">
+\[
+F(x, y) = \begin{cases}
+\frac{1}{16} x y (x + y), & 0\le x \le 2, 0 \le y \le 2,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Find \(f(x, y)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \frac{\partial F}{\partial x}
+& = \frac{\partial}{\partial x}\left[\frac{1}{16} x y(x+y)\right] = \frac{1}{16} \frac{\partial}{\partial x}(x^2 y + xy^2)\\
+& = \frac{1}{16}( 2xy + y^2 ).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Then
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \frac{\partial^2 F}{\partial x \partial y}
+& = \frac{\partial}{\partial y}\left[\frac{1}{16}( 2xy + y^2 )\right] = \frac{1}{16}(2x + 2y) = \frac{x + y}{8}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org13050ec">
+<h3 id="org13050ec">3.5. Marginal Distributions</h3>
+<div class="outline-text-3" id="text-org13050ec">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgf15b497">
+<h4 id="orgf15b497">Theorem</h4>
+<p class="fragment">
+(1) If \(X\) and \(Y\) are discrete random variables, then the p.m.f. of \(X\) and \(Y\) are obtained from the joint p.m.f. of \((X, Y)\) by
+</p>
+
+<div class="fragment">
+\begin{align*}
+  p_X(k) & = \sum_l p_{X, Y}(k, l),\\
+p_Y(l) & = \sum_k p_{X, Y}( k, l ).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Idea of the proof: <span style="color: rgb(30,144,255)">law of total probability.</span>
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A) = \sum_{k=1}^{\infty} \mathbb{P}(A \cap B_{k}).
+\]
+</p>
+</section>
+<section>
+<p>
+(2) If \(X\) and \(Y\) are continuous random variables, then the p.d.f.s of \(X\) and \(Y\) are obtained from the joint p.d.f. of \((X, Y)\) by
+</p>
+
+<div class="fragment">
+\begin{align*}
+  f_X(x) = \int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dy,\\
+f_Y(y) = \int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dx.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+</section>
+</section>
+<section>
+<section id="slide-org0d142da">
+<h4 id="org0d142da">Example (Deriving Marginal p.m.f. from Joint p.m.f.)</h4>
+<p class="fragment">
+Recall
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">\(0\)</th>
+<th scope="col" class="org-left">\(1\)</th>
+<th scope="col" class="org-left">\(2\)</th>
+<th scope="col" class="org-left">\(3\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(1\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(2\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(3\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(4\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(X = 1)
+& = \mathbb{P}(X = 1, Y = 0) + \mathbb{P}(X = 1, Y = 1) \\
+& \quad + \mathbb{P}(X = 1, Y = 2) + \mathbb{P}(X = 1, Y = 3)\\
+& = \frac{1}{16} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} = \frac{7}{16}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+\[
+\mathbb{P}(Y = 2) = \frac{1}{8} + \frac{1}{8} + 0 + 0 = \frac{1}{4}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc06bfeb">
+<h4 id="orgc06bfeb">Example (Deriving Marginal p.d.f. from Joint p.d.f.)</h4>
+<p class="fragment">
+Recall
+</p>
+
+<p class="fragment">
+\[
+f(x, y) = \begin{cases}
+\frac{21}{4} x^2y, & x^2 \le y \le 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+What is \(f_X(x)\, (f_Y(y))\)?
+</p>
+
+</section>
+<section>
+<div class="column" style="float:left; width: 50%">
+<div>
+\begin{align*}
+  f_X(x)
+& = \int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dy\\
+& \neq   \int_{-\infty}^{\infty} \frac{21}{4} x^2y  \, dy\\
+& \neq \int_0^1 \frac{21}{4} x^2y  \, dy\\
+& = \begin{cases}
+\int_{x^{2}}^1 \frac{21}{4} x^2y \, dy, & -1 \le x \le 1,\\
+0, & x< -1 ~\text{or}~ x>1.
+\end{cases}\\
+& = \begin{cases}
+\frac{21}{8} x^2 ( 1 - x^{4} ), & -1 \le x \le 1,\\
+0, & x< -1 ~\text{or}~ x>1.
+\end{cases}
+\end{align*}
+
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org58618d4" class="figure">
+<p><img src="../img/eg3-4-7.svg" alt="eg3-4-7.svg" class="fragment" />
+</p>
+</div>
+</div>
+
+
+</section>
+<section>
+<div>
+\begin{align*}
+  f_Y(y)
+& = \int_{-\infty}^{\infty} f_{X, Y}(x, y) \, dx\\
+& = \begin{cases}
+\int_{-\sqrt{y}}^{\sqrt{y}} \frac{21}{4} x^2y \, dx, & 0 \le y \le 1,\\
+0, & y > 1 ~\text{or}~ y < 0.
+\end{cases}\\
+& = \begin{cases}
+\frac{7}{2} y^{5/2}, & 0 \le y \le 1,\\
+0, & y > 1 ~\text{or}~ y < 0.
+\end{cases}
+\end{align*}
+
+</div>
+
+
+<div id="orgc876310" class="figure">
+<p><img src="../img/eg3-4-7.svg" alt="eg3-4-7.svg" class="fragment middle" width="60%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org51831ef">
+<h4 id="org51831ef">Independent Random Variables</h4>
+<p class="fragment">
+Recall: Events \(A\) and \(B\) are independent, if
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B).
+\]
+</p>
+
+<p class="fragment">
+<b>Definition</b>
+</p>
+
+<p class="fragment">
+We say random variables \(X\) and \(Y\) are independent, if
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(X \in A , Y \in B) = \mathbb{P}(X \in A) \mathbb{P}(Y \in B)
+\]
+</p>
+<p class="fragment">
+for all \(A, B \subseteq \mathbb{R}\).
+</p>
+
+<p class="fragment">
+In particular, if \(A = (-\infty, x], B = (-\infty, y]\), then
+</p>
+
+<p class="fragment">
+\[
+X ~\text{and}~ Y ~\text{are independent}~ \Rightarrow \mathbb{P}(X \le x, Y \le y) = \mathbb{P}(X \le x) \mathbb{P}(Y \le y).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org7131ff4">
+<h4 id="org7131ff4">Theorem</h4>
+<p class="fragment">
+(1) \(X\) and \(Y\) are independent if and only if
+</p>
+
+<p class="fragment">
+\[
+F_{X, Y}(x, y) = F_X(x) F_Y(y) \quad \forall x, y \in \mathbb{R}.
+\]
+</p>
+
+<p class="fragment">
+(2) \(X\) and \(Y\) are independent if and only if the following factorization is satisfied:
+</p>
+
+<p class="fragment">
+<span style="color: rgb(30,144,255)">Continuous</span> case: \[f_{X, Y}(x, y) = f_1(x) f_2(y), \, \forall x, y \in \mathbb{R}.\]
+</p>
+
+<p class="fragment">
+<span style="color: rgb(30,144,255)">Discrete</span> case: \[p_{X, Y}(k, l) = p_X(k) p_Y(l), \, \forall k, l \in \mathbb{R}.\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org71902ed">
+<h4 id="org71902ed">Example</h4>
+<p>
+Flip a fair coin twice.
+</p>
+
+<p class="fragment">
+Let \(X\) be the outcome of the first flip, and \(Y\) be the second. Then we have
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">\(0\)</th>
+<th scope="col" class="org-left">\(1\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(1/4\)</td>
+<td class="org-left">\(1/4\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(1\)</td>
+<td class="org-left">\(1/4\)</td>
+<td class="org-left">\(1/4\)</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fragment">
+It is easy to check that
+</p>
+
+<p class="fragment">
+\[
+p_{X, Y}(k, l) = p_X(k) p_Y(l), \, \forall k, l.
+\]
+</p>
+
+<p class="fragment">
+So \(X\) and \(Y\) are independent.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4c2f57e">
+<h4 id="org4c2f57e">Example</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">\(0\)</th>
+<th scope="col" class="org-left">\(1\)</th>
+<th scope="col" class="org-left">\(2\)</th>
+<th scope="col" class="org-left">\(3\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(1\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(2\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(3\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(1/8\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(4\)</td>
+<td class="org-left">\(1/16\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(0\)</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fragment">
+Are \(X\) and \(Y\) independent?
+</p>
+
+<p class="fragment">
+No!
+</p>
+
+<p class="fragment">
+For example, \(p_X(1) = 7/16, p_Y(0) = 1/4\), but \(p_{X, Y}(1, 0) = 1/16\), and
+</p>
+
+<p class="fragment">
+\[
+p_{X, Y}(1, 0) \neq p_X(1) p_Y(0).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3e9364a">
+<h4 id="org3e9364a">Example</h4>
+<p class="fragment">
+Let \((X, Y) \sim \text{Unif}(A)\), where \(A = [a, b]\times [c, d]\), i.e.,
+</p>
+
+<p class="fragment">
+\[
+f(x, y) = \begin{cases}
+\frac{1}{\text{area}(A)} = \frac{1}{(b-a)(d-c)}, & (x, y) \le A,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Are \(X\) and \(Y\) independent?
+</p>
+
+<p class="fragment">
+<b>Check</b>: \(f(x, y) = f_1(x) f_2(y)\) ?
+</p>
+
+</section>
+<section>
+<p>
+First, we need to calculate the marginal p.d.f.s.
+</p>
+
+<div class="fragment">
+\begin{align*}
+  f_X(x)
+& = \int_{-\infty}^{\infty} f(x, y) \, dy\\
+& = \begin{cases}
+\int_c^d \frac{1}{(b-a)(d-c)} \, dy, & a \le x \le b,\\
+0, & x < a ~\text{or}~ x >b.
+\end{cases}\\
+& = \begin{cases}
+\frac{1}{b-a}, & a \le x \le b,\\
+0, & x < a ~\text{or}~ x >b.
+\end{cases}
+\end{align*}
+
+</div>
+
+
+<div id="org86c52ce" class="figure">
+<p><img src="../img/joint-uniform.svg" alt="joint-uniform.svg" class="fragment middle" width="60%" />
+</p>
+</div>
+
+</section>
+<section>
+<p>
+Similarly, we have
+</p>
+
+<p class="fragment">
+\[
+f_Y(y) = \begin{cases}
+\frac{1}{d- c}, & c \le y \le d,\\
+0, & y < c ~\text{or}~ y > d.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+So,
+</p>
+
+<p class="fragment">
+\[
+f_{X, Y}( x, y ) = f_X(x) f_Y(y),
+\]
+</p>
+
+<p class="fragment">
+and thus \(X\) and \(Y\) are independent.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgec583e1">
+<h4 id="orgec583e1">Example</h4>
+<p>
+Let \((X, Y) \sim \text{Unif}(A)\), where \(A\) is a triangle with vertices \((0, 0), (0, 1)\) and \((1, 0)\).
+</p>
+
+<p class="fragment">
+The joint p.d.f. of \((X, Y)\) is:
+</p>
+
+<p class="fragment">
+\[
+f(x, y) = \begin{cases}
+\frac{1}{\text{area}(A)} = 2, & (x, y) \in A,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Are \(X\) and \(Y\) independent?
+</p>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  f_X(x)
+& = \int_{-\infty}^{\infty} f(x, y) \, dy\\
+& = \begin{cases}
+\int_0^{1-x} 2 \, dy, & 0 \le x \le 1,\\
+0, & x < 0 ~\text{or}~ x > 1.
+\end{cases}\\
+& = \begin{cases}
+2(1 - x), & 0 \le x \le 1,\\
+0, & x < 0 ~\text{or}~ x > 1.
+\end{cases}
+\end{align*}
+
+</div>
+
+
+<div id="org119b2d6" class="figure">
+<p><img src="../img/joint-uniform-triangle.svg" alt="joint-uniform-triangle.svg" class="fragment middle" width="60%" />
+</p>
+</div>
+
+</section>
+<section>
+<p>
+Similarly,
+</p>
+
+<p class="fragment">
+\[
+  f_Y(y)
+ = \begin{cases}
+2(1 - y), & 0 \le y \le 1,\\
+0, & y < 0 ~\text{or}~ y > 1.
+\end{cases}
+\]
+</p>
+
+
+<p class="fragment">
+Thus,
+</p>
+
+<div class="fragment">
+\begin{align*}
+ f_X(x) f_Y(y)
+& = \begin{cases}
+4(1 - x)(1 -y), & (x, y) \in [0, 1]^2,\\
+0, & \text{otherwise}.
+\end{cases}\\
+& \neq \begin{cases}
+2, & (x, y) \in A,\\
+0, & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Therefore, \(X\) and \(Y\) are not independent.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org116e5a2">
+<h3 id="org116e5a2">3.6. Conditional Distributions</h3>
+<div class="outline-text-3" id="text-org116e5a2">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org58b9f0b">
+<h4 id="org58b9f0b">Definition</h4>
+<p class="fragment">
+Recall
+</p>
+
+<p class="fragment">
+\[
+\mathbb{P}(A | B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}.
+\]
+</p>
+
+<p class="fragment">
+Let \(X\) and \(Y\) be two discrete random variables, then
+</p>
+<div class="fragment">
+\begin{align*}
+  p_{X | Y}(k | l)
+& = \mathbb{P}(X = k | Y = l) \\
+& = \frac{\mathbb{P}( X = k , Y = l )}{\mathbb{P}(Y = l)}\\
+& = \frac{p_{X, Y}(k, l)}{p_Y(l)}.
+\end{align*}
+
+</div>
+<p class="fragment">
+is called the <b>conditional p.m.f.</b> of \(X\) and \(Y\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org664cba0">
+<h4 id="org664cba0">Example</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">\(0\)</th>
+<th scope="col" class="org-left">\(1\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(0\)</td>
+<td class="org-left">\(3/10\)</td>
+<td class="org-left">\(2/10\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(1\)</td>
+<td class="org-left">\(1/10\)</td>
+<td class="org-left">\(4/10\)</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fragment">
+From the table, we have \(X \sim \text{Ber}(1/2)\), and \(Y \sim \text{Ber}(3/5)\).
+</p>
+
+<p class="fragment">
+What is the conditional p.m.f. of \(X\) given \(Y\)?
+</p>
+
+</section>
+<section>
+<p>
+<b>Want</b>:
+</p>
+<p class="fragment">
+\[
+p_{X | Y}(k | l) = ? \quad \forall k, l \in \mathbb{R}
+\]
+</p>
+
+<p class="fragment">
+If \(k \notin \{ 0, 1\}\) or \(l \notin \{0, 1\}\),
+</p>
+
+<p class="fragment">
+\[
+p_{X | Y}(k | l) = 0.
+\]
+</p>
+
+<div class="fragment">
+\begin{align*}
+  p_{X|Y}(0|0) & = \frac{p_{X|Y}(0, 0)}{p_Y(0)} = \frac{3/10}{2/5} = \frac{3}{4}.\\
+  p_{X|Y}(0|1) & = \frac{p_{X|Y}(0, 1)}{p_Y(0)} = \frac{1/5}{3/5} = \frac{1}{3}.\\
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Similarly,
+</p>
+<div class="fragment">
+\begin{align*}
+  p_{X|Y}(1|0) & = \frac{1}{4}.\\
+  p_{X|Y}(0|0) & = \frac{2}{3}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfb79ada">
+<h4 id="orgfb79ada">Definition</h4>
+<p>
+Let \(X\) and \(Y\) be two continuous random variables, then
+</p>
+
+<p class="fragment">
+\[
+f_{X|Y}(x|y) = \frac{f_{X, Y}(x, y)}{f_Y(y)}.
+\]
+</p>
+
+<p class="fragment">
+is called the <b>conditional p.d.f.</b> of \(X\) given \(Y\).
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org09ed7fe">
+<h4 id="org09ed7fe">Example</h4>
+<p>
+Recall
+\[
+f(x, y) = \begin{cases}
+\frac{21}{4} x^2 y, & x^2 \le y \le 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p>
+Also,
+\[
+f_X(x) = \begin{cases}
+\frac{21}{8} x^2 (1 - x^4), & -1 \le x \le 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Therefore,
+</p>
+
+<p class="fragment">
+\[
+f_{Y|X}(y|x) = \frac{f(x, y)}{f_X(x)} = \begin{cases}
+\frac{2y}{1 - x^4}, & x^2 \le y \le 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+</section>
+<section>
+<p>
+In particular,
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}( Y \ge 3/4 | X = 1/2)
+& = \int_{3/4}^{\infty} f_{Y | X}(y | 1/2) \, dy\\
+& = \int_{3/4}^1 \frac{2y}{1 - (1/2)^4}, \, dy\\
+& = \frac{7}{15}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org8415913">
+<h4 id="org8415913">Multiplication Rule for Conditional Random Variables</h4>
+<p class="fragment">
+Recall
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A | B)  \mathbb{P}(B) = \mathbb{P}(B | A)  \mathbb{P}(A).
+\]
+</p>
+
+<p class="fragment">
+<b>Theorem</b>
+</p>
+<div class="fragment">
+\begin{align*}
+  f_{X, Y}(x, y) &= f_{X | Y}(x|y) f_Y(y) = f_{Y|X}(y|x) f_X(x),\\
+p_{X, Y}(k, l) &= p_{X | Y}(k | l )p_Y(l) = p_{Y | X}(l|k) p_X(k).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org41e2f03">
+<h4 id="org41e2f03">Law of Total Probability for Random Variables</h4>
+<p class="fragment">
+Recall
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A) = \sum_i \mathbb{P}(A | B_i) \mathbb{P}(B_i).
+\]
+</p>
+
+<p class="fragment">
+<b>Theorem</b>
+</p>
+<div class="fragment">
+\begin{align*}
+  f_X(x) & = \int_{-\infty}^{\infty} f_{X | Y}(x | y) f_Y(y) \, dy,\\
+p_X(k) & = \sum_l p_{X | Y}( k | l  )p_Y(l).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org7456feb">
+<h4 id="org7456feb">Bayes&rsquo; Theorem for Random Variables</h4>
+<div class="fragment">
+\begin{align*}
+  f_{X | Y}(x | y) & = \frac{f_{Y|X}(y|x) f_X(x)}{\int_{-\infty}^{\infty} f_{Y|X}(y|x) f_X(x) \, dx},\\
+p_{X|Y}(k | l) & = \frac{p_{Y|X}(l|k) p_X(k)}{\sum_k p_{Y|X}(l | k) p_X(k)}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org4aeb6a4">
+<h4 id="org4aeb6a4">Example 3.6.10</h4>
+<p>
+Let \(X \sim \text{Unif}([0,1])\). For \(0 < x < 1\), after \(X=x\) has been observed, a point \(Y\) is chosen from a uniform distribution on \([x, 1]\).
+</p>
+
+<p class="fragment">
+What&rsquo;s the p.d.f. of \(Y\)?
+</p>
+
+<p class="fragment">
+<b>Have</b>:
+</p>
+<p class="fragment">
+(1)
+\[
+f_X(x) = \begin{cases}
+1, & 0 < x < 1, \\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+</section>
+<section>
+<p>
+(2) If \(X = 0.3\), then \(Y \sim \text{Unif}([0.3, 1])\), i.e.,
+</p>
+<p class="fragment">
+\[
+f_{Y|X}(y | 0.3) = \begin{cases}
+\frac{1}{1 - 0.3}, & 0.3 < y < 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+In general,
+</p>
+<p class="fragment">
+\[
+f_{Y|X}(y | x) = \begin{cases}
+\frac{1}{1-x}, & x < y < 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+</section>
+<section>
+<p>
+<b>Want</b>: \(f_Y(y) =?\)
+</p>
+
+<div class="fragment">
+\begin{align*}
+  f_Y(y) & = \int_{-\infty}^{\infty} f(x, y) \, dx = \int_{-\infty}^{\infty} f_{Y|X}(y|x) f_X(x) \, dx\\
+& = \begin{cases}
+\int_0^y \frac{1}{1 - x} \cdot 1 \, dx, & 0 < y < 1,\\
+0, & \text{otherwise}
+\end{cases}\\
+& = \begin{cases}
+- \log ( 1- y ), & 0 < y < 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+</div>
+
+<div id="orgc40651b" class="figure">
+<p><img src="../img/eg3-6-10.svg" alt="eg3-6-10.svg" class="fragment middle" width="60%" />
+</p>
+</div>
+
+</section>
+<section>
+<p>
+What about \(f_{X|Y}(x | y) = ?\)
+</p>
+
+<div class="fragment">
+\begin{align*}
+  f_{X|Y}(x | y)
+& = \frac{f_{X, Y}(x, y)}{f_Y(y)}\\
+& = \begin{cases}
+- \frac{1}{(1-x) \log(1 - y)}, & 0 < x < y< 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc285da1">
+<h4 id="orgc285da1">Independence of Two Random Variables</h4>
+<p class="fragment">
+Recall: if two events \(A\) and \(B\) are independent,
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(A | B) = \mathbb{P}(A).
+\]
+</p>
+
+<p class="fragment">
+<b>Theorem</b>
+</p>
+<p class="fragment">
+Two random variables \(X\) and \(Y\) are independent if and only if
+</p>
+<div class="fragment">
+\begin{align*}
+  f_{X|Y}(x |y ) = f_X(x),\\
+p_{X|Y}(k | l) = p_X(k).
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc400bfc">
+<h3 id="orgc400bfc">3.8. Functions of a Random Variable</h3>
+<p>
+<b>Question</b>: Given the distribution of a random variable \(X\), what&rsquo;s the distribution of \(Y = h(X)\) for some function \(h\)?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga6a4697">
+<h4 id="orga6a4697">Discrete Case</h4>
+<p class="fragment">
+<b>Example</b>
+</p>
+<p class="fragment">
+Let \(X\) be the uniform distribution on integers \(\{1, 2, \dots, 9\}\), i.e.,
+</p>
+<p class="fragment">
+\[
+p_X(k) = \mathbb{P}(X = k) = \frac{1}{9}, \quad\text{if}~ k \in \{1, 2, \dots, 9\}.
+\]
+</p>
+
+<p class="fragment">
+Let \(Y = |X - 5|\), what&rsquo;s \(p_Y(l)\)?
+</p>
+
+</section>
+<section>
+<p>
+Note that \(\range (Y) = \{0, 1, 2, 3, 4\}\).
+</p>
+<div class="fragment">
+\begin{align*}
+  p_Y(0)
+& = \mathbb{P}(Y = 0) = \mathbb{P}(|X - 5| = 0)\\
+& = \mathbb{P}(X = 5) = p_X(5) = \frac{1}{9}.
+\end{align*}
+
+</div>
+
+<div class="fragment">
+\begin{align*}
+  p_Y(1) & = \mathbb{P}(Y = 1) = \mathbb{P}(|X - 5| = 1)\\
+& = \mathbb{P}(X = 4 ~\text{or}~ X = 6)\\
+& = p_X(4) + p_X(6) = \frac{2}{9}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Similarly, for \(k = 1, 2, 3, 4\),
+</p>
+
+<p class="fragment">
+\[
+p_Y(k) = \mathbb{P}(| X - 5| = k) = \mathbb{P}(X = 5 + k ~\text{or}~ 5 - k) = \frac{2}{9}
+\]
+</p>
+</section>
+<section>
+<p>
+To sum up,
+</p>
+<p class="fragment">
+\[
+p_Y(k) = \begin{cases}
+\frac{1}{9}, & k = 0,\\
+\frac{2}{9}, & k = 1, 2, 3, 4,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org0908967">
+<h4 id="org0908967">Theorem</h4>
+<p class="fragment">
+Let \(X\) be a discrete random variable with p.m.f. \(p_X\) and \(Y = h(X)\) for some function \(h\) defined on the set of possible values of \(X\). Then the p.m.f. of \(Y\) is
+</p>
+<div class="fragment">
+\begin{align*}
+  p_Y(l)
+& = \mathbb{P}(Y = l) = \mathbb{P}(h(X) = l)\\
+& = \sum_{k: h(k)=l} p_X(k).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orge0fec02">
+<h4 id="orge0fec02">Continuous Case</h4>
+<p class="fragment">
+<b>Example</b> (Averaging waiting time)
+</p>
+<p class="fragment">
+Let \(Z\) be the rate at which customers are served in a queue, and suppose \(Z\) is continuous with CDF, say \(F_Z\).
+</p>
+
+<p class="fragment">
+The average waiting time is \(Y = 1/Z\) (\(h(x) = 1/x\)).
+</p>
+
+<p class="fragment">
+Find \(F_Y\) (in terms of \(F_Z\)).
+</p>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  F_Y(y)
+& = \mathbb{P}(Y \le y) = \mathbb{P}( 1/Z \le y )\\
+& = \mathbb{P}( Z \ge y ) = \mathbb{P}(Z > 1/y)\\
+& = 1 - \mathbb{P}(Z \le 1/ y) = 1 - F_Z(1/y).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+In general, given the p.d.f. of \(f_X\) of \(X\), we can write
+</p>
+<div class="fragment">
+\begin{align*}
+F_Y(y) & = \mathbb{P}(Y \le y) = \mathbb{P}(h(X) \le y )\\
+& = \int_{h(X) \le y} f_X(x) \, dx.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+If \(Y = h(X)\) is continuous, then
+</p>
+
+<p class="fragment">
+\[
+\frac{d F_Y(y)}{dy} = f_Y(y) \quad\text{p.d.f. of } Y.
+\]
+</p>
+
+<p class="fragment">
+<b>Question</b>: If \(X\) is continuous, is \(Y = h(X)\) always continuous? If not, counterexample?
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org7a11451">
+<h4 id="org7a11451">Example</h4>
+<p>
+Let \(X \sim \text{Unif}([-1, 1])\), and \(Y = X^2\). Find p.d.f. of \(Y\)?
+</p>
+
+<p class="fragment">
+Note that \(\range (Y) = [0, 1]\), uncountable.
+</p>
+
+<p class="fragment">
+First of all, find the CDF of \(Y\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  F_Y(y) & = \mathbb{P}(Y \le y) = \mathbb{P}(X^2 \le y)\\
+& = \begin{cases}
+\mathbb{P}(-\sqrt{y} \le X \le \sqrt{y}), & y \ge 0,\\
+0, & y < 0.
+\end{cases}
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  F_Y(0) & = \mathbb{P}(0 \le X \le 0) = \mathbb{P}(X = 0) = 0,\\
+F_Y(1) & = \mathbb{P}(-1 \le X \le 1) = 1.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+So,
+</p>
+<p class="fragment">
+\[
+F_Y(y) = 1, y \ge 1, \quad F_Y(y) = 0, y \le 0.
+\]
+</p>
+
+</section>
+<section>
+<p>
+If \(0 < y < 1\), then \([-\sqrt{y}, \sqrt{y}] \subseteq [-1, 1]\).
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(-\sqrt{y} \le X \le \sqrt{y} )
+& = \int_{-\sqrt{y}}^{\sqrt{y}} f_X(x) \, dx\\
+& = \int_{-\sqrt{y}}^{\sqrt{y}} \frac{1}{2} \, dx\\
+& = \sqrt{y}.
+\end{align*}
+
+</div>
+<p class="fragment">
+To sum up,
+\[
+F_Y(y) = \begin{cases}
+\sqrt{y}, & 0 < y < 1,\\
+1, & y \ge 1,\\
+0, & y \le 0.
+\end{cases}
+\]
+</p>
+
+</section>
+<section>
+<p>
+Finally,
+</p>
+<p class="fragment">
+\[
+f_Y(y) = F'_Y(y) = \begin{cases}
+\frac{1}{2\sqrt{y}}, & 0 < y < 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org67e190e">
+<h4 id="org67e190e">Linear Transformation</h4>
+<p>
+\[
+h(x) = a x + b, \quad a \neq 0.
+\]
+</p>
+
+<p class="fragment">
+<b>Theorem</b>
+</p>
+<p class="fragment">
+Suppose \(X\) has p.d.f. \(f_X\), and \(Y = a X + b\), then
+</p>
+<p class="fragment">
+\[
+f_Y(y) = \frac{1}{|a|} f_X\left(\frac{y - b}{a}\right), \quad a \neq 0.
+\]
+</p>
+
+<p class="fragment">
+Read the proof.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orge37e664">
+<h4 id="orge37e664">The Probability Integral Transformation</h4>
+<p>
+<b>Example</b>
+Let \(X\) be continuous with p.d.f.
+</p>
+<p class="fragment">
+\[
+f_X(x) = \begin{cases}
+e^{-x}, & x > 0, \\
+0, & x \le 0,
+\end{cases}
+\]
+</p>
+<p class="fragment">
+and CDF
+</p>
+<p class="fragment">
+\[
+F_X(x) = 1 - e^{-x}, \quad x>0.
+\]
+</p>
+
+<p class="fragment">
+Now \(h = F_X\), i.e., \(h(x) = 1 - e^{-x}\).
+</p>
+
+<p class="fragment">
+Define
+</p>
+<p class="fragment">
+\[
+Y = h(X) = F_X(X) = 1 - e^{-X}.
+\]
+</p>
+
+<p class="fragment">
+What&rsquo;s the distribution of \(Y\)?
+</p>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  F_Y(y) = \mathbb{P}(Y \le y)
+& = \mathbb{P}(1 - e^{-X} \le y) = \mathbb{P}(e^{-X} \ge 1 - y)\\
+& = \mathbb{P}(-X \ge \log(1 - y)) = \mathbb{P}(X \le -\log(1 - y))\\
+& = F_X( -\log(1-y) ) = 1 - e^{-[-\log(1 -y)]} = y.
+\end{align*}
+
+</div>
+<p class="fragment">
+So,
+</p>
+<p class="fragment">
+\[
+F_Y(y) = \begin{cases}
+y, & 0 < y < 1,\\
+1, & y \ge 1,\\
+0, & y \le 0,
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+and
+</p>
+<p class="fragment">
+\[
+f_Y(y) = \begin{cases}
+1, & 0 < y < 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Therefore, \(Y \sim \text{Unif}([0, 1])\).
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgbcb5f1e">
+<h2 id="orgbcb5f1e">Chapter 4 - Expectation</h2>
+<div class="outline-text-2" id="text-orgbcb5f1e">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org97ac827">
+<h3 id="org97ac827">4.1. The Expectation of a Random Variable</h3>
+<p>
+Roughly speaking,
+\[
+\text{Expectation} ~=~ \text{Weighted Average}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgca0ea02">
+<h4 id="orgca0ea02">Definition</h4>
+<p class="fragment">
+(1) If \(X\) is discrete with p.m.f. \(p_X\), then the <b>expectation</b> of \(X\) is
+</p>
+
+<p class="fragment">
+\[
+\mathbb{E}(X) = \sum_{k \in \range (X)} k p_X(k).
+\]
+</p>
+
+<p class="fragment">
+(2) If \(X\) is continuous with p.d.f. \(f_X\), then the <b>expectation</b> of \(X\) is
+</p>
+
+<p class="fragment">
+\[
+\mathbb{E}(X) = \int_{-\infty}^{\infty} x f_X(x) \, dx.
+\]
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \text{Expectation}
+& =~ \text{mean} ~=~ \text{first moment}\\
+& =~ \text{average value}\\
+& =~ \text{expected value}
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org6875867">
+<h4 id="org6875867">Example</h4>
+<p>
+\(X \sim \text{Ber}(p)\), i.e.,
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X = 1) = p, \quad \mathbb{P}(X = 0) = 1 - p.
+\]
+</p>
+
+<p class="fragment">
+Then
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X) = 1 \cdot \mathbb{P}(X = 1) + 0 \cdot \mathbb{P}(X = 0) = p.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org1ed8c37">
+<h4 id="org1ed8c37">Example</h4>
+<p>
+Suppose you got:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">HW</td>
+<td class="org-left">\(9/10\)</td>
+</tr>
+
+<tr>
+<td class="org-left">M1</td>
+<td class="org-left">\(45/50\)</td>
+</tr>
+
+<tr>
+<td class="org-left">M2</td>
+<td class="org-left">\(40/50\)</td>
+</tr>
+
+<tr>
+<td class="org-left">Final</td>
+<td class="org-left">\(83/100\)</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fragment">
+According to our syllabus, what&rsquo;s your weighted average of your final grade?
+</p>
+
+<p class="fragment">
+\[
+90 \cdot 0.1 + 90 \cdot 0.25 + 83 \cdot 0.25 + 83 \cdot 0.4 = 85.45.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org18de887">
+<h4 id="org18de887">Example</h4>
+<p>
+\(X \sim \text{Bin}(n, p)\), Find \(\mathbb{E}(X)\).
+</p>
+
+<p class="fragment">
+If \(n=1\), \(X \sim \text{Bin}(1, p) = \text{Ber}(p)\), so
+</p>
+
+<p class="fragment">
+\[
+\mathbb{E}(X) = p.
+\]
+</p>
+
+<p class="fragment">
+Recall that \(X\) is the number of &ldquo;successes&rdquo;, so
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X) = \text{Expected number of successes} = np.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4e9f76d">
+<h4 id="org4e9f76d">Proof</h4>
+<p class="fragment">
+Note that \(\range (X) = \{0, 1, 2, \dots, n\}\). By definition,
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X)
+& = \sum_{k=0}^n k \mathbb{P}(X = k) = \sum_{k=0}^n k \binom{n}{k} p^k  (1 - p)^{n-k}\\
+& = \sum_{k=1}^n k \binom{n}{k} p^k  (1 - p)^{n-k}\\
+& = \sum_{k=1}^n k \frac{n!}{k!(n-k)!} p^k  (1 - p)^{n-k}\\
+& = \sum_{k=1}^n k \frac{n!}{(k-1)!(n-k)!} p^k  (1 - p)^{n-k}\\
+& = n p \sum_{k=1}^n k \frac{(n - 1)!}{(k-1)!(n-k)!} p^k  (1 - p)^{n-k}\\
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<div>
+\begin{align*}
+\sum_{k=1}^n k \frac{(n - 1)!}{(k-1)!(n-k)!} p^k  (1 - p)^{n-k}
+& = \sum_{k=1}^n k \binom{n-1}{k-1} p^k  (1 - p)^{n-k}\\
+& =  \sum_{j=0}^{n-1} \binom{n-1}{j} p^j ( 1 - p)^{n-j-1}\\
+& = \sum_{j=0}^m  \binom{m}{j} p^j (1-p)^{m-j}\\
+\end{align*}
+
+</div>
+
+<div class="fragment">
+\begin{align*}
+  \sum_{j=0}^m  \binom{m}{j} p^j (1-p)^{m-j}
+& = ( p + (1-p))^m\\
+& = 1^m = 1.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org903e405">
+<h4 id="org903e405">Example</h4>
+<p>
+\(X \sim \text{Unif}([a, b])\), i.e.,
+\[
+f_X(x) = \begin{cases}
+\frac{1}{b-a}, & a \le x \le b,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Find \(\mathbb{E}(X)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X)
+& = \int_{-\infty}^{\infty} x f_X(x) \, dx = \int_a^b x \cdot \frac{1}{b-a}\, dx\\
+& = \frac{b+a}{2}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org8805755">
+<h4 id="org8805755">Expectation of a Function of Random Variables</h4>
+<p class="fragment">
+Given a random variable \(X\) and a function \(g: \mathbb{R} \mapsto \mathbb{R}\), by definition directly,
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(g(X)) = \begin{cases}
+\sum_{k \in \range (Y)} k p_Y(k), & \text{discrete case}\\
+\int_{-\infty}^{\infty} y f_Y(y)\, dy, & \text{continuous case}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Most of the time, we don&rsquo;t know the p.m.f. or p.d.f. of \(Y\), what can we do?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org5ebcbd8">
+<h4 id="org5ebcbd8">Law of the Unconscious Statistician (LOTUS)</h4>
+<p class="fragment">
+Discrete:
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(g(X)) = \sum_{k \in \range (X)} g(k) p_X(k).
+\]
+</p>
+
+<p class="fragment">
+Continuous:
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(g(X)) = \int_{-\infty}^{\infty}  g(x) f_X(x) \, dx.
+\]
+</p>
+
+
+<p class="fragment">
+In particular, if \(g(x)=x\), LOTUS is just the usual definition of the expectation.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org242a297">
+<h4 id="org242a297">Example</h4>
+<p>
+Roll a fair six sided die.
+</p>
+
+<p class="fragment">
+Let \(X\) be the outcome, i.e.,
+</p>
+<p class="fragment">
+\[
+p_X(k) = \frac{1}{6}, \quad \text{if}~k \in \{1, 2, 3, 4, 5, 6\}.
+\]
+</p>
+
+<p class="fragment">
+Then
+</p>
+<div class="fragment">
+\begin{align*}
+\mathbb{E}(X^2 )
+& = \sum_{k \in \range (X)} k^2 p_X(k)\\
+& = 1^2 \cdot \frac{1}{6} + 2^2 \cdot \frac{1}{6} + \cdots + 6^2 \cdot \frac{1}{6}\\
+& = \frac{91}{6}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf115e14">
+<h4 id="orgf115e14">Example 4.1.6</h4>
+<p class="fragment">
+Let \(X\) be a continuous random variable with p.d.f.
+</p>
+<p class="fragment">
+\[
+f_X(x) = \begin{cases}
+2x, & 0 < x < 1, \\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Define
+</p>
+<p class="fragment">
+\[
+Y = g(X) = X^{1/2} = \sqrt{X}.
+\]
+</p>
+
+<p class="fragment">
+Find \(\mathbb{E}(X)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org95d0170">
+<h4 id="org95d0170">Solution 1</h4>
+<p>
+Find p.d.f. of \(Y\).
+</p>
+
+<p class="fragment">
+To this end, we need to find the CDF first.
+</p>
+
+<div class="fragment">
+\begin{align*}
+  F_Y(y)
+& = \mathbb{P}(Y \le y) = \mathbb{P}(\sqrt{X} \le y) = 0 \quad \text{if}~ y<0\\
+& = \mathbb{P}(X \le y^2) \quad \text{if}~ y \ge 0\\
+& = \int_{-\infty}^{y^2}  f_X(x) \, dx\\
+& = \int_0^{y^2} 2x \, dx\quad (\text{for what $y$?})\\
+& = \left. x^2 \right|_0^{y^2} = y^4.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+To sum up,
+</p>
+<p class="fragment">
+\[
+F_Y(y) = \begin{cases}
+0, & y < 0,\\
+y^4, & 0 \le y \le 1,\\
+1, & y \ge 1.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Thus,
+</p>
+<p class="fragment">
+\[
+f_Y(y) = F'_Y(y) = \begin{cases}
+4y^3, & 0 \le y \le 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Finally,
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(Y)
+& = \int_{-\infty}^{\infty} y f_Y(y) \, dy = \int_{0}^1 y \cdot 4 y^3 \, dy\\
+& = \frac{4}{5}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcf042f4">
+<h4 id="orgcf042f4">Solution 2 (LOTUS)</h4>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(Y)
+& = \mathbb{E}(\sqrt{X}) = \int_{-\infty}^{\infty} \sqrt{x} f_X(x) \, dx\\
+& = \int_0^1 \sqrt{x} \cdot 2 x \, dx = \frac{4}{5}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org1f45bf5">
+<h3 id="org1f45bf5">4.2. Properties of Expectations</h3>
+<div class="outline-text-3" id="text-org1f45bf5">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgea3665b">
+<h4 id="orgea3665b">Theorem (Linearity)</h4>
+<p class="fragment">
+If \(Y = aX + b\), where \(a, b \in \mathbb{R}\), then
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(Y ) = a \mathbb{E}(X) + b.
+\]
+</p>
+
+<p class="fragment">
+In particular, if \(a = 0\), \(Y = a X + b = b\), then
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(Y) = \mathbb{E}(b) = b.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4b05325">
+<h4 id="org4b05325">Proof (Continuous case)</h4>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(Y)
+& = \mathbb{E}(a X + b) = \int_{-\infty}^{\infty} (a x + b) f_X(x) \, dx\\
+& = \int_{-\infty}^{\infty}  a x f_X(x) \, dx + \int_{-\infty}^{\infty} b f_X(x) \, dx\\
+& = a \int_{-\infty}^{\infty} x f_X(x)\, dx + b \int_{-\infty}^{\infty} f_X(x) \, dx\\
+& = a \mathbb{E}(X) + b.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org2867946">
+<h4 id="org2867946">Theorem</h4>
+<p class="fragment">
+Assume \(\mathbb{E}(X_i)\) is finite for \(i = 1, 2, \dots, n\). Then
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(a_1 X_1 + a_2 X_2 + \cdots + a_n X_n) = a_1 \mathbb{E}(X_1) + a_2 \mathbb{E}(X_2) + \cdots + a_n \mathbb{E}(X_n).
+\]
+</p>
+
+<p class="fragment">
+In particular,
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X + Y) = \mathbb{E}(X) + \mathbb{E}(Y).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org49f0e28">
+<h4 id="org49f0e28">Example</h4>
+<p>
+Recall that if \(X \sim \text{Bin}(n, p)\), we computed
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X) = np,
+\]
+</p>
+<p class="fragment">
+where
+</p>
+<p class="fragment">
+\[
+X = \sum_{i=0}^n X_i, \quad X_i \sim \text{Ber}(p), \, \mathbb{E}(X_i) = p.
+\]
+</p>
+<p class="fragment">
+Thus,
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X)
+& = \mathbb{E}(X_1) + \cdots + \mathbb{E}(X_n)\\
+& = p + \cdots + p = np.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgab8f1b7">
+<h4 id="orgab8f1b7">Example (Match Problem Revisited)</h4>
+<p>
+Suppose \(n\) men throw their hats into the center of a room. Then hats are mixed up, and each man randomly selects a hat.
+</p>
+
+<p>
+Let \(X\) be the number of men who gets his own hat.
+</p>
+
+<p class="fragment">
+Find \(\mathbb{E}(X)\).
+</p>
+
+</section>
+<section>
+<p>
+Define
+</p>
+<p class="fragment">
+\[
+X_i = \begin{cases}
+1, & i^{\text{th}}~ \text{man gets his own hat},\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Then
+</p>
+<p class="fragment">
+\[
+X = X_1 + X_2 + \cdots + X_n.
+\]
+</p>
+
+<p class="fragment">
+Note that \(X_i \sim \text{Ber}(p_i)\), where
+</p>
+<p class="fragment">
+\[
+p_i = \mathbb{P}(X_i = 1) = \frac{1}{n}.
+\]
+</p>
+
+<p class="fragment">
+So
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X) = \sum_{i=1}^n \mathbb{E}(X_i) = \sum_{i=1}^n \frac{1}{n} = 1.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org14c0782">
+<h4 id="org14c0782">Independence and Expectation</h4>
+<p>
+<b>Theorem</b>
+</p>
+<p class="fragment">
+If two random variables \(X\) and \(Y\) are independent, and \(\mathbb{E}(X), \mathbb{E}(Y)\) are finite. Then
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(XY) = \mathbb{E}(X) \mathbb{E}(Y).
+\]
+</p>
+
+<p class="fragment">
+In general, if \(X_1, \dots, X_n\) are independent, then
+</p>
+<p class="fragment">
+\[
+\mathbb{E}\left(\prod_{i=1}^n X_i\right) = \prod_{i=1}^n \mathbb{E}(X_i).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org97e1089">
+<h4 id="org97e1089">Example</h4>
+<p>
+Suppose \(X_1, X_2, X_3\) form a random sample, i.e., independent and identically distributed, such that
+\(\mathbb{E}(X_1) = 0, \mathbb{E}(X_1^2) = 1\).
+</p>
+
+<p class="fragment">
+Compute
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X_1^2 ( X_2 - 4X_3)^2).
+\]
+</p>
+
+<div class="fragment">
+\begin{align*}
+\mathbb{E}(X_1^2 ( X_2 - 4X_3)^2)
+& = \mathbb{E}(X_1^2) \mathbb{E}(X_2 - 4X_3)^2\\
+& = \mathbb{E}(X_2^2 - 8 X_2 X_3 + 16 X_3^2)\\
+& = \mathbb{E}(X_2^2) - 8 \mathbb{E}(X_2 X_3) + 16 \mathbb{E}(X_3^2)\\
+& = 1 - 8 \mathbb{E}(X_2) \mathbb{E}(X_3) + 16\\
+& = 1 - 0 + 16 = 17.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org30cdf71">
+<h3 id="org30cdf71">4.3 &amp; 4.6 Variance, Covariance and Correlation</h3>
+<div class="outline-text-3" id="text-org30cdf71">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org61f27bc">
+<h4 id="org61f27bc">Definition</h4>
+<p>
+Let \(X\) be a random variable, let \(\mu_X = \mathbb{E}(X)\). Then
+</p>
+<p class="fragment">
+\[
+\text{Var}(X) = \mathbb{E}(X - \mu_X)^2,
+\]
+</p>
+<p class="fragment">
+is called the <b>variance</b> of \(X\), and measures how spread out of the distribution of \(X\) is.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb292439">
+<h4 id="orgb292439">Example</h4>
+<p>
+Let \(X \sim \text{Unif}([0, 1])\), then
+</p>
+<p class="fragment">
+\[
+\mu_X = \mathbb{E}(X) = \frac{1}{2}.
+\]
+</p>
+<p class="fragment">
+Thus,
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Var}(X)
+& = \mathbb{E}(X - 1/2)^2\\
+& = \int_{-\infty}^{\infty}  (x - 1/2)^2 f_X(x) \, dx\\
+& = \int_0^1 (x - 1/2)^2 \cdot 1 \, dx = \frac{1}{12}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org38739ec">
+<h4 id="org38739ec">Example</h4>
+<p>
+Let \(X \sim \text{Ber}(p)\), what is \(\text{Var}(X)\)?
+</p>
+
+<p class="fragment">
+Since \(\mathbb{E}(X) = p\),
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Var}(X)
+& = \mathbb{E}(X - p)^2 \\
+& = (0 - p)^2 \mathbb{P}(X = 0) + (1-p)^2 \mathbb{P}(X = 1)\\
+& = p^2(1-p) + (1-p)^2 p\\
+& = p(1-p) [ p + (1-p)] = p(1-p).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0cf1b5a">
+<h4 id="org0cf1b5a">Definition</h4>
+<p>
+Let \(X, Y\) be two random variables. Then
+\[
+\text{Cov}(X, Y) = \mathbb{E}(X - \mu_X)(Y - \mu_Y)
+\]
+is called the <b>covariance</b> of \((X, Y)\), and measures &ldquo;dependence&rdquo; between \(X\) and \(Y\).
+</p>
+
+<p class="fragment">
+Intuition
+</p>
+
+<p class="fragment">
+If \((X - \mu_X)(Y - \mu_Y) > 0\), then \(X\) and \(Y\) are both above or below their means.
+</p>
+
+<p class="fragment">
+If \((X - \mu_X)(Y - \mu_Y) < 0\), then \(X\) and \(Y\) are on opposite sides of their means.
+</p>
+
+<p class="fragment">
+In particular,
+\[
+\text{Cov}(X, X) = \mathbb{E}(X - \mu_X)^2 = \text{Var}(X).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf1da8c9">
+<h4 id="orgf1da8c9">Formulas</h4>
+<p class="fragment">
+(1) \(\text{Cov}(X, Y) = \mathbb{E}(XY) - \mathbb{E}(X) \mathbb{E}(Y)\).
+</p>
+
+<p class="fragment">
+(2) \(\text{Var}(X) = \mathbb{E}(X^2) - \left(\mathbb{E}(X)\right)^2\).
+</p>
+
+<p class="fragment">
+Proof of (1).
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{LHS}
+& = \mathbb{E}(X - \mu_X)(Y - \mu_Y) = \mathbb{E}(XY - \mu_Y X - \mu_X Y + \mu_X \mu_Y)\\
+& = \mathbb{E}(XY) - \mathbb{E}(\mu_Y X) - \mathbb{E}(\mu_X Y) + \mathbb{E}(\mu_X \mu_Y)\\
+& = \mathbb{E}(XY) - \mu_Y \mathbb{E}(X) - \mu_X \mathbb{E}(Y) + \mu_X \mu_Y\\
+& = \mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y) = \text{RHS}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org9bf9e27">
+<h4 id="org9bf9e27">Example</h4>
+<p>
+Let \(X \sim \text{Unif}([0, 1])\), we computed
+\[
+\text{Var}(X) = \frac{1}{12}.
+\]
+</p>
+
+<p class="fragment">
+Now we apply the formula above to recompute the variance.
+</p>
+
+<p class="fragment">
+First, we have \(\mathbb{E}(X) = 1/2\).
+</p>
+
+<p class="fragment">
+Second, \(\mathbb{E}(X^2) = \int_0^1 x^2 \cdot 1 \, dx = \frac{1}{3}\).
+</p>
+
+<p class="fragment">
+Therefore,
+\(\text{Var}(X) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2 = \frac{1}{3} - \left(\frac{1}{2}\right)^2 = \frac{1}{12}\).
+</p>
+
+<p class="fragment">
+Try to find \(\mathbb{E}(X), \text{Var}(X)\) for \(X \sim \text{Unif}([a, b])\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc1921c8">
+<h4 id="orgc1921c8">Example</h4>
+<p>
+Suppose \((X, Y)\) has the joint p.d.f.
+\[
+f(x, y) = \begin{cases}
+x + y, & 0 < x < 1, 0 < y < 1,\\
+ 0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Find \(\text{Cov}(X, Y)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(XY)
+& = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x y f(x, y) \, dx dy\\
+& = \int_0^1  \int_0^1 x y (x+ y) \, dx dy = \frac{1}{3}.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  \mathbb{E}(X)
+& = \int_{-\infty}^{\infty} x f_X(x) \, dx\\
+& = \int_{-\infty}^{\infty} x \left(\int_{-\infty}^{\infty} f(x, y) \, dy\right) \, dx\\
+& = \int_0^1  x \int_0^1 (x + y)\, dy dx\\
+& = \frac{7}{12}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Similarly,
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(Y) = \frac{7}{12}.
+\]
+</p>
+
+<p class="fragment">
+Thus,
+</p>
+<p class="fragment">
+\[
+\text{Cov}(X, Y) = \frac{1}{3} - \left( \frac{7}{12}\right)^2 = - \frac{1}{144}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org1afc857">
+<h4 id="org1afc857">Properties of Covariance</h4>
+<p class="fragment">
+(1)
+</p>
+<p class="fragment">
+\[
+\text{Cov}(a X + b, Y) = \text{Cov}(X, a Y + b) = a \text{Cov}(X, Y).
+\]
+</p>
+
+
+<p class="fragment">
+(2)
+</p>
+<p class="fragment">
+\[
+\text{Cov} \left( \sum_{i=1}^m X_i, \sum_{j=1}^n Y_j  \right) = \sum_{i=1}^m \sum_{j=1}^n \text{Cov}(X_i, Y_j).
+\]
+</p>
+
+<p class="fragment">
+(3)
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Cov} \left( \sum_{i=1}^m (a_i X_i + b_i), \sum_{j=1}^n (c_j Y_j + d_j) \right)
+& \overset{(2)}{=} \sum_{i=1}^m \sum_{j=1}^n \text{Cov} \left( a_i X_i + b_i, c_j Y_j + d_j \right)\\
+& \overset{(1)}{=} \sum_{i=1}^m \sum_{j=1}^n a_i c_j \text{Cov}(X_i, Y_j)
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+In particular, take \(a = 0\) in (1), we have
+</p>
+<p class="fragment">
+(4)
+</p>
+<p class="fragment">
+\[
+\text{Cov}(b, Y) = 0, \quad \text{Var}(b) = \text{Cov}(b, b) = 0.
+\]
+</p>
+
+<p class="fragment">
+(5)
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Var}(a X + b)
+& = \text{Cov}(a X + b, a X + b) = a^2 \text{Cov}(X, X)\\
+& = a^2 \text{Var}(X).
+\end{align*}
+
+</div>
+</section>
+<section>
+<p>
+Proof of (1).
+</p>
+<p class="fragment">
+\[
+\text{Cov}(a X + b, Y) = a \text{Cov}(X, Y).
+\]
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \text{LHS}
+& = \mathbb{E}(a X + b - \mathbb{E}(a X + b))(Y - \mathbb{E}(Y))\\
+& = \mathbb{E}(a X + b - a \mathbb{E}(X) - b)(Y - \mathbb{E}(Y))\\
+& = a \mathbb{E}(X - \mathbb{E}(X))(Y - \mathbb{E}(Y))\\
+& = a \text{Cov}(X, Y) = \text{RHS}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orga1f3712">
+<h4 id="orga1f3712">Variance of Sum</h4>
+<p class="fragment">
+Recall
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X + Y) = \mathbb{E}(X) + \mathbb{E}(Y).
+\]
+</p>
+
+<p class="fragment">
+For the variance, we have
+</p>
+
+<p class="fragment">
+(1)
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Var}(X + Y)
+& = \text{Cov}(X + Y, X + Y)\\
+& = \text{Cov}(X, X) + \text{Cov}(X, Y) + \text{Y, X} + \text{Cov}(Y, X) + \text{Cov}(Y, Y)\\
+& = \text{Var}(X) + 2 \text{Cov}(X, Y) + \text{Var}(Y).
+\end{align*}
+
+</div>
+<p class="fragment">
+(2)
+</p>
+<p class="fragment">
+\[
+\text{Var}\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \text{Var}(X_i) + 2 \sum_{1 \le i < j \le n } \text{Cov}(X_i, X_j).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga1324e3">
+<h4 id="orga1324e3">Example (Match Problem again)</h4>
+<p>
+Suppose \(n\) men throw their hats into the center of a room. Then hats are mixed up, and each man randomly selects a hat.
+</p>
+
+<p>
+Let \(X\) be the number of men who gets his own hat.
+</p>
+
+<p class="fragment">
+Find \(\text{Var}(X)\).
+</p>
+
+<p class="fragment">
+Define
+</p>
+<p class="fragment">
+\[
+X_i = \begin{cases}
+1, & i^{\text{th}}~ \text{man gets his own hat},\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+
+<p class="fragment">
+Then
+</p>
+<p class="fragment">
+\[
+X = X_1 + X_2 + \cdots + X_n.
+\]
+</p>
+
+<p class="fragment">
+Note that \(X_i \sim \text{Ber}(p_i)\), where
+\(p_i = \mathbb{P}(X_i = 1) = \frac{1}{n}\).
+</p>
+
+</section>
+<section>
+<p>
+Also, we have
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X_i) = p_i = \frac{1}{n}, \quad \text{Var}(X_i) = p_i(1-p_i) = \frac{1}{n} \left( 1 - \frac{1}{n} \right).
+\]
+\[
+\text{Var}(X) = \text{Var}\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \underbrace{\text{Var}(X_i)}_{\checkmark} + 2 \sum_{1 \le i < j \le n } \underbrace{\text{Cov}(X_i, X_j)}_{?}.
+\]
+</p>
+
+
+<p class="fragment">
+Fix \(1 \le i < j \le n\),
+</p>
+<p class="fragment">
+\[
+\text{Cov}(X_i, X_j) = \underbrace{\mathbb{E}(X_iX_j)}_{?} - \underbrace{\mathbb{E}(X_i)}_{\checkmark} \underbrace{\mathbb{E}(X_j)}_{\checkmark}.
+\]
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X_i X_j)
+& = \mathbb{P}(X_i X_j = 1) = \mathbb{P}(X_i=1, X_j=1)\\
+& = \underbrace{\mathbb{P}(X_i = 1)}_{\checkmark} + \underbrace{\mathbb{P}(X_j = 1)}_{\checkmark} - \underbrace{\mathbb{P}(X_i=1 ~\text{or}~ X_j=1)}_{?}.
+\end{align*}
+
+</div>
+<p class="fragment">
+\[
+\mathbb{P}(X_i = 1, X_j=1) = \mathbb{P}(X_i | X_j = 1) \mathbb{P}(X_j=1) = \frac{1}{n-1}\cdot \frac{1}{n}.
+\]
+</p>
+
+</section>
+<section>
+<p>
+So,
+</p>
+<p class="fragment">
+\[
+\text{Cov}(X_i, X_j) = \frac{1}{(n-1)n} - \frac{1}{n^2} = \frac{1}{n^2(n-1)}.
+\]
+</p>
+
+<p class="fragment">
+Finally,
+</p>
+<div class="fragment">
+\begin{align*}
+ \text{Var}(X)
+& =  \text{Var}\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \text{Var}(X_i) + 2 \sum_{1 \le i < j \le n } \text{Cov}(X_i, X_j)\\
+& = \sum_{i=1}^n \frac{1}{n} \left( 1 - \frac{1}{n} \right) + 2 \sum_{1 \le i < j \le n} \frac{1}{n^2(n-1)}\\
+& = 1 - \frac{1}{n} + \frac{2}{n^2(n-1)} \left( \sum_{1 \le i < j \le n}  1 \right)\\
+& = 1 - \frac{1}{n} + \frac{1}{n}\\
+& = 1.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+In the previous calculation, we used the fact that
+\[
+\sum_{1 \le i < j \le n} 1 = \frac{[1 + (n-1)](n-1)}{2} = \frac{n(n-1)}{2} = \binom{n}{2}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org833511a">
+<h4 id="org833511a">Correlation</h4>
+<p class="fragment">
+Suppose you have \(X, Y\) with \(\text{Cov}(X, Y) = 5\).
+</p>
+<p class="fragment">
+Define
+</p>
+<p class="fragment">
+\[
+U = 10 X, \quad V = 10 Y.
+\]
+</p>
+
+<p class="fragment">
+Then
+</p>
+<div class="fragment">
+\begin{align*}
+ \text{Cov}(U, V)
+& = \text{Cov}(10 X, 10 Y) = 10 \cdot 10 \text{Cov}(X, Y)\\
+& = 100 \times 5 = 500.
+\end{align*}
+
+</div>
+
+
+<p class="fragment">
+<b>Question</b>: How to obtain a measure of &ldquo;dependence&rdquo; between \(X, Y\) that is not driven by changing the scales of random variables?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf04f8bd">
+<h4 id="orgf04f8bd">Definition</h4>
+<p>
+\[
+\sigma_{X} = \sqrt{\text{Var}(X)}
+\]
+is called the <b>standard deviation</b> of \(X\), and
+\[
+\text{Corr}(X, Y) = \rho(X, Y) = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}
+\]
+is called the <b>correlation</b> of \(X\) and \(Y\).
+</p>
+
+<p class="fragment">
+Rearrange the terms, we have
+</p>
+<p class="fragment">
+\[
+\text{Cov}(X, Y) = \rho(X, Y) \sigma_X \sigma_Y.
+\]
+</p>
+
+</section>
+<section>
+<p>
+Let&rsquo;s come back to the previous example: \(U = 10 X, V = 10 Y\).
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Corr}(U, V)
+& = \frac{\text{Cov}(U, V)}{\sqrt{\text{Var}(U)} \sqrt{\text{Var}(V)}}\\
+& = \frac{100 \text{Cov}(X, Y)}{10 \sqrt{\text{Var}(X)} \cdot 10 \sqrt{\text{Var}(Y)}}\\
+& = \text{Corr}(X, Y).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org29c14ce">
+<h4 id="org29c14ce">Properties of Correlation</h4>
+<p class="fragment">
+(1) \(-1 \le \rho(X, Y) \le 1\).
+</p>
+
+<p class="fragment">
+(2) \(\rho(X, Y) = 1\) if and only if \(Y = a X + b\) for some \(a > 0, b \in \mathbb{R}\).
+</p>
+
+<p class="fragment">
+(3) \(\rho(X, Y) = -1\) if and only if \(Y = a X + b\) for some \(a < 0, b \in \mathbb{R}\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org27a7d99">
+<h4 id="org27a7d99">Example</h4>
+<p>
+Assume that
+\[
+2 X + 3 Y = 5.
+\]
+</p>
+<p class="fragment">
+Then
+</p>
+<p class="fragment">
+\[
+Y = - \frac{2}{3} X + \frac{5}{3}, \quad\text{or}, \quad X = - \frac{3}{2}Y + \frac{5}{2}.
+\]
+</p>
+<p class="fragment">
+Thus,
+</p>
+<p class="fragment">
+\[
+\rho(X,Y) = -1.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2c7013b">
+<h4 id="org2c7013b">Example</h4>
+<p>
+Consider tossing a coin \(n\) times. The probability of &ldquo;success&rdquo; (getting a head) is \(p\).
+</p>
+
+<p class="fragment">
+Let \(X, Y\) be the number of heads and tails, respectively.
+</p>
+
+<p class="fragment">
+Compute \(\text{Corr}(X, Y)\).
+</p>
+
+<p class="fragment">
+It is clear that
+\[
+X + Y = n \quad \text{or}\quad Y = n- X,
+\]
+</p>
+<p class="fragment">
+so \(\rho(X, Y) = -1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org06ec723">
+<h4 id="org06ec723">What about \(\rho(X, Y) = 0\)?</h4>
+<p class="fragment">
+In this case, we say that \(X, Y\) are <b>uncorrelated</b> if \(\rho(X, Y) = \text{Cov}(X, Y) = 0\).
+</p>
+
+<p class="fragment">
+<b>Theorem</b>
+</p>
+<p class="fragment">
+If two random variables \(X\) and \(Y\) are uncorrelated, then
+</p>
+<p class="fragment">
+\[
+\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org318e103">
+<h4 id="org318e103">Independence and Correlation</h4>
+<p class="fragment">
+<b>Theorem</b>
+</p>
+<p class="fragment">
+\[
+X, Y ~\text{are independent} \Rightarrow \text{Cov}(X, Y) = \rho(X, Y) = 0.
+\]
+</p>
+
+<p class="fragment">
+<span style="color: rgb(255,0,0)">Warning</span>:
+</p>
+<p class="fragment">
+\[
+\text{Cov}(X,Y) = 0 \nRightarrow X, Y ~\text{are independent}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org34d41c7">
+<h4 id="org34d41c7">Example</h4>
+<p>
+Let \(X\) be uniform on integers \(\{-1, 0, 1\}\), i.e.,
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X = -1) = \mathbb{P}(X = 0) = \mathbb{P}(X = 1) = \frac{1}{3}.
+\]
+</p>
+
+<p class="fragment">
+Let \(Y = X^2\), we have
+</p>
+<div class="fragment">
+\begin{align*}
+ \text{Cov}(X, Y)
+& = \mathbb{E}(XY) - \mathbb{E}(X) \mathbb{E}(Y)\\
+& = \mathbb{E}(X^3) - \mathbb{E}(X) \mathbb{E}(Y)\\
+& = \mathbb{E}(X) - \mathbb{E}(X) \mathbb{E}(Y)\\
+& = 0.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+We used the fact that \(X = X^3\) and
+\(\mathbb{E}(X) = (-1 + 0 + 1) \cdot \frac{1}{3} = 0\).
+</p>
+
+<p class="fragment">
+Therefore, \(X\) and \(Y\) are uncorrelated.
+</p>
+
+</section>
+<section>
+<p>
+However, \(X\) are \(Y\) ar not independent since
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X = 1, Y = 0) = \mathbb{P}(X = 1, X = 0) = 0,
+\]
+</p>
+<p class="fragment">
+and
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X = 1) = \frac{1}{3}, \quad \mathbb{P}(Y = 0) = \mathbb{P}(X = 0) = \frac{1}{3}
+\]
+</p>
+<p class="fragment">
+which implies
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X = 1, Y = 0) \neq \mathbb{P}(X = 1) \mathbb{P}(Y = 0).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb42d1a9">
+<h4 id="orgb42d1a9">Example</h4>
+<p>
+Let \(X_1, \dots X_n\) be a random sample from Bernoulli distribution with probability of success \(p\), and \(X = \sum_{i=1}^n X_i\).
+</p>
+
+<p class="fragment">
+\[
+\text{Var}(X) = \sum_{i=1}^n \text{Var}(X_i) = np(1 - p).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org9ea3448">
+<h4 id="org9ea3448">Example</h4>
+<p>
+Assume \((X, Y)\) has a joint p.d.f.
+\[
+f(x, y) = \begin{cases}
+\frac{4y}{x^2}, & 1 < x < 2, 0 < y < 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+</p>
+<p class="fragment">
+Find \(\text{Cov}(X, Y)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd1213c9">
+<h4 id="orgd1213c9">Solution 1</h4>
+<p class="fragment">
+To compute the covariance, we need to calculate \(\mathbb{E}(X), \mathbb{E}(Y)\) and \(\mathbb{E}(XY)\).
+</p>
+
+<p class="fragment">
+To this end, we compute
+</p>
+<p class="fragment">
+\[
+  f_X(x) = \int_{-\infty}^{\infty} f(x, y) \, dy = \int_0^1 \frac{4y}{x^2} \, dy = \frac{2}{x^2}, \, 1 < x < 2.
+\]
+</p>
+<p class="fragment">
+\[
+  f_Y(y) = \int_{-\infty}^{\infty} f(x, y) \, dx = \int_1^2 \frac{4y}{x^2} \, dx = 2y, \, 0 < y < 1.
+\]
+</p>
+
+</section>
+<section>
+<p>
+Thus,
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X) & = \int_1^2 x \cdot \frac{2}{x^2}\, dx = \cdots\\
+\mathbb{E}(Y) &  = \int_0^1 y \cdot 2 y \, dy = \cdots\\
+\mathbb{E}(XY) & = \int_1^2 \int_0^1 x y f(x, y) \, dy dx = \cdots
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org803e02a">
+<h4 id="org803e02a">Solution 2</h4>
+<p class="fragment">
+Clearly,
+</p>
+<p class="fragment">
+\[
+f(x, y) = f_1(x) f_2(y),
+\]
+</p>
+<p class="fragment">
+where
+</p>
+<div class="fragment">
+\begin{align*}
+ f_1(x)  & = \frac{1}{x^2},\quad  1 < x < 2\\
+f_2(y) & = 4y, \quad 0 < y < 1.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Therefore, \(X\) and \(Y\) are independent and thus they are uncorrelated.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org1580b7b">
+<h3 id="org1580b7b">4.4. Moments</h3>
+<div class="outline-text-3" id="text-org1580b7b">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc884a2e">
+<h4 id="orgc884a2e">Definition</h4>
+<p>
+Given a random variable \(X\), \(\mathbb{E}(X^k)\) is called the \(k^{\text{th}}\) <b>moment</b> of \(X\), for \(k \ge 0\), integer.
+</p>
+
+<p data-fragment-index="0" class="fragment">
+In particular,
+</p>
+
+<ul>
+<li data-fragment-index="1" class="fragment">\(k = 0: \mathbb{E}(X^0) = \mathbb{E}(1) = 1\).</li>
+<li data-fragment-index="2" class="fragment">\(k = 1: \mathbb{E}(X^1) = \mu_X\), mean or \(1^{\text{st}}\) moment.</li>
+<li data-fragment-index="3" class="fragment">\(k = 2: \mathbb{E}(X^2) = \sigma^2 + \mu^2\), \(2^{\text{nd}}\) moment.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org4871dd0">
+<h4 id="org4871dd0">Example</h4>
+<p data-fragment-index="0" class="fragment">
+Let \(X \sim \text{Ber}(p)\), then
+</p>
+
+<ul>
+<li data-fragment-index="1" class="fragment">\(\mathbb{E}(X) = p\)</li>
+<li data-fragment-index="2" class="fragment">\(\mathbb{E}(X^2) = 0^2 \mathbb{P}(X = 0) + 1^2 \mathbb{P}(X = 1) = p\)</li>
+<li data-fragment-index="3" class="fragment">\(\mathbb{E}(X^3)  = p\)</li>
+<li data-fragment-index="4" class="fragment">\(\mathbb{E}(X^k)  = p, \quad k \ge 1\).</li>
+
+</ul>
+
+<p data-fragment-index="5" class="fragment">
+In general, it is not easy to compute \(\mathbb{E}(X^k)\) for arbitrary \(k \ge 1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org6a311bc">
+<h4 id="org6a311bc">Moment Generating Functions (m.g.f.)</h4>
+<p>
+Can generate moments
+</p>
+
+<p class="fragment">
+<b>Definition</b>
+</p>
+
+<p class="fragment">
+Given a random variable \(X\), we call
+</p>
+<p class="fragment">
+\[
+\psi_X(t) = \mathbb{E}(e^{tX})
+\]
+the m.g.f. of \(X\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb93cde6">
+<h4 id="orgb93cde6">Example</h4>
+<p>
+Let \(X \sim \text{Ber}(p)\), find \(\psi_X(t)\).
+</p>
+
+<p class="fragment">
+By definition,
+</p>
+<div class="fragment">
+\begin{align*}
+  \psi_X(t)
+& = \mathbb{E}(e^{tX}) = e^{t\cdot 0} \mathbb{P}(X = 0) + e^{t \cdot 1} \mathbb{P}(X = 1)\\
+& = 1 - p  + e^t p.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6aff35a">
+<h4 id="org6aff35a">Example</h4>
+<p>
+Let \(X\) be a discrete random variable with \(\range (X) = \{k_1, k_2, \dots, k_n\}\) and
+</p>
+<p class="fragment">
+\[
+\mathbb{P}(X = k_i) = p_i, \quad \sum_{i=1}^n p_i = 1.
+\]
+</p>
+<p class="fragment">
+Find \(\psi_X(t)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \psi_X(t)
+& = \mathbb{E}(e^{tX})\\
+& = e^{tk_1} p_1 + e^{tk_2} p_2 + \cdots +e^{tk_n} p_n\\
+& = \sum_{i=1}^n e^{tk_i}  p_i.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd7ea113">
+<h4 id="orgd7ea113">Example</h4>
+<p>
+Suppose the m.g.f. of \(X\) is
+\[
+\psi_X(t) = \frac{1}{5} e^t + \frac{2}{5} e^{4t} + \frac{2}{5} e^{8t}.
+\]
+</p>
+
+<p class="fragment">
+What&rsquo;s the distribution of \(X\)?
+</p>
+
+<p class="fragment">
+From the previous example, we have
+</p>
+<p class="fragment">
+\[
+p_X(1) = \frac{1}{5}, p_X(4) = \frac{2}{5}, p_X(8) = \frac{2}{5},
+\]
+</p>
+<p class="fragment">
+and so \(X\) is discrete with
+</p>
+<p class="fragment">
+\[
+\range (X) = \{1, 4, 8\}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org1f2e536">
+<h4 id="org1f2e536">Example</h4>
+<p>
+Suppose \(X\) has a p.d.f
+</p>
+
+<p>
+\[
+f(x) = \begin{cases}
+e^{-x}, & x > 0, \\
+0, & \ow .
+\end{cases}
+\]
+</p>
+<p class="fragment">
+Find \(\psi_X(t)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \psi_X(t)
+& = \mathbb{E}(e^{tX})  = \int_{-\infty}^{\infty} e^{t x} f(x) \, dx\\
+& = \int_0^{\infty} e^{tx} \cdot e^{-x} \, dx\\
+& = \int_0^{\infty} e^{(t - 1)x} \, dx.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+If \(t = 1\),
+</p>
+<p class="fragment">
+\[
+\int_0^{\infty} e^{(t - 1)x} \, dx = \int_0^{\infty} 1 \, dx = \infty.
+\]
+</p>
+
+<p class="fragment">
+If \(t \neq 1\),
+</p>
+
+<div class="fragment">
+\begin{align*}
+\int_0^{\infty} e^{(t - 1)x} \, dx
+& = \left. \frac{1}{t - 1} e^{(t-1) x} \right|_0^\infty\\
+& = \begin{cases}
+\frac{1}{1 - t}, & t < 1,\\
+\infty, & t > 1.
+\end{cases}
+\end{align*}
+
+</div>
+</section>
+<section>
+<p>
+To sum up,
+\[
+\psi_X(t) = \begin{cases}
+\frac{1}{1 - t}, & t < 1,\\
+\infty, & t \ge 1.
+\end{cases}
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga8364a7">
+<h4 id="orga8364a7">Why do we call \(\psi_X(t)\) the moment generating function?</h4>
+<p class="fragment">
+It is simply because it generates moments, but how?
+</p>
+
+<p class="fragment">
+\[
+\psi_X(t) = \mathbb{E}(e^{tX}) \overset{?}{\longrightarrow} \mathbb{E}(X^k)
+\]
+</p>
+
+<p class="fragment">
+Recall the Maclaurin series of \(e^x\):
+</p>
+<div class="fragment">
+\begin{align*}
+  e^x
+& = \sum_{k=0}^{\infty} \frac{(e^x)^{(k)}(0)}{k!} x^k = \sum_{k=0}^{\infty} \frac{x^k}{k!}\\
+& = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<div>
+\begin{align*}
+  \psi_X(t) & = \mathbb{E}(e^{t X})\\
+\psi'_X(t) & = \frac{d}{dt} \mathbb{E}(e^{tX}) = \mathbb{E} \left( \frac{d}{dt} e^{tX} \right) = \mathbb{E}(e^{tX} X)\\
+\psi'_X(0) & = \mathbb{E}(e^{0\cdot X} X) = \mathbb{E}(X) \quad \text{$1^{\text{st}}$ moment}
+\end{align*}
+
+</div>
+
+
+<div class="fragment">
+\begin{align*}
+\psi''_X(t) & = \frac{d}{dt} \mathbb{E}(e^{tX} X) =  \mathbb{E}(e^{tX} X^2)\\
+\psi''_X(0) & = \mathbb{E}(e^{0\cdot X} X^2) = \mathbb{E}(X^2) \quad \text{$2^{\text{nd}}$ moment}
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc0a6048">
+<h4 id="orgc0a6048">Theorem</h4>
+<p>
+Given a random variable \(X\). If the m.g.f. of \(X\) is finite for all \(t\) in some open interval around \(t=0\), then
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X^k) = \psi_X^{(k)}(0).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org5f887d7">
+<h4 id="org5f887d7">Example</h4>
+<p>
+Recall:
+\[
+\psi_X(t) = \frac{1}{1 - t}, \quad t < 1.
+\]
+</p>
+
+<p class="fragment">
+Find \(\mathbb{E}(X)\) and \(\text{Var}(X)\).
+</p>
+
+<p class="fragment">
+Since
+</p>
+<p class="fragment">
+\[
+\psi_X'(t) = \frac{1}{(1 - t)^2},
+\]
+</p>
+<p class="fragment">
+we have
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X) = \psi_X'(0) = 1.
+\]
+</p>
+
+</section>
+<section>
+<p>
+For the variance,
+</p>
+<p class="fragment">
+\[
+\text{Var}(X) = \underbrace{\mathbb{E}(X^2)}_{?} - \underbrace{(\mathbb{E}(X))^2}_{= 1}.
+\]
+</p>
+<p class="fragment">
+But
+</p>
+<p class="fragment">
+\[
+\psi_X''(t) = \frac{2}{(1 - t)^3},
+\]
+</p>
+<p class="fragment">
+and thus
+</p>
+<p class="fragment">
+\[
+\mathbb{E}(X^2) = \psi''_X(0) = 2.
+\]
+</p>
+<p class="fragment">
+Therefore,
+</p>
+<p class="fragment">
+\[
+\text{Var}(X) = 2 - 1^2 = 1.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdb6435a">
+<h4 id="orgdb6435a">Properties of m.g.f.</h4>
+<p>
+<b>Theorem</b> (Linear transformation)
+</p>
+<p class="fragment">
+Given a random variable \(X\), and let \(Y = a X + b\), then
+</p>
+<p class="fragment">
+\[
+\psi_Y(t) = \mathbb{E}(e^{tY}) = e^{t b} \psi_X(at).
+\]
+</p>
+
+<p class="fragment">
+Proof.
+</p>
+<div class="fragment">
+\begin{align*}
+ \mathbb{E}(e^{tY})
+& = \mathbb{E}(e^{t(aX + b)}) = \mathbb{E}(e^{t a X} \cdot e^{t b})\\
+& = e^{tb} \mathbb{E}(e^{at\cdot X}).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgeec34f9">
+<h4 id="orgeec34f9">Example</h4>
+<p>
+Recall again
+\[
+\psi_X(t) = \frac{1}{1 - t}, \quad t < 1.
+\]
+</p>
+
+<p class="fragment">
+Let \(Y = 3 - 2X\), find \(\psi_Y(t)\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(e^{t Y})
+& = \mathbb{E}(e^{t (3 - 2X)})\\
+& = e^{3t} \mathbb{E}( e^{-2t X} )\\
+& = e^{3t} \psi_X(-2t)\\
+& = \frac{e^{3t}}{1 + 2t}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdcdfde5">
+<h4 id="orgdcdfde5">Independence and m.g.f.</h4>
+<p>
+<b>Theorem</b>
+</p>
+<p class="fragment">
+If two random variables \(X\) and \(Y\) are independent, then
+</p>
+<p class="fragment">
+\[
+\psi_{X+Y}(t) = \psi_X(t) \psi_Y(t).
+\]
+</p>
+
+<p class="fragment">
+Proof.
+</p>
+<div class="fragment">
+\begin{align*}
+ \psi_{X + Y}(t)
+& = \mathbb{E}(e^{t (X + Y)}) = \mathbb{E}(e^{t X} \cdot e^{t Y})\\
+& = \mathbb{E}(e^{t X}) \mathbb{E}(e^{tY}).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+In general, \(X_1, X_2, \dots, X_n\) are independent, then
+</p>
+<p class="fragment">
+\[
+\psi_{\sum_{i=1}^n X_i}(t) = \prod_{i=1}^n \psi_{X_i}(t).
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgba86628">
+<h4 id="orgba86628">Example</h4>
+<p class="fragment">
+Find the m.g.f. of \(X \sim \text{Bin}(n,p)\).
+</p>
+
+<p class="fragment">
+Since
+\[
+X = \sum_{i=1}^n X_i, \quad X_i \sim \text{Ber}(p), \, \text{i.i.d.}
+\]
+</p>
+<div class="fragment">
+\begin{align*}
+  \psi_X(t)
+& = \psi_{\sum_{i=1}^n X_i}(t) = \prod_{i=1}^n \psi_{X_i}(t)\\
+& = \prod_{i=1}^n (1 - p + p e^t)\\
+& = (1 - p + pe^{t})^n.
+\end{align*}
+
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/reveal.js-menu/menu.js"></script>
+<script src="../reveal.js-plugins/chalkboard/plugin.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'none',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom, RevealMenu, RevealChalkboard ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+,chalkboard: {src: "chalkboard/chalkboard.json", storage: "chalkboard-demo", toggleChalkboardButton: { left: "80px" },	toggleNotesButton: { left: "130px" },	colorButtons: 5}});
+</script>
+</body>
+</html>
