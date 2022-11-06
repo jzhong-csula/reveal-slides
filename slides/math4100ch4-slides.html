@@ -34,22 +34,22 @@ California State University, Los Angeles</h6>
 
 
 <section>
-<section id="slide-orgf96c4f4">
-<h2 id="orgf96c4f4">Chapter 4 Line, Surface, and Volume Integrals</h2>
-<div class="outline-text-2" id="text-orgf96c4f4">
+<section id="slide-org1f1e1b7">
+<h2 id="org1f1e1b7">Chapter 4 Line, Surface, and Volume Integrals</h2>
+<div class="outline-text-2" id="text-org1f1e1b7">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org0d7757a">
-<h3 id="org0d7757a">4.1 Line Integrals</h3>
-<div class="outline-text-3" id="text-org0d7757a">
+<section id="slide-org784b479">
+<h3 id="org784b479">4.1 Line Integrals</h3>
+<div class="outline-text-3" id="text-org784b479">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgf586668">
-<h4 id="orgf586668">Definition</h4>
+<section id="slide-org1fe68c5">
+<h4 id="org1fe68c5">Definition</h4>
 <p class="fragment">
 Let \(\mathbf{F}\) be a vector field that is continuous on the \(C^1\) curve \(\mathbf{R}: [a, b] \to \mathbb{R}^3\). We define the <b>line integral</b> of \(\mathbf{F}\) along \(\mathbf{R}\), by
 </p>
@@ -75,8 +75,8 @@ If \(\mathbf{F} = F_1 \mathbf{i} + F_2 \mathbf{j} + F_3 \mathbf{k}\), we have
 </section>
 </section>
 <section>
-<section id="slide-org41ba518">
-<h4 id="org41ba518">Motivation</h4>
+<section id="slide-org524f6a4">
+<h4 id="org524f6a4">Motivation</h4>
 <p class="fragment">
 Consider \(\mathbf{F}\) is a force in space.
 </p>
@@ -98,8 +98,8 @@ If \(\mathbf{F}\) is constant acting through a displacement \(\mathbf{D}\),
 </section>
 </section>
 <section>
-<section id="slide-org711344a">
-<h4 id="org711344a">Motivation - Continued</h4>
+<section id="slide-org5604ce5">
+<h4 id="org5604ce5">Motivation - Continued</h4>
 <div class="column" style="float:left; width: 48%">
 <p class="fragment">
 We can imagine that the curve is made up of a succession of infinitesimal straight-line displacement.
@@ -118,7 +118,7 @@ Then the work done in going from \(\mathbf{R}(t)\) to \(\mathbf{R}(t+\Delta t)\)
 
 <div class="column" style="float:right; width: 50%">
 
-<div id="org2438925" class="figure">
+<div id="org8cc2eae" class="figure">
 <p><img src="../img/math4100/fig4-3.jpeg" alt="fig4-3.jpeg" class="fragment" />
 </p>
 </div>
@@ -127,8 +127,8 @@ Then the work done in going from \(\mathbf{R}(t)\) to \(\mathbf{R}(t+\Delta t)\)
 </section>
 </section>
 <section>
-<section id="slide-org976be5c">
-<h4 id="org976be5c">Motivation - Continued</h4>
+<section id="slide-org33de833">
+<h4 id="org33de833">Motivation - Continued</h4>
 <p class="fragment">
 If we subdivide the interval \([a, b]\) into \(n\) equal parts \(a = t_0 < t_1 < \cdots < t_n = b\), with \(\Delta t = t_{i+1} - t_i\), then the work done by \(\mathbf{F}\) is approximately
 </p>
@@ -150,10 +150,10 @@ whose limit is given by the integral
 </section>
 </section>
 <section>
-<section id="slide-org196d033">
-<h4 id="org196d033">Example 4.1</h4>
+<section id="slide-org400f806">
+<h4 id="org400f806">Example 4.1</h4>
 <p>
-Let \(C\) be the curve \(y = \sqrt{x}\) in the \(xy\) plane extending from \((0, 0, 0)\) to \((1, 1, 0)\), and let \(\mathbf{F} = xy^2 \mathbf{i} + y^2 \mathbf{k}\). Find \(\displaystyle \int_C \mathbf{F} \cdot \mathbf{R}\).
+Let \(C\) be the curve \(y = \sqrt{x}\) in the \(xy\) plane extending from \((0, 0, 0)\) to \((1, 1, 0)\), and let \(\mathbf{F} = xy^2 \mathbf{i} + y^2 \mathbf{k}\). Find \(\displaystyle \int_C \mathbf{F} \cdot d \mathbf{R}\).
 </p>
 
 <p class="fragment">
@@ -177,10 +177,10 @@ The line integral is
 </section>
 </section>
 <section>
-<section id="slide-orgab23372">
-<h4 id="orgab23372">Example 4.2</h4>
+<section id="slide-org31084e5">
+<h4 id="org31084e5">Example 4.2</h4>
 <p>
-Compute the line integral \(\displaystyle \int_C \mathbf{F} \cdot \mathbf{R}\) from \((0, 0, 0)\) to \((1, 2, 4)\) if
+Compute the line integral \(\displaystyle \int_C \mathbf{F} \cdot d \mathbf{R}\) from \((0, 0, 0)\) to \((1, 2, 4)\) if
 </p>
 <div>
 \begin{align*}
@@ -196,8 +196,8 @@ Compute the line integral \(\displaystyle \int_C \mathbf{F} \cdot \mathbf{R}\) f
 </section>
 </section>
 <section>
-<section id="slide-orgf0cd80f">
-<h4 id="orgf0cd80f">Solution of (a)</h4>
+<section id="slide-orgac0c4c6">
+<h4 id="orgac0c4c6">Solution of (a)</h4>
 <p class="fragment">
 The curve can be parametrized \(x = t, y = 2t, z = 4t, 0 \le t \le 1\).
 </p>
@@ -218,8 +218,8 @@ The line integral is
 </section>
 </section>
 <section>
-<section id="slide-org3940036">
-<h4 id="org3940036">Solution of (b)</h4>
+<section id="slide-org46632b1">
+<h4 id="org46632b1">Solution of (b)</h4>
 <p class="fragment">
 In this case, we have
 </p>
@@ -235,8 +235,8 @@ In this case, we have
 </section>
 </section>
 <section>
-<section id="slide-orga12d10f">
-<h4 id="orga12d10f">Example 4.3</h4>
+<section id="slide-org861e675">
+<h4 id="org861e675">Example 4.3</h4>
 <p>
 Find the line integral of \(\mathbf{F} = x \mathbf{i} + x^2 \mathbf{j}\) from \((-1, 0)\) to \((1, 0)\) in the \(xy\) plane.
 (a) along the \(x\) axis.<br />
@@ -247,8 +247,8 @@ Find the line integral of \(\mathbf{F} = x \mathbf{i} + x^2 \mathbf{j}\) from \(
 </section>
 </section>
 <section>
-<section id="slide-org15d3b5c">
-<h4 id="org15d3b5c">Solution of (a)</h4>
+<section id="slide-org85c255c">
+<h4 id="org85c255c">Solution of (a)</h4>
 <p class="fragment">
 Along the \(x\) axis, \(y = 0\); hence \(dy = 0\), and
 </p>
@@ -262,8 +262,8 @@ Along the \(x\) axis, \(y = 0\); hence \(dy = 0\), and
 </section>
 </section>
 <section>
-<section id="slide-org8760999">
-<h4 id="org8760999">Solution of (b)</h4>
+<section id="slide-org300c185">
+<h4 id="org300c185">Solution of (b)</h4>
 <p class="fragment">
 Along the semicircle, we use polar coordinate: \(x = \cos \theta, y = \sin \theta\); hence \(dx = - \sin \theta\, d\theta, dy = \cos \theta\, d\theta\), and \(\theta\) runs from \(\pi\) down to zero.
 </p>
@@ -279,8 +279,8 @@ Along the semicircle, we use polar coordinate: \(x = \cos \theta, y = \sin \thet
 </section>
 </section>
 <section>
-<section id="slide-orgef62fd2">
-<h4 id="orgef62fd2">Solution of (c)</h4>
+<section id="slide-orgc30043b">
+<h4 id="orgc30043b">Solution of (c)</h4>
 <p class="fragment">
 Along the path labeled (1) in Figure 4.4, \(y = x+1\), so that \(dy = dx\), and
 </p>
@@ -314,15 +314,15 @@ So the final answer of the integral is \(-1/6 +1/2 - 1 = -2/3\).
 </section>
 </section>
 <section>
-<section id="slide-org2db20c8">
-<h3 id="org2db20c8">4.2 Domains; Simply Connected Domains</h3>
-<div class="outline-text-3" id="text-org2db20c8">
+<section id="slide-org80e9b3c">
+<h3 id="org80e9b3c">4.2 Domains; Simply Connected Domains</h3>
+<div class="outline-text-3" id="text-org80e9b3c">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org4036258">
-<h4 id="org4036258">Definitions and Concepts</h4>
+<section id="slide-orgefa5867">
+<h4 id="orgefa5867">Definitions and Concepts</h4>
 <p class="fragment">
 The distance between two points \(P\) and \(P_0\) in space is defined by
 </p>
@@ -351,8 +351,8 @@ A region containing an open ball centered at a point \(P_0\) is called a <b>neig
 </section>
 </section>
 <section>
-<section id="slide-orgafeb1c9">
-<h4 id="orgafeb1c9">Definitions and Concepts - Continued</h4>
+<section id="slide-orge4bad4f">
+<h4 id="orge4bad4f">Definitions and Concepts - Continued</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">A point \(P\) is an <b>interior point</b> of a region \(R\) if there is a neighborhood of \(P\) contained in the region \(R\).</li>
 <li data-fragment-index="2" class="fragment">A point \(P\) is an <b>exterior point</b> of a region \(R\) if there is a neighborhood of the point \(P\) that is entirely outside of the region \(R\).</li>
@@ -366,8 +366,8 @@ A region containing an open ball centered at a point \(P_0\) is called a <b>neig
 </section>
 </section>
 <section>
-<section id="slide-org5123fcf">
-<h4 id="org5123fcf">Definitions and Concepts - Continued</h4>
+<section id="slide-orgc65bdd6">
+<h4 id="orgc65bdd6">Definitions and Concepts - Continued</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">A region \(R\) is <b>open</b> if every point of the region \(R\) is an interior point.</li>
 <li data-fragment-index="2" class="fragment">An open region does not contain any its boundary points and coincides with its interior.</li>
@@ -381,8 +381,8 @@ A region containing an open ball centered at a point \(P_0\) is called a <b>neig
 </section>
 </section>
 <section>
-<section id="slide-orgba2e0ff">
-<h4 id="orgba2e0ff">Definitions and Concepts - Continued</h4>
+<section id="slide-orgeeb7d4e">
+<h4 id="orgeeb7d4e">Definitions and Concepts - Continued</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">A <b>domain</b> is an open connected region.</li>
 <li data-fragment-index="2" class="fragment">We will consider below only open connected regions (domains).</li>
@@ -395,8 +395,8 @@ A region containing an open ball centered at a point \(P_0\) is called a <b>neig
 </section>
 </section>
 <section>
-<section id="slide-orgab741de">
-<h4 id="orgab741de">Examples</h4>
+<section id="slide-org6513925">
+<h4 id="org6513925">Examples</h4>
 <p data-fragment-index="0" class="fragment">
 Simply connected
 </p>
@@ -413,6 +413,226 @@ Simply connected
 <li>Exterior of cylinder: \(x^2 + y^2 > c^2\)</li>
 
 </ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga30ace8">
+<h3 id="orga30ace8">4.3 Conservative Fields: The Potential Function</h3>
+<div class="outline-text-3" id="text-orga30ace8">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org279a1b3">
+<h4 id="org279a1b3">Motivation</h4>
+<p class="fragment">
+Let&rsquo;s consider a vector field \(\mathbf{F} = x^2 \mathbf{i} + y^2 \mathbf{j}\), and compute the line integrals along the following curves:
+</p>
+<div class="fragment">
+\begin{align*}
+& C_1: \, \mathbf{R}(t) = t \mathbf{i}, && -1  \le t \le 1\\
+& C_2: \, \mathbf{R}(t) = - \cos t \mathbf{i} + \sin t \mathbf{j}, && 0 \le t \le \pi\\
+& C_3: \, \mathbf{R}(t) = - \cos t \mathbf{i} + \sin t \mathbf{j}, &&  -\pi \le t \le 0\\
+& C_4: \, \mathbf{R}(t) = C_{41} + C_{42} + C_{43}, &&
+  \end{align*}
+
+</div>
+<p class="fragment">
+where
+</p>
+<div class="fragment">
+  \begin{align*}
+ & C_{41}: \, \mathbf{R}(t) = t \mathbf{i} + (t+1) \mathbf{j}, && -1  \le t \le 0\\
+& C_{42}: \, \mathbf{R}(t) = t \mathbf{i} + \mathbf{j}, && 0 \le t \le 1\\
+& C_{43}: \, \mathbf{R}(t) =  \mathbf{i} + (1 - t) \mathbf{j}, &&  0 \le t \le 1,
+  \end{align*}
+
+</div>
+<p class="fragment">
+as well as
+</p>
+<div class="fragment">
+\begin{align*}
+C_5 = \mathbf{R}(t) = - \cos t \mathbf{i} + \sin t \mathbf{j}, \quad 0 \le t \le 2\pi.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orga6e273c">
+<h4 id="orga6e273c">Motivation - Continued</h4>
+<p class="fragment">
+Then
+</p>
+<div class="fragment">
+\begin{align*}
+\int_{C_1} \mathbf{F}\cdot d \mathbf{R} =
+\int_{C_2} \mathbf{F}\cdot d \mathbf{R} =
+\int_{C_3} \mathbf{F}\cdot d \mathbf{R} =
+\int_{C_4} \mathbf{F}\cdot d \mathbf{R} = \frac{2}{3},
+ \end{align*}
+
+</div>
+<p class="fragment">
+and
+</p>
+<div class="fragment">
+\begin{align*}
+    \int_{C_5} = \mathbf{F} \cdot d \mathbf{R} = 0.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org1c59965">
+<h4 id="org1c59965">Motivation - Continued</h4>
+<p data-fragment-index="0" class="fragment">
+<span style="color: rgb(24,116,205)">Note</span>:
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment">It is not a coincidence that the line integrals along curves \(C_1, C_2, C_3\) and \(C_4\) are the same.</li>
+<li data-fragment-index="2" class="fragment">In fact, these integrals does not depend on the curve but only depends on the initial and the end points as follows:<br />
+\(\int_C \mathbf{F} \cdot d \mathbf{R} = f(1, 0, 0) - f(-1, 0, 0) = \frac{2}{3}\),<br />
+where \(f = (x^3 + y^3)/3\) such that \(\mathbf{F} = \mathbf{grad} f\).</li>
+<li data-fragment-index="3" class="fragment">The line integral of \(\mathbf{F}\) around a <i>closed</i> curve \(C\) is called the <b>circulation</b> of \(\mathbf{F}\) about \(C\), and denoted by<br />
+\(\oint_C \mathbf{F} \cdot d \mathbf{R}\).</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org576e5db">
+<h4 id="org576e5db">Definition</h4>
+<p class="fragment">
+A continuous vector field \(\mathbf{F}\) is said to be <b>conservative</b> in a domain \(D\) if there is a scalar field \(\phi\) defined in \(D\) such that \(\mathbf{F} = \mathbf{grad}\, \phi\). If this is possible, then \(\phi\) is called a <b>potential</b> function, or simply a potential, for \(\mathbf{F}\).
+</p>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Note</span>: A potential for a conservative field is not unique, since one can always add an arbitrary constant to \(\phi\) to obtain a new potential \(\phi + C\) whose gradient is also \(\mathbf{F}\).
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org17087df">
+<h4 id="org17087df">Theorem</h4>
+<p class="fragment">
+A vector field \(\mathbf{F}\) continuous in a domain \(D\) is conservative if and only if the line integral of \(\mathbf{F}\) along <i>every</i> regular curve in \(D\) depends only on the initial and terminal points of the curve. In that case, the line integral is simply the difference in potential  of the endpoints.
+</p>
+
+<p class="fragment">
+That is, we have
+</p>
+<div class="fragment">
+\begin{align*}
+\int_C \mathbf{F} \cdot d \mathbf{R} = \phi(Q) - \phi(P),
+  \end{align*}
+
+</div>
+
+<p class="fragment">
+where \(\phi\) is the potential for \(\mathbf{F}\), \(P\) and \(Q\) are initial and terminal pints of \(C\), respectively.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org767d3fd">
+<h4 id="org767d3fd">Corollary</h4>
+<p class="fragment">
+A vector field \(\mathbf{F}\) continuous in a domain \(D\) is conservative if and only if the line integral of \(\mathbf{F}\) along <i>every</i> regular <i>closed</i> curve in \(D\) (i.e., its circulation) is zero.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org9c662b3">
+<h4 id="org9c662b3">Example 4.4</h4>
+<p>
+Show that \(\mathbf{F} = xy^2 \mathbf{i} + x^3 y \mathbf{j}\) is <i>not</i> conservative.
+</p>
+
+<p class="fragment">
+<i>Solution</i>
+</p>
+
+<p class="fragment">
+We can prove the vector field is not conservative by showing that its line integral does <i>depend</i> on the path.
+</p>
+
+<p class="fragment">
+We compute the line integral along two paths joining \((0, 0)\) to \((1, 1)\) in the \(xy\) plane.
+</p>
+
+<p class="fragment">
+Along the line \(y = x\), we have
+</p>
+<div class="fragment">
+\begin{align*}
+\int_{(0, 0)}^{(1,1)} (x^2 dy + x^3 y dy) = \int_{x=1}^{x=1} (x^3 + x^4)\, dx = \frac{9}{20}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org09d0dba">
+<h4 id="org09d0dba">Example 4.4</h4>
+<p>
+Now let us move along the regular path consisting of two line segments, the first joining \((0, 0)\) to \((1, 0)\) and the second joining \((1, 0)\) to \((1, 1)\). Along the first line segment, \(y =0\), so that the line integral is zero. Along the second line segment, \(x=1\), so that \(dx =0\), and the integral becomes
+</p>
+<div class="fragment">
+\begin{align*}
+\int_{y=0}^{y=1} y\, dy = \frac{1}{2}.
+\end{align*}
+
+</div>
+<p class="fragment">
+The total of the two integrals is thus \(1/2\), differing from \(9/20\). Hence the field is not conservative.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org601eee2">
+<h4 id="org601eee2">Example 4.5</h4>
+<p>
+Show that  \(\mathbf{F} = xy^2 \mathbf{i} + x^3 y \mathbf{j}\) is <i>not</i> conservative, without computing any integrals.
+</p>
+
+<p class="fragment">
+<i>Proof</i>
+</p>
+<p class="fragment">
+This can be done by contradiction.
+</p>
+
+<p class="fragment">
+Suppose \(\mathbf{F}\) were conservative. Then \(\mathbf{F} = \mathbf{grad}\, \phi\) for some scalar function \(\phi\), and thus,
+</p>
+<div class="fragment">
+\begin{align*}
+    \frac{\partial \phi}{\partial x} = F_1 = xy^2, \quad \frac{\partial \phi}{\partial y} = F_2 = x^3y.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+This is impossible, since the mixed derivatives
+</p>
+<div class="fragment">
+\begin{align*}
+    \frac{\partial^2 \phi}{\partial y \partial x} = 2 xy \neq 3x^2y = \frac{\partial^2 \phi}{\partial x \partial y}
+\end{align*}
+
+</div>
+
+<p class="fragment">
+are not the same.
+</p>
 </section>
 </section>
 </div>
