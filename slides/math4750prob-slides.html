@@ -33,15 +33,15 @@ California State University, Los Angeles</h6>
 </section>
 
 <section>
-<section id="slide-org011a53c">
-<h2 id="org011a53c">Brief Review of Probability</h2>
-<div class="outline-text-2" id="text-org011a53c">
+<section id="slide-org027234c">
+<h2 id="org027234c">Brief Review of Probability</h2>
+<div class="outline-text-2" id="text-org027234c">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org9ab1724">
-<h3 id="org9ab1724">Sets (Events)</h3>
+<section id="slide-orgb9d9e48">
+<h3 id="orgb9d9e48">Sets (Events)</h3>
 <p class="fragment">
 Set operations:
 </p>
@@ -55,8 +55,8 @@ Set operations:
 </section>
 </section>
 <section>
-<section id="slide-orga3928a1">
-<h3 id="orga3928a1">Axioms of Probability</h3>
+<section id="slide-org020dc27">
+<h3 id="org020dc27">Axioms of Probability</h3>
 <p class="fragment">
 A.1 \(0\le \mathbb{P}(A)\le 1\) for each event \(A\);
 </p>
@@ -74,8 +74,8 @@ A.3 If \(A_1, A_2, \dots\) is a sequence of (pairwise) disjoint events, then
 </section>
 </section>
 <section>
-<section id="slide-orgd1c8d5f">
-<h3 id="orgd1c8d5f">Addition Rule</h3>
+<section id="slide-org8d9dbb6">
+<h3 id="org8d9dbb6">Addition Rule</h3>
 <div class="fragment">
 \begin{align*}
 \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A\cap B).
@@ -86,8 +86,8 @@ A.3 If \(A_1, A_2, \dots\) is a sequence of (pairwise) disjoint events, then
 </section>
 </section>
 <section>
-<section id="slide-orgcac6b90">
-<h3 id="orgcac6b90">Conditional Probability</h3>
+<section id="slide-orgac138fc">
+<h3 id="orgac138fc">Conditional Probability</h3>
 <div class="fragment">
 \begin{align*}
   \mathbb{P}(A | B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)},
@@ -100,8 +100,8 @@ if \(\mathbb{P}(B) \neq 0\).
 </section>
 </section>
 <section>
-<section id="slide-org817edad">
-<h3 id="org817edad">Multiplication Rule</h3>
+<section id="slide-org97eb9ab">
+<h3 id="org97eb9ab">Multiplication Rule</h3>
 <div class="fragment">
 \begin{align*}
   \mathbb{P}(A \cap B) = \mathbb{P}(AB) & \mathbb{P}(A | B) \mathbb{P}(B)\\
@@ -112,8 +112,8 @@ if \(\mathbb{P}(B) \neq 0\).
 </section>
 </section>
 <section>
-<section id="slide-org2476394">
-<h3 id="org2476394">Law of Total Probability</h3>
+<section id="slide-org5a527e7">
+<h3 id="org5a527e7">Law of Total Probability</h3>
 <div class="fragment">
 \begin{align*}
   \mathbb{P}(A) & = \sum_{i=1}^n \mathbb{P}(A \cap B_i)\\
@@ -127,8 +127,8 @@ where \(\{B_i\}_{i=1}^n\) is a partition of the sample space \(S\).
 </section>
 </section>
 <section>
-<section id="slide-org7b8f50e">
-<h3 id="org7b8f50e">Bayes Theorem</h3>
+<section id="slide-org5a3143f">
+<h3 id="org5a3143f">Bayes Theorem</h3>
 <div class="fragment">
 \begin{align*}
   \mathbb{P}(B_i |A) & = \frac{\mathbb{P}(A\cap B_i)}{\mathbb{P}(A)}\\
@@ -139,8 +139,8 @@ where \(\{B_i\}_{i=1}^n\) is a partition of the sample space \(S\).
 </section>
 </section>
 <section>
-<section id="slide-org4c4d429">
-<h3 id="org4c4d429">Random Variables</h3>
+<section id="slide-org2937181">
+<h3 id="org2937181">Random Variables</h3>
 <p class="fragment">
 A random variable \(X\) is a function maps from the sample space \(S\) to the real line.
 </p>
@@ -186,7 +186,7 @@ In particular, for a continuous random variable \(X\),
 <div class="fragment">
 \begin{align*}
   F_X(t) &= \int_{-\infty}^t f_X(x)\, dx\\
-F'_X(t) &= f(X)(t)
+F'_X(t) &= f_X(t)
 \end{align*}
 
 </div>
@@ -194,13 +194,14 @@ F'_X(t) &= f(X)(t)
 </section>
 </section>
 <section>
-<section id="slide-org8263b7a">
-<h3 id="org8263b7a">Bivariate Distributions</h3>
+<section id="slide-org22f4c07">
+<h3 id="org22f4c07">Bivariate Distributions</h3>
 <p>
 Only review the continuous case for simplicity.
 </p>
-<p>
-Joint p.d.f: \(f_{X, Y}(x,y)\)
+
+<p class="fragment">
+Joint p.d.f.: \(f_{X, Y}(x,y)\)
 </p>
 <div class="fragment">
 \begin{align*}
@@ -214,8 +215,8 @@ Marginal p.d.f.:
 </p>
 <div class="fragment">
 \begin{align*}
-  f_X(x) & = \int_{-\infty}^{\infty} f_{X, Y}(x, y)\, dy\\
-  f_Y(y) & = \int_{-\infty}^{\infty} f_{X, Y}(x, y)\, dx\\
+  f_X(x) & = \int_{-\infty}^{\infty} f_{X, Y}(x, y)\, dy.\\
+  f_Y(y) & = \int_{-\infty}^{\infty} f_{X, Y}(x, y)\, dx.\\
 \end{align*}
 
 </div>
@@ -230,6 +231,178 @@ Conditional p.d.f.:
 \begin{align*}
   f_{X|Y}(x | y) &= \frac{f_{X, Y}(x, y)}{f_Y(y)}\\
   f_{Y|X}(y | x) &= \frac{f_{X, Y}(x, y)}{f_X(x)}\\
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgcb7fadd">
+<h3 id="orgcb7fadd">Expectation (weighted average)</h3>
+<div class="fragment">
+\begin{align*}
+  \mu = \mathbb{E}(X) = \begin{cases}
+\sum_k k p_X(k)\\
+\int_{-\infty}^{\infty} x f_X(x)\, dx.
+\end{cases}
+\end{align*}
+
+</div>
+<p class="fragment">
+<span style="color: rgb(24,116,205)">LOTUS</span>:
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(g(X)) =  \begin{cases}
+\sum_k g(k) p_X(k)\\
+\int_{-\infty}^{\infty} g(x) f_X(x)\, dx.
+\end{cases}
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgded4249">
+<h3 id="orgded4249">Properties of Expectation</h3>
+<ul>
+<li data-fragment-index="1" class="fragment">\(\mathbb{E}(a X + b) = a \mathbb{E}(X) + b\).</li>
+<li data-fragment-index="2" class="fragment">\(\mathbb{E}(X + Y) = \mathbb{E}(X) + \mathbb{E}(Y)\).</li>
+<li data-fragment-index="3" class="fragment">\(\mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)\), if \(X \perp Y\).</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org63df687">
+<h3 id="org63df687">Variance</h3>
+<div>
+\begin{align*}
+  \text{Var} (X) &= \mathbb{E}(X - \mu)^2\\
+& = \mathbb{E}(X^2) - [\mathbb{E}(X)]^2.
+\end{align*}
+
+</div>
+<p class="fragment">
+We call \(\sigma_X = \sqrt{\text{Var} (X)}\) the <i>standard deviation</i> of \(X\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4ee9cb5">
+<h3 id="org4ee9cb5">Moments</h3>
+<p>
+\(\mathbb{E}(X^k)\), for \(k = 0, 1, 2, \dots\)
+</p>
+
+<p class="fragment">
+Moment generating function (m.g.f.):
+</p>
+<div class="fragment">
+\begin{align*}
+  \psi_X(t) = \mathbb{E}(e^{tX}).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Theorem</span>: \(\mathbb{E}(X^k) = \psi_X^{(k)}(0)\).
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org2299241">
+<h3 id="org2299241">Covariance</h3>
+<div>
+\begin{align*}
+  \text{Cov} (X, Y) & = \mathbb{E}[(X - \mu_X)(Y - \mu_Y)]\\
+& = \mathbb{E}(XY) - \mathbb{E}(X)\mathbb{E}(Y).
+\end{align*}
+
+</div>
+<p class="fragment">
+In particular,
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Cov} (X, X) = \text{Var} (X).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb389e02">
+<h3 id="orgb389e02">Correlation</h3>
+<div>
+\begin{align*}
+  \rho_{X,Y} = \frac{\text{Cov} (X, Y)
+}{\sigma_X \sigma_Y}, \quad -1\le \rho_{X, Y} \le 1.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Example</span>: If \(X + Y = 5\), what is \(\rho_{X, Y}\)?
+</p>
+<p class="fragment">
+Answer: \(-1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdff0e48">
+<h3 id="orgdff0e48">Formulas</h3>
+<p>
+How to expand \(\text{Var}(X + Y)\) and \(\text{Cov}(X + Y, U + V)\)?
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Var} (X + Y) = \text{Var} (X) + \text{Var} (Y) + 2 \text{Cov} (X, Y).
+\end{align*}
+
+</div>
+
+<div class="fragment">
+\begin{align*}
+  \text{Cov} (X+Y, U+V) & = \text{Cov} (X, U) + \text{Cov} (X, V)\\
+& \quad + \text{Cov} (Y, U) + \text{Cov} (Y, V).
+\end{align*}
+
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgce542f0">
+<h3 id="orgce542f0">Independence</h3>
+<p>
+We say two events \(A\) and \(B\) are independent if
+</p>
+<div>
+\begin{align*}
+  \mathbb{P}(AB) = \mathbb{P}(A) \mathbb{P}(B).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Questions</span>: What are other equivalent definitions?
+</p>
+
+<p class="fragment">
+For random variables:
+</p>
+<div class="fragment">
+\begin{align*}
+  X \perp Y \Leftrightarrow & f_{X, Y}(x, y) = f_X(x) f_Y(y)\\
+& f_{X|Y}(x|y) = f_X(x)\\
+\Rightarrow & \mathbb{E} (XY) = \mathbb{E}(X) \mathbb{E}(Y)\\
+\Rightarrow & \text{Cov} (X, Y) = 0, \rho_{X, Y} = 0.
 \end{align*}
 
 </div>
