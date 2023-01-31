@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MATH 4750 - Introduction to Mathematical Statistics</title>
+<meta name="author" content="\\
+Jie Zhong \\
+Department of Mathematics \\
+California State University, Los Angeles"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../dist/reveal.css"/>
+
+<link rel="stylesheet" href="../dist/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/chalkboard/style.css"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/menu/font-awesome/css/fontawesome.css"/>
+
+<link rel="stylesheet" href="../gnohz.css"/>
+<script>window.MathJax = { TeX: {Macros: {range: "\\text{Range}", ow: "\\text{otherwise}"}} }</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>MATH 4750 - Introduction to Mathematical Statistics</h1><h2></h2><h6> <br />
+Jie Zhong <br />
+Department of Mathematics <br />
+California State University, Los Angeles</h6>
+</section>
+
+<section>
+<section id="slide-org949723a">
+<h2 id="org949723a">Chapter 5 Special Distributions</h2>
+<div class="outline-text-2" id="text-org949723a">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org3e52d58">
+<h3 id="org3e52d58">5.2 The Bernoulli and Binomial Distributions</h3>
+<div class="outline-text-3" id="text-org3e52d58">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge1e8927">
+<h4 id="orge1e8927">Definition</h4>
+<p class="fragment">
+A random variable \(X\)  has <i>Bernoulli distribution</i> with parameter \(p\in [0, 1]\) if it can take only two values \(\{0, 1\}\), and
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(X = 1) = p, \quad \mathbb{P}(X = 0 ) = 1 - p.
+\end{align*}
+
+</div>
+<p class="fragment">
+Written as \(X \sim \text{Ber}(p)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org9d43688">
+<h4 id="org9d43688">What are \(\mathbb{E}(X), \text{Var} (X)\) and \(\psi_X(t)\)?</h4>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X) & = 1 \cdot p + 0 \cdot (1 - p) = p.
+\end{align*}
+
+</div>
+
+<div class="fragment">
+\begin{align*}
+\text{Var} (X) & = \mathbb{E}(X^2) - (E(X))^2 = p - p^2 = p(1-p).
+\end{align*}
+
+</div>
+<div class="fragment">
+\begin{align*}
+\psi_X(t) & = \mathbb{E}(e^{tX}) = e^{t \cdot 1} \cdot p + e^{t \cdot 0}\cdot (1 - p)\\
+& = p e^t + (1 - p).
+\end{align*}
+
+</div>
+<p class="fragment">
+What is \(\mathbb{E}(X^{100})\)?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org0248ef8">
+<h4 id="org0248ef8">Bernoulli Trials (Process)</h4>
+<p>
+We say \(X_1, X_2, \dots\) are Bernoulli trials with parameter \(p\), if \(X_1, X_2, \dots\) are i.i.d., with \(X_1 \sim \text{Ber} (p)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgca73e1b">
+<h4 id="orgca73e1b">Example</h4>
+<p class="fragment">
+(1) Tossing a fair coin.
+</p>
+<div class="fragment">
+\begin{align*}
+X_i = ~\text{outcome of } i^{\text{th}}~ \text{trial} ~ =
+\begin{cases}
+ 0, & \text{tail} \\
+ 1, & \text{head}
+ \end{cases}
+ \end{align*}
+
+</div>
+<p class="fragment">
+So \(X_1, X_2, \dots\) are Bernoulli trials with \(p = 1/2\).
+</p>
+<p class="fragment">
+(2) Defective parts.
+</p>
+<div class="fragment">
+   \begin{align*}
+X_i &  = ~\text{inspection outcome of } i^{\text{th}}~ \text{item produced}\\
+    &  =    \begin{cases}
+ 0, & \text{non-defective} \\
+ 1, & \text{defective}
+ \end{cases}
+ \end{align*}
+
+</div>
+<p class="fragment">
+Suppose \(\mathbb{P}(X_i = 1) = 1/100\).
+Then \(X_1, X_2, \dots X_n\) form \(n\) Bernoulli trials with \(p = 1/100\).
+</p>
+<p class="fragment">
+(3) Clinical trials (See Example 4.7.8)
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org13b25e7">
+<h4 id="org13b25e7">Binomial Distribution</h4>
+</section>
+</section>
+<section>
+<section id="slide-org1e51ec0">
+<h4 id="org1e51ec0">Definition</h4>
+<p class="fragment">
+A random variable \(X\) has the <i>binomial distribution</i> with parameters \(n\) and \(p\), if
+</p>
+<div class="fragment">
+\begin{align*}
+  p_X(k) = \mathbb{P}(X = k) = \binom{n}{k}p^k (1-p)^{n-k},
+\end{align*}
+
+</div>
+<p class="fragment">
+for \(k = 0, 1, \dots, n\).
+</p>
+<p class="fragment">
+Written as \(X \sim \text{Bin} (n, p)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3e7cbb5">
+<h4 id="org3e7cbb5">Theorem (relation between Bernoulli and Binomial)</h4>
+<p class="fragment">
+If \(X_1, X_2, \dots, X_n\) are i.i.d. \(\text{Ber}(p)\), then
+</p>
+<div class="fragment">
+\begin{align*}
+  X = X_1 + X_2 + \cdots, X_n \sim \text{Bin} (n, p).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+What are \(\mathbb{E}(X), \text{Var} (X)\) and \(\psi_X(t)\)?
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X) & = np\\
+    \text{Var} (X) & = np(1 - p)\\
+\psi_X(t) & = \mathbb{E}(e^{tX}) = \mathbb{E}\left(e^{t(X_1 + \cdots X_n)}\right)\\
+& = ( p e^t + (1 - p) )^n
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0991340">
+<h4 id="org0991340">Example</h4>
+<p>
+We have \(15\) red balls, and \(18\) blue ones. Then  we repeatedly select \(8\) balls with replacement.
+</p>
+<div class="fragment">
+\begin{align*}
+  X = \#~ \text{of red ball selected} ~ \sim \text{Bin} (n, p).
+\end{align*}
+
+</div>
+<p class="fragment">
+What are \(\mathbb{E}(X)\) and \(\text{Var}(X)\)?
+</p>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(X) & = n p = 8 \cdot \frac{15}{33}\\
+    \text{Var} (X) & = np(1 - p) = 8 \cdot \frac{15}{33}\cdot \frac{18}{33}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbafd31b">
+<h4 id="orgbafd31b">Theorem</h4>
+<p class="fragment">
+If \(X_i \sim \text{Bin} (n_i, p), i = 1, \dots, m\), independent, then
+</p>
+<div class="fragment">
+\begin{align*}
+  Y = X_1 + \cdots + X_m \sim \text{Bin} (n_1 + \cdots + n_m, p).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdb89967">
+<h4 id="orgdb89967">Example</h4>
+<p>
+If \(X \sim \text{Bin} (10, 0.5)\), \(Y \sim \text{Bin}(6, 0.5)\), independent, then
+</p>
+<div class="fragment">
+\begin{align*}
+  X + Y \sim \text{Bin} (16, 0.5).
+\end{align*}
+
+</div>
+<p class="fragment">
+So
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(X + Y = 7) = \binom{16}{7}0.5^7 0.5^9.
+\end{align*}
+
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orga8445a6">
+<h3 id="orga8445a6">5.4 Poisson Distribution</h3>
+<div class="outline-text-3" id="text-orga8445a6">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org2ce203f">
+<h4 id="org2ce203f">Example</h4>
+<p class="fragment">
+A certain computer server receives \(3\) requests per second on average.
+</p>
+
+<p class="fragment">
+Estimate the probability that the server receives \(5\) requests in a given second.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org061b11f">
+<h4 id="org061b11f">Example - continued</h4>
+<p>
+Divide the second into \(n = 10\) tenth of a second. At each tenth second, there is an independent trial where &ldquo;success&rdquo; means the request received.
+</p>
+
+<p class="fragment">
+For each trail, the success probability \(p = 3/10\). Then
+</p>
+<div class="fragment">
+\begin{align*}
+  S_{10} = \#~ \text{of requests received in}~ 1~\text{second}~ \sim \text{Bin}(10, 3/10).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+We want to estimate \(\mathbb{P}(S_{10} = 5)\).
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(S_{10} = 5) & \approx \binom{10}{5}\left( \frac{3}{10} \right)^5 \left( 1- \frac{3}{10} \right)^{10-5}\\
+& = 0.102919\dots
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org81f2b4e">
+<h4 id="org81f2b4e">Example - continued</h4>
+<p>
+Divide the second into \(n = 1000\) milliseconds.
+</p>
+
+<p class="fragment">
+This time
+</p>
+<div class="fragment">
+\begin{align*}
+  p = \frac{3}{1000}, \quad S_{1000} \sim \text{Bin}(1000, 3/1000),
+\end{align*}
+
+</div>
+<p class="fragment">
+and thus,
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(S_{1000} = 5) & \approx \binom{1000}{5}\left( \frac{3}{1000} \right)^5 \left( 1- \frac{3}{1000} \right)^{1000-5}\\
+& = 0.100869\dots
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org80dfa0b">
+<h4 id="org80dfa0b">Poisson Limit Theorem (approximation by Binomial)</h4>
+<p class="fragment">
+Assume \(S_n \sim \text{Bin} (n, p)\), where \(\mathbb{E}(S_n) = np = \lambda = ~\text{constant}\). Then
+</p>
+<div class="fragment">
+\begin{align*}
+  \lim_{n\to \infty} \mathbb{P}(S_n = k) = \frac{e^{-\lambda} \lambda^k}{k!} = \mathbb{P}(Y = k).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+When \(\lambda = 3\),
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(Y = 5) = \frac{e^{-3}3^5}{5!} = 0.1008188\dots
+\end{align*}
+
+</div>
+<p class="fragment">
+Recall that
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(S_{10} = 5) & = 0.102919\dots\\
+  \mathbb{P}(S_{1000} = 5) & = 0.100869\dots\\
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org68c48c2">
+<h4 id="org68c48c2">Poisson Random Variables</h4>
+<p class="fragment">
+Let \(\lambda \ge 0\). The random variable \(Y\) has the <i>Poisson distribution</i> with parameter \(\lambda\) if
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(Y = k) = \frac{e^{-\lambda} \lambda^k}{k!},
+\end{align*}
+
+</div>
+<p class="fragment">
+for \(k = 0, 1, 2, \dots\)
+</p>
+<p class="fragment">
+Write \(Y \sim \text{Poisson} (\lambda)\), where \(\lambda\) is often interpreted as the <i>rate</i> of rare events happened.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga2ad8f0">
+<h4 id="orga2ad8f0">Facts</h4>
+<div class="fragment">
+\begin{align*}
+  \sum_{k=0}^{\infty} \frac{e^{-\lambda}\lambda^k }{k!} = 1 \Leftrightarrow e^{\lambda} = \sum_{k=0}^\infty \frac{\lambda^k}{k!}
+\end{align*}
+
+</div>
+
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(Y) = \text{Var} (Y) = \lambda.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc26a036">
+<h4 id="orgc26a036">Applicability</h4>
+<p class="fragment">
+In a system with a large number of possible events, each of which is rare, then the number of events that occur in a fixed interval is often well modeled by a Poisson random variable.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org765caa9">
+<h4 id="org765caa9">Poisson Process</h4>
+<p class="fragment">
+Recall Bernoulli process (trials): (infinite) sequence of independent \(\text{Ber} (p)\) trials \(X_1, X_2, \cdots\)
+</p>
+
+<p class="fragment">
+<i>Poisson process</i> (continuous time analogue of Bernoulli process):
+sequence of events occurring randomly over a <i>continuous</i> time period, starting at \(0\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc089d8d">
+<h4 id="orgc089d8d">Example</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">Requests to a computer server</li>
+<li data-fragment-index="2" class="fragment">Arrivals at a post office</li>
+<li data-fragment-index="3" class="fragment">Calls received at a call center</li>
+<li data-fragment-index="4" class="fragment">Delays of radioactive atoms</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org70a70f3">
+<h4 id="org70a70f3">Notations</h4>
+<p class="fragment">
+For a time interval \(I\), we denote the length by \(|I|\).
+</p>
+
+<div class="fragment">
+\begin{align*}
+  N(I) = ~\text{number of occurrences in the time interval } I.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0eee639">
+<h4 id="org0eee639">Definition</h4>
+<p>
+Poisson process with parameter \(\lambda\) satisfies:
+</p>
+<p class="fragment">
+(1) \(N(I) \sim ~\text{Poisson} (\lambda |I|)\), i.e.,
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{P}(N(I) = k) = \frac{e^{-\lambda |I|} (\lambda |I|)^k}{k!}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+(2) If \(I_1, I_2, \dots I_n\) are &ldquo;disjoint&rdquo; intervals, then \(N(I_1), N(I_2), \dots N(I_n)\) are independent.
+</p>
+
+<p class="fragment">
+Here, for example, we consider the intervals \([9, 10]\) and \([10, 12]\) are disjoint time intervals.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org36b0f40">
+<h4 id="org36b0f40">Example</h4>
+<p>
+Calls come into a call center according to a Poisson process at rate \(20\) calls/hour. Starting at midnight \(t=0\).
+Find the probability that there are no calls between 9 am and 10 am, but \(60\) calls between 10 am and noon.
+</p>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Have</span>: \(\lambda = 20\) calls per hour
+</p>
+<div class="fragment">
+\begin{align*}
+  N(I) = ~\text{number of calls in the time interval } I.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Want</span>:
+</p>
+<div class="fragment">
+\begin{align*}
+   & \mathbb{P}(N([9, 10]) =0, ~\text{and} ~N([10, 12]) =60)\\
+     = & \mathbb{P}(N([9, 10]) = 0) \mathbb{P}(N[10, 12]) = 60)\\
+     = & \frac{e^{-\lambda \cdot 1}(\lambda \cdot 1)^0}{0!} \cdot \frac{e^{-\lambda \cdot 2}(\lambda \cdot 2)^{60}}{60!}\\
+     = & e^{-20} \cdot \frac{e^{-40}40^{60}}{60!}\\
+     \approx & 0.000678651\dots
+\end{align*}
+
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/reveal.js-menu/menu.js"></script>
+<script src="../reveal.js-plugins/chalkboard/plugin.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'none',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom, RevealMenu, RevealChalkboard ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+,chalkboard: {src: "chalkboard/chalkboard.json", storage: "chalkboard-demo", toggleChalkboardButton: { left: "80px" },	toggleNotesButton: { left: "130px" },	colorButtons: 5}});
+</script>
+</body>
+</html>
