@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MATH 4750 - Introduction to Mathematical Statistics</title>
+<meta name="author" content="\\
+Jie Zhong \\
+Department of Mathematics \\
+California State University, Los Angeles"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../dist/reveal.css"/>
+
+<link rel="stylesheet" href="../dist/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/chalkboard/style.css"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/menu/font-awesome/css/fontawesome.css"/>
+
+<link rel="stylesheet" href="../gnohz.css"/>
+<script>window.MathJax = { TeX: {Macros: {range: "\\text{Range}", ow: "\\text{otherwise}"}} }</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>MATH 4750 - Introduction to Mathematical Statistics</h1><h2></h2><h6> <br />
+Jie Zhong <br />
+Department of Mathematics <br />
+California State University, Los Angeles</h6>
+</section>
+
+<section>
+<section id="slide-org1a024dd">
+<h2 id="org1a024dd">Chapter 7 Estimation</h2>
+<div class="outline-text-2" id="text-org1a024dd">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgf45d92b">
+<h3 id="orgf45d92b">7.1 Statistical Inference</h3>
+<div class="outline-text-3" id="text-orgf45d92b">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgaaa3885">
+<h4 id="orgaaa3885">Example 7.1.1 (Lifetimes of Electronic Components)</h4>
+<p data-fragment-index="1" class="fragment">
+<span style="color: rgb(24,116,205)">Goal</span>: know as much as possible about how long each component is likely to last
+</p>
+<ul>
+<li data-fragment-index="2" class="fragment">Collect data: \(X_1, X_2, \dots\) (observations)</li>
+<li data-fragment-index="3" class="fragment">Choose the family of exponential distributions to model the length of time</li>
+<li data-fragment-index="4" class="fragment">If the failure rate \(\theta\) is known, then \(X_i \sim \text{Exp}(\theta)\)</li>
+<li data-fragment-index="5" class="fragment">We are also interested \(\theta\) itself because \(\mathbb{E}(X_i) = 1/\theta\)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org46b3fe0">
+<h4 id="org46b3fe0">How to Estimate \(\theta\)?</h4>
+<p class="fragment">
+By LLN,
+</p>
+<div class="fragment">
+\begin{align*}
+  \frac{1}{n} \sum_{i=1}^n X_i \xrightarrow{\mathbb{P}} \frac{1}{\theta},
+\end{align*}
+
+</div>
+
+<p class="fragment">
+and Theorem 6.2.5 says
+</p>
+<div class="fragment">
+\begin{align*}
+  \frac{n}{\sum_{i=1}^n X_i} \xrightarrow{\mathbb{P}} \theta.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org5b492ed">
+<h4 id="org5b492ed">Statistical Model</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">Identification of random variable of interest</li>
+<li data-fragment-index="2" class="fragment">Specification of a joint distribution</li>
+<li data-fragment-index="3" class="fragment">Identification of unknown parameters, and their distributions</li>
+
+</ul>
+
+<p data-fragment-index="4" class="fragment">
+<span style="color: rgb(24,116,205)">Note</span>: When we treat the unknown parameter(s) \(\theta\) as random, then the joint distribution of the observable random variables indexed by \(\theta\) is understood as the <b>conditional distribution</b> of the observable
+random variables given \(\theta\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org89d20f5">
+<h4 id="org89d20f5">Definitions</h4>
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Statistical inference</span>:
+</p>
+<p class="fragment">
+A procedure that produce a probabilistic statement about some or all parts of a statistical model.
+</p>
+
+<p class="fragment">
+In a problem of statistical inference, a characteristic or combination of characteristics that determine the joint distribution for the random variables of interest is called a <i>parameter</i> of the distribution. The set \(\Omega\) of all possible values of a parameter \(\theta\) or of a vector of parameters \((\theta_1, \theta_2, \dots, \theta_k)\) is called the
+<i>parameter space</i>.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org5159508">
+<h4 id="org5159508">Statistic</h4>
+<p class="fragment">
+Suppose \(X_1, X_2, \dots, X_n\) are observable random variables. Let \(r\) be an arbitrary real-valued function of \(n\) real variables. Then the random variable \(T = r(X_1, X_2, \dots, X_n)\) is called a <i>statistic</i>.
+</p>
+
+<p class="fragment">
+For example,
+</p>
+<div class="fragment">
+\begin{align*}
+  \overline{X}_n & = \frac{1}{n} \sum_{i=1}^n X_i\\
+Y_n & = \max\{ X_1, \dots, X_n\} ~\text{or} ~ \min\{X_1, \dots, X_n\}\\
+C_n & = 3
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org2915761">
+<h4 id="org2915761">General Classes of Inference Problems</h4>
+<ul>
+<li>Prediction (Chapter 7 and 8)</li>
+<li>Statistical decision problems (Chapter 9)</li>
+<li>Experimental design</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/reveal.js-menu/menu.js"></script>
+<script src="../reveal.js-plugins/chalkboard/plugin.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'none',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom, RevealMenu, RevealChalkboard ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+,chalkboard: {src: "chalkboard/chalkboard.json", storage: "chalkboard-demo", toggleChalkboardButton: { left: "80px" },	toggleNotesButton: { left: "130px" },	colorButtons: 5}});
+</script>
+</body>
+</html>
