@@ -33,22 +33,22 @@ California State University, Los Angeles</h6>
 </section>
 
 <section>
-<section id="slide-org1a024dd">
-<h2 id="org1a024dd">Chapter 7 Estimation</h2>
-<div class="outline-text-2" id="text-org1a024dd">
+<section id="slide-orgbea3ef8">
+<h2 id="orgbea3ef8">Chapter 7 Estimation</h2>
+<div class="outline-text-2" id="text-orgbea3ef8">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgf45d92b">
-<h3 id="orgf45d92b">7.1 Statistical Inference</h3>
-<div class="outline-text-3" id="text-orgf45d92b">
+<section id="slide-orgd7440ac">
+<h3 id="orgd7440ac">7.1 Statistical Inference</h3>
+<div class="outline-text-3" id="text-orgd7440ac">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgaaa3885">
-<h4 id="orgaaa3885">Example 7.1.1 (Lifetimes of Electronic Components)</h4>
+<section id="slide-orgce64c67">
+<h4 id="orgce64c67">Example 7.1.1 (Lifetimes of Electronic Components)</h4>
 <p data-fragment-index="1" class="fragment">
 <span style="color: rgb(24,116,205)">Goal</span>: know as much as possible about how long each component is likely to last
 </p>
@@ -63,8 +63,8 @@ California State University, Los Angeles</h6>
 </section>
 </section>
 <section>
-<section id="slide-org46b3fe0">
-<h4 id="org46b3fe0">How to Estimate \(\theta\)?</h4>
+<section id="slide-orgcc9e940">
+<h4 id="orgcc9e940">How to Estimate \(\theta\)?</h4>
 <p class="fragment">
 By LLN,
 </p>
@@ -88,8 +88,8 @@ and Theorem 6.2.5 says
 </section>
 </section>
 <section>
-<section id="slide-org5b492ed">
-<h4 id="org5b492ed">Statistical Model</h4>
+<section id="slide-org0b6a192">
+<h4 id="org0b6a192">Statistical Model</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">Identification of random variable of interest</li>
 <li data-fragment-index="2" class="fragment">Specification of a joint distribution</li>
@@ -105,8 +105,8 @@ random variables given \(\theta\).
 </section>
 </section>
 <section>
-<section id="slide-org89d20f5">
-<h4 id="org89d20f5">Definitions</h4>
+<section id="slide-org3825818">
+<h4 id="org3825818">Definitions</h4>
 <p class="fragment">
 <span style="color: rgb(24,116,205)">Statistical inference</span>:
 </p>
@@ -122,8 +122,8 @@ In a problem of statistical inference, a characteristic or combination of charac
 </section>
 </section>
 <section>
-<section id="slide-org5159508">
-<h4 id="org5159508">Statistic</h4>
+<section id="slide-org75e4579">
+<h4 id="org75e4579">Statistic</h4>
 <p class="fragment">
 Suppose \(X_1, X_2, \dots, X_n\) are observable random variables. Let \(r\) be an arbitrary real-valued function of \(n\) real variables. Then the random variable \(T = r(X_1, X_2, \dots, X_n)\) is called a <i>statistic</i>.
 </p>
@@ -143,14 +143,558 @@ C_n & = 3
 </section>
 </section>
 <section>
-<section id="slide-org2915761">
-<h4 id="org2915761">General Classes of Inference Problems</h4>
+<section id="slide-orge020973">
+<h4 id="orge020973">General Classes of Inference Problems</h4>
 <ul>
 <li>Prediction (Chapter 7 and 8)</li>
 <li>Statistical decision problems (Chapter 9)</li>
 <li>Experimental design</li>
 
 </ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org6b8ff75">
+<h3 id="org6b8ff75">7.2 Prior and Posterior Distributions</h3>
+<div class="outline-text-3" id="text-org6b8ff75">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgeec1ae1">
+<h4 id="orgeec1ae1">Example 7.1.1 (Revisited)</h4>
+<p>
+Suppose before observing any data, the company believes the failure rate is around \(0.5\) per year but not sure.
+</p>
+<p class="fragment">
+They model \(\theta\) as a random variable which has the exponential distribution, i.e. \(\theta \sim \text{Exp}(0.5)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgce1b424">
+<h4 id="orgce1b424">Definition</h4>
+<p class="fragment">
+Suppose one has a statistical model with parameter \(\theta\). If one treats \(\theta\) as a random variable, then the distribution that one assigns to \(\theta\) <b>before</b> observing any other random variables of interest is called its <i>prior distribution</i>.
+</p>
+
+<p class="fragment">
+We use \(\xi(\theta)\) to denote the prior p.m.f. or p.d.f. as a function of \(\theta\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgaa837c7">
+<h4 id="orgaa837c7">Example 7.2.2</h4>
+<p>
+Let \(\theta\) denote the probability of obtaining a head when a certain coin is tossed, and suppose that it is known that the coin either is fair or has a head on each side: \(\theta =1/2\) or \(\theta = 1\).
+</p>
+
+<p class="fragment">
+If the prior probability that the coin is fair is \(0.8\), then the prior p.m.f. of \(\theta\) is
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(1/2)  = 0.8, \quad \xi(1) = 0.2.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd973a42">
+<h4 id="orgd973a42">Example 7.2.3</h4>
+<p>
+Suppose that the proportion \(\theta\) of defective items in a large manufactured lot is unknown and that the prior distribution assigned to \(\theta\) is the uniform distribution on the interval \([0, 1]\).
+</p>
+
+<p class="fragment">
+Then the prior p.d.f. of \(\theta\) is
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(\theta) = \begin{cases}
+1, & \mbox{for } 0 < \theta < 1,\\
+0, & \mbox{otherwise.}
+\end{cases}
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgf8d18cd">
+<h4 id="orgf8d18cd">Example 7.2.4</h4>
+<p>
+Lifetimes of Fluorescent Lamps
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment">Suppose the lifetimes (in hours)  of fluorescent lamps are to be observed.</li>
+<li data-fragment-index="2" class="fragment">Assume that the lifetime \(\sim \text{Exp}(\theta)\).</li>
+<li data-fragment-index="3" class="fragment">Prior distribution of \(\theta\): gamma distribution with \(\mu =0.0002\) and \(\sigma = 0.0001\).</li>
+
+</ul>
+
+<p data-fragment-index="4" class="fragment 4">
+Determine the prior p.d.f. of \(\theta\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org09964d5">
+<h4 id="org09964d5">Example 7.2.4 - Continued</h4>
+<p>
+<i>Solution</i>
+</p>
+<p class="fragment">
+Recall that if \(\theta \sim \text{Gamma} (\alpha, \lambda)\), then
+</p>
+<div class="fragment">
+\begin{align*}
+  \mathbb{E}(\theta) = \frac{\alpha}{\lambda}, \quad \text{Var} (\theta) = \frac{\alpha}{\lambda^2}.
+\end{align*}
+
+</div>
+<p class="fragment">
+Therefore, we have
+</p>
+<div class="fragment">
+\begin{align*}
+  \frac{\alpha}{\lambda} = 0.0002, \quad \frac{\alpha}{\lambda^2} = 0.0001,
+\end{align*}
+
+</div>
+<p class="fragment">
+and thus,
+</p>
+<div class="fragment">
+\begin{align*}
+  \alpha = 4, \quad \lambda = 20,000.
+\end{align*}
+
+</div>
+<p class="fragment">
+So the prior p.d.f. of \(\theta\) is
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(\theta) = \begin{cases}
+\frac{20,000^4}{3!} \theta^3 e^{-20,000 \theta}, & \theta>0,\\
+0, & \theta \le 0.
+\end{cases}
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0c55b53">
+<h4 id="org0c55b53">The Posterior Distribution</h4>
+<p>
+Suppose in Example 7.2.4 that we observe a collection of \(n\) lifetimes of fluorescent lamps, how would we change the distribution of \(\theta\) to take account of the observed data?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org86f9bc6">
+<h4 id="org86f9bc6">Definition</h4>
+<p>
+Consider a statistical inference problem with parameter \(\theta\) and random variables \(X_1, \dots, X_n\) to be observed. The conditional distribution of \(\theta\) given \(X_1, \dots, X_n\) is called the <i>posterior distribution</i> of \(\theta\).
+</p>
+
+<p class="fragment">
+The conditional p.m.f or p.d.f. of \(\theta\) given \(X_1 = x_1, \dots, X_n = x_n\) is typically denoted \(\xi(\theta|x_1, \dots, x_n)\) or \(\xi(\theta|\vec{x}), \vec{x} = (x_1, \dots, x_n)\).
+</p>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Question</span>: How to find the posterior distribution?
+</p>
+<p class="fragment">
+Answer: Bayes&rsquo; theorem.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org67313c4">
+<h4 id="org67313c4">Theorem 7.2.1</h4>
+<p>
+Suppose that the \(n\) random variables \(X_1, \dots, X_n\) form a random sample from a distribution for which the p.d.f. or the p.m.f. is \(f(x|\theta)\). Suppose also that the value of the parameter \(\theta\) is unknown and the prior p.d.f. or p.m.f. of \(\theta\) is \(\xi(\theta)\).
+</p>
+<p class="fragment">
+Then the posterior p.d.f. or p.m.f. of \(\theta\) is
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(\theta|\vec{x}) = \frac{f_n(\vec{x}|\theta)\xi(\theta)}{g_n(\vec{x})},\quad \text{for all} ~ \theta\in \Omega,
+\end{align*}
+
+</div>
+<p class="fragment">
+where
+</p>
+<div class="fragment">
+\begin{align*}
+  f_n(\vec{x}|\theta) & = f(x_1|\theta)\cdots f(x_n|\theta),\\
+  g_n(\vec{x}) & =  \int_\Omega f_n(\vec{x}|\theta) \xi(\theta)\, d\theta.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdc12bbd">
+<h4 id="orgdc12bbd">Example 7.2.6</h4>
+<p>
+Lifetimes of Fluorescent Lamps (Revisited)
+</p>
+<p class="fragment">
+Suppose also that the lifetimes \(X_1,\dots, X_n\) of a random sample of \(n\) lamps are observed.
+</p>
+
+<p class="fragment">
+We shall determine the posterior p.d.f. of \(\theta\) given that \(X_1 = x_1, \dots , X_n = x_n\).
+</p>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Have</span>: \(X_i\sim \text{Exp} (\theta)\), and the prior p.d.f. \(\xi(\theta)\) of \(\theta\), i.e.,
+</p>
+<div class="fragment">
+\begin{align*}
+f(x|\theta) = \begin{cases}
+\theta e^{-\theta x}, & x > 0,\\
+0, & x \le 0.
+\end{cases} \quad
+  \xi(\theta) = \begin{cases}
+\frac{20,000^4}{3!} \theta^3 e^{-20,000 \theta}, & \theta>0,\\
+0, & \theta \le 0.
+\end{cases}
+\end{align*}
+
+</div>
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Want</span>: the posterior p.d.f. \(\xi(\theta|\vec{x})\).
+</p>
+
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Need</span>: \(f_n(\vec{x}|\theta)\) and \(g_n(\vec{x})\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org305bf73">
+<h4 id="org305bf73">Example 7.2.6 - Continued</h4>
+<p>
+The conditional joint p.d.f. of \(X_1, \dots, X_n\) can be written in the following form, for \(x_i>0\, (i=1, \dots, n)\):
+</p>
+<div class="fragment">
+\begin{align*}
+  f_n(\vec{x}|\theta) = \prod_{i=1}^n \theta e^{-\theta x_i} = \theta^n e^{-\theta y},
+\end{align*}
+
+</div>
+<p class="fragment">
+where \(y = \sum_{i=1}^n x_i\).
+</p>
+
+<p class="fragment">
+The \(n \text{-dimensional}\) marginal joint p.d.f. of \(X_1, \dots, X_n\) is
+</p>
+<div class="fragment">
+\begin{align*}
+  g_n(\vec{x}) & = \int_0^{\infty} \theta^n e^{-\theta y} \frac{20,000^4}{3!} \theta^3 e^{-20,000 \theta}\, d\theta \\
+& = C  \int_0^{\infty} \theta^{n+3} e^{-(y+20,000)\theta} \, d\theta \\
+& = \frac{C \Gamma(n+4)}{(y+20,000)^{n+4}}.
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org9e11f32">
+<h4 id="org9e11f32">Example 7.2.6 - Continued</h4>
+<p>
+Finally,
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(\theta|\vec{x}) & = \frac{f_n(\vec{x}|\theta)\xi(\theta)}{g_n(\vec{x})}\\
+& = \frac{\theta^n e^{-\theta y} \cdot C \theta^3 e^{-20,000 \theta}}{\frac{C \Gamma(n+4)}{(y+20,000)^{n+4}}}\\
+& = \frac{(y+20,000)^{n+4} \theta^{n+3}}{\Gamma(n+4)} e^{-(y+20,000)\theta},
+\end{align*}
+
+</div>
+<p class="fragment">
+for \(\theta>0\).
+</p>
+
+<p class="fragment">
+In other words, \(\xi(\theta|\vec{x})\sim \text{Gamma} (n+4, y+20,000)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf40d867">
+<h4 id="orgf40d867">Example 7.2.6 - Continued</h4>
+<p>
+For example, suppose that we observe the following \(n=5\) lifetimes in hours: \(2911, 3403, 3237, 3509\) and \(3118\). Then \(y = 16,178\), and the posterior p.d.f. of \(\theta\) is the gamma distribution with parameters \(9\) and \(36,178\).
+</p>
+
+
+<div id="orgc21d73e" class="figure">
+<p><img src="../img/math4750/fig7-1.png" alt="fig7-1.png" class="fragment middle" width="75%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3d7bb6a">
+<h4 id="org3d7bb6a">Example (Exercise 7.2.3)</h4>
+<p>
+Suppose that the number of defects on a roll of magnetic recording tape has a Poisson distribution for which the mean \(\lambda\) is either \(1.0\) or \(1.5\), and the prior p.m.f. of \(\lambda\) is as follows:
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(1.0) = 0.4, \quad \xi(1.5) = 0.6.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+If a roll of tape selected at random is found to have three defects, what is the posterior p.m.f. of \(\lambda\)?
+</p>
+
+<p class="fragment">
+<i>Solution</i>
+</p>
+<p class="fragment">
+Let \(X\) be the number of defects, and observed \(x = 3\).
+</p>
+<p class="fragment">
+The (conditional) p.m.f. of \(X\):
+</p>
+<div class="fragment">
+\begin{align*}
+  f(x|\theta) = \frac{e^{-\theta} \theta^x}{x!}, \quad \text{for } x>0.
+\end{align*}
+
+</div>
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Want</span>: \(\xi(\theta|x)\)?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2dbd692">
+<h4 id="org2dbd692">Example (Exercise 7.2.3) - Continued</h4>
+<p>
+Note here we only one sample, that is, \(n=1\).
+</p>
+
+<p class="fragment">
+The marginal p.m.f. of \(X\) is
+</p>
+<div class="fragment">
+\begin{align*}
+  g_1(x) & = f(x|\theta = 1.0) \xi(1.0) + f(x|\theta =1.5)\xi(1.5)\\
+& = \frac{e^{-1.0}\cdot 1.0^x}{x!}\cdot 0.4 + \frac{e^{-1.5}\cdot 1.5^x}{x!}\cdot 0.6,
+\end{align*}
+
+</div>
+<p class="fragment">
+and thus \(g_1(3) = 0.09983\dots\)
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org87f1d91">
+<h4 id="org87f1d91">Example (Exercise 7.2.3) - Continued</h4>
+<p>
+Therefore,
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(1.0|3) = \frac{f_1(3|1.0)\xi(1.0)}{g_1(3)} = \frac{\frac{e^{-1.0}\cdot 1.0^3}{3!}\cdot 0.4}{0.09983} = 0.2456,
+\end{align*}
+
+</div>
+<p class="fragment">
+and
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(1.5|3) = 1 = \xi(1.0|3) = 0.7544.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Try \(X = 0\)?
+</p>
+
+</section>
+<section>
+<p>
+What if \(n>1\)?
+</p>
+
+<p class="fragment">
+Say we observed \(X_1 = x_1, X_2 = x_2\). Then
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(\theta|x_1, x_2) & = \frac{f_2(x_1, x_2|\theta)\xi(\theta)}{g_2(x_1, x_2)}\\
+& = \frac{f(x_2|\theta)f(x_1|\theta)\xi(\theta)}{g_2(x_1, x_2)}\\
+& \propto f(x_2|\theta) \xi(\theta|x_1),
+\end{align*}
+
+</div>
+<p class="fragment">
+where \(\propto\) means &ldquo;proportional to (up to a constant, but nothing to do with \(\theta\))&rdquo;.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org1ed1de1">
+<h4 id="org1ed1de1">Example 7.2.7</h4>
+<p>
+Proportion of Defective Items (Revisited)
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment">Observations: \(X_1 = x_1, \dots, X_n = x_n\).</li>
+<li data-fragment-index="2" class="fragment">\(X_i \sim \text{Ber} (\theta)\), where \(\theta\) is the (unknown) proportion of defective items.</li>
+<li data-fragment-index="3" class="fragment">The prior distribution of \(\theta\): \(\xi(\theta) \sim \text{Unif} ([0,1])\).</li>
+
+</ul>
+
+<p class="fragment">
+What is the posterior distribution?
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org6a494f9">
+<h4 id="org6a494f9">Example 7.2.7 - Continued</h4>
+<p>
+We first re-write the p.m.f. of \(X_i\) as follows:
+</p>
+<div class="fragment">
+\begin{align*}
+  f(x|\theta) = \begin{cases}
+\theta^x (1 - \theta)^{1-x}, & 0< \theta < 1,\\
+0, & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+</div>
+<p class="fragment">
+Then
+</p>
+<div class="fragment">
+\begin{align*}
+  f_n(\vec{x}|\theta) & = \prod_{i=1}^n f(x_i|\theta) = \prod_{i=1}^n \theta^{x_i}(1- \theta)^{1-x_i}\\
+& = \theta^y (1- \theta)^{n-y}, \quad y = \sum_{i=1}^n x_i.
+\end{align*}
+
+</div>
+
+<div class="fragment">
+\begin{align*}
+  g_n(\vec{x}) & = \int_0^1 f_n(\vec{x}|\theta) \xi(\theta)\, d\theta = \int_0^1 \theta^y (1 - \theta)^{n-y}\cdot 1 \, d\theta\\
+& = B(y+1, n-y+1).
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org13dbbd0">
+<h4 id="org13dbbd0">Example 7.2.7 - Continued</h4>
+<p>
+Therefore,
+</p>
+<div>
+\begin{align*}
+  \xi(\theta|\vec{x})
+& = \frac{f_n(\vec{x}|\theta)\xi(\theta)}{g_n(\vec{x})} = \frac{\theta^y (1 - \theta)^{n-y}}{B(y+1, n-y+1)}\\
+& \sim \text{Beta} (y + 1, n - y +1).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org299a895">
+<h4 id="org299a895">Remark</h4>
+<p class="fragment">
+(1) Recall the p.d.f. of \(\text{Beta} (\alpha, \beta)\): for \(x\in (0,1)\)
+</p>
+<div class="fragment">
+\begin{align*}
+    f(x, \alpha, \beta) =
+    \frac{x^{\alpha -1}(1 - x)^{\beta -1}}{B(\alpha, \beta)}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+If \(\alpha =1, \beta = 1\), then for \(x\in (0,1)\),
+</p>
+<div class="fragment">
+\begin{align*}
+  f(x|1, 1) = 1.
+\end{align*}
+
+</div>
+<p class="fragment">
+Thus, \(\text{Beta}(1, 1) = \text{Unif}([0,1])\).
+</p>
+
+</section>
+<section>
+<p>
+(2) Sequential observations
+</p>
+<div class="fragment">
+\begin{align*}
+  \text{Beta} (1, 1) & \xrightarrow{x_1} ~ \text{Beta} (x_1+1, 1 - x_1 + 1)\\
+& \xrightarrow{x_2} ~ \text{Beta} (x_1+x_2+1, 2 - x_1-x_2 + 1)\\
+& \quad \vdots\\
+& \xrightarrow{x_n} ~ \text{Beta} (y+1, n-y + 1).
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+(3) When the joint p.d.f. or p.m.f. \(f_n(\vec{x}|\theta)\) of the observations in a random sample is regarded as a function of \(\theta\) fro given values of \(x_1, \dots, x_n\), it is called the <i>likelihood function</i>.
+</p>
+<div class="fragment">
+\begin{align*}
+  \xi(\theta|\vec{x}) = \frac{f_n(\vec{x}|\theta)\xi(\theta)}{g_n(\vec{x})} \propto f_n(\vec{x}|\theta)\xi(\theta).
+\end{align*}
+
+</div>
+<p class="fragment">
+Thus, the posterior is proportional to the product of the likelihood function and the prior.
+</p>
 </section>
 </section>
 </div>
