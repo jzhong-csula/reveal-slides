@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MATH 4750 - Introduction to Mathematical Statistics</title>
+<meta name="author" content="\\
+Jie Zhong \\
+Department of Mathematics \\
+California State University, Los Angeles"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../dist/reveal.css"/>
+
+<link rel="stylesheet" href="../dist/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/chalkboard/style.css"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/menu/font-awesome/css/fontawesome.css"/>
+
+<link rel="stylesheet" href="../gnohz.css"/>
+<script>window.MathJax = { TeX: {Macros: {range: "\\text{Range}", ow: "\\text{otherwise}"}} }</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>MATH 4750 - Introduction to Mathematical Statistics</h1><h2></h2><h6> <br />
+Jie Zhong <br />
+Department of Mathematics <br />
+California State University, Los Angeles</h6>
+</section>
+
+
+<section>
+<section id="slide-org1e23b6e">
+<h2 id="org1e23b6e">Chapter 9 Testing Hypotheses</h2>
+<div class="outline-text-2" id="text-org1e23b6e">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge59bc39">
+<h3 id="orge59bc39">9.1 Problems of Testing Hypotheses</h3>
+<p>
+In general, hypothesis testing concerns trying to decide whether a parameter \(\theta\) lies in one subset of the parameter space or in its complement. When \(\theta\) is one-dimensional, at least one of the two subsets will typically be an interval, possibly degenerate. In this section, we introduce the notation and some common methodology associated with hypothesis testing. We also demonstrate an equivalence between hypothesis tests and confidence intervals.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3fcc3b8">
+<h4 id="org3fcc3b8">The Null and Alternative Hypotheses</h4>
+<p class="fragment">
+Consider a statistical problem involving a parameter \(\theta \in \Omega\), where \(\Omega\) is a certain parameter space.
+</p>
+<p class="fragment">
+Suppose that
+</p>
+<div class="fragment">
+\begin{align*}
+  \Omega = \Omega_0 \cup \Omega_1, \quad \Omega_0 \cap \Omega_1 = \varnothing.
+\end{align*}
+
+</div>
+<p class="fragment">
+Let
+</p>
+<div class="fragment">
+\begin{align*}
+  H_0: \theta \in \Omega_0, \quad H_1: \theta \in \Omega_1.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Goal</span>: To decide which of hypothesis \(H_0\) or \(H_1\) appears to be true.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgad810df">
+<h4 id="orgad810df">The Null and Alternative Hypotheses - Continued</h4>
+<p>
+<span style="color: rgb(24,116,205)">Goal</span>: To decide which of hypothesis \(H_0\) or \(H_1\) appears to be true.
+</p>
+
+<p class="fragment">
+A problem of this type, in which there are only two possible decisions, is called a problem of <i>testing hypotheses</i>.
+</p>
+
+<p class="fragment">
+A procedure for deciding which hypothesis to choose is called a <i>test procedure</i> or simply a <i>test</i>.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4b80417">
+<h4 id="org4b80417">Definition</h4>
+<p class="fragment">
+The hypothesis \(H_0\) is called the <i>null hypothesis</i> and the hypothesis \(H_1\) is called the <i>alternative hypothesis</i>.
+</p>
+
+<p class="fragment">
+When performing a test, if we decide that \(\theta\) lies in \(\Omega_1\), we are said to <i>reject</i> \(H_0\). If we decide that \(\theta\) lies in \(\Omega_0\), we are said <i>not to reject</i> \(H_0\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4f9235f">
+<h4 id="org4f9235f">Example 9.1.2</h4>
+<p>
+<span style="color: rgb(24,116,205)">Egyptian Skulls</span>
+</p>
+
+<p class="fragment">
+Observations: breadth measurements (in mm) of the skulls found in Egypt from various time periods
+</p>
+<p class="fragment">
+Model: \(\mathcal{N}(\mu, \sigma^2)\).
+</p>
+<p class="fragment">
+Goal: Interest might lie in how \(\mu\) compares to the breadth of a modern-day skull, about 140mm.
+</p>
+<p class="fragment">
+Hypotheses setup:
+</p>
+<div class="fragment">
+\begin{align*}
+  & H_0: \mu \ge 140,\\
+  & H_1: \mu < 140.
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+<span style="color: rgb(24,116,205)">Question</span>: How did we decide that the null hypothesis should be \(H_0: \mu \ge 140\) rather than \(\mu < 140\)? Would we be led to the same conclusion either way?
+</p>
+<p class="fragment">
+We can address these issues after we introduce the possible errors that can arise in hypothesis testing.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb887ba6">
+<h4 id="orgb887ba6">Simple and Composite Hypotheses</h4>
+<p class="fragment">
+For \(i = 0\) or \(i=1\), if \(\Omega_i\) contains just a single value of \(\theta\), then \(H_i\) is a <i>single hypothesis</i>.
+</p>
+
+<p class="fragment">
+If the set \(\Omega_i\) contains more than one value of \(\theta\), then \(H_i\) is a <i>composite hypothesis</i>.
+</p>
+<p class="fragment">
+For example, a simple null hypothesis \(H_0\) must have the form
+</p>
+<div class="fragment">
+\begin{align*}
+  H_0: \theta = \theta_0.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgde6b405">
+<h4 id="orgde6b405">Definition</h4>
+<p>
+Let \(\theta\) be a one-dimensional parameter. <i>One-sided</i> null hypotheses are of the form \(H_0 : \theta \le \theta_0\) or \(H_0 : \theta \ge \theta_0\), with the corresponding one-sided alternative hypotheses being \(H_1 : \theta>\theta_0\) or \(H_1: \theta < \theta_0\).
+</p>
+
+<p class="fragment">
+When the null hypothesis is simple, the alternative hypothesis is usually two-sided, \(H_1: \theta \neq \theta_0\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgce680f0">
+<h4 id="orgce680f0">The Critical Region and Test Statistic</h4>
+<p>
+<span style="color: rgb(24,116,205)">Example 9.1.3</span>
+Suppose that \(\vec{X} = (X_1, \dots, X_n)\) is random sample from \(\mathcal{N}(\mu, \sigma^2)\).
+</p>
+<p class="fragment">
+We wish to test the hypotheses:
+</p>
+<div class="fragment">
+\begin{align*}
+  & H_0: \mu = \mu_0,\\
+  & H_1: \mu \neq \mu_0.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Question</span>:
+What is a reasonable criterion to reject \(H_0\)?
+</p>
+<p class="fragment">
+Reject \(H_0\) if \(\overline{X}_n\) is far from \(\mu_0\).
+</p>
+
+</section>
+<section>
+<p>
+For example, we could choose a number \(c\) and reject \(H_0\) if
+</p>
+<div>
+\begin{align*}
+  |\overline{X}_n - \mu_0| \ge c.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Alternatively, we can also based on theoretical considerations, choose a number \(c\) and reject \(H_0\) if \(|U| \ge c\), where
+</p>
+<div class="fragment">
+\begin{align*}
+  U = \frac{n^{1/2}(\overline{X}_n - \mu_0)}{\sigma'}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org1192e29">
+<h4 id="org1192e29">The Critical Region and Test Statistic - Continued</h4>
+<p>
+In such a way, we actually divide the sample space \(S\) into two sets
+</p>
+<div class="fragment">
+\begin{align*}
+  S_0 = \{\vec{x}: - c < \overline{X}_n -\mu_0< c\}, \quad \text{and}\quad S_1 = S^C_0.
+\end{align*}
+
+</div>
+<p class="fragment">
+We then reject \(H_0\) if \(\vec{X}\in S_1\), and we don&rsquo;t reject \(H_0\) if \(\vec{X}\in S_0\).
+</p>
+
+<p class="fragment">
+A simpler way to express the procedure is to define the statistic \(T = |\overline{X}_n - \mu_0|\), and reject \(H_0\) if \(T\ge c\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org6ef91b1">
+<h4 id="org6ef91b1">The Critical Region and Test Statistic - Continued</h4>
+<p>
+In general, we can specify a test procedure by partitioning \(S\) into two subsets:
+</p>
+<div class="fragment">
+\begin{align*}
+  S_1 = \{\vec{x}: ~\text{reject } H_0\},\quad \text{and}\quad S_1 = S^C_0.
+\end{align*}
+
+</div>
+<p class="fragment">
+The set defined above is called the <i>critical region</i> of the test.
+</p>
+
+<p class="fragment">
+In summary, a test procedure is determined by specifying the critical region of the test. In most hypothesis-testing problems, the critical region is defined in terms of a statistic, \(T = r(\vec{X})\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org66d112f">
+<h4 id="org66d112f">Definition</h4>
+<p>
+Let \(\vec{X}\) be a random sample from a distribution that depends on a parameter \(\theta\).
+</p>
+
+<p class="fragment">
+Let \(T = r(\vec{X})\) be a statistic, and let \(R\) be a subset of the real line. Suppose that a test procedure for the hypotheses is of the form &ldquo;reject \(H_0\) if \(T \in R\).&rdquo;
+</p>
+
+<p class="fragment">
+Then we call \(T\) a <i>test statistic</i>, and we call \(R\) the <i>rejection region</i> of the test.
+</p>
+
+<p class="fragment">
+When a test is defined in terms of a test statistic \(T\) and rejection region \(R\), the set \(S_1 = \{\vec{x}: r(\vec{x}) \in R\}\) is the critical region.
+</p>
+
+<p class="fragment">
+In Example 9.1.3, we reject \(H_0\) if \(T = |\overline{X}_n - \mu_0| \ge c\), and the rejection region \(R = [c, \infty]\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd1fc432">
+<h4 id="orgd1fc432">Definition</h4>
+<p>
+Let \(\delta\) be a test procedure, and \(S_1\) be the critical region of \(\delta\), we call the probability given a \(\theta\in \Omega\) that the test \(\delta\) will reject \(H_0\), i.e.,
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\theta|\delta) = \mathbb{P}(\vec{X} \in S_1 |\theta)
+\end{align*}
+
+</div>
+<p class="fragment">
+the <i>power function</i> of the test \(\delta\).
+</p>
+<p class="fragment">
+If \(\delta\) is described in terms of a test statistic \(T\) and rejection region \(R\), the power function is
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\theta|\delta) = \mathbb{P}(T\in R|\theta).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc748187">
+<h4 id="orgc748187">Example 9.1.5</h4>
+<p>
+<span style="color: rgb(24,116,205)">Testing Hypotheses about the Mean of a Normal Distribution with Known Variance</span>
+</p>
+<p class="fragment">
+In Example 9.1.3, the test \(\delta\) is based on the test statistic \(T = |\overline{X}_n - \mu|\) with rejection region \(R = [c, \infty)\).
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgf2a54da">
+<h4 id="orgf2a54da">Example 9.1.5 - Continued</h4>
+<p>
+Note that \(\overline{X}_n \sim \mathcal{N}(\mu, \sigma^2/n)\), then the power function
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\mu|\delta) & = \mathbb{P}(T\in R|\mu)\\
+& = \mathbb{P}(|\overline{X}_n-\mu_0| \ge c|\mu)\\
+& = \mathbb{P}(\overline{X}_n \ge \mu_0 + c |\mu) + \mathbb{P}(\overline{X}_n \le \mu_0 - c |\mu)\\
+& = 1 - \Phi \left( \frac{\mu_0 + c - \mu}{\sigma/\sqrt{n}} \right) + \Phi \left( \frac{\mu_0 - c - \mu}{\sigma/\sqrt{n}} \right).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org037d89b">
+<h4 id="org037d89b">Ideal Power Function?</h4>
+<p>
+Recall that the power function \(\pi(\theta|\delta)\) specifies, for each possible value of the parameter \(\theta\), the probability that \(\delta\) will reject \(H_0\), it follows that the ideal power function would be one for which
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\theta|\delta) = \begin{cases}
+0, & \text{for each } \theta \in \Omega_0,\\
+1, & \text{for each } \theta \in \Omega_1.
+\end{cases}
+\end{align*}
+
+</div>
+
+<p class="fragment">
+&ldquo;Ideal&rdquo; here means that test \(\delta\) would lead to the correct decision with probability \(1\).
+</p>
+
+<p class="fragment">
+In a practical problem, however, there would seldom exit any test procedure having such an ideal power function.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org29d7664">
+<h4 id="org29d7664">Definition</h4>
+<p>
+An erroneous decision to reject a true null hypothesis is a <i>type I error</i>, and an erroneous decision not to reject a false null hypothesis is called a <i>type II error</i>.
+</p>
+
+<p class="fragment">
+In terms of the power function,
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\theta|\delta) & = \mathbb{P}(\text{type I error}), & \theta \in \Omega_0\\
+  1 - \pi(\theta|\delta) & = \mathbb{P}(\text{type II error}), & \theta \in \Omega_1\\
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Now our goal is to choose a test \(\delta\) so that the power function \(\pi(\theta|\delta)\) is low for \(\theta\in \Omega_0\), and high for \(\theta\in \Omega_1\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orge3dba01">
+<h4 id="orge3dba01">Example</h4>
+<p>
+Consider the test \(\delta_0\) that <b>never rejects</b> \(H_0\), then we have
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\theta|\delta_0) = 0, \quad \text{for all }  \theta \in \Omega.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Question</span>: What are the probabilities of making type I and type II errors, respectively?
+</p>
+
+
+<p class="fragment">
+Consider the test \(\delta_1\) that <b>always rejects</b> \(H_0\), then we have
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\theta|\delta_0) = 1, \quad \text{for all }  \theta \in \Omega.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Question</span>: What are the probabilities of making type I and type II errors, respectively?
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgd6328bf">
+<h4 id="orgd6328bf">Definition</h4>
+<p>
+Given a number \(\alpha_0\in (0, 1)\), the test \(\delta\) such that
+</p>
+<div class="fragment">
+\begin{align*}
+  \pi(\theta|\delta) \le \alpha_0, \quad \text{for all }  \theta\in \Omega_0
+\end{align*}
+
+</div>
+<p class="fragment">
+is called a <i>level \(\alpha_0\) test</i>,  and we say that the test has <i>level of significance \(\alpha_0\)</i>.
+</p>
+<p class="fragment">
+In addition, the <i>size \(\alpha(\delta)\) of a test \(\delta\)</i> is defined as follows:
+</p>
+<div class="fragment">
+\begin{align*}
+  \alpha(\delta) = \sup_{\theta\in \Omega_0}\pi(\theta|\delta).
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0afa901">
+<h4 id="org0afa901">Corollary</h4>
+<p>
+A test \(\delta\) is a level \(\alpha_0\) test if and only if its size is at most \(\alpha_0\) (i.e. \(\alpha(\delta)\le \alpha_0\)). If the null hypothesis is simple, that is, \(H_0: \theta = \theta_0\), then the size of \(\delta\) will be \(\alpha(\delta) = \pi(\theta_0|\delta)\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org71f682f">
+<h4 id="org71f682f">Example 9.1.7</h4>
+<p>
+Observations: \(X_1, \dots, X_n \sim \text{Unif}([0, \theta])\), with \(\theta\) unknown.
+Hypotheses:
+</p>
+<div>
+\begin{align*}
+  H_0: & 3 \le \theta \le 4,\\
+  H_1: & \theta < 3 ~\text{or}~ \theta>4.
+\end{align*}
+
+</div>
+
+<p>
+We know (from Example 7.5.7) that the M.L.E. of \(\theta\) is
+</p>
+<div>
+\begin{align*}
+  Y_n = \max\{X_1, \dots, X_n\}.
+\end{align*}
+
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/reveal.js-menu/menu.js"></script>
+<script src="../reveal.js-plugins/chalkboard/plugin.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'none',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom, RevealMenu, RevealChalkboard ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+,chalkboard: {src: "chalkboard/chalkboard.json", storage: "chalkboard-demo", toggleChalkboardButton: { left: "80px" },	toggleNotesButton: { left: "130px" },	colorButtons: 5}});
+</script>
+</body>
+</html>
