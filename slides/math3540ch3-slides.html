@@ -31,38 +31,367 @@ Jie Zhong <br />
 Department of Mathematics <br />
 California State University, Los Angeles</h6>
 </section>
+
+
+<section>
+<section id="slide-orga0fd01f">
+<h2 id="orga0fd01f">Chapter 3 Annuities (annuities certain)</h2>
+<div class="outline-text-2" id="text-orga0fd01f">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org6b09445">
+<h3 id="org6b09445">Introduction</h3>
+<div class="outline-text-3" id="text-org6b09445">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgfe990c6">
+<h4 id="orgfe990c6">General terminology</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">An <span style="color: rgb(24,116,205)">annuitiy</span> is a series of payments made at specified intervals (called <span style="color: rgb(24,116,205)">payment period</span>) for a fixed or contingent period.</li>
+<li data-fragment-index="2" class="fragment">If the length of time is fixed (deterministic), then the annuity is called an <span style="color: rgb(24,116,205)">annuitiy-certain</span>.</li>
+<li data-fragment-index="3" class="fragment">If not, then it is called a <span style="color: rgb(24,116,205)">contingent annuity</span>; an import example is the <span style="color: rgb(24,116,205)">life annuity</span>.</li>
+<li data-fragment-index="4" class="fragment">If the length of time is deterministic and infinite, the annuity is called a <span style="color: rgb(24,116,205)">perpetuity</span>.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org6304595">
+<h3 id="org6304595">Annuities-immediate</h3>
+<div class="outline-text-3" id="text-org6304595">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org51a3271">
+<h4 id="org51a3271">Definition</h4>
+<ul>
+<li data-fragment-index="1" class="fragment">If an annuity is such that the payments are made at the <span style="color: rgb(24,116,205)">end</span> of each payment periods, then it is called an <span style="color: rgb(24,116,205)">annuity-immediate</span>.</li>
+<li data-fragment-index="2" class="fragment"><i>Caveat</i>: The terminology may seem counter-intuitive &#x2026;</li>
+<li data-fragment-index="3" class="fragment">If the amount paid at the end of each period is equal to \(1\), we call this annuity the <span style="color: rgb(24,116,205)">basic annuity-immediate</span>.</li>
+<li data-fragment-index="4" class="fragment">In general, if the payments are equal for all the periods of an annuity, we say that the annuity is <span style="color: rgb(24,116,205)">level</span>; otherwise, we say it is <span style="color: rgb(24,116,205)">nonlevel</span>.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org8904c7e">
+<h4 id="org8904c7e">Notation: Present value</h4>
+<p class="fragment">
+An \(n \text{-year}\) basic annuity-immediate pays \(1\) at times \(1, 2, 3, \dots, n\).
+</p>
+<p class="fragment">
+Those payments are worth (at time \(0\)):
+</p>
+<div class="fragment">
+\begin{align*}
+ v(1)  + v(2) + v(3) + \cdots + v(n).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+When we have compound interest, then \(v(t) = (1 + i)^{-t} = v^t\), and the present value becomes
+</p>
+<div class="fragment">
+\begin{align*}
+ a_{\overline{n}|i} = v + v^2 + v^3 + \cdots + v^n = \frac{1 - v^n}{i}.
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org7a6c0db">
+<h4 id="org7a6c0db">Notation: Accumulated value</h4>
+<p class="fragment">
+The accumulated value at the time of <b>the last payment</b> of all the payments made by a basic annuity-immediate lasting \(n\) periods is denoted as \(s_{\overline{n}|}\), i.e.,
+</p>
+<div class="fragment">
+\begin{align*}
+ s_{\overline{n}|}  = a(n) a_{\overline{n}|}\qquad \text{or} \qquad a_{\overline{n}|} = v(n) s_{\overline{n}|}.
+\end{align*}
+
+</div>
+<p class="fragment">
+When \(a(n) = (1 + i)^n\),
+</p>
+<div class="fragment">
+\begin{align*}
+ s_{\overline{n}|i}  = (1 + i)^na_{\overline{n}|i} \qquad \text{or} \qquad a_{\overline{n}|i}  = v^n s_{\overline{n}|i}.
+\end{align*}
+
+</div>
+<div class="fragment">
+\begin{align*}
+s_{\overline{n}|i} = (1+i)^{n-1} + (1 + i)^{n-2} + \cdots + 1 = \frac{(1 +i)^n - 1}{i}.
+\end{align*}
+
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orga4bc17e">
+<h4 id="orga4bc17e">Example 3.2.11 - Unknown present value</h4>
 <p>
-\(
-\def\actuarial#1{%
-  \vbox{
-    \offinterlineskip
-    \tabskip=0pt
-    \mathsurround=0pt
-    \halign{##&\vrule##\cr
-      \noalign{\hrule}%
-      &height 1pt\cr
-      $\scriptstyle#1$&\cr
-    }%
-  }%
-}
-\)
+Candace wishes to buy a new car. Her budget allows her to make monthly payments of $500, and she has saved $1,800 for a down payment. Candace qualifies for a 36-month auto loan which has a nominal interest rate of \(4.8\%\) convertible monthly. How expensive a car can Candace buy?
 </p>
 
+<p data-fragment-index="0" class="fragment">
+<b>Solution</b>
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment">The monthly interest rate is \(\displaystyle\frac{i^{(12)}}{12} = 0.048/12 = 0.004\).</li>
+<li data-fragment-index="2" class="fragment">The present value of payments: \(\displaystyle 500 a_{\overline{36}|0.004} = 500 \left[ \frac{1 - 1.004^{-36}}{0.004} \right] = 16,732.94\).</li>
+<li data-fragment-index="3" class="fragment">Total cost of the car: \(16732.94 + 1800=18532.94\).</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org16c68fa">
+<h4 id="org16c68fa">Example 3.2.12 - Unknown contribution</h4>
 <p>
-\(a_{\overline{n}|i}\)
+Seth wishes to borrow \(4,400\) so he can pay his tuition. He qualifies for a two-year loan with a monthly effective interest rate of \(0.25\%\) and level payments. Find the amount of Seth&rsquo;s monthly payments under this loan.
 </p>
 
-<p>
-\(\range\)
+<p data-fragment-index="0" class="fragment">
+<b>Solution</b>
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment">Let \(Q\) be the monthly payment.</li>
+<li data-fragment-index="2" class="fragment">The time \(0\) equation of value: \(\displaystyle 4400 = Q a_{\overline{24}|0.0025}\).</li>
+<li data-fragment-index="3" class="fragment">\(\displaystyle Q = \frac{4400 \cdot 0.0025}{1 - 1.0025^{-24})} = 189.12\)</li>
+<li data-fragment-index="4" class="fragment">However, \(189.12 a_{\overline{24}|0.025} = 4400.062057114\)</li>
+<li data-fragment-index="5" class="fragment">Therefore, the <b>last</b> payment should be reduced by \(\displaystyle 0.06257114(1.0025)^{24} = 0.065889578 = 0.07\).</li>
+
+</ul>
+
+<p data-fragment-index="6" class="fragment">
+<span style="color: rgb(24,116,205)">Read:</span> Algorithm 3.2.14 and Example 3.2.15.
 </p>
 
+</section>
+</section>
+<section>
+<section id="slide-org6cf9a9b">
+<h4 id="org6cf9a9b">Example 3.2.17 - Unknown number of contributions</h4>
 <p>
-\(a_{\actuarial{n}}\)
+Hyun wishes to contribute \(100\) at the end of each month to his savings account until the account has a balance of at least \(3,000\), at which time he will buy his grandmother&rsquo;s piano. Hyun&rsquo;s savings account has an annual interest rate of \(5.4\%\) convertible monthly. How many months it will take Hyun to accumulate the needed money?
 </p>
 
-<p>
-\(\ow\)
+<p data-fragment-index="0" class="fragment">
+<b>Solution</b>
 </p>
+<ul>
+<li data-fragment-index="1" class="fragment">The monthly interest rate is \(0.054/12 = 0.0045\).</li>
+<li data-fragment-index="2" class="fragment">Find the smallest integer \(n\) such that \(100 s_{\overline{n}|0.0045} \ge 3000\).</li>
+<li data-fragment-index="3" class="fragment">Equivalently, \(\displaystyle \frac{1.0045^n - 1}{0.0045} \ge 30\), and thus \(\displaystyle n\ge \frac{\ln 1.135}{\ln 1.0045} = 28.2\).</li>
+<li data-fragment-index="4" class="fragment">Therefore, \(n = 29\).</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org840cc31">
+<h4 id="org840cc31">Relationship between the present and future values</h4>
+<div>
+\begin{align*}
+ i + \frac{1}{s_{\overline{n}|i}} = \frac{1}{a_{\overline{n}|i}}.
+\end{align*}
+
+</div>
+<p class="fragment">
+<b>Why</b>?
+</p>
+
+<p class="fragment">
+Mathematically,
+</p>
+<div class="fragment">
+\begin{align*}
+ i + \frac{1}{s_{\overline{n}|i}}
+& = i + \frac{i}{(1 + i)^n - 1} = i \cdot \left[ 1 + \frac{1}{(1 + i)^n - 1} \right]\\
+& = i \cdot \frac{(1 + i)^n}{(1 + i)^n -1} = i\cdot \frac{1}{1 - v^n}= \frac{1}{a_{\overline{n}|i}}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+<span style="color: rgb(24,116,205)">Intuitive interpretation?</span>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgbc3714c">
+<h4 id="orgbc3714c">Loan repayment</h4>
+<p class="fragment">
+Consider a loan of amount \(L\) to be repaid at the end of \(n\) periods, and let \(i\) be the effective interest rate per period.
+</p>
+
+<p class="fragment">
+Then we can setup a repayment schedule as a level annuity-immediate with the level payment
+</p>
+<div class="fragment">
+\begin{align*}
+ Q_1 = \frac{L}{a_{\overline{n}|i}}.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org9d2f259">
+<h4 id="org9d2f259">Loan repayment - another way</h4>
+<p>
+This time we repay the loan \(L\) as follows:
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment">at the end of each period the interest accrued is repaid</li>
+<li data-fragment-index="2" class="fragment">the entire principal is repaid at the end of \(n\) periods.</li>
+
+</ul>
+
+<p data-fragment-index="3" class="fragment">
+In order to be able to repay the entire principal at the end of \(n\) periods, we should make a level payment of \(L/s_{\overline{n}|i}\) at the end of every period.
+</p>
+
+<p data-fragment-index="4" class="fragment">
+Together with the interest \(L\cdot i\) paid at the end of every period, we totally pay
+</p>
+<div data-fragment-index="3" class="fragment">
+\begin{align*}
+ Q_2 = L \left( i + \frac{1}{s_{\overline{n}|i}} \right).
+\end{align*}
+
+</div>
+
+<p data-fragment-index="5" class="fragment">
+The two payments \(Q_1\) and \(Q_2\) should be equal, we arrive at the desire equality.
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org99d8918">
+<h3 id="org99d8918">Annuities-due</h3>
+<div class="outline-text-3" id="text-org99d8918">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org7b6dc79">
+<h4 id="org7b6dc79">Notation: Present value</h4>
+<p class="fragment">
+An \(n \text{-year}\) basic annuity-due pays \(1\) at times \(0, 1, 2, \dots, n-1\).
+Those payments are worth (at time \(0\)):
+</p>
+<div class="fragment">
+\begin{align*}
+ v(0)  + v(1) + v(2) + \cdots + v(n-1).
+\end{align*}
+
+</div>
+
+<p class="fragment">
+When we have compound interest, then \(v(t) = (1 + i)^{-t} = v^t\), and the present value becomes
+</p>
+<div class="fragment">
+\begin{align*}
+ \ddot{a}_{\overline{n}|i} = 1 + v + v^2 + \cdots + v^{n-1} = \frac{1 - v^n}{1 - v} = \frac{1 - v^n}{d}.
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge076362">
+<h4 id="orge076362">Notation: Accumulated value</h4>
+<p class="fragment">
+The accumulated value at the time \(n\) of all the payments made by a basic annuity-due lasting \(n\) periods is denoted as \(\ddot{s}_{\overline{n}|}\), i.e.,
+</p>
+<div class="fragment">
+\begin{align*}
+ \ddot{s}_{\overline{n}|}  = a(n) \ddot{a}_{\overline{n}|}\qquad \text{or} \qquad \ddot{a}_{\overline{n}|} = v(n) \ddot{s}_{\overline{n}|}.
+\end{align*}
+
+</div>
+<p class="fragment">
+When \(a(n) = (1 + i)^n\),
+</p>
+<div class="fragment">
+\begin{align*}
+ \ddot{s}_{\overline{n}|i}  = (1 + i)^n \ddot{a}_{\overline{n}|i} \qquad \text{or} \qquad \ddot{a}_{\overline{n}|i}  = v^n \ddot{s}_{\overline{n}|i}.
+\end{align*}
+
+</div>
+<div class="fragment">
+\begin{align*}
+\ddot{s}_{\overline{n}|i} = (1+i)^n + (1 + i)^{n-1} + \cdots + (1+i) = \frac{(1 +i)^n - 1}{d}.
+\end{align*}
+
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgd12d8ff">
+<h4 id="orgd12d8ff">Connection between &ldquo;due&rdquo; and &ldquo;immediate&rdquo;</h4>
+<p class="fragment">
+The most basic relationship is obtained through discounting
+</p>
+<div class="fragment">
+\begin{align*}
+ \ddot{a}_{\overline{n}|i}  = (1 + i) a_{\overline{n}|i} \qquad \text{and}\qquad
+ \ddot{s}_{\overline{n}|i}  = (1 + i) s_{\overline{n}|i}.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+The other basic relationship is obtained by &ldquo;shifting the time&rdquo; by one
+</p>
+<div class="fragment">
+\begin{align*}
+  \ddot{a}_{\overline{n}|i}  = 1 + a_{\overline{n-1}|i} \qquad \text{and}\qquad
+ \ddot{s}_{\overline{n}|i} + 1  = s_{\overline{n+1}|i}.
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org7346cbb">
+<h4 id="org7346cbb">Example 3.3.11</h4>
+<p>
+During 1998, Omar had a dividend payment of \(100\) directly deposited to his savings account on the first day of each month. Find the accumulated value of these payments at the end of the year if his savings account had a nominal discount rate of \(4.8\%\) payable monthly.
+</p>
+
+<p data-fragment-index="0" class="fragment">
+<b>Solution</b>
+</p>
+<ul>
+<li data-fragment-index="1" class="fragment">The monthly discount rate is \(0.048/12 = 0.004\).</li>
+<li data-fragment-index="2" class="fragment">The equivalent monthly interest rate is \(\displaystyle \frac{0.004}{1 - 0.004} = \frac{4}{996}\).</li>
+<li data-fragment-index="3" class="fragment">The accumulated value at the end of the year is \(\displaystyle 100 \ddot{s}_{\overline{12}|\frac{4}{996}} = 100 \left[ \frac{\left( \frac{1000}{996} \right)^{12} - 1}{0.004} \right] = 1231.79\).</li>
+
+</ul>
+</section>
+</section>
 </div>
 </div>
 <script src="../dist/reveal.js"></script>
