@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MATH 3540 - Mathematical Finance and Interest Theory</title>
+<meta name="author" content="\\
+Jie Zhong \\
+Department of Mathematics \\
+California State University, Los Angeles"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../dist/reveal.css"/>
+
+<link rel="stylesheet" href="../dist/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/chalkboard/style.css"/>
+
+<link rel="stylesheet" href="../reveal.js-plugins/menu/font-awesome/css/fontawesome.css"/>
+
+<link rel="stylesheet" href="../gnohz.css"/>
+<script>window.MathJax = { TeX: {Macros: {range: "\\text{Range}", ow: "\\text{otherwise}"}} }</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>MATH 3540 - Mathematical Finance and Interest Theory</h1><h2></h2><h6> <br />
+Jie Zhong <br />
+Department of Mathematics <br />
+California State University, Los Angeles</h6>
+</section>
+
+<section>
+<section id="slide-org4652b16">
+<h2 id="org4652b16">Chapter 5 Loan Repayment</h2>
+<div class="outline-text-2" id="text-org4652b16">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org50f5105">
+<h3 id="org50f5105">Amortized Loans and Amortized Schedules</h3>
+<div class="outline-text-3" id="text-org50f5105">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org130c94e">
+<h4 id="org130c94e">Definitions</h4>
+<p>
+When a loan is an <span style="color: rgb(24,116,205)">amortized loan</span>, each payment is understood to consist of:
+</p>
+<ol>
+<li data-fragment-index="1" class="fragment">The interest due on the <b>outstanding loan balance</b>;</li>
+<li data-fragment-index="2" class="fragment">The rest of the payment which goes towards reducing the OLB and which is referred to as the <span style="color: rgb(24,116,205)">principal payment</span>.</li>
+
+</ol>
+
+<p data-fragment-index="3" class="fragment">
+The chart (table) containing the payment amount, interest paid in each payment, principle repaid in each payment and the OLB after each payment is called the <span style="color: rgb(24,116,205)">amortization schedule</span>.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org4215fd0">
+<h4 id="org4215fd0">An Example</h4>
+<p>
+Consider a loan for \(1,000\) which is to be repaid in four annual payments under the effective annual interest rate of \(8\%\).
+</p>
+<p class="fragment">
+We assume that all payments are equal.
+</p>
+
+<p class="fragment">
+What is amount of each level payment?
+</p>
+<div class="fragment">
+\begin{align*}
+  Q = \frac{1000}{a_{\overline{4}|0.08}} = \frac{1000}{3.3121}=301.92.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdd04bb6">
+<h4 id="orgdd04bb6">An Example - Continued</h4>
+<p>
+Then, amount of interest contained in the first payment is
+</p>
+<div class="fragment">
+\begin{align*}
+  I_1 = 1000\cdot i = 1000\cdot 0.08 = 80.
+\end{align*}
+
+</div>
+<p class="fragment">
+Hence, the portion of the first payment that goes toward the reduction of the outstanding balance is
+</p>
+<div class="fragment">
+\begin{align*}
+  301.92 - 80 = 221.92.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+The outstanding balance at the end of the first year is, then
+</p>
+<div class="fragment">
+\begin{align*}
+  1000 - 221.92 = 778.08.
+\end{align*}
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org26b29ef">
+<h4 id="org26b29ef">An Example - Amortization Schedule</h4>
+<p>
+If we continue the procedure we completed for the first year for the remaining 3 payments, we get the entire amortization schedule:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">Year</td>
+<td class="org-right">Payment</td>
+<td class="org-right">Interest</td>
+<td class="org-right">Principal</td>
+<td class="org-right">OLB</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">1000</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">301.29</td>
+<td class="org-right">80.00</td>
+<td class="org-right">221.92</td>
+<td class="org-right">778.08</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">301.29</td>
+<td class="org-right">62.25</td>
+<td class="org-right">239.67</td>
+<td class="org-right">538.41</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">301.29</td>
+<td class="org-right">43.07</td>
+<td class="org-right">258.85</td>
+<td class="org-right">279.56</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">301.29</td>
+<td class="org-right">22.36</td>
+<td class="org-right">279.56</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section id="slide-orgd63e148">
+<h4 id="orgd63e148">An Example - Smaller Final Payment</h4>
+<p>
+A \(1,000\) loan is being repaid by payments of \(100\) (plus the final smaller payment) at the end of each quarter for as long as it is necessary. Assume that \(i^{(4)}=0.16\).
+</p>
+
+<p class="fragment">
+Find the amount of interest and the amount of principal repaid in the fourth payment.
+</p>
+
+<p class="fragment">
+<b>Questions</b>
+</p>
+<p class="fragment">
+At what time we need to know the OLB?
+</p>
+
+<p class="fragment">
+Which method, prospective or retrospective to compute the balance?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org092a27d">
+<h4 id="org092a27d">An Example - Solution</h4>
+<p>
+We use retrospective method here:
+</p>
+<div class="fragment">
+\begin{align*}
+  OLB_3 = 1000(1.04)^3 - 100 \cdot s_{\overline{3}|0.04} = 1124.86 - 312.16 = 812.70.
+\end{align*}
+
+</div>
+
+<p class="fragment">
+Then the interest to be repaid in the fourth payment is \(812.70 \cdot 0.04 = 32.51\).
+</p>
+
+<p class="fragment">
+The principal payment in the fourth payment is \(100 - 32.51 = 67.49\).
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/reveal.js-menu/menu.js"></script>
+<script src="../reveal.js-plugins/chalkboard/plugin.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'none',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom, RevealMenu, RevealChalkboard ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+,chalkboard: {src: "chalkboard/chalkboard.json", storage: "chalkboard-demo", toggleChalkboardButton: { left: "80px" },	toggleNotesButton: { left: "130px" },	colorButtons: 5}});
+</script>
+</body>
+</html>
