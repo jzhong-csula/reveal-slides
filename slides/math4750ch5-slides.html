@@ -33,22 +33,22 @@ California State University, Los Angeles</h6>
 </section>
 
 <section>
-<section id="slide-org9b755cb">
-<h2 id="org9b755cb">Chapter 5 Special Distributions</h2>
-<div class="outline-text-2" id="text-org9b755cb">
+<section id="slide-org07f5cfa">
+<h2 id="org07f5cfa">Chapter 5 Special Distributions</h2>
+<div class="outline-text-2" id="text-org07f5cfa">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org58a8c05">
-<h3 id="org58a8c05">5.2 The Bernoulli and Binomial Distributions</h3>
-<div class="outline-text-3" id="text-org58a8c05">
+<section id="slide-org4c9fb59">
+<h3 id="org4c9fb59">5.2 The Bernoulli and Binomial Distributions</h3>
+<div class="outline-text-3" id="text-org4c9fb59">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org7503156">
-<h4 id="org7503156">Definition</h4>
+<section id="slide-org88035e5">
+<h4 id="org88035e5">Definition</h4>
 <p class="fragment">
 A random variable \(X\)  has <i>Bernoulli distribution</i> with parameter \(p\in [0, 1]\) if it can take only two values \(\{0, 1\}\), and
 </p>
@@ -65,8 +65,8 @@ Written as \(X \sim \text{Ber}(p)\).
 </section>
 </section>
 <section>
-<section id="slide-org3781058">
-<h4 id="org3781058">What are \(\mathbb{E}(X), \text{Var} (X)\) and \(\psi_X(t)\)?</h4>
+<section id="slide-orgd4f0d7d">
+<h4 id="orgd4f0d7d">What are \(\mathbb{E}(X), \text{Var} (X)\) and \(\psi_X(t)\)?</h4>
 <div class="fragment">
 \begin{align*}
   \mathbb{E}(X) & = 1 \cdot p + 0 \cdot (1 - p) = p.
@@ -94,8 +94,8 @@ What is \(\mathbb{E}(X^{100})\)?
 </section>
 </section>
 <section>
-<section id="slide-orgc7174bd">
-<h4 id="orgc7174bd">Bernoulli Trials (Process)</h4>
+<section id="slide-orgca64753">
+<h4 id="orgca64753">Bernoulli Trials (Process)</h4>
 <p>
 We say \(X_1, X_2, \dots\) are Bernoulli trials with parameter \(p\), if \(X_1, X_2, \dots\) are i.i.d., with \(X_1 \sim \text{Ber} (p)\).
 </p>
@@ -103,8 +103,8 @@ We say \(X_1, X_2, \dots\) are Bernoulli trials with parameter \(p\), if \(X_1, 
 </section>
 </section>
 <section>
-<section id="slide-orgaf1dfaa">
-<h4 id="orgaf1dfaa">Example</h4>
+<section id="slide-org926398b">
+<h4 id="org926398b">Example</h4>
 <p class="fragment">
 (1) Tossing a fair coin.
 </p>
@@ -144,8 +144,8 @@ Then \(X_1, X_2, \dots X_n\) form \(n\) Bernoulli trials with \(p = 1/100\).
 </section>
 </section>
 <section>
-<section id="slide-org6d8fab9">
-<h4 id="org6d8fab9">Binomial Distribution</h4>
+<section id="slide-orgd46fe25">
+<h4 id="orgd46fe25">Binomial Distribution</h4>
 <p>
 <span style="color: rgb(24,116,205)">Definition</span>
 </p>
@@ -168,14 +168,14 @@ Written as \(X \sim \text{Bin} (n, p)\).
 </section>
 </section>
 <section>
-<section id="slide-org38b3146">
-<h4 id="org38b3146">Theorem (relation between Bernoulli and Binomial)</h4>
+<section id="slide-orgc36fcc3">
+<h4 id="orgc36fcc3">Theorem (relation between Bernoulli and Binomial)</h4>
 <p class="fragment">
 If \(X_1, X_2, \dots, X_n\) are i.i.d. \(\text{Ber}(p)\), then
 </p>
 <div class="fragment">
 \begin{align*}
-  X = X_1 + X_2 + \cdots, X_n \sim \text{Bin} (n, p).
+  X = X_1 + X_2 + \cdots + X_n \sim \text{Bin} (n, p).
 \end{align*}
 
 </div>
@@ -188,7 +188,7 @@ What are \(\mathbb{E}(X), \text{Var} (X)\) and \(\psi_X(t)\)?
 \begin{align*}
   \mathbb{E}(X) & = np\\
     \text{Var} (X) & = np(1 - p)\\
-\psi_X(t) & = \mathbb{E}(e^{tX}) = \mathbb{E}\left(e^{t(X_1 + \cdots X_n)}\right)\\
+\psi_X(t) & = \mathbb{E}(e^{tX}) = \mathbb{E}\left(e^{t(X_1 + \cdots + X_n)}\right)\\
 & = ( p e^t + (1 - p) )^n
 \end{align*}
 
@@ -197,8 +197,8 @@ What are \(\mathbb{E}(X), \text{Var} (X)\) and \(\psi_X(t)\)?
 </section>
 </section>
 <section>
-<section id="slide-org99ed8c1">
-<h4 id="org99ed8c1">Example</h4>
+<section id="slide-org29f1b72">
+<h4 id="org29f1b72">Example</h4>
 <p>
 We have \(15\) red balls, and \(18\) blue ones. Then  we repeatedly select \(8\) balls with replacement.
 </p>
@@ -223,8 +223,8 @@ What are \(\mathbb{E}(X)\) and \(\text{Var}(X)\)?
 </section>
 </section>
 <section>
-<section id="slide-org92b0bb7">
-<h4 id="org92b0bb7">Theorem</h4>
+<section id="slide-org243e49e">
+<h4 id="org243e49e">Theorem</h4>
 <p class="fragment">
 If \(X_i \sim \text{Bin} (n_i, p), i = 1, \dots, m\), independent, then
 </p>
@@ -238,8 +238,8 @@ If \(X_i \sim \text{Bin} (n_i, p), i = 1, \dots, m\), independent, then
 </section>
 </section>
 <section>
-<section id="slide-org732535f">
-<h4 id="org732535f">Example</h4>
+<section id="slide-org5d5b852">
+<h4 id="org5d5b852">Example</h4>
 <p>
 If \(X \sim \text{Bin} (10, 0.5)\), \(Y \sim \text{Bin}(6, 0.5)\), independent, then
 </p>
@@ -262,15 +262,15 @@ So
 </section>
 </section>
 <section>
-<section id="slide-orgbb4d213">
-<h3 id="orgbb4d213">5.4 The Poisson Distribution</h3>
-<div class="outline-text-3" id="text-orgbb4d213">
+<section id="slide-org5cc7fd3">
+<h3 id="org5cc7fd3">5.4 The Poisson Distribution</h3>
+<div class="outline-text-3" id="text-org5cc7fd3">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org00ea28f">
-<h4 id="org00ea28f">Example</h4>
+<section id="slide-org03b5f47">
+<h4 id="org03b5f47">Example</h4>
 <p class="fragment">
 A certain computer server receives \(3\) requests per second on average.
 </p>
@@ -282,8 +282,8 @@ Estimate the probability that the server receives \(5\) requests in a given seco
 </section>
 </section>
 <section>
-<section id="slide-org69cf4c2">
-<h4 id="org69cf4c2">Example - continued</h4>
+<section id="slide-org04fa5a2">
+<h4 id="org04fa5a2">Example - continued</h4>
 <p>
 Divide the second into \(n = 10\) tenth of a second. At each tenth second, there is an independent trial where &ldquo;success&rdquo; means the request received.
 </p>
@@ -312,8 +312,8 @@ We want to estimate \(\mathbb{P}(S_{10} = 5)\).
 </section>
 </section>
 <section>
-<section id="slide-org5ab573e">
-<h4 id="org5ab573e">Example - continued</h4>
+<section id="slide-org17f5680">
+<h4 id="org17f5680">Example - continued</h4>
 <p>
 Divide the second into \(n = 1000\) milliseconds.
 </p>
@@ -341,8 +341,8 @@ and thus,
 </section>
 </section>
 <section>
-<section id="slide-org8cc2e63">
-<h4 id="org8cc2e63">Poisson Limit Theorem (approximation by Binomial)</h4>
+<section id="slide-org4b635f1">
+<h4 id="org4b635f1">Poisson Limit Theorem (approximation by Binomial)</h4>
 <p class="fragment">
 Assume \(S_n \sim \text{Bin} (n, p)\), where \(\mathbb{E}(S_n) = np = \lambda = ~\text{constant}\). Then
 </p>
@@ -376,8 +376,8 @@ Recall that
 </section>
 </section>
 <section>
-<section id="slide-org795ccca">
-<h4 id="org795ccca">Poisson Random Variables</h4>
+<section id="slide-org9aff3de">
+<h4 id="org9aff3de">Poisson Random Variables</h4>
 <p class="fragment">
 Let \(\lambda \ge 0\). The random variable \(Y\) has the <i>Poisson distribution</i> with parameter \(\lambda\) if
 </p>
@@ -397,8 +397,8 @@ Write \(Y \sim \text{Poisson} (\lambda)\), where \(\lambda\) is often interprete
 </section>
 </section>
 <section>
-<section id="slide-org6d8f64e">
-<h4 id="org6d8f64e">Facts</h4>
+<section id="slide-org0434003">
+<h4 id="org0434003">Facts</h4>
 <div class="fragment">
 \begin{align*}
   \sum_{k=0}^{\infty} \frac{e^{-\lambda}\lambda^k }{k!} = 1 \Leftrightarrow e^{\lambda} = \sum_{k=0}^\infty \frac{\lambda^k}{k!}
@@ -416,8 +416,8 @@ Write \(Y \sim \text{Poisson} (\lambda)\), where \(\lambda\) is often interprete
 </section>
 </section>
 <section>
-<section id="slide-orgd08e270">
-<h4 id="orgd08e270">Applicability</h4>
+<section id="slide-org0edf6ef">
+<h4 id="org0edf6ef">Applicability</h4>
 <p class="fragment">
 In a system with a large number of possible events, each of which is rare, then the number of events that occur in a fixed interval is often well modeled by a Poisson random variable.
 </p>
@@ -425,8 +425,8 @@ In a system with a large number of possible events, each of which is rare, then 
 </section>
 </section>
 <section>
-<section id="slide-org94a9a22">
-<h4 id="org94a9a22">Poisson Process</h4>
+<section id="slide-org4b2dd05">
+<h4 id="org4b2dd05">Poisson Process</h4>
 <p class="fragment">
 Recall Bernoulli process (trials): (infinite) sequence of independent \(\text{Ber} (p)\) trials \(X_1, X_2, \cdots\)
 </p>
@@ -439,8 +439,8 @@ sequence of events occurring randomly over a <i>continuous</i> time period, star
 </section>
 </section>
 <section>
-<section id="slide-org893c637">
-<h4 id="org893c637">Example</h4>
+<section id="slide-orgc1bb7e3">
+<h4 id="orgc1bb7e3">Example</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">Requests to a computer server</li>
 <li data-fragment-index="2" class="fragment">Arrivals at a post office</li>
@@ -452,8 +452,8 @@ sequence of events occurring randomly over a <i>continuous</i> time period, star
 </section>
 </section>
 <section>
-<section id="slide-org291bf11">
-<h4 id="org291bf11">Notations</h4>
+<section id="slide-orge05b7e2">
+<h4 id="orge05b7e2">Notations</h4>
 <p class="fragment">
 For a time interval \(I\), we denote the length by \(|I|\).
 </p>
@@ -468,8 +468,8 @@ For a time interval \(I\), we denote the length by \(|I|\).
 </section>
 </section>
 <section>
-<section id="slide-org89cfa74">
-<h4 id="org89cfa74">Definition</h4>
+<section id="slide-org9f0f645">
+<h4 id="org9f0f645">Definition</h4>
 <p>
 Poisson process with parameter \(\lambda\) satisfies:
 </p>
@@ -494,8 +494,8 @@ Here, for example, we consider the intervals \([9, 10]\) and \([10, 12]\) are di
 </section>
 </section>
 <section>
-<section id="slide-org24bf97b">
-<h4 id="org24bf97b">Example</h4>
+<section id="slide-org4f44a77">
+<h4 id="org4f44a77">Example</h4>
 <p>
 Calls come into a call center according to a Poisson process at rate \(20\) calls/hour. Starting at midnight \(t=0\).
 Find the probability that there are no calls between 9 am and 10 am, but \(60\) calls between 10 am and noon.
@@ -527,10 +527,10 @@ Find the probability that there are no calls between 9 am and 10 am, but \(60\) 
 </section>
 </section>
 <section>
-<section id="slide-orgcedb74a">
-<h3 id="orgcedb74a">5.6 The Normal (Gaussian) Distribution</h3>
+<section id="slide-org6a13752">
+<h3 id="org6a13752">5.6 The Normal (Gaussian) Distribution</h3>
 
-<div id="org066c366" class="figure">
+<div id="org830f7c5" class="figure">
 <p><img src="../img/math4750/normal-histogram.png" alt="normal-histogram.png" class="middle" />
 </p>
 </div>
@@ -538,8 +538,8 @@ Find the probability that there are no calls between 9 am and 10 am, but \(60\) 
 </section>
 </section>
 <section>
-<section id="slide-orgb16e678">
-<h4 id="orgb16e678">Definition</h4>
+<section id="slide-org32ef766">
+<h4 id="org32ef766">Definition</h4>
 <p class="fragment">
 Let \(\mu \in \mathbb{R}, \sigma^2 > 0\). A random variable \(X\) with p.d.f.
 </p>
@@ -556,8 +556,8 @@ has the <i>normal distribution</i> with parameter \(\mu\) and \(\sigma^2\), and 
 </section>
 </section>
 <section>
-<section id="slide-org6a5b3bc">
-<h4 id="org6a5b3bc">Facts</h4>
+<section id="slide-org59a85a6">
+<h4 id="org59a85a6">Facts</h4>
 <p class="fragment">
 (1) \(f_X\) indeed is a p.d.f.
 </p>
@@ -588,8 +588,8 @@ Why?
 </section>
 </section>
 <section>
-<section id="slide-orgb62f4ac">
-<h4 id="orgb62f4ac">Linear Transformation</h4>
+<section id="slide-orgac2ba2c">
+<h4 id="orgac2ba2c">Linear Transformation</h4>
 <p class="fragment">
 If \(X \sim \mathcal{N}(\mu, \sigma^2), Y = aX + b\), where \(a \neq 0\), then
 </p>
@@ -616,8 +616,8 @@ Need to check if
 </section>
 </section>
 <section>
-<section id="slide-org938e0c0">
-<h4 id="org938e0c0">Proof - Continued</h4>
+<section id="slide-org4a4fe36">
+<h4 id="org4a4fe36">Proof - Continued</h4>
 <div class="fragment">
 \begin{align*}
   \psi_{aX + b}(t)
@@ -631,8 +631,8 @@ Need to check if
 </section>
 </section>
 <section>
-<section id="slide-org65c57c7">
-<h4 id="org65c57c7">Example</h4>
+<section id="slide-org815aa45">
+<h4 id="org815aa45">Example</h4>
 <p>
 Suppose \(X\) has its m.g.f. as
 </p>
@@ -659,8 +659,8 @@ Solution:
 </section>
 </section>
 <section>
-<section id="slide-org5db432d">
-<h4 id="org5db432d">Standard Normals</h4>
+<section id="slide-orgbb98ebb">
+<h4 id="orgbb98ebb">Standard Normals</h4>
 <p class="fragment">
 Recall: If \(X\sim \mathcal{N}(\mu, \sigma^2)\), then
 </p>
@@ -683,8 +683,8 @@ and
 </section>
 </section>
 <section>
-<section id="slide-orga03cf46">
-<h4 id="orga03cf46">Standard Normals - Continued</h4>
+<section id="slide-org5a1b80c">
+<h4 id="org5a1b80c">Standard Normals - Continued</h4>
 <p>
 In particular, when \(\mu = 0, \sigma = 1\), we call \(Z \sim \mathcal{N}(0, 1)\) has the <i>standard normal</i> distribution, and
 </p>
@@ -708,8 +708,8 @@ Its C.D.F. is
 </section>
 </section>
 <section>
-<section id="slide-orgfc41e98">
-<h4 id="orgfc41e98">Useful Fact</h4>
+<section id="slide-org5ede4e9">
+<h4 id="org5ede4e9">Useful Fact</h4>
 <div>
 \begin{align*}
   \Phi(-t) = 1 - \Phi(t).
@@ -717,7 +717,7 @@ Its C.D.F. is
 
 </div>
 
-<div id="orgc21eae7" class="figure">
+<div id="orgb90fdc2" class="figure">
 <p><img src="../img/math4750/normal-cdf-pdf.png" alt="normal-cdf-pdf.png" class="fragment middle" />
 </p>
 </div>
@@ -725,8 +725,8 @@ Its C.D.F. is
 </section>
 </section>
 <section>
-<section id="slide-org0a372b5">
-<h4 id="org0a372b5">Example</h4>
+<section id="slide-org90f86a3">
+<h4 id="org90f86a3">Example</h4>
 <p>
 Assume \(Z\sim \mathcal{N}(0, 1)\). Please use the Table to compute
 </p>
@@ -750,8 +750,8 @@ For (1):
 </section>
 </section>
 <section>
-<section id="slide-orgc8c038c">
-<h4 id="orgc8c038c">Example - Continued</h4>
+<section id="slide-org881be0b">
+<h4 id="org881be0b">Example - Continued</h4>
 <p>
 For (2):
 </p>
@@ -768,8 +768,8 @@ For (2):
 </section>
 </section>
 <section>
-<section id="slide-org579e8d8">
-<h4 id="org579e8d8">Example</h4>
+<section id="slide-org7d2556a">
+<h4 id="org7d2556a">Example</h4>
 <p>
 If \(X\sim \mathcal{N}(7, 4)\), find \(\mathbb{P}(5 < X < 10)\).
 </p>
@@ -787,8 +787,8 @@ If \(X\sim \mathcal{N}(7, 4)\), find \(\mathbb{P}(5 < X < 10)\).
 </section>
 </section>
 <section>
-<section id="slide-org454bd94">
-<h4 id="org454bd94">Standardization</h4>
+<section id="slide-orgb9f1c76">
+<h4 id="orgb9f1c76">Standardization</h4>
 <p class="fragment">
 If \(X \sim \mathcal{N}(\mu, \sigma^2)\), then
 </p>
@@ -802,8 +802,8 @@ If \(X \sim \mathcal{N}(\mu, \sigma^2)\), then
 </section>
 </section>
 <section>
-<section id="slide-orge0b8fbc">
-<h4 id="orge0b8fbc">Example - Continued</h4>
+<section id="slide-orgc06f9f2">
+<h4 id="orgc06f9f2">Example - Continued</h4>
 <p>
 Back to the previous example, \(\mu = 7, \sigma = 2\), then
 </p>
@@ -828,8 +828,8 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-org135cc2d">
-<h4 id="org135cc2d">Theorem (linear combination of normals)</h4>
+<section id="slide-org5923c64">
+<h4 id="org5923c64">Theorem (linear combination of normals)</h4>
 <p class="fragment">
 If \(X_1, X_2, \dots, X_k\) are independent, and \(X_i \sim \mathcal{N}(\mu_i, \sigma_i^2)\), for \(i = 1, 2, \dots, k\), then
 </p>
@@ -844,8 +844,8 @@ If \(X_1, X_2, \dots, X_k\) are independent, and \(X_i \sim \mathcal{N}(\mu_i, \
 </section>
 </section>
 <section>
-<section id="slide-orgab2ba4c">
-<h4 id="orgab2ba4c">Example</h4>
+<section id="slide-orgae5fc7a">
+<h4 id="orgae5fc7a">Example</h4>
 <p>
 If \(X \sim \mathcal{N}(1, 2), Y \sim \mathcal{N}(0, 7)\), and \(X \perp Y\).
 What&rsquo;s the standard deviation of \(X + Y\)?
@@ -874,8 +874,8 @@ Try
 </section>
 </section>
 <section>
-<section id="slide-org9c68524">
-<h4 id="org9c68524">Sample Mean</h4>
+<section id="slide-org3d353d9">
+<h4 id="org3d353d9">Sample Mean</h4>
 <p class="fragment">
 Let \(X_1, X_2, \dots, X_n\) be random variables, then
 </p>
@@ -896,8 +896,8 @@ is called the <i>sample mean</i>.
 </section>
 </section>
 <section>
-<section id="slide-orgd35096e">
-<h4 id="orgd35096e">Theorem</h4>
+<section id="slide-orge5023fb">
+<h4 id="orge5023fb">Theorem</h4>
 <p class="fragment">
 If \(X_1, X_2, \dots, X_n\) form a random sample (i.i.d.) from a normal distribution with mean \(\mu\), and variance \(\sigma^2\). Then
 </p>
@@ -911,8 +911,8 @@ If \(X_1, X_2, \dots, X_n\) form a random sample (i.i.d.) from a normal distribu
 </section>
 </section>
 <section>
-<section id="slide-org47cab25">
-<h4 id="org47cab25">Example 5.6.7</h4>
+<section id="slide-orgde33bf3">
+<h4 id="orgde33bf3">Example 5.6.7</h4>
 <p>
 Determine a sample size.
 </p>
@@ -929,8 +929,8 @@ Suppose \(X_1, X_2, \dots, X_n\) form a random sample (i.i.d.) from a normal dis
 </section>
 </section>
 <section>
-<section id="slide-orgefc3b3a">
-<h4 id="orgefc3b3a">Example 5.6.7 - Continued</h4>
+<section id="slide-org4910013">
+<h4 id="org4910013">Example 5.6.7 - Continued</h4>
 <p>
 First,
 </p>
@@ -963,8 +963,8 @@ Then
 </section>
 </section>
 <section>
-<section id="slide-org217aa4f">
-<h4 id="org217aa4f">Example 5.6.7 - Continued</h4>
+<section id="slide-org5378c3a">
+<h4 id="org5378c3a">Example 5.6.7 - Continued</h4>
 <p>
 So we require
 </p>
@@ -985,8 +985,8 @@ We choose \(n = 35\).
 </section>
 </section>
 <section>
-<section id="slide-orgdd34b9c">
-<h4 id="orgdd34b9c">Another interpretation: <i>confidence interval</i> (see Sec. 8.5)</h4>
+<section id="slide-orgbfad253">
+<h4 id="orgbfad253">Another interpretation: <i>confidence interval</i> (see Sec. 8.5)</h4>
 <div class="fragment">
 \begin{align*}
   0.95 = \mathbb{P}(|Z|<1.96) = \mathbb{P}\left(|\overline{X}_n - \mu| < 1.96 \frac{3}{\sqrt{n}}\right) ,
@@ -1022,8 +1022,8 @@ contains \(\mu\) with probability at least \(0.95\).
 </section>
 </section>
 <section>
-<section id="slide-org3ae4563">
-<h4 id="org3ae4563">The Lognormal Distribution</h4>
+<section id="slide-org4b88845">
+<h4 id="org4b88845">The Lognormal Distribution</h4>
 <p class="fragment">
 <span style="color: rgb(24,116,205)">Definition</span>
 If \(\log (Y) \sim \mathcal{N}(\mu, \sigma^2)\), then we say \(Y\) has the <i>lognormal</i> distribution with parameters \(\mu\) and \(\sigma^2\).
@@ -1048,8 +1048,8 @@ Let \(X = \log(Y)\), then \(Y = e^X\).
 </section>
 </section>
 <section>
-<section id="slide-orgb2d0eef">
-<h4 id="orgb2d0eef">The Lognormal Distribution - Continued</h4>
+<section id="slide-org97402d9">
+<h4 id="org97402d9">The Lognormal Distribution - Continued</h4>
 <p>
 However, we know that
 </p>
@@ -1091,15 +1091,15 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-org6362116">
-<h3 id="org6362116">5.7 The Gamma Distributions</h3>
-<div class="outline-text-3" id="text-org6362116">
+<section id="slide-org119f1da">
+<h3 id="org119f1da">5.7 The Gamma Distributions</h3>
+<div class="outline-text-3" id="text-org119f1da">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgcb81c6d">
-<h4 id="orgcb81c6d">Exponential Distribution</h4>
+<section id="slide-org44585dd">
+<h4 id="org44585dd">Exponential Distribution</h4>
 <p>
 <span style="color: rgb(24,116,205)">Definition</span>
 </p>
@@ -1122,8 +1122,8 @@ We write \(X \sim \text{Exp} (\lambda)\).
 </section>
 </section>
 <section>
-<section id="slide-org9764a62">
-<h4 id="org9764a62">Facts</h4>
+<section id="slide-org666bbea">
+<h4 id="org666bbea">Facts</h4>
 <p class="fragment">
 (1)
 </p>
@@ -1155,8 +1155,8 @@ We write \(X \sim \text{Exp} (\lambda)\).
 </section>
 </section>
 <section>
-<section id="slide-orgdc9400e">
-<h4 id="orgdc9400e">Memoryless Property</h4>
+<section id="slide-org5556441">
+<h4 id="org5556441">Memoryless Property</h4>
 <p class="fragment">
 Assume \(X \sim \text{Exp} (\lambda)\), then
 </p>
@@ -1182,8 +1182,8 @@ Proof.
 </section>
 </section>
 <section>
-<section id="slide-orgddff48f">
-<h4 id="orgddff48f">Applicability (&ldquo;waiting time&rdquo;)</h4>
+<section id="slide-org54abd35">
+<h4 id="org54abd35">Applicability (&ldquo;waiting time&rdquo;)</h4>
 <ul>
 <li data-fragment-index="1" class="fragment">time until a light bulb fails</li>
 <li data-fragment-index="2" class="fragment">time until an earthquake occurs</li>
@@ -1194,8 +1194,8 @@ Proof.
 </section>
 </section>
 <section>
-<section id="slide-org9faa1b4">
-<h4 id="org9faa1b4">What is the gamma distribution?</h4>
+<section id="slide-orgab503a3">
+<h4 id="orgab503a3">What is the gamma distribution?</h4>
 <p class="fragment">
 Recall: For a Poisson process with parameter \(\lambda\), we have \(N(I)\sim ~\text{Poisson} (\lambda |I|)\), i.e.,
 </p>
@@ -1216,8 +1216,8 @@ Fact: \(T_1 \sim \text{Exp}(\lambda)\).
 </section>
 </section>
 <section>
-<section id="slide-org8b29ead">
-<h4 id="org8b29ead">Proof</h4>
+<section id="slide-org6a3fc8d">
+<h4 id="org6a3fc8d">Proof</h4>
 <p class="fragment">
 It suffices to show that the C.D.F. of \(T_1\) is \(1 - e^{-\lambda t}\).
 </p>
@@ -1253,8 +1253,8 @@ which is the same as
 </section>
 </section>
 <section>
-<section id="slide-orgd18931c">
-<h4 id="orgd18931c">Gamma Distribution</h4>
+<section id="slide-org9b0019b">
+<h4 id="org9b0019b">Gamma Distribution</h4>
 <p>
 Now let \(T_k\) be the waiting time until \(k\) th occurrence, \(k = 1, 2, 3, \dots\)
 </p>
@@ -1284,8 +1284,8 @@ If \(t \ge 0\), consider the event \(\{T_k > t\}\):
 </section>
 </section>
 <section>
-<section id="slide-org2e5e6c7">
-<h4 id="org2e5e6c7">Gamma Distribution - continued</h4>
+<section id="slide-org8a2222c">
+<h4 id="org8a2222c">Gamma Distribution - continued</h4>
 <p>
 Then
 </p>
@@ -1312,8 +1312,8 @@ Therefore,
 </section>
 </section>
 <section>
-<section id="slide-org1081c49">
-<h4 id="org1081c49">Gamma Distribution - continued</h4>
+<section id="slide-org4ed83d7">
+<h4 id="org4ed83d7">Gamma Distribution - continued</h4>
 <p>
 For p.d.f. of \(T_k\):
 </p>
@@ -1344,8 +1344,8 @@ If \(t \ge 0\),
 </section>
 </section>
 <section>
-<section id="slide-org80dae00">
-<h4 id="org80dae00">Definition</h4>
+<section id="slide-orgd89646d">
+<h4 id="orgd89646d">Definition</h4>
 <p class="fragment">
 Let \(\lambda > 0, k \in \mathbb{N}\), we say a random variable \(X\) has the <i>gamma distribution</i> with parameter \(k\) and \(\lambda\) if its p.d.f. is
 </p>
@@ -1380,8 +1380,8 @@ The previous example says
 </section>
 </section>
 <section>
-<section id="slide-orgc78465c">
-<h4 id="orgc78465c">Moment Generating Function of Gamma Distributions</h4>
+<section id="slide-orgfb8afce">
+<h4 id="orgfb8afce">Moment Generating Function of Gamma Distributions</h4>
 <div class="fragment">
 \begin{align*}
   \psi_X(t) = \left( \frac{\lambda}{\lambda - t} \right)^k, \, t < \lambda.
@@ -1392,8 +1392,8 @@ The previous example says
 </section>
 </section>
 <section>
-<section id="slide-org18b0557">
-<h4 id="org18b0557">Theorem</h4>
+<section id="slide-org5009da6">
+<h4 id="org5009da6">Theorem</h4>
 <p>
 If \(X \sim \text{Gamma}(k, \lambda)\) and \(Y \sim \text{Gamma}(l, \lambda)\) are independent, then \(X+Y \sim \text{Gamma}(k+l, \lambda)\).
 </p>
@@ -1411,8 +1411,8 @@ Proof.
 </section>
 </section>
 <section>
-<section id="slide-org61d2748">
-<h4 id="org61d2748">Corollary</h4>
+<section id="slide-orgab5b909">
+<h4 id="orgab5b909">Corollary</h4>
 <p class="fragment">
 If \(X_1, X_2, \dots, X_k\) are independent, and \(X_i \sim \text{Exp}(\lambda)\), for \(i = 1, 2, \dots, k\), then
 </p>
@@ -1426,8 +1426,8 @@ If \(X_1, X_2, \dots, X_k\) are independent, and \(X_i \sim \text{Exp}(\lambda)\
 </section>
 </section>
 <section>
-<section id="slide-org0d931d7">
-<h4 id="org0d931d7">General Case</h4>
+<section id="slide-orgc805d86">
+<h4 id="orgc805d86">General Case</h4>
 <p>
 We can define the gamma distribution with parameters \(k = \alpha > 0\).
 </p>
@@ -1461,8 +1461,8 @@ e^{-\lambda x}  \frac{\lambda^\alpha x^{\alpha-1}}{\Gamma(\alpha)}, & \mbox{if}~
 </section>
 </section>
 <section>
-<section id="slide-orgd8f9116">
-<h4 id="orgd8f9116">Fact</h4>
+<section id="slide-orgb4b6bda">
+<h4 id="orgb4b6bda">Fact</h4>
 <div class="fragment">
 \begin{align*}
   \Gamma(\alpha) = (\alpha - 1) \Gamma(\alpha -1), \, \alpha > 1.
@@ -1483,8 +1483,8 @@ If \(\alpha = k \in \mathbb{N}\),
 </section>
 </section>
 <section>
-<section id="slide-orgcde67a2">
-<h4 id="orgcde67a2">Mean and Variance of Gamma Distributions</h4>
+<section id="slide-org2f79f32">
+<h4 id="org2f79f32">Mean and Variance of Gamma Distributions</h4>
 <p class="fragment">
 <span style="color: rgb(24,116,205)">Theorem 5.7.5 (Moments)</span>
 Assume \(X \sim \text{Gamma} (\alpha, \lambda)\), then
@@ -1502,8 +1502,8 @@ Assume \(X \sim \text{Gamma} (\alpha, \lambda)\), then
 </section>
 </section>
 <section>
-<section id="slide-orgff0dcd5">
-<h4 id="orgff0dcd5">Mean and Variance of Gamma Distributions - Continued</h4>
+<section id="slide-org540a957">
+<h4 id="org540a957">Mean and Variance of Gamma Distributions - Continued</h4>
 <p>
 In particular,
 </p>
@@ -1526,15 +1526,15 @@ and
 </section>
 </section>
 <section>
-<section id="slide-org6b49485">
-<h3 id="org6b49485">5.8 The Beta Distributions</h3>
-<div class="outline-text-3" id="text-org6b49485">
+<section id="slide-org67da536">
+<h3 id="org67da536">5.8 The Beta Distributions</h3>
+<div class="outline-text-3" id="text-org67da536">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org966bef3">
-<h4 id="org966bef3">Example 3.6.9 (page 148)</h4>
+<section id="slide-org708a677">
+<h4 id="org708a677">Example 3.6.9 (page 148)</h4>
 <p class="fragment">
 Let
 </p>
@@ -1562,8 +1562,8 @@ for \(k = 0, 1, \dots, n\), and \(p\in [0,1]\).
 </section>
 </section>
 <section>
-<section id="slide-org3a9d835">
-<h4 id="org3a9d835">What is the conditional p.d.f. of \(P\) given \(X = k\)?</h4>
+<section id="slide-org67cb336">
+<h4 id="org67cb336">What is the conditional p.d.f. of \(P\) given \(X = k\)?</h4>
 <p>
 By the definition of conditional probability,
 </p>
@@ -1599,8 +1599,8 @@ Thus,
 </section>
 </section>
 <section>
-<section id="slide-org3d01ce3">
-<h4 id="org3d01ce3">The Beta Function</h4>
+<section id="slide-org752bdac">
+<h4 id="org752bdac">The Beta Function</h4>
 <p class="fragment">
 For \(\alpha , \beta >0\),
 </p>
@@ -1624,8 +1624,8 @@ For example, in the previous calculation, how to express the denominator in term
 </section>
 </section>
 <section>
-<section id="slide-orgfac36fd">
-<h4 id="orgfac36fd">Theorem 5.8.1</h4>
+<section id="slide-orgaa28036">
+<h4 id="orgaa28036">Theorem 5.8.1</h4>
 <div class="fragment">
 \begin{align*}
   B(\alpha, \beta) = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha + \beta)}.
@@ -1640,8 +1640,8 @@ See the proof at the end of this section.
 </section>
 </section>
 <section>
-<section id="slide-org804f1fe">
-<h4 id="org804f1fe">Example</h4>
+<section id="slide-orgdfe84a3">
+<h4 id="orgdfe84a3">Example</h4>
 <div class="fragment">
 \begin{align*}
   B(k+1, n-k+1) & = \frac{\Gamma(k+1)\Gamma(n-k+1)}{\Gamma(n+2)}\\
@@ -1664,8 +1664,8 @@ and so
 </section>
 </section>
 <section>
-<section id="slide-org0d25344">
-<h4 id="org0d25344">Definition</h4>
+<section id="slide-org3ec417e">
+<h4 id="org3ec417e">Definition</h4>
 <p>
 Let \(\alpha, \beta >0\), we say a random variable \(X\) has the <i>beta distribution</i> with parameters \(\alpha, \beta\), if its p.d.f. is
 </p>
@@ -1690,8 +1690,8 @@ In particular, the conditional distribution of \(P\) given \(X=k\) in Example 3.
 </section>
 </section>
 <section>
-<section id="slide-orgc91f0a4">
-<h4 id="orgc91f0a4">Moments of Beta Distribution</h4>
+<section id="slide-orge83cee3">
+<h4 id="orge83cee3">Moments of Beta Distribution</h4>
 <p class="fragment">
 For \(\alpha, \beta >0\), assume \(X \sim Beta(\alpha, \beta)\),
 </p>
@@ -1707,8 +1707,8 @@ For \(\alpha, \beta >0\), assume \(X \sim Beta(\alpha, \beta)\),
 </section>
 </section>
 <section>
-<section id="slide-orgb88f0e3">
-<h4 id="orgb88f0e3">Moments of Beta Distribution - Continued</h4>
+<section id="slide-org6390429">
+<h4 id="org6390429">Moments of Beta Distribution - Continued</h4>
 <p>
 When \(k = 1\),
 </p>
